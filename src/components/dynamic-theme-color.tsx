@@ -21,7 +21,7 @@ export function DynamicThemeColor() {
     if (resolvedTheme === 'dark') {
       meta.content = '#0a0a0a';
     } else {
-      meta.content = '#ffffff';
+      meta.content = '#f1efe7';
     }
 
     document.head.appendChild(meta);
