@@ -21,14 +21,14 @@ export function AdaptiveIcon({
   draggable = false,
 }: AdaptiveIconProps) {
   return (
-    <div className={cn('adaptive-icon transition-all duration-200', className)}>
+    <div className={cn('adaptive-icon transition-colors duration-200', className)}>
       <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
         draggable={draggable}
-        className="transition-all duration-200"
+        className="transition-colors duration-200"
       />
     </div>
   );
