@@ -60,6 +60,16 @@ export const metadata: Metadata = {
     description: meta.description,
     url: defaultUrl,
     siteName: `Portfolio | ${meta.title}`,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'James Reyes - Portfolio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
@@ -68,18 +78,20 @@ export const metadata: Metadata = {
       template: `%s | ${meta.title}`,
     },
     description: meta.description,
-    images: [`${defaultUrl}/og-image.png`],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
     ],
-    apple: '/apple-touch-icon.png',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
     other: [
       {
         rel: 'icon',
-        url: '/favicon.svg',
+        url: '/icon.svg',
         type: 'image/svg+xml',
       },
     ],
