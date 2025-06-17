@@ -1,29 +1,26 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { GitHubIcon } from "@/components/ui/github-icon";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center">
         <p className="font-[family-name:var(--font-geist-mono)] text-center font-light">
           Coming soon...
         </p>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <Link
-            className="rounded-2xl border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://github.com/jamesleoreyes"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/github.svg"
-              alt="GitHub logomark"
-              width={20}
-              height={20}
-            />
-            GitHub
-          </Link>
+          <Button size="sm" asChild className="rounded-full transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium">
+            <Link
+              href="https://github.com/jamesleoreyes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon className="size-5" />
+              GitHub
+            </Link>
+          </Button>
         </div>
       </main>
     </div>
