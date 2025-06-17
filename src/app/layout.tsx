@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { urlConfig } from "@/configs/app";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,43 +14,75 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Portfolio | James Reyes',
-    template: '%s | James Reyes',
-  },
-  description: 'I build useful, purposeful apps and learn everything I can along the way.',
-  applicationName: 'Portfolio | James Reyes',
+const defaultUrl = urlConfig.app
+  ? `https://${urlConfig.app}`
+  : 'http://localhost:3000';
+
+interface Meta {
+  title: string;
+  description: string;
+  keywords: string[];
+  siteName: string;
+  creator: string;
+}
+
+const meta: Meta = {
+  title: 'James Reyes',
+  description: "I build useful, purposeful apps and learn everything I can along the way.",
   keywords: ['James Reyes', 'Portfolio', 'Developer', 'Software Engineer', 'Web Developer', 'Mobile Developer', 'Full Stack Developer', 'Frontend Developer', 'Backend Developer', 'Software Developer', 'Software Engineer', 'Web Developer', 'Mobile Developer', 'Full Stack Developer', 'Frontend Developer', 'Backend Developer', 'Software Developer'],
+  siteName: 'James Reyes',
+  creator: 'James Reyes'
+}
+
+export const metadata: Metadata = {
+  metadataBase: new URL(defaultUrl),
+  title: {
+    default: `Portfolio | ${meta.title}`,
+    template: `%s | ${meta.title}`,
+  },
+  description: meta.description,
+  applicationName: `Portfolio | ${meta.title}`,
+  keywords: meta.keywords,
   authors: [
     {
-      name: 'James Reyes',
-      url: 'https://jamesleoreyes.com'
+      name: meta.creator,
+      url: defaultUrl
     },
   ],
-  creator: 'James Reyes',
-  publisher: 'James Reyes',
+  creator: meta.creator,
+  publisher: meta.creator,
   robots: 'index, follow',
   openGraph: {
     title: {
-      default: 'Portfolio | James Reyes',
-      template: '%s | James Reyes',
+      default: `Portfolio | ${meta.title}`,
+      template: `%s | ${meta.title}`,
     },
-    description: 'I build useful, purposeful apps and learn everything I can along the way.',
-    url: 'https://jamesleoreyes.com',
-    siteName: 'Portfolio | James Reyes',
+    description: meta.description,
+    url: defaultUrl,
+    siteName: `Portfolio | ${meta.title}`,
   },
   twitter: {
     card: 'summary_large_image',
     title: {
-      default: 'Portfolio | James Reyes',
-      template: '%s | James Reyes',
+      default: `Portfolio | ${meta.title}`,
+      template: `%s | ${meta.title}`,
     },
-    description: 'I build useful, purposeful apps and learn everything I can along the way.',
-    images: ['https://jamesleoreyes.com/og-image.png'],
+    description: meta.description,
+    images: [`${defaultUrl}/og-image.png`],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
   },
 }
 
