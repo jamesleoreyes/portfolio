@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { urlConfig } from "@/configs/app";
 import { DynamicThemeColor } from "@/components/dynamic-theme-color";
+import { DynamicViewport } from "@/components/dynamic-viewport";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,10 +15,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const defaultUrl = urlConfig.app
-  ? `https://${urlConfig.app}`
-  : 'http://localhost:3000';
 
 interface Meta {
   title: string;
@@ -36,7 +33,7 @@ const meta: Meta = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL(defaultUrl),
+  metadataBase: new URL(urlConfig.app),
   title: {
     default: `Portfolio | ${meta.title}`,
     template: `%s | ${meta.title}`,
@@ -47,7 +44,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: meta.creator,
-      url: defaultUrl
+      url: urlConfig.app
     },
   ],
   creator: meta.creator,
@@ -59,7 +56,7 @@ export const metadata: Metadata = {
       template: `%s | ${meta.title}`,
     },
     description: meta.description,
-    url: defaultUrl,
+    url: urlConfig.app,
     siteName: `Portfolio | ${meta.title}`,
     images: [
       {
@@ -99,6 +96,14 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: true,
+  viewportFit: 'cover',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -116,6 +121,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <DynamicThemeColor />
+          <DynamicViewport />
           {children}
         </ThemeProvider>
       </body>

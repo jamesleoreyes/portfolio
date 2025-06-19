@@ -7,6 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'I build useful, purposeful apps and learn everything I can along the way.',
     start_url: '/',
     display: 'standalone',
+    orientation: 'portrait',
     background_color: '#f1efe7',
     theme_color: '#0a0a0a',
     icons: [
