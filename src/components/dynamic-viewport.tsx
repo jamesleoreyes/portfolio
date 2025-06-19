@@ -6,7 +6,7 @@ export function DynamicViewport() {
   useEffect(() => {
     // Check if the app is running in standalone mode as a PWA
     const isPWA = window.matchMedia('(display-mode: standalone)').matches ||
-      (window.navigator as any).standalone === true ||
+      (window.navigator as unknown as { standalone?: boolean }).standalone === true ||
       document.referrer.includes('android-app://');
 
     // Get the existing viewport meta tag
