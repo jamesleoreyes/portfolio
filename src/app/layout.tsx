@@ -19,7 +19,6 @@ const geistMono = Geist_Mono({
 interface Meta {
   title: string;
   description: string;
-  keywords: string[];
   siteName: string;
   creator: string;
 }
@@ -27,7 +26,6 @@ interface Meta {
 const meta: Meta = {
   title: 'James Reyes',
   description: "I build useful, purposeful apps and learn everything I can along the way.",
-  keywords: ['James Reyes', 'Portfolio', 'Developer', 'Software Engineer', 'Web Developer', 'Mobile Developer', 'Full Stack Developer', 'Frontend Developer', 'Backend Developer', 'Software Developer', 'Software Engineer', 'Web Developer', 'Mobile Developer', 'Full Stack Developer', 'Frontend Developer', 'Backend Developer', 'Software Developer'],
   siteName: 'James Reyes',
   creator: 'James Reyes'
 }
@@ -40,7 +38,6 @@ export const metadata: Metadata = {
   },
   description: meta.description,
   applicationName: `Portfolio | ${meta.title}`,
-  keywords: meta.keywords,
   authors: [
     {
       name: meta.creator,
