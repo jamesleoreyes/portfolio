@@ -38,22 +38,29 @@ export const metadata: Metadata = {
   },
   description: meta.description,
   applicationName: `Portfolio | ${meta.title}`,
-  authors: [
-    {
-      name: meta.creator,
-      url: urlConfig.app
-    },
-  ],
+  authors: [{ name: meta.creator, url: urlConfig.app }],
   creator: meta.creator,
   publisher: meta.creator,
-  robots: 'index, follow',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: urlConfig.app,
     title: {
       default: `Portfolio | ${meta.title}`,
       template: `%s | ${meta.title}`,
     },
     description: meta.description,
-    url: urlConfig.app,
     siteName: `Portfolio | ${meta.title}`,
     images: [
       {
@@ -63,8 +70,6 @@ export const metadata: Metadata = {
         alt: 'James Reyes - Portfolio',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
@@ -74,6 +79,9 @@ export const metadata: Metadata = {
     },
     description: meta.description,
     images: ['/og-image.png'],
+  },
+  alternates: {
+    canonical: urlConfig.app,
   },
   icons: {
     icon: [
@@ -108,6 +116,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "James Reyes",
+              "url": urlConfig.app,
+              "image": `${urlConfig.app}/og-image.png`,
+              "sameAs": [
+                "https://github.com/jamesleoreyes",
+                "https://linkedin.com/in/jamesleoreyes"
+              ],
+              "jobTitle": "Full Stack Product Engineer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Cimplx HR, Inc.",
+                "url": "https://cimplx.com"
+              }
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
