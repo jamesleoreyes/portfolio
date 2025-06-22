@@ -1,7 +1,4 @@
-'use client'
-
 import Link from "next/link";
-import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { GitHubIcon } from "@/components/ui/github-icon";
 import { AdaptiveIcon } from "@/components/adaptive-icon";
@@ -9,22 +6,7 @@ import { AdaptiveIcon } from "@/components/adaptive-icon";
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-dvh p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <motion.main
-        className="flex flex-col gap-[32px] row-start-2 items-center"
-        initial={{
-          opacity: 0,
-          scale: 0.8,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          transition: {
-            duration: 0.5,
-            ease: 'easeOut',
-            delay: 0.25,
-          },
-        }}
-      >
+      <main className="flex flex-col gap-[32px] row-start-2 items-center">
         <AdaptiveIcon
           src='/media/icon-transparent.svg'
           alt="James Reyes Transparent Logo"
@@ -47,7 +29,7 @@ export default function Home() {
             </Link>
           </Button>
         </div>
-      </motion.main>
+      </main>
     </div>
   );
 }

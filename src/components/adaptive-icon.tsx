@@ -28,6 +28,7 @@ export function AdaptiveIcon({
         width={width}
         height={height}
         draggable={draggable}
+        priority={true}
         className="transition-colors duration-200"
       />
     </div>
