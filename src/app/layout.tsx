@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from 'next-themes';
 import { urlConfig } from "@/configs/app";
 import { DynamicThemeColor } from "@/components/dynamic-theme-color";
 import { DynamicViewport } from "@/components/dynamic-viewport";
@@ -117,8 +117,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#f1efe7" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

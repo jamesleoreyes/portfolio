@@ -7,9 +7,9 @@ export function DynamicThemeColor() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    const existingThemeColor = document.querySelectorAll('meta[name="theme-color"]');
+    const existingThemeColor = document.querySelector('meta[name="theme-color"]');
     if (existingThemeColor) {
-      existingThemeColor.forEach(meta => meta.remove());
+      existingThemeColor.remove();
     }
 
     const meta = document.createElement('meta');
