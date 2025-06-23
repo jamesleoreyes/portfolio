@@ -26,6 +26,7 @@ export default function manifest(): MetadataRoute.Manifest {
       'backend developer',
       'software developer'
     ],
+    background_color: '#f1efe7',
     display: 'standalone',
     orientation: 'portrait',
     icons: [

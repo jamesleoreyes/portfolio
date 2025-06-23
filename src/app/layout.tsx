@@ -80,6 +80,12 @@ export const metadata: Metadata = {
     description: meta.description,
     images: ['/og-image.png'],
   },
+  appleWebApp: {
+    capable: true,
+    title: meta.title,
+    statusBarStyle: 'default',
+    startupImage: '/apple-touch-icon.png'
+  },
   alternates: {
     canonical: urlConfig.app,
   },
