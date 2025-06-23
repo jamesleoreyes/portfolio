@@ -9,5 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: [],
     },
     host: urlConfig.app,
+    sitemap: urlConfig.sitemap,
   };
 }
