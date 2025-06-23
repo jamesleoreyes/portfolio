@@ -7,25 +7,17 @@ export function DynamicThemeColor() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    // Remove existing theme-color meta tag
-    const existingThemeColor = document.querySelector(`meta[name='theme-color']`);
+    const existingThemeColor = document.querySelectorAll('meta[name="theme-color"]');
     if (existingThemeColor) {
-      existingThemeColor.remove();
+      existingThemeColor.forEach(meta => meta.remove());
     }
 
-    // Create new theme-color meta tag
     const meta = document.createElement('meta');
     meta.name = 'theme-color';
-
-    // Set color based on theme
-    if (resolvedTheme === 'dark') {
-      meta.content = '#0a0a0a';
-    } else {
-      meta.content = '#f1efe7';
-    }
+    meta.content = resolvedTheme === 'dark' ? '#0a0a0a' : '#f1efe7';
 
     document.head.appendChild(meta);
   }, [resolvedTheme]);
 
   return null;
-} 
+}
