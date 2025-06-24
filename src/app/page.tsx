@@ -1,9 +1,4 @@
-import Link from 'next/link';
-import { Button } from '@/components';
-import { GitHubIcon } from '@/components';
 import { AdaptiveIcon } from '@/components';
-import { LinkedInIcon } from '@/components';
-import { TwitterIcon } from '@/components';
 
 export default function Home() {
   return (

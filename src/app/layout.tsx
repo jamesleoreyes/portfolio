@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next'
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { urlConfig } from '@/configs/app';
@@ -9,13 +9,8 @@ import { DynamicViewport } from '@/components';
 import { Navbar } from '@/components';
 import { Footer } from '@/components';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const outfit = Outfit({
+  variable: '--font-outfit',
   subsets: ['latin'],
 });
 
@@ -150,7 +145,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh flex flex-col`}
+        className={`${outfit.variable} antialiased min-h-dvh flex flex-col`}
       >
         <ThemeProvider
           attribute='class'
