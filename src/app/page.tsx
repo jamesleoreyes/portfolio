@@ -16,7 +16,7 @@ export default function Home() {
           height={200}
         />
         <div className='flex gap-4 items-center flex-col sm:flex-row'>
-          <Button size='sm' asChild className='rounded-full transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium'>
+          <Button size='sm' asChild className='transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium'>
             <Link
               href='https://github.com/jamesleoreyes'
               target='_blank'
@@ -26,7 +26,7 @@ export default function Home() {
               GitHub
             </Link>
           </Button>
-          <Button size='sm' asChild className='rounded-full transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium'>
+          <Button size='sm' asChild className='transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium'>
             <Link
               href='https://www.linkedin.com/in/jamesleoreyes/'
               target='_blank'
@@ -36,7 +36,7 @@ export default function Home() {
               LinkedIn
             </Link>
           </Button>
-          <Button size='sm' asChild className='rounded-full transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium'>
+          <Button size='sm' asChild className='transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium'>
             <Link
               href='https://x.com/jamesleoreyes'
               target='_blank'

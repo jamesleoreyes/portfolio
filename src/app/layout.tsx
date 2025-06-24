@@ -6,6 +6,8 @@ import { ThemeProvider } from 'next-themes';
 import { urlConfig } from "@/configs/app";
 import { DynamicThemeColor } from "@/components/dynamic-theme-color";
 import { DynamicViewport } from "@/components/dynamic-viewport";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -148,7 +150,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh flex flex-col`}
       >
         <ThemeProvider
           attribute="class"
@@ -158,7 +160,11 @@ export default function RootLayout({
         >
           <DynamicThemeColor />
           <DynamicViewport />
-          {children}
+          <Navbar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
           <Analytics />
         </ThemeProvider>
       </body>
