@@ -7,7 +7,7 @@ export function DynamicThemeColor() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    const existingThemeColor = document.querySelector('meta[name="theme-color"]');
+    const existingThemeColor = document.querySelector(`meta[name='theme-color']`);
     if (existingThemeColor) {
       existingThemeColor.remove();
     }

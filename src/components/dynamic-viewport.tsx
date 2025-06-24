@@ -10,7 +10,7 @@ export function DynamicViewport() {
       document.referrer.includes('android-app://');
 
     // Get the existing viewport meta tag
-    const viewportMeta = document.querySelector('meta[name="viewport"]');
+    const viewportMeta = document.querySelector(`meta[name='viewport']`);
 
     if (viewportMeta) {
       // Set userScalable based on PWA status
