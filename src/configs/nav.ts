@@ -1,6 +1,6 @@
 import { Navigation } from '@/types/Navigation';
 
-const navigation: Navigation[] = [
+const nav: Navigation[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/work', label: 'Work' },
@@ -8,4 +8,4 @@ const navigation: Navigation[] = [
   { href: '/contact', label: 'Contact' },
 ];
 
-export { navigation };
+export { nav };
