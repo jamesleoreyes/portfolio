@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { nav } from '@/configs/nav';
-import { GitHubIcon, LinkedInIcon, TwitterIcon, Button } from '@/components';
+import { GitHubIcon, LinkedInIcon, TwitterIcon, Button, AdaptiveIcon } from '@/components';
 import { ThemeToggle } from '@/components';
 
 interface SocialLink {
@@ -39,12 +38,12 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className='lg:col-span-1 text-center lg:text-left'>
             <Link href='/' className='inline-block'>
-              <Image
+              <AdaptiveIcon
                 src='/media/icon-transparent.svg'
-                alt='James Reyes Logo'
+                alt='James Reyes Transparent Logo'
                 width={40}
                 height={40}
-                className='w-10 h-10 bg-background hover:opacity-80 transition-all duration-300'
+                className='w-10 h-10 hover:opacity-60 transition-all duration-150'
               />
             </Link>
             <p className='mt-4 text-sm text-muted-foreground max-w-xs mx-auto lg:mx-0'>

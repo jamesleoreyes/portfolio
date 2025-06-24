@@ -65,7 +65,14 @@ export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps)
   if (variant === 'simple') {
     // Simple toggle between light and dark only
     const toggleTheme = () => {
-      setTheme(theme === 'dark' ? 'light' : 'dark');
+      if (theme === 'system') {
+        // Check if system prefers dark mode
+        const systemIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(systemIsDark ? 'light' : 'dark');
+      } else {
+        // Normal toggle between explicit light and dark
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+      }
     };
 
     return (
