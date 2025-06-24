@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { nav } from '@/configs/nav';
 import { Button } from '@/components';
 import { MobileNav } from '@/components';
+import { ThemeToggle } from '@/components';
 
 export default function Navbar() {
   return (
@@ -21,7 +22,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className='hidden md:flex'>
+        <div className='hidden md:flex items-center gap-2'>
           {nav.map((page) => (
             <Button key={page.label} asChild variant='ghost'>
               <Link href={page.href}>
@@ -29,6 +30,7 @@ export default function Navbar() {
               </Link>
             </Button>
           ))}
+          <ThemeToggle variant="simple" />
         </div>
 
         {/* Mobile Navigation */}

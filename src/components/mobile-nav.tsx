@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { nav } from '@/configs/nav';
 import { Button } from '@/components';
+import { ThemeToggle } from '@/components';
 
 interface MobileNavProps {
   className?: string;
@@ -66,6 +67,10 @@ export default function MobileNav({ className }: MobileNavProps) {
                     </Link>
                   </Button>
                 ))}
+                {/* Theme Toggle */}
+                <div className='mt-2 pt-2 border-t border-border/40'>
+                  <ThemeToggle variant="simple" className="mr-2" />
+                </div>
               </div>
             </div>
           </div>

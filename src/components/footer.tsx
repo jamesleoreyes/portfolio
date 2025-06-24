@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { nav } from '@/configs/nav';
 import { GitHubIcon, LinkedInIcon, TwitterIcon, Button } from '@/components';
+import { ThemeToggle } from '@/components';
 
 interface SocialLink {
   name: string;
@@ -119,6 +120,7 @@ export default function Footer() {
             <p className='text-sm text-muted-foreground'>
               &copy; {currentYear} James Reyes
             </p>
+            <ThemeToggle variant='full' />
           </div>
         </div>
       </div>
