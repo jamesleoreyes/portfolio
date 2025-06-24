@@ -21,7 +21,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className='hidden md:flex gap-2'>
+        <div className='hidden md:flex'>
           {nav.map((page) => (
             <Button key={page.label} asChild variant='ghost'>
               <Link href={page.href}>
