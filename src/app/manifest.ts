@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Portfolio | James Reyes',
     short_name: 'James Reyes',
-    description: 'I build useful, purposeful apps and learn everything I can along the way.',
+    description: 'Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
     start_url: '/',
     scope: '/',
     lang: 'en-US',

@@ -52,13 +52,13 @@ export default function MobileNav({ className }: MobileNavProps) {
           {/* Mobile Menu */}
           <div className='absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg md:hidden z-50'>
             <div className='mx-auto max-w-screen-lg px-4 py-4'>
-              <div className='flex flex-col space-y-2'>
+              <div className='flex flex-col space-y-2 items-end'>
                 {nav.map((page) => (
                   <Button
                     key={page.label}
                     asChild
                     variant='ghost'
-                    className='justify-start h-12 text-base'
+                    className='justify-end h-12 text-base w-auto px-4'
                     onClick={closeMobileMenu}
                   >
                     <Link href={page.href}>

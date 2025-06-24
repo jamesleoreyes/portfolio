@@ -23,7 +23,7 @@ interface Meta {
 
 const meta: Meta = {
   title: 'James Reyes',
-  description: 'I build useful, purposeful apps and learn everything I can along the way.',
+  description: 'Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
   siteName: 'James Reyes',
   creator: 'James Reyes'
 }

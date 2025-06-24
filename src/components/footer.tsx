@@ -36,7 +36,7 @@ export default function Footer() {
       <div className='mx-auto max-w-screen-lg px-4 py-12'>
         <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
           {/* Logo and Description */}
-          <div className='lg:col-span-1'>
+          <div className='lg:col-span-1 text-center lg:text-left'>
             <Link href='/' className='inline-block'>
               <Image
                 src='/media/icon-transparent.svg'
@@ -46,12 +46,12 @@ export default function Footer() {
                 className='w-10 h-10 bg-background hover:opacity-80 transition-all duration-300'
               />
             </Link>
-            <p className='mt-4 text-sm text-muted-foreground max-w-xs'>
+            <p className='mt-4 text-sm text-muted-foreground max-w-xs mx-auto lg:mx-0'>
               Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.
             </p>
 
             {/* Social Links */}
-            <div className='mt-6 flex space-x-4'>
+            <div className='mt-6 flex space-x-4 justify-center lg:justify-start'>
               {socialLinks.map((link) => {
                 const IconComponent = link.icon;
                 return (
@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className='lg:col-span-1'>
+          <div className='lg:col-span-1 text-center lg:text-left'>
             <h3 className='text-sm font-semibold text-foreground'>Look Around</h3>
             <ul className='mt-4 space-y-3'>
               {nav.slice(0, 3).map((page) => (
@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className='lg:col-span-1'>
+          <div className='lg:col-span-1 text-center lg:text-left'>
             <h3 className='text-sm font-semibold text-foreground'>Get in Touch</h3>
             <div className='mt-4 space-y-3'>
               <Link
