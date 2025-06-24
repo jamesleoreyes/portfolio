@@ -1,4 +1,6 @@
-const urlConfig = {
+import { UrlConfig } from '@/types/Config';
+
+const urlConfig: UrlConfig = {
   /** 
    * The URL of the app.
    * 
