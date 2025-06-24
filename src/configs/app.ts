@@ -1,4 +1,4 @@
-export const urlConfig = {
+const urlConfig = {
   /** 
    * The URL of the app.
    * 
@@ -14,3 +14,5 @@ export const urlConfig = {
    */
   sitemap: process.env['SITEMAP_URL'] ? `https://${process.env['SITEMAP_URL']}` : 'http://localhost:3000/sitemap.xml',
 }
+
+export { urlConfig };
