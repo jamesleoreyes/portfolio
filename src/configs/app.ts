@@ -1,4 +1,6 @@
-export const urlConfig = {
+import { UrlConfig } from '@/types/Config';
+
+const urlConfig: UrlConfig = {
   /** 
    * The URL of the app.
    * 
@@ -14,3 +16,5 @@ export const urlConfig = {
    */
   sitemap: process.env['SITEMAP_URL'] ? `https://${process.env['SITEMAP_URL']}` : 'http://localhost:3000/sitemap.xml',
 }
+
+export { urlConfig };

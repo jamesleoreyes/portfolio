@@ -1,7 +1,7 @@
 'use client';
 
-import Image from "next/image";
-import { cn } from "@/lib/utils";
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 interface AdaptiveIconProps {
   src: string;
@@ -29,7 +29,7 @@ export function AdaptiveIcon({
         height={height}
         draggable={draggable}
         priority={true}
-        className="transition-colors duration-200"
+        className='transition-colors duration-200'
       />
     </div>
   );

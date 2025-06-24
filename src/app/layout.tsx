@@ -1,20 +1,17 @@
-import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/next"
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@vercel/analytics/next'
+import { Outfit } from 'next/font/google';
+import './globals.css';
 import { ThemeProvider } from 'next-themes';
-import { urlConfig } from "@/configs/app";
-import { DynamicThemeColor } from "@/components/dynamic-theme-color";
-import { DynamicViewport } from "@/components/dynamic-viewport";
+import { urlConfig } from '@/configs/app';
+import { DynamicThemeColor } from '@/components';
+import { DynamicViewport } from '@/components';
+import { Navbar } from '@/components';
+import { Footer } from '@/components';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const outfit = Outfit({
+  variable: '--font-outfit',
+  subsets: ['latin'],
 });
 
 interface Meta {
@@ -26,7 +23,7 @@ interface Meta {
 
 const meta: Meta = {
   title: 'James Reyes',
-  description: "I build useful, purposeful apps and learn everything I can along the way.",
+  description: 'Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
   siteName: 'James Reyes',
   creator: 'James Reyes'
 }
@@ -122,43 +119,47 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="antialiased" suppressHydrationWarning>
+    <html lang='en' className='antialiased' suppressHydrationWarning>
       <head>
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "James Reyes",
-              "url": urlConfig.app,
-              "image": `${urlConfig.app}/og-image.png`,
-              "sameAs": [
-                "https://github.com/jamesleoreyes",
-                "https://linkedin.com/in/jamesleoreyes"
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              'name': 'James Reyes',
+              'url': urlConfig.app,
+              'image': `${urlConfig.app}/og-image.png`,
+              'sameAs': [
+                'https://github.com/jamesleoreyes',
+                'https://linkedin.com/in/jamesleoreyes'
               ],
-              "jobTitle": "Full Stack Product Engineer",
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Cimplx HR, Inc.",
-                "url": "https://cimplx.com"
+              'jobTitle': 'Full Stack Product Engineer',
+              'worksFor': {
+                '@type': 'Organization',
+                'name': 'Cimplx HR, Inc.',
+                'url': 'https://cimplx.com'
               }
             })
           }}
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.variable} antialiased min-h-dvh flex flex-col`}
       >
         <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
+          attribute='class'
+          defaultTheme='system'
           enableSystem
           disableTransitionOnChange
         >
           <DynamicThemeColor />
           <DynamicViewport />
-          {children}
+          <Navbar />
+          <main className='flex-1'>
+            {children}
+          </main>
+          <Footer />
           <Analytics />
         </ThemeProvider>
       </body>
