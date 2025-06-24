@@ -15,10 +15,6 @@ export default function Home() {
           width={200}
           height={200}
         />
-        <p className='font-[family-name:var(--font-geist-mono)] text-center font-light'>
-          Coming soon...
-        </p>
-
         <div className='flex gap-4 items-center flex-col sm:flex-row'>
           <Button size='sm' asChild className='rounded-full transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium'>
             <Link
