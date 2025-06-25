@@ -12,8 +12,8 @@ const words = [
 
 export default function Home() {
   return (
-    <div className='min-h-dvh flex items-center justify-center px-4 py-8'>
-      <main className='max-w-4xl mx-auto text-center space-y-8'>
+    <div className='max-w-4xl flex items-center justify-center px-4 py-8'>
+      <main className='mx-auto text-center space-y-8'>
         {/* Hero Section */}
         <div className='space-y-6 flex flex-col items-start'>
           <div className='text-left'>
@@ -53,7 +53,7 @@ export default function Home() {
               About Me
             </Link>
           </Button>
-          
+
           <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
             <Link href='/projects'>
               View My Projects

@@ -156,7 +156,7 @@ export default function RootLayout({
           <DynamicThemeColor />
           <DynamicViewport />
           <Navbar />
-          <main className='flex-1'>
+          <main className='flex-1 flex justify-center items-center'>
             {children}
           </main>
           <Footer />
