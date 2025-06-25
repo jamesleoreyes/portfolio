@@ -27,7 +27,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className='hidden md:flex items-center gap-2'>
-          {nav.map((page) => (
+          {nav.filter(page => page.href !== '/resume').map((page) => (
             <Button
               key={page.label}
               asChild

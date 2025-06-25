@@ -3,6 +3,7 @@ import { Navigation } from '@/types/Navigation';
 const navContent: Navigation[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
   { href: '/experience', label: 'Experience' },
   { href: '/projects', label: 'Projects' },
 ];
