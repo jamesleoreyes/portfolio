@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { nav } from '@/configs/nav';
-import { Button, AdaptiveIcon } from '@/components';
-import { MobileNav } from '@/components';
-import { ThemeToggle } from '@/components';
+import { Button, AdaptiveIcon, MobileNav, ThemeToggle } from '@/components';
 
 export default function Navbar() {
   return (
@@ -29,7 +27,7 @@ export default function Navbar() {
               </Link>
             </Button>
           ))}
-          <ThemeToggle variant="simple" />
+          <ThemeToggle variant='simple' />
         </div>
 
         {/* Mobile Navigation */}

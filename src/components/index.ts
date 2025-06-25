@@ -9,6 +9,8 @@ export { Button } from './ui/button';
 export { GitHubIcon } from './ui/github-icon';
 export { LinkedInIcon } from './ui/linkedin-icon';
 export { TwitterIcon } from './ui/twitter-icon';
+export { SocialLinks } from './social-links';
+export { WordRotate } from './magicui/word-rotate';
 
 // Utility Components
 export { AdaptiveIcon } from './adaptive-icon';
