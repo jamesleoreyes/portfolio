@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { nav } from '@/configs/nav';
+import { nav, navContent, navWork } from '@/configs/nav';
 import { ThemeToggle, AdaptiveIcon, SocialLinks } from '@/components';
 
 export default function Footer() {
@@ -33,9 +33,9 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className='lg:col-span-1 text-center lg:text-left'>
-            <h3 className='text-sm font-semibold text-foreground'>Look Around</h3>
+            <h2 className='text-sm font-semibold text-foreground'>Look Around</h2>
             <ul className='mt-4 space-y-3'>
-              {nav.slice(0, 3).map((page) => (
+              {navContent.map((page) => (
                 <li key={page.href}>
                   <Link
                     href={page.href}
@@ -50,21 +50,19 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className='lg:col-span-1 text-center lg:text-left'>
-            <h3 className='text-sm font-semibold text-foreground'>Get in Touch</h3>
-            <div className='mt-4 space-y-3'>
-              <Link
-                href='/contact'
-                className='block text-sm text-muted-foreground hover:text-foreground transition-colors duration-200'
-              >
-                Contact Me
-              </Link>
-              <Link
-                href='/resume'
-                className='block text-sm text-muted-foreground hover:text-foreground transition-colors duration-200'
-              >
-                View Resume
-              </Link>
-            </div>
+            <h2 className='text-sm font-semibold text-foreground'>Get in Touch</h2>
+            <ul className='mt-4 space-y-3'>
+              {navWork.map((page) => (
+                <li key={page.href}>
+                  <Link
+                    href={page.href}
+                    className='text-sm text-muted-foreground hover:text-foreground transition-colors duration-200'
+                  >
+                    {page.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

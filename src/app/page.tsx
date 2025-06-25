@@ -49,14 +49,14 @@ export default function Home() {
         {/* Call to Action Buttons */}
         <div className='flex flex-col sm:flex-row gap-4 justify-start items-start'>
           <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
-            <Link href='/work'>
-              View My Work
-            </Link>
-          </Button>
-
-          <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
             <Link href='/about'>
               About Me
+            </Link>
+          </Button>
+          
+          <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
+            <Link href='/projects'>
+              View My Projects
             </Link>
           </Button>
 
@@ -80,7 +80,7 @@ export default function Home() {
               resume
             </Link>
             {' '}or check out my latest{' '}
-            <Link href='/work' className='underline hover:text-foreground transition-colors'>
+            <Link href='/projects' className='underline hover:text-foreground transition-colors'>
               projects
             </Link>
           </p>
