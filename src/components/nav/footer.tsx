@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { nav, navContent, navWork } from '@/configs/nav';
+import { navContent, navWork } from '@/configs/nav';
 import { ThemeToggle, AdaptiveIcon, SocialLinks } from '@/components';
 
 export default function Footer() {
