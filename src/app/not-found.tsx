@@ -3,8 +3,8 @@ import { Button } from '@/components';
 
 export default function NotFound() {
   return (
-    <div className='min-h-dvh flex items-center justify-center px-4 py-8'>
-      <main className='max-w-4xl mx-auto text-center space-y-8'>
+    <div className='max-w-4xl flex items-center justify-center px-4 py-8'>
+      <main className='mx-auto text-center space-y-8'>
         {/* Error Section */}
         <div className='space-y-6 flex flex-col items-center'>
           <div className='text-center'>
