@@ -155,12 +155,18 @@ export default function RootLayout({
         >
           <DynamicThemeColor />
           <DynamicViewport />
-          <Navbar />
-          <main className='flex-1 flex justify-center items-center'>
-            {children}
-          </main>
-          <Footer />
+          <div className='flex-1 hidden min-[151px]:flex flex-col'>
+            <Navbar />
+            <main className='flex-1 flex justify-center items-center'>
+              {children}
+            </main>
+            <Footer />
+          </div>
           <Analytics />
+          <div className='flex flex-col justify-center items-center text-center min-h-screen min-[151px]:hidden'>
+            <p className='text-2xl'>🤔</p>
+            <p>What kind of device are you viewing on???</p>
+          </div>
         </ThemeProvider>
       </body>
     </html>
