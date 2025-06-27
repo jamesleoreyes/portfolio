@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button, SocialLinks } from '@/components';
 import type { Meta } from '@/types/App';
+import { JavaScriptIcon, PythonIcon, TypeScriptIcon } from '@/components/icons';
 
 const meta: Meta = {
   title: 'About Me',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 interface TechnicalSkills {
-  languages: string[],
+  languages: Record<string, React.ElementType>,
   frontend: string[],
   backend: string[],
   devops: string[],
@@ -23,11 +24,11 @@ interface TechnicalSkills {
 }
 
 const techSkills: TechnicalSkills = {
-  languages: [
-    'JavaScript',
-    'TypeScript',
-    'Python',
-  ],
+  languages: {
+    'JavaScript': JavaScriptIcon,
+    'TypeScript': TypeScriptIcon,
+    'Python': PythonIcon,
+  },
   frontend: [
     'HTML + CSS',
     'React',
@@ -109,16 +110,18 @@ export default function About() {
         {/* Technical Skills */}
         <section className='space-y-6'>
           <h2 className='text-center sm:text-left text-3xl font-bold tracking-tight'>Technical Skills</h2>
-          <div className='flex flex-col items-center sm:items-start sm:grid grid-cols-1 md:grid-cols-2 gap-6'>
+          <div className='flex flex-col gap-6'>
             <div className="space-y-3">
               <h3 className="text-xl font-semibold">Languages</h3>
-              <ul className="text-center sm:text-left space-y-1 text-muted-foreground">
-                {techSkills.languages.map(language => {
+              <div className="flex text-center sm:text-left gap-3 text-muted-foreground">
+                {Object.entries(techSkills.languages).map(([name, IconComponent]) => {
                   return (
-                    <li key={language}>{language}</li>
+                    <p key={name} className="flex items-center gap-2">
+                      <IconComponent className="w-15 h-15" title={name}/>
+                    </p>
                   )
                 })}
-              </ul>
+              </div>
             </div>
             <div className='space-y-3'>
               <h3 className='text-xl font-semibold'>Frontend Development</h3>
