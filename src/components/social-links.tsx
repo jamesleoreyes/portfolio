@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Button, GitHubIcon, LinkedInIcon, TwitterIcon } from '@/components';
+import { Button } from '@/components';
+import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@/components/icons';
 
 interface SocialLink {
   name: string;

@@ -1,3 +1,6 @@
+// Utility icons
+export { default as AdaptiveIcon } from './adaptive-icon';
+
 // Social icons
 export { default as GitHubIcon } from './socials/GitHubIcon'
 export { default as LinkedInIcon } from './socials/LinkedInIcon'

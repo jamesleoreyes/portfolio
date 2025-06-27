@@ -12,7 +12,7 @@ interface AdaptiveIconProps {
   draggable?: boolean;
 }
 
-export function AdaptiveIcon({
+export default function AdaptiveIcon({
   src,
   alt,
   width,
