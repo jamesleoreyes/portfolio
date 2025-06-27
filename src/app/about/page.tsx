@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button, SocialLinks } from '@/components';
 import type { Meta } from '@/types/App';
-import { JavaScriptIcon, PythonIcon, TypeScriptIcon } from '@/components/icons';
+import { Button, SocialLinks } from '@/components';
+import * as Icons from '@/components/icons';
 
 const meta: Meta = {
   title: 'About Me',
@@ -15,49 +15,55 @@ export const metadata: Metadata = {
   description: meta.description,
 };
 
+interface IconComponent {
+  name: string;
+  icon: React.ElementType;
+  url: string;
+}
+
 interface TechnicalSkills {
-  languages: Record<string, React.ElementType>,
-  frontend: string[],
-  backend: string[],
-  devops: string[],
-  cloud: string[],
+  languages: IconComponent[],
+  frontend: IconComponent[],
+  backend: IconComponent[],
+  devops: IconComponent[],
+  cloud: IconComponent[],
 }
 
 const techSkills: TechnicalSkills = {
-  languages: {
-    'JavaScript': JavaScriptIcon,
-    'TypeScript': TypeScriptIcon,
-    'Python': PythonIcon,
-  },
+  languages: [
+    { name: 'JavaScript', icon: Icons.JavaScript, url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+    { name: 'TypeScript', icon: Icons.TypeScript, url: 'https://www.typescriptlang.org/' },
+    { name: 'Python', icon: Icons.Python, url: 'https://www.python.org/' },
+  ],
   frontend: [
-    'HTML + CSS',
-    'React',
-    'Next.js',
-    'Tailwind CSS',
-    'shadcn/ui',
-    'Vite',
+    { name: 'HTML5', icon: Icons.HTML5, url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+    { name: 'CSS', icon: Icons.CSS, url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+    { name: 'React', icon: Icons.React, url: 'https://react.dev/' },
+    { name: 'Next.js', icon: Icons.NextJs, url: 'https://nextjs.org/' },
+    { name: 'Tailwind CSS', icon: Icons.Tailwind, url: 'https://tailwindcss.com/' },
+    { name: 'shadcn/ui', icon: Icons.Shadcn, url: 'https://ui.shadcn.com/' },
+    { name: 'Vite', icon: Icons.Vite, url: 'https://vite.dev/' },
   ],
   backend: [
-    'Node.js',
-    'Deno',
-    'Express',
-    'Flask',
-    'Supabase',
-    'REST API Design',
+    { name: 'Node.js', icon: Icons.NodeJs, url: 'https://nodejs.org/' },
+    { name: 'Deno', icon: Icons.Deno, url: 'https://deno.com/' },
+    { name: 'Express', icon: Icons.Express, url: 'https://expressjs.com/' },
+    { name: 'Flask', icon: Icons.Flask, url: 'https://flask.palletsprojects.com/' },
+    { name: 'Supabase', icon: Icons.Supabase, url: 'https://supabase.com/' },
+    // { name: 'REST API Design', icon: Icons.RestApi },
   ],
   devops: [
-    'Git',
-    'GitHub',
-    'CI/CD Pipelines',
-    'Postman',
-    'Sentry'
+    { name: 'Git', icon: Icons.Git, url: 'https://git-scm.com/' },
+    { name: 'GitHub', icon: Icons.GitHub, url: 'https://github.com/' },
+    // { name: 'CI/CD Pipelines', icon: Icons.CiCd },
+    { name: 'Postman', icon: Icons.Postman, url: 'https://www.postman.com/' },
+    { name: 'Sentry', icon: Icons.Sentry, url: 'https://sentry.io/' },
   ],
   cloud: [
-    'Azure',
-    'Vercel',
-    'Heroku',
-    'Railway',
-    'Render',
+    { name: 'Azure', icon: Icons.Azure, url: 'https://azure.microsoft.com/' },
+    { name: 'Vercel', icon: Icons.Vercel, url: 'https://vercel.com/' },
+    { name: 'Heroku', icon: Icons.Heroku, url: 'https://www.heroku.com/' },
+    { name: 'Railway', icon: Icons.Railway, url: 'https://railway.app/' },
   ]
 }
 
@@ -112,53 +118,71 @@ export default function About() {
           <h2 className='text-center sm:text-left text-3xl font-bold tracking-tight'>Technical Skills</h2>
           <div className='flex flex-col gap-6'>
             <div className="space-y-3">
-              <h3 className="text-xl font-semibold">Languages</h3>
-              <div className="flex text-center sm:text-left gap-3 text-muted-foreground">
-                {Object.entries(techSkills.languages).map(([name, IconComponent]) => {
+              <h3 className="text-center sm:text-left text-xl font-semibold">Languages</h3>
+              <ul className="flex justify-center sm:justify-start text-center sm:text-left gap-3 text-muted-foreground">
+                {techSkills.languages.map(({ name, icon: IconComponent, url }) => {
                   return (
-                    <p key={name} className="flex items-center gap-2">
-                      <IconComponent className="w-15 h-15" title={name}/>
-                    </p>
-                  )
-                })}
-              </div>
-            </div>
-            <div className='space-y-3'>
-              <h3 className='text-xl font-semibold'>Frontend Development</h3>
-              <ul className='text-center sm:text-left space-y-1 text-muted-foreground'>
-                {techSkills.frontend.map(item => {
-                  return (
-                    <li key={item}>{item}</li>
+                    <li key={name} className="flex items-center gap-2" title={name} aria-label={name}>
+                      <Link href={url} target='_blank' rel='noopener noreferrer'>
+                        <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" title={name} aria-label={name} />
+                      </Link>
+                    </li>
                   )
                 })}
               </ul>
             </div>
             <div className='space-y-3'>
-              <h3 className='text-xl font-semibold'>Backend Development</h3>
-              <ul className='text-center sm:text-left space-y-1 text-muted-foreground'>
-                {techSkills.backend.map(item => {
+              <h3 className='text-center sm:text-left text-xl font-semibold'>Frontend Development</h3>
+              <ul className="flex justify-center sm:justify-start text-center sm:text-left gap-3 text-muted-foreground">
+                {techSkills.frontend.map(({ name, icon: IconComponent, url }) => {
                   return (
-                    <li key={item}>{item}</li>
+                    <li key={name} className="flex items-center gap-2" title={name} aria-label={name}>
+                      <Link href={url} target='_blank' rel='noopener noreferrer'>
+                        <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" title={name} aria-label={name} />
+                      </Link>
+                    </li>
                   )
                 })}
               </ul>
             </div>
             <div className='space-y-3'>
-              <h3 className='text-xl font-semibold'>Tooling & DevOps</h3>
-              <ul className='text-center sm:text-left space-y-1 text-muted-foreground'>
-                {techSkills.devops.map(item => {
+              <h3 className='text-center sm:text-left text-xl font-semibold'>Backend Development</h3>
+              <ul className="flex justify-center sm:justify-start text-center sm:text-left gap-3 text-muted-foreground">
+                {techSkills.backend.map(({ name, icon: IconComponent, url }) => {
                   return (
-                    <li key={item}>{item}</li>
+                    <li key={name} className="flex items-center gap-2" title={name} aria-label={name}>
+                      <Link href={url} target='_blank' rel='noopener noreferrer'>
+                        <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" title={name} aria-label={name} />
+                      </Link>
+                    </li>
                   )
                 })}
               </ul>
             </div>
             <div className='space-y-3'>
-              <h3 className='text-xl font-semibold'>Cloud & Infrastructure</h3>
-              <ul className='text-center sm:text-left space-y-1 text-muted-foreground'>
-                {techSkills.cloud.map(item => {
+              <h3 className='text-center sm:text-left text-xl font-semibold'>Tooling & DevOps</h3>
+              <ul className='flex justify-center sm:justify-start text-center sm:text-left gap-3 text-muted-foreground'>
+                {techSkills.devops.map(({ name, icon: IconComponent, url }) => {
                   return (
-                    <li key={item}>{item}</li>
+                    <li key={name} className="flex items-center gap-2" title={name} aria-label={name}>
+                      <Link href={url} target='_blank' rel='noopener noreferrer'>
+                        <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" title={name} aria-label={name} />
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            <div className='space-y-3'>
+              <h3 className='text-center sm:text-left text-xl font-semibold'>Cloud & Infrastructure</h3>
+              <ul className='flex justify-center sm:justify-start text-center sm:text-left gap-3 text-muted-foreground'>
+                {techSkills.cloud.map(({ name, icon: IconComponent, url }) => {
+                  return (
+                    <li key={name} className="flex items-center gap-2" title={name} aria-label={name} >
+                      <Link href={url} target='_blank' rel='noopener noreferrer'>
+                        <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" title={name} aria-label={name} />
+                      </Link>
+                    </li>
                   )
                 })}
               </ul>

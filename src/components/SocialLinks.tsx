@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components';
-import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@/components/icons';
+import { GitHub, LinkedIn, Twitter } from '@/components/icons';
 
 interface SocialLink {
   name: string;
@@ -14,17 +14,17 @@ export function SocialLinks() {
     {
       name: 'GitHub',
       href: 'https://github.com/jamesleoreyes',
-      icon: GitHubIcon,
+      icon: GitHub,
     },
     {
       name: 'LinkedIn',
       href: 'https://linkedin.com/in/jamesleoreyes',
-      icon: LinkedInIcon,
+      icon: LinkedIn,
     },
     {
       name: 'Twitter',
       href: 'https://twitter.com/jamesleoreyes',
-      icon: TwitterIcon,
+      icon: Twitter,
     },
   ];
 
