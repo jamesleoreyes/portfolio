@@ -5,7 +5,7 @@ interface GitHubIconProps extends React.SVGProps<SVGSVGElement> {
   className?: string
 }
 
-export function GitHubIcon({ className, ...props }: GitHubIconProps) {
+export default function GitHubIcon({ className, ...props }: GitHubIconProps) {
   return (
     <svg
       role='img'

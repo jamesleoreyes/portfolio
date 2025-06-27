@@ -6,9 +6,9 @@ export { ThemeToggle } from './theme/theme-toggle';
 
 // UI Components
 export { Button } from './ui/button';
-export { GitHubIcon } from './ui/github-icon';
-export { LinkedInIcon } from './ui/linkedin-icon';
-export { TwitterIcon } from './ui/twitter-icon';
+export { GitHubIcon } from './icons/socials/GitHubIcon';
+export { LinkedInIcon } from './icons/socials/LinkedInIcon';
+export { TwitterIcon } from './icons/socials/TwitterIcon';
 export { SocialLinks } from './social-links';
 export { WordRotate } from './magicui/word-rotate';
 

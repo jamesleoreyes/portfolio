@@ -5,7 +5,7 @@ interface TwitterIconProps extends React.SVGProps<SVGSVGElement> {
   className?: string
 }
 
-export function TwitterIcon({ className, ...props }: TwitterIconProps) {
+export default function TwitterIcon({ className, ...props }: TwitterIconProps) {
   return (
     <svg
       role='img'
