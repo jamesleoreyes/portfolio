@@ -86,7 +86,7 @@ export default function About() {
               About Me
             </h1>
             <p className='text-xl text-muted-foreground max-w-2xl'>
-              Hi, I'm James Reyes, a Product-Focused Engineer who loves building meaningful software that makes a difference.
+              Hi, I&apos;m James Reyes, a Product-Focused Engineer who loves building meaningful software that makes a difference.
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function About() {
           <h2 className='text-center sm:text-left text-3xl font-bold tracking-tight'>My Story</h2>
           <div className='text-center sm:text-left space-y-4 text-lg leading-relaxed'>
             <p>
-              I'm passionate about creating scalable, maintainable software solutions that solve real-world problems.
+              I&apos;m passionate about creating scalable, maintainable software solutions that solve real-world problems.
               My journey in technology began with a curiosity about how things work, which evolved into a deep
               appreciation for clean code, thoughtful architecture, and user-centered design.
             </p>
@@ -266,7 +266,7 @@ export default function About() {
             <div className='space-y-3'>
               <h3 className='text-center sm:text-left text-xl font-semibold'>Continuous Learning</h3>
               <p className='text-center sm:text-left text-muted-foreground leading-relaxed'>
-                Technology evolves rapidly, and I'm committed to staying current with best practices,
+                Technology evolves rapidly, and I&apos;m committed to staying current with best practices,
                 new tools, and emerging patterns in software development.
               </p>
             </div>
@@ -282,11 +282,11 @@ export default function About() {
 
         {/* Call to Action */}
         <section className='space-y-6 text-center border-t pt-12'>
-          <h2 className='text-3xl font-bold tracking-tight'>Let's Work Together</h2>
+          <h2 className='text-3xl font-bold tracking-tight'>Let&apos;s Work Together</h2>
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
-            I'm always interested in new opportunities and meaningful projects.
-            Whether you're looking to build something new or improve something existing,
-            I'd love to help bring your ideas to life.
+            I&apos;m always interested in new opportunities and meaningful projects.
+            Whether you&apos;re looking to build something new or improve something existing,
+            I&apos;d love to help bring your ideas to life.
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
