@@ -6,7 +6,7 @@ import './globals.css';
 import { baseMeta, urlConfig } from '@/configs/app';
 import { DynamicThemeColor } from '@/components';
 import { DynamicViewport } from '@/components';
-import { Navbar } from '@/components';
+import { NavBar } from '@/components';
 import { Footer } from '@/components';
 
 const outfit = Outfit({
@@ -142,7 +142,7 @@ export default function RootLayout({
           <DynamicThemeColor />
           <DynamicViewport />
           <div className='flex-1 hidden min-[151px]:flex flex-col'>
-            <Navbar />
+            <NavBar />
             <main className='flex-1 flex justify-center items-center'>
               {children}
             </main>
