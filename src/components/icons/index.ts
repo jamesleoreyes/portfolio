@@ -1,5 +1,5 @@
 // Utility icons
-export { default as AdaptiveIcon } from './adaptive-icon';
+export { default as AdaptiveIcon } from './AdaptiveIcon';
 
 // Social icons
 export { default as GitHubIcon } from './socials/GitHubIcon'
