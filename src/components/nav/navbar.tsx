@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { Button, MobileNav, ThemeToggle } from '@/components';
 import { AdaptiveIcon } from '@/components/icons';
 
-export default function Navbar() {
+export default function NavBar() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 

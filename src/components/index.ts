@@ -1,5 +1,5 @@
 // Navigation Components
-export { default as Navbar } from './nav/NavBar';
+export { default as NavBar } from './nav/NavBar';
 export { default as MobileNav } from './nav/MobileNav';
 export { default as Footer } from './nav/Footer';
 export { ThemeToggle } from './theme/ThemeToggle';
