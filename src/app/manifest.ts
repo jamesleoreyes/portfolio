@@ -1,10 +1,11 @@
+import { baseMeta } from '@/configs/app'
 import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Portfolio | James Reyes',
+    name: baseMeta.fullTitle,
     short_name: 'James Reyes',
-    description: 'Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
+    description: baseMeta.description,
     start_url: '/',
     scope: '/',
     lang: 'en-US',
@@ -12,6 +13,7 @@ export default function manifest(): MetadataRoute.Manifest {
       'portfolio',
       'developer',
       'software engineer',
+      'product-focused engineer',
       'web developer',
       'mobile developer',
       'full stack developer',

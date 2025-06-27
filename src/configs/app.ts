@@ -1,4 +1,5 @@
-import { UrlConfig } from '@/types/Config';
+import type { Meta } from '@/types/App';
+import { UrlConfig } from '@/types/App';
 
 const urlConfig: UrlConfig = {
   /** 
@@ -17,4 +18,12 @@ const urlConfig: UrlConfig = {
   sitemap: process.env['SITEMAP_URL'] ? `https://${process.env['SITEMAP_URL']}` : 'http://localhost:3000/sitemap.xml',
 }
 
-export { urlConfig };
+const baseMeta: Meta = {
+  title: 'James Reyes',
+  fullTitle: 'James Reyes | Product-Focused Engineer',
+  description: 'Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
+  siteName: 'James Reyes',
+  creator: 'James Reyes'
+}
+
+export { urlConfig, baseMeta };

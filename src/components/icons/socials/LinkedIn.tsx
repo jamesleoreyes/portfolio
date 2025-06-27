@@ -5,7 +5,7 @@ interface LinkedInIconProps extends React.SVGProps<SVGSVGElement> {
   className?: string
 }
 
-export function LinkedInIcon({ className, ...props }: LinkedInIconProps) {
+export default function LinkedInIcon({ className, ...props }: LinkedInIconProps) {
   return (
     <svg
       role='img'

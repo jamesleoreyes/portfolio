@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { nav } from '@/configs/nav';
 import { cn } from '@/lib/utils';
-import { Button, AdaptiveIcon, MobileNav, ThemeToggle } from '@/components';
+import { Button, MobileNav, ThemeToggle } from '@/components';
+import { AdaptiveIcon } from '@/components/icons';
 
 export default function Navbar() {
   const pathname = usePathname();

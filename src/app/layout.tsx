@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next'
 import { Outfit } from 'next/font/google';
-import './globals.css';
 import { ThemeProvider } from 'next-themes';
-import { urlConfig } from '@/configs/app';
+import './globals.css';
+import { baseMeta, urlConfig } from '@/configs/app';
 import { DynamicThemeColor } from '@/components';
 import { DynamicViewport } from '@/components';
 import { Navbar } from '@/components';
@@ -14,31 +14,17 @@ const outfit = Outfit({
   subsets: ['latin'],
 });
 
-interface Meta {
-  title: string;
-  description: string;
-  siteName: string;
-  creator: string;
-}
-
-const meta: Meta = {
-  title: 'James Reyes',
-  description: 'Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
-  siteName: 'James Reyes',
-  creator: 'James Reyes'
-}
-
 export const metadata: Metadata = {
   metadataBase: new URL(urlConfig.app),
   title: {
-    default: `Portfolio | ${meta.title}`,
-    template: `%s | ${meta.title}`,
+    default: `${baseMeta.fullTitle}`,
+    template: `${baseMeta.title} | %s`,
   },
-  description: meta.description,
-  applicationName: `Portfolio | ${meta.title}`,
-  authors: [{ name: meta.creator, url: urlConfig.app }],
-  creator: meta.creator,
-  publisher: meta.creator,
+  description: baseMeta.description,
+  applicationName: `${baseMeta.fullTitle}`,
+  authors: [{ name: baseMeta.creator, url: urlConfig.app }],
+  creator: baseMeta.creator,
+  publisher: baseMeta.creator,
   robots: {
     index: true,
     follow: true,
@@ -55,32 +41,32 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: urlConfig.app,
     title: {
-      default: `Portfolio | ${meta.title}`,
-      template: `%s | ${meta.title}`,
+      default: `${baseMeta.fullTitle}`,
+      template: `${baseMeta.title} | %s`,
     },
-    description: meta.description,
-    siteName: `Portfolio | ${meta.title}`,
+    description: baseMeta.description,
+    siteName: `${baseMeta.fullTitle}`,
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'James Reyes - Portfolio',
+        alt: `${baseMeta.fullTitle}`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: {
-      default: `Portfolio | ${meta.title}`,
-      template: `%s | ${meta.title}`,
+      default: `${baseMeta.fullTitle}`,
+      template: `${baseMeta.title} | %s`,
     },
-    description: meta.description,
+    description: baseMeta.description,
     images: ['/og-image.png'],
   },
   appleWebApp: {
     capable: true,
-    title: meta.title,
+    title: baseMeta.title,
     statusBarStyle: 'default',
     startupImage: '/apple-touch-icon.png'
   },
