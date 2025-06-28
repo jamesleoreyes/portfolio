@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className='border-t bg-background'>
-      <div className='mx-auto max-w-screen-xl px-4 py-12'>
+      <div className='mx-auto max-w-screen-xl py-8'>
         <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
           {/* Logo and Description */}
           <div className='lg:col-span-1 text-center lg:text-left'>
