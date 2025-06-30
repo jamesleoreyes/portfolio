@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(urlConfig.app),
   title: {
     default: `${baseMeta.fullTitle}`,
-    template: `${baseMeta.title} | %s`,
+    template: `%s | ${baseMeta.title}`,
   },
   description: baseMeta.description,
   applicationName: `${baseMeta.fullTitle}`,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: urlConfig.app,
     title: {
       default: `${baseMeta.fullTitle}`,
-      template: `${baseMeta.title} | %s`,
+      template: `%s | ${baseMeta.title}`,
     },
     description: baseMeta.description,
     siteName: `${baseMeta.fullTitle}`,
@@ -59,10 +59,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: {
       default: `${baseMeta.fullTitle}`,
-      template: `${baseMeta.title} | %s`,
+      template: `%s | ${baseMeta.title}`,
     },
     description: baseMeta.description,
     images: ['/og-image.png'],
+    creator: '@jamesleoreyes',
   },
   appleWebApp: {
     capable: true,
