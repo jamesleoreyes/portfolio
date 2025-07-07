@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { TechnicalSkills } from "@/app/about/page";
+import type { TechnicalSkills } from "@/app/about/data";
 
 export default function TechSkills({ techSkills }: { techSkills: TechnicalSkills }) {
   return (
