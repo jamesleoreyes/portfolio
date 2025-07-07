@@ -20,8 +20,8 @@ const urlConfig: UrlConfig = {
 
 const baseMeta: Meta = {
   title: 'James Reyes',
-  fullTitle: 'James Reyes | Product-Focused Engineer',
-  description: 'Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
+  fullTitle: 'James Reyes | Full-Stack Product Engineer',
+  description: 'Full-Stack Product Engineer building useful, purposeful apps and learning everything along the way.',
   siteName: 'James Reyes',
   creator: 'James Reyes'
 }

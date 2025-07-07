@@ -133,7 +133,7 @@ export default function About() {
               About Me
             </h1>
             <p className='text-xl text-muted-foreground max-w-2xl'>
-              Hi, I&apos;m James Reyes, a Product-Focused Engineer who loves building meaningful software that makes a difference.
+              Hi, I&apos;m James Reyes, a Full-Stack Product Engineer who loves building meaningful software that makes a difference.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ export default function About() {
               appreciation for clean code, thoughtful architecture, and user-centered design.
             </p>
             <p>
-              As a Product-Focused Engineer, I bridge the gap between technical implementation and business value.
+              As a Full-Stack Product Engineer, I bridge the gap between technical implementation and business value.
               I believe that the best software is not just technically sound, but also intuitive, accessible,
               and truly useful to the people who use it.
             </p>

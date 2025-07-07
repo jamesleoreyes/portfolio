@@ -13,7 +13,7 @@ export default function manifest(): MetadataRoute.Manifest {
       'portfolio',
       'developer',
       'software engineer',
-      'product-focused engineer',
+      'full stack product engineer',
       'web developer',
       'mobile developer',
       'full stack developer',

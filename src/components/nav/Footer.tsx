@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </Link>
             <p className='mt-4 text-sm text-muted-foreground max-w-xs mx-auto lg:mx-0'>
-              Full Stack Product Engineer building useful, purposeful apps and learning everything along the way.
+              Full-Stack Product Engineer building useful, purposeful apps and learning everything along the way.
             </p>
 
             {/* Social Links */}

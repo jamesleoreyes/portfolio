@@ -3,7 +3,7 @@ import { Button, SocialLinks, WordRotate } from '@/components';
 import Image from 'next/image';
 
 const words = [
-  'Product-Focused Engineer',
+  'Full-Stack Product Engineer',
   'UX-Driven Problem Solver',
   'Cross-Functional Translator',
   'Lifelong Learner',
