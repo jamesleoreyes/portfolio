@@ -19,6 +19,9 @@ export function DynamicViewport() {
 
       viewportMeta.setAttribute('content', viewportContent);
     }
+
+    // Add data attribute to body for PWA detection in CSS
+    document.body.dataset['pwa'] = isPWA ? 'true' : 'false';
   }, []);
 
   return null;

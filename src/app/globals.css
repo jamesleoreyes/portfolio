@@ -127,6 +127,16 @@
   body::selection {
     @apply bg-foreground text-background;
   }
+
+  body[data-pwa="true"] {
+    /* Add padding for the home indicator in PWA mode */
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Ensure the footer respects the safe area inset in PWA mode */
+  body[data-pwa="true"] .vaul-drawer {
+    padding-bottom: max(env(safe-area-inset-bottom), 16px);
+  }
 }
 
 .adaptive-icon img {
