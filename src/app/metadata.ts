@@ -64,7 +64,8 @@ const metadata: Metadata = {
   icons: {
     icon: [
       { url: assets.branding.favicon, sizes: '32x32', type: 'image/x-icon' },
-      { url: assets.branding.icon, type: 'image/svg+xml' },
+      { url: assets.branding.iconInverted, type: 'image/svg+xml', media: '(prefers-color-scheme: light)' },
+      { url: assets.branding.icon, type: 'image/svg+xml', media: '(prefers-color-scheme: dark)' },
     ],
     apple: [
       { url: assets.branding.appleTouchIcon, sizes: '180x180', type: 'image/png' },
@@ -72,8 +73,15 @@ const metadata: Metadata = {
     other: [
       {
         rel: 'icon',
+        url: assets.branding.iconInverted,
+        type: 'image/svg+xml',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        rel: 'icon',
         url: assets.branding.icon,
         type: 'image/svg+xml',
+        media: '(prefers-color-scheme: dark)',
       },
     ],
   },

@@ -2,8 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import './globals.css';
-import { DynamicThemeColor } from '@/components';
-import { DynamicViewport } from '@/components';
+import { DynamicFavicon, DynamicThemeColor, DynamicViewport } from '@/components';
 import { NavBar } from '@/components';
 import { Footer } from '@/components';
 import Head from './head';
@@ -33,6 +32,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <DynamicFavicon />
           <DynamicThemeColor />
           <DynamicViewport />
           <div className='flex-1 hidden min-[151px]:flex flex-col'>

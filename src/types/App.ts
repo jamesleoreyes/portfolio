@@ -41,6 +41,10 @@ interface Assets {
      * @url `/branding/icon.svg`
      */
     icon: string;
+    /**
+     * @url `/branding/icon-inverted.svg`
+     */
+    iconInverted: string;
   };
   downloads: {
     /**

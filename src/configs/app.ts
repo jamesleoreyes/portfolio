@@ -35,6 +35,7 @@ const assets: Assets = {
     iconMaskable: '/branding/icon-maskable.png',
     iconTransparent: '/branding/icon-transparent.svg',
     icon: '/branding/icon.svg',
+    iconInverted: '/branding/icon-inverted.svg',
   },
   downloads: {
     resume: '/downloads/resume/James-Reyes-Resume.pdf',
