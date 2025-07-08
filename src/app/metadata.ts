@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { baseMeta, urlConfig } from "@/configs/app";
+import { assets, baseMeta, urlConfig } from "@/configs/app";
 
 const metadata: Metadata = {
   metadataBase: new URL(urlConfig.app),
@@ -35,7 +35,7 @@ const metadata: Metadata = {
     siteName: `${baseMeta.fullTitle}`,
     images: [
       {
-        url: '/og-image.png',
+        url: assets.images.og,
         width: 1200,
         height: 630,
         alt: `${baseMeta.fullTitle}`,
@@ -49,30 +49,30 @@ const metadata: Metadata = {
       template: `%s | ${baseMeta.siteName}`,
     },
     description: baseMeta.description,
-    images: ['/og-image.png'],
+    images: [assets.images.og],
     creator: '@jamesleoreyes',
   },
   appleWebApp: {
     capable: true,
     title: baseMeta.title,
     statusBarStyle: 'default',
-    startupImage: '/apple-touch-icon.png'
+    startupImage: assets.branding.appleTouchIcon
   },
   alternates: {
     canonical: urlConfig.app,
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: assets.branding.favicon, sizes: '32x32', type: 'image/x-icon' },
+      { url: assets.branding.icon, type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: assets.branding.appleTouchIcon, sizes: '180x180', type: 'image/png' },
     ],
     other: [
       {
         rel: 'icon',
-        url: '/icon.svg',
+        url: assets.branding.icon,
         type: 'image/svg+xml',
       },
     ],

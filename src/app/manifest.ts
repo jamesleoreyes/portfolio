@@ -1,4 +1,4 @@
-import { baseMeta } from '@/configs/app'
+import { assets, baseMeta } from '@/configs/app'
 import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -33,17 +33,17 @@ export default function manifest(): MetadataRoute.Manifest {
     orientation: 'portrait',
     icons: [
       {
-        src: '/icon-192.png',
+        src: assets.branding.icon192,
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: '/icon-512.png',
+        src: assets.branding.icon512,
         sizes: '512x512',
         type: 'image/png',
       },
       {
-        src: '/icon-maskable.png',
+        src: assets.branding.iconMaskable,
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',

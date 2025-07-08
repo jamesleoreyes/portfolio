@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { assets } from '@/configs/app';
 import { navContent, navWork } from '@/configs/nav';
 import { ThemeToggle, SocialLinks } from '@/components';
 import { AdaptiveIcon } from '@/components/icons';
@@ -15,7 +16,7 @@ export default function Footer() {
           <div className='lg:col-span-1 text-center lg:text-left'>
             <Link href='/' className='inline-block'>
               <AdaptiveIcon
-                src='/media/icon-transparent.svg'
+                src={assets.branding.iconTransparent}
                 alt='James Reyes Transparent Logo'
                 width={40}
                 height={40}

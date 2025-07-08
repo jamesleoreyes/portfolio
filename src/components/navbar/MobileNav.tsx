@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Drawer } from 'vaul';
 import { nav } from '@/configs/nav';
+import { assets } from '@/configs/app';
 import { Button, ThemeToggle } from '@/components';
 import { AdaptiveIcon } from '@/components/icons';
 
@@ -34,7 +35,7 @@ export default function MobileNav({ className }: MobileNavProps) {
             {/* Header */}
             <Drawer.Title className="font-medium mb-4 flex items-center justify-center">
               <AdaptiveIcon
-                src='/media/icon-transparent.svg'
+                src={assets.branding.iconTransparent}
                 alt='logo'
                 width={100}
                 height={100}
@@ -44,7 +45,7 @@ export default function MobileNav({ className }: MobileNavProps) {
 
             {/* Navigation Links */}
             <div className="flex flex-col gap-2 mb-8 text-left">
-              {nav.filter(page => page.href !== '/resume').map((page) => (
+              {nav.map((page) => (
                 <Drawer.Close key={page.label} asChild>
                   <Button
                     asChild

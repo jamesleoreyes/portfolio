@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { assets } from '@/configs/app';
 import { Button, SocialLinks, WordRotate } from '@/components';
 import Image from 'next/image';
 
@@ -16,7 +17,7 @@ export default function Home() {
     <div className='flex items-center justify-center px-4 py-8'>
       <main className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center space-y-8 lg:space-y-0'>
         <Image
-          src='/media/me.jpg'
+          src={assets.images.profile.me}
           alt='Me in front of my desk'
           width={400}
           height={400}
@@ -69,7 +70,7 @@ export default function Home() {
                 View My Projects
               </Link>
             </Button>
-            
+
             <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
               <Link href='/contact'>
                 Get In Touch

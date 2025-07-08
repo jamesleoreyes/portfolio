@@ -1,4 +1,4 @@
-import { urlConfig } from "@/configs/app";
+import { assets, urlConfig } from "@/configs/app";
 
 
 export default function Head() {
@@ -12,7 +12,7 @@ export default function Head() {
             '@type': 'Person',
             'name': 'James Reyes',
             'url': urlConfig.app,
-            'image': `${urlConfig.app}/og-image.png`,
+            'image': `${urlConfig.app}${assets.images.og}`,
             'sameAs': [
               'https://github.com/jamesleoreyes',
               'https://linkedin.com/in/jamesleoreyes'

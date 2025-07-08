@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { assets } from '@/configs/app';
 import { nav } from '@/configs/nav';
 import { cn } from '@/lib/utils';
 import { Button, MobileNav, ThemeToggle } from '@/components';
@@ -18,7 +19,7 @@ export default function NavBar() {
         {/* Logo */}
         <Link href='/'>
           <AdaptiveIcon
-            src='/media/icon-transparent.svg'
+            src={assets.branding.iconTransparent}
             alt='logo'
             width={100}
             height={100}

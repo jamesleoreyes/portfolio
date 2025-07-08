@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { assets } from "@/configs/app";
 
 export default function HeroSection() {
   return (
     <section>
       <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center lg:text-left space-y-8 lg:space-y-0' >
         <Image
-          src='/media/me.jpg'
+          src={assets.images.profile.me}
           alt='James Reyes'
           width={300}
           height={300}

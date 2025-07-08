@@ -1,4 +1,4 @@
-import type { Meta } from '@/types/App';
+import type { Assets, Meta } from '@/types/App';
 import { UrlConfig } from '@/types/App';
 
 const urlConfig: UrlConfig = {
@@ -26,4 +26,28 @@ const baseMeta: Meta = {
   creator: 'James Reyes'
 }
 
-export { urlConfig, baseMeta };
+const assets: Assets = {
+  branding: {
+    appleTouchIcon: '/branding/apple-touch-icon.png',
+    favicon: '/branding/favicon.ico',
+    icon192: '/branding/icon-192.png',
+    icon512: '/branding/icon-512.png',
+    iconMaskable: '/branding/icon-maskable.png',
+    iconTransparent: '/branding/icon-transparent.svg',
+    icon: '/branding/icon.svg',
+  },
+  downloads: {
+    resume: '/downloads/resume/James-Reyes-Resume.pdf',
+  },
+  images: {
+    logos: {
+      wide: '/images/logos/jlr.png',
+    },
+    profile: {
+      me: '/images/profile/me.jpg',
+    },
+    og: '/images/og-image.png',
+  }
+}
+
+export { urlConfig, baseMeta, assets };
