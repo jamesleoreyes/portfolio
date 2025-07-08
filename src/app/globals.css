@@ -128,17 +128,19 @@
     @apply bg-foreground text-background;
   }
 
+  /* PWA-specific styles for safe area handling */
   body[data-pwa="true"] {
     /* Add padding for the home indicator in PWA mode */
     padding-bottom: env(safe-area-inset-bottom);
   }
 
-  /* Ensure the footer respects the safe area inset in PWA mode */
-  body[data-pwa="true"] .vaul-drawer {
-    padding-bottom: max(env(safe-area-inset-bottom), 16px);
+  /* Target the vaul drawer content specifically in PWA mode */
+  body[data-pwa="true"] [data-vaul-drawer] {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
 
 .adaptive-icon img {
-  filter: brightness(var(--icon-brightness, 1)) saturate(var(--icon-saturate, 1));
+  filter: brightness(var(--icon-brightness, 1))
+    saturate(var(--icon-saturate, 1));
 }
