@@ -38,7 +38,7 @@ export function SocialLinks() {
             aria-label={`Follow on ${link.name}`}
             title={`Follow on ${link.name}`}
             variant='ghost'
-            size='sm'
+            size='icon'
             asChild
             className='h-9 w-9 p-0'
           >
@@ -46,7 +46,6 @@ export function SocialLinks() {
               href={link.href}
               target='_blank'
               rel='noopener noreferrer'
-              aria-label={`Follow on ${link.name}`}
             >
               <IconComponent className='h-4 w-4' />
             </Link>
