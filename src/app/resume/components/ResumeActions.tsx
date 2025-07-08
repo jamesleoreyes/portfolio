@@ -14,14 +14,14 @@ export default function ResumeActions() {
           text: 'Check out James Reyes\' professional resume',
           url: window.location.href,
         });
-      } catch (err) {
+      } catch {
         toast.error('Error sharing');
       }
     } else {
       try {
         await navigator.clipboard.writeText(window.location.href);
         toast.success('URL copied to clipboard');
-      } catch (err) {
+      } catch {
         toast.error('Failed to copy URL');
       }
     }
