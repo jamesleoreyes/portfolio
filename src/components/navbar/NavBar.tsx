@@ -13,7 +13,7 @@ export default function NavBar() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <nav className='flex justify-center items-center p-4 sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b'>
+    <nav className='flex justify-center items-center p-4 sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b'>
       <div className='flex justify-between items-center max-w-screen-xl w-full'>
         {/* Logo */}
         <Link href='/'>
