@@ -1,6 +1,6 @@
 # James Reyes | Portfolio
 
-[![JLR Logo](public/media/jlr.png)](https://jamesleoreyes.com)
+[![JLR Logo](public/images/logos/jlr.png)](https://jamesleoreyes.com)
 
 A modern, responsive portfolio website showcasing my work as a Full-Stack Product Engineer. Built with Next.js 15, TypeScript, and Tailwind CSS with a focus on performance, accessibility, and maintainability.
 
