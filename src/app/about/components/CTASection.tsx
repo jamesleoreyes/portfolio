@@ -12,13 +12,26 @@ export default function CTASection() {
       </p>
 
       <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-        <Button asChild size='lg' className='min-w-[140px]'>
+        <Button
+          asChild
+          size='lg'
+          className='min-w-[140px]'
+          aria-label='View my projects'
+          title='View my projects'
+        >
           <Link href='/projects'>
             View My Work
           </Link>
         </Button>
 
-        <Button asChild size='lg' variant='ghost' className='min-w-[140px]'>
+        <Button
+          asChild
+          size='lg'
+          variant='ghost'
+          className='min-w-[140px]'
+          aria-label='Get in touch with me'
+          title='Get in touch with me'
+        >
           <Link href='/contact'>
             Get In Touch
           </Link>

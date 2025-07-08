@@ -6,15 +6,20 @@ import { usePathname } from 'next/navigation';
 import { assets } from '@/configs/app';
 import { nav } from '@/configs/nav';
 import { cn } from '@/lib/utils';
+import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { Button, MobileNav, ThemeToggle } from '@/components';
 import { AdaptiveIcon } from '@/components/icons';
 
 export default function NavBar() {
   const pathname = usePathname();
+  const scrolled = useScrollPosition();
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <nav className='flex justify-center items-center p-4 sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b'>
+    <nav className={cn(
+      'flex justify-center items-center p-4 sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60',
+      scrolled && 'border-b'
+    )}>
       <div className='flex justify-between items-center max-w-screen-xl w-full'>
         {/* Logo */}
         <Link href='/'>
@@ -32,6 +37,8 @@ export default function NavBar() {
           {nav.filter(page => page.href !== '/resume').map((page) => (
             <Button
               key={page.label}
+              aria-label={`Go to ${page.label} page`}
+              title={`Go to ${page.label} page`}
               asChild
               disabled={page.disabled}
               variant='ghost'

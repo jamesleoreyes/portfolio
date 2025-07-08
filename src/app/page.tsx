@@ -59,21 +59,39 @@ export default function Home() {
 
           {/* Call to Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-4 justify-start items-start'>
-            <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
+            <Button
+              asChild
+              size='lg'
+              className='min-w-[140px] w-full sm:w-auto'
+              aria-label='Go to About page'
+              title='Go to About page'
+            >
               <Link href='/about'>
                 About Me
               </Link>
             </Button>
 
-            <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
+            <Button
+              asChild
+              size='lg'
+              className='min-w-[140px] w-full sm:w-auto'
+              aria-label='View my projects'
+              title='View my projects'
+            >
               <Link href='/projects'>
                 View My Projects
               </Link>
             </Button>
 
-            <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
-              <Link href='/contact'>
-                Get In Touch
+            <Button
+              asChild
+              size='lg'
+              className='min-w-[140px] w-full sm:w-auto'
+              aria-label='Go to my personal blog'
+              title='Go to my personal blog'
+            >
+              <Link href='/blog'>
+                My Blog
               </Link>
             </Button>
           </div>
@@ -87,12 +105,22 @@ export default function Home() {
           <div className='text-sm text-muted-foreground text-left'>
             <p>
               Explore my{' '}
-              <Link href='/resume' className='underline hover:text-foreground transition-colors'>
+              <Link
+                href='/resume'
+                className='underline hover:text-foreground transition-colors'
+                aria-label='View my resume'
+                title='View my resume'
+              >
                 resume
               </Link>
-              {' '}or check out my latest{' '}
-              <Link href='/projects' className='underline hover:text-foreground transition-colors'>
-                projects
+              {' '}or reach out to me{' '}
+              <Link
+                href='/contact'
+                className='underline hover:text-foreground transition-colors'
+                aria-label='Go to Contact page'
+                title='Go to Contact page'
+              >
+                here
               </Link>
             </p>
           </div>

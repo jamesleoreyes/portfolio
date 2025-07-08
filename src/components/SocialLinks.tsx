@@ -35,6 +35,8 @@ export function SocialLinks() {
         return (
           <Button
             key={link.name}
+            aria-label={`Follow on ${link.name}`}
+            title={`Follow on ${link.name}`}
             variant='ghost'
             size='sm'
             asChild

@@ -29,19 +29,37 @@ export default function NotFound() {
 
         {/* Call to Action Buttons */}
         <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-          <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
+          <Button
+            asChild
+            size='lg'
+            className='min-w-[140px] w-full sm:w-auto'
+            aria-label='Go to home page'
+            title='Go to home page'
+          >
             <Link href='/'>
               Go Home
             </Link>
           </Button>
 
-          <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
+          <Button
+            asChild
+            size='lg'
+            className='min-w-[140px] w-full sm:w-auto'
+            aria-label='View my projects'
+            title='View my projects'
+          >
             <Link href='/projects'>
               View Projects
             </Link>
           </Button>
 
-          <Button asChild size='lg' className='min-w-[140px] w-full sm:w-auto'>
+          <Button
+            asChild
+            size='lg'
+            className='min-w-[140px] w-full sm:w-auto'
+            aria-label='Contact me'
+            title='Contact me'
+          >
             <Link href='/contact'>
               Contact Me
             </Link>
@@ -52,15 +70,30 @@ export default function NotFound() {
         <div className='text-sm text-muted-foreground'>
           <p>
             Or try one of these pages:{' '}
-            <Link href='/about' className='underline hover:text-foreground transition-colors'>
+            <Link
+              href='/about'
+              className='underline hover:text-foreground transition-colors'
+              aria-label='Go to about page'
+              title='Go to about page'
+            >
               about
             </Link>
             {', '}
-            <Link href='/experience' className='underline hover:text-foreground transition-colors'>
+            <Link
+              href='/experience'
+              className='underline hover:text-foreground transition-colors'
+              aria-label='Go to experience page'
+              title='Go to experience page'
+            >
               experience
             </Link>
             {', or '}
-            <Link href='/resume' className='underline hover:text-foreground transition-colors'>
+            <Link
+              href='/resume'
+              className='underline hover:text-foreground transition-colors'
+              aria-label='View my resume'
+              title='View my resume'
+            >
               resume
             </Link>
           </p>
