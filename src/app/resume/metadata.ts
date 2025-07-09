@@ -28,7 +28,7 @@ const metadata: Metadata = {
     type: 'profile',
     locale: 'en_US',
     url: `${urlConfig.app}/resume`,
-    title: `${meta.title} | ${baseMeta.siteName}`,
+    title: meta.title,
     description: meta.description,
     siteName: baseMeta.fullTitle,
     images: [
@@ -48,7 +48,7 @@ const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${meta.title} | ${baseMeta.siteName}`,
+    title: meta.title,
     description: meta.description,
     images: [assets.images.og],
     creator: '@jamesleoreyes',
