@@ -8,7 +8,7 @@ export default function CoreCompetencies() {
         {resumeData.coreCompetencies.map((competency, index) => (
           <div
             key={index}
-            className="bg-muted/50 px-3 py-2 text-sm font-medium text-center flex items-center justify-center"
+            className="bg-accent px-3 py-2 text-sm font-medium text-center flex items-center justify-center"
           >
             {competency}
           </div>

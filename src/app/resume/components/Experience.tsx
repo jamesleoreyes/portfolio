@@ -36,7 +36,7 @@ function ExperienceItem({ experience }: { experience: typeof resumeData.experien
             {experience.technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="bg-secondary text-secondary-foreground px-2 py-1 text-sm"
+                className="bg-accent text-secondary-foreground px-2 py-1 text-sm"
               >
                 {tech}
               </span>

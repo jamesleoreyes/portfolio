@@ -5,10 +5,10 @@ import { resumeData } from "../data";
 export default function Certifications() {
   return (
     <section>
-      <h2 className="text-2xl font-semibold mb-6 text-primary border-b border-primary/20 pb-2">Certifications</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-primary border-b pb-2">Certifications</h2>
       <div className="grid gap-4 md:grid-cols-2">
         {resumeData.certifications.map((cert, index) => (
-          <div key={index} className="border p-4 space-y-2 bg-muted-foreground/10">
+          <div key={index} className="border border-foreground/10 p-4 space-y-2 bg-accent">
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="font-semibold">{cert.name}</h3>

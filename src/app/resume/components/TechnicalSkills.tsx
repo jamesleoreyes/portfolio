@@ -12,7 +12,7 @@ function SkillCategory({ title, skills }: { title: string; skills: Array<{ name:
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-muted/50 hover:bg-muted px-3 py-2 transition-colors group"
+            className="flex items-center gap-2 bg-accent hover:bg-accent/80 hover:shadow-md px-3 py-2 transition-all duration-200 group"
             title={name}
           >
             <IconComponent className="w-5 h-5 group-hover:scale-110 transition-transform" />

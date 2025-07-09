@@ -65,6 +65,15 @@ interface Assets {
        */
       me: string;
     },
+    screenshots: {
+      /**
+       * @url `/images/screenshots/portfolio-desktop.png`
+       */
+      portfolioDesktop: {
+        light: string;
+        dark: string;
+      };
+    },
     /**
      * @url /images/og-image.png
      */

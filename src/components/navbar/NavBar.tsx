@@ -34,7 +34,7 @@ export default function NavBar() {
 
         {/* Desktop Navigation */}
         <div className='hidden md:flex items-center gap-2'>
-          {nav.filter(page => page.href !== '/resume').map((page) => (
+          {nav.map((page) => (
             <Button
               key={page.label}
               aria-label={`Go to ${page.label} page`}

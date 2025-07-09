@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function MicrosoftAzure(props: SVGProps<SVGSVGElement>) {
+export default function AzureIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 96 96"

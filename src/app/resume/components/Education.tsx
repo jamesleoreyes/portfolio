@@ -7,13 +7,13 @@ export default function Education() {
       <div className="space-y-6">
         {resumeData.education.map((edu, index) => (
           <div key={index} className="border-l-4 border-primary/20 pl-6 relative">
-            <div className="absolute -left-2 top-0 w-4 h-4 bg-primary"></div>
+            <div className="absolute -left-2.5 top-0 w-4 h-4 bg-primary"></div>
 
             <div className="space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
                   <h3 className="text-lg font-semibold">{edu.degree} in {edu.field}</h3>
-                  <p className="text-primary font-medium">{edu.institution}</p>
+                  <p className="text-muted-foreground font-medium">{edu.institution}</p>
                 </div>
                 <div className="text-sm text-muted-foreground">
                   <p>{edu.startDate} - {edu.endDate}</p>

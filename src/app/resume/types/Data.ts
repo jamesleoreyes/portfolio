@@ -17,6 +17,10 @@ interface ExperienceItem {
 interface ProjectItem {
   name: string;
   description: string;
+  image?: {
+    light: string;
+    dark: string;
+  };
   technologies: string[];
   highlights: string[];
   url?: string;

@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function Railway(props: SVGProps<SVGSVGElement>) {
+export default function RailwayIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="none"

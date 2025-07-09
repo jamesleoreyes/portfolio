@@ -1,11 +1,17 @@
+'use client';
+
 import Link from "next/link";
-import { resumeData } from "../data";
+import { resumeData, type ProjectItem } from "../data";
 import { ExternalLink } from "lucide-react";
 import { GitHub } from "@/components/icons";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
-function ProjectCard({ project }: { project: typeof resumeData.projects[0] }) {
+function ProjectCard({ project }: { project: ProjectItem }) {
+  const { theme } = useTheme();
+
   return (
-    <div className="border p-6 space-y-4 hover:shadow-md transition-shadow">
+    <div className="border border-foreground/10 bg-accent p-6 space-y-4 hover:shadow-md transition-shadow">
       <div className="flex items-start justify-between">
         <h3 className="text-lg font-semibold">{project.name}</h3>
         <div className="flex gap-2">
@@ -32,6 +38,20 @@ function ProjectCard({ project }: { project: typeof resumeData.projects[0] }) {
         </div>
       </div>
 
+      {project.image && (
+        <div className="flex items-center justify-center">
+          <Link href={project.image[theme === 'dark' ? 'dark' : 'light']} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={project.image[theme === 'dark' ? 'dark' : 'light']}
+              alt={project.name}
+              title={project.name}
+              width={1000}
+              height={1000}
+            />
+          </Link>
+        </div>
+      )}
+
       <p className="text-muted-foreground text-sm leading-relaxed">
         {project.description}
       </p>
@@ -51,7 +71,7 @@ function ProjectCard({ project }: { project: typeof resumeData.projects[0] }) {
           {project.technologies.map((tech, idx) => (
             <span
               key={idx}
-              className="bg-muted text-muted-foreground px-2 py-1 text-xs"
+              className="bg-popover text-secondary-foreground px-2 py-1 text-xs"
             >
               {tech}
             </span>

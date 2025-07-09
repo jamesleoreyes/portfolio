@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function Vercel(props: SVGProps<SVGSVGElement>) {
+export default function VercelIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 256 222"

@@ -1,3 +1,4 @@
+import { assets } from '@/configs/app';
 import * as Icons from '@/components/icons';
 import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from './types/Data';
 
@@ -79,6 +80,10 @@ const resumeData: ResumeData = {
     {
       name: 'Portfolio Website',
       description: 'Personal portfolio site showcasing projects, experience, and backend-to-full stack journey. Built with modern web technologies and enterprise-grade features.',
+      image: {
+        light: assets.images.screenshots.portfolioDesktop.light,
+        dark: assets.images.screenshots.portfolioDesktop.dark,
+      },
       technologies: ['Next.js 15', 'React 19', 'TypeScript', 'shadcn/ui', 'Tailwind CSS', 'Vercel'],
       highlights: [
         'Server-side rendering and static generation for optimal performance and SEO',
@@ -141,6 +146,8 @@ const resumeData: ResumeData = {
     ],
     devops: [
       { name: 'Git', icon: Icons.Git, url: 'https://git-scm.com/' },
+      { name: 'GitHub', icon: Icons.GitHub, url: 'https://github.com/' },
+      { name: 'GitLab', icon: Icons.GitLab, url: 'https://gitlab.com/' },
       { name: 'Postman', icon: Icons.Postman, url: 'https://www.postman.com/' },
       { name: 'Sentry', icon: Icons.Sentry, url: 'https://sentry.io/' },
     ],
@@ -158,8 +165,6 @@ const resumeData: ResumeData = {
     'Cloud Infrastructure',
     'DevOps & CI/CD',
     'REST APIs',
-    'Microservices Architecture',
-    'Database Design',
     'Performance Optimization',
     'User Experience Design',
     'Technical Leadership',

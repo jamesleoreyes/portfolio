@@ -47,6 +47,12 @@ const assets: Assets = {
     profile: {
       me: '/images/profile/me.jpg',
     },
+    screenshots: {
+      portfolioDesktop: {
+        light: '/images/screenshots/portfolio-desktop-light.png',
+        dark: '/images/screenshots/portfolio-desktop-dark.png',
+      },
+    },
     og: '/images/og-image.png',
   }
 }
