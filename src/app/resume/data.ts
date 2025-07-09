@@ -1,5 +1,5 @@
 import * as Icons from '@/components/icons';
-import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from './types/data';
+import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from './types/Data';
 
 const resumeData: ResumeData = {
   personalInfo: {
