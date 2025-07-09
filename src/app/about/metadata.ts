@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { baseMeta, urlConfig } from "@/configs/app";
+import { assets, baseMeta, urlConfig } from "@/configs/app";
 import type { Meta } from "@/types/App";
 
 const meta: Meta = {
@@ -8,8 +8,10 @@ const meta: Meta = {
 }
 
 const metadata: Metadata = {
+  metadataBase: new URL(urlConfig.app),
   title: meta.title,
   description: meta.description,
+  applicationName: baseMeta.fullTitle,
   authors: [{ name: baseMeta.creator, url: urlConfig.app }],
   creator: baseMeta.creator,
   publisher: baseMeta.creator,
@@ -25,7 +27,7 @@ const metadata: Metadata = {
     },
   },
   openGraph: {
-    type: 'website',
+    type: 'profile',
     locale: 'en_US',
     url: `${urlConfig.app}/about`,
     title: meta.title,
@@ -33,16 +35,16 @@ const metadata: Metadata = {
     siteName: baseMeta.fullTitle,
     images: [
       {
-        url: '/og-image.png',
+        url: assets.images.og,
         width: 1200,
         height: 630,
-        alt: baseMeta.fullTitle,
+        alt: `${meta.title} - ${baseMeta.fullTitle}`,
       },
       {
-        url: '/media/me.jpg',
-        width: 300,
-        height: 300,
-        alt: baseMeta.fullTitle,
+        url: assets.images.profile.me,
+        width: 400,
+        height: 400,
+        alt: 'James Reyes - Professional Photo',
       },
     ],
   },
@@ -50,11 +52,21 @@ const metadata: Metadata = {
     card: 'summary_large_image',
     title: meta.title,
     description: meta.description,
-    images: ['/og-image.png'],
+    images: [assets.images.og],
     creator: '@jamesleoreyes',
+  },
+  appleWebApp: {
+    capable: true,
+    title: meta.title,
+    statusBarStyle: 'default',
   },
   alternates: {
     canonical: `${urlConfig.app}/about`,
+  },
+  other: {
+    'profile:first_name': 'James',
+    'profile:last_name': 'Reyes',
+    'profile:username': 'jamesreyes',
   },
 };
 

@@ -8,8 +8,10 @@ const meta: Meta = {
 }
 
 const metadata: Metadata = {
+  metadataBase: new URL(urlConfig.app),
   title: meta.title,
   description: meta.description,
+  applicationName: baseMeta.fullTitle,
   authors: [{ name: baseMeta.creator, url: urlConfig.app }],
   creator: baseMeta.creator,
   publisher: baseMeta.creator,
@@ -36,7 +38,7 @@ const metadata: Metadata = {
         url: assets.images.og,
         width: 1200,
         height: 630,
-        alt: `${baseMeta.fullTitle} - Resume`,
+        alt: `${meta.title} - ${baseMeta.fullTitle}`,
       },
       {
         url: assets.images.profile.me,
@@ -52,6 +54,11 @@ const metadata: Metadata = {
     description: meta.description,
     images: [assets.images.og],
     creator: '@jamesleoreyes',
+  },
+  appleWebApp: {
+    capable: true,
+    title: meta.title,
+    statusBarStyle: 'default',
   },
   alternates: {
     canonical: `${urlConfig.app}/resume`,

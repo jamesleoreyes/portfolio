@@ -1,28 +1,40 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { assets } from '@/configs/app';
 
 export function DynamicFavicon() {
   const { resolvedTheme } = useTheme();
+  const [currentTheme, setCurrentTheme] = useState<string | undefined>();
 
   useEffect(() => {
-    const existingFavicons = document.querySelectorAll('link[rel*="icon"]');
-    existingFavicons.forEach(favicon => favicon.remove());
-    const link = document.createElement('link');
-    link.rel = 'icon';
+    // Only update if theme actually changed
+    if (!resolvedTheme || resolvedTheme === currentTheme) return;
 
-    // Set the appropriate icon based on theme
-    if (resolvedTheme === 'dark') {
-      link.href = assets.branding.icon;
-    } else {
-      link.href = assets.branding.iconInverted;
+    const iconUrl = resolvedTheme === 'dark' ? assets.branding.icon : assets.branding.iconInverted;
+
+    // Find existing dynamic favicon or create one
+    let favicon = document.querySelector('link[data-dynamic-favicon]') as HTMLLinkElement;
+
+    if (!favicon) {
+      // Remove any existing SVG favicons first (only on first run)
+      const existingSvg = document.querySelectorAll('link[rel*="icon"][type="image/svg+xml"]');
+      existingSvg.forEach(el => el.remove());
+
+      // Create new dynamic favicon
+      favicon = document.createElement('link');
+      favicon.rel = 'icon';
+      favicon.type = 'image/svg+xml';
+      favicon.setAttribute('data-dynamic-favicon', 'true');
+      document.head.appendChild(favicon);
     }
 
-    // Add the new favicon to the document head
-    document.head.appendChild(link);
-  }, [resolvedTheme]);
+    // Update href
+    favicon.href = iconUrl;
+    setCurrentTheme(resolvedTheme);
+
+  }, [resolvedTheme, currentTheme]);
 
   return null;
 } 
