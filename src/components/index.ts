@@ -12,4 +12,5 @@ export { WordRotate } from './magicui/WordRotate';
 // Utility Components
 export { DynamicThemeColor } from './theme/DynamicThemeColor';
 export { DynamicViewport } from './DynamicViewport';
-export { DynamicFavicon } from './theme/DynamicFavicon'; 
+export { DynamicFavicon } from './theme/DynamicFavicon';
+export { default as ProfileImage } from './ProfileImage'; 

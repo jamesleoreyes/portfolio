@@ -4,6 +4,14 @@ import { assets, urlConfig } from "@/configs/app";
 export default function Head() {
   return (
     <head>
+      <link
+        rel="preload"
+        href={assets.images.profile.me}
+        as="image"
+        type="image/jpeg"
+        fetchPriority="high"
+      />
+
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
