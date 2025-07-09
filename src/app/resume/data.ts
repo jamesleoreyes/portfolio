@@ -121,7 +121,17 @@ const resumeData: ResumeData = {
       name: 'Full-Stack Engineer',
       issuer: 'Codecademy',
       date: 'In Progress',
-    }
+    },
+    {
+      name: 'Front-End Engineer',
+      issuer: 'Codecademy',
+      date: 'In Progress',
+    },
+    {
+      name: 'Back-End Engineer',
+      issuer: 'Codecademy',
+      date: 'In Progress',
+    },
   ],
   skills: {
     languages: [
