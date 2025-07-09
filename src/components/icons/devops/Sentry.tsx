@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function Sentry(props: SVGProps<SVGSVGElement>) {
+export default function SentryIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

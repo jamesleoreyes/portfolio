@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function Flask(props: SVGProps<SVGSVGElement>) {
+export default function FlaskIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="currentColor"

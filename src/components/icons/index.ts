@@ -29,6 +29,7 @@ export { default as Supabase } from './backend/Supabase'
 
 // DevOps icons
 export { default as Git } from './devops/Git'
+export { default as GitLab } from './devops/GitLab'
 export { default as Postman } from './devops/Postman'
 export { default as Sentry } from './devops/Sentry'
 

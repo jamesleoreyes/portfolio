@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import { Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
+import { Toaster } from "@/components/ui/sonner"
 import './globals.css';
 import { DynamicFavicon, DynamicThemeColor, DynamicViewport } from '@/components';
 import { NavBar } from '@/components';
@@ -42,6 +43,13 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
+          <Toaster
+            richColors
+            closeButton
+            visibleToasts={5}
+            duration={5000}
+            position='top-center'
+          />
           <Analytics />
           <div className='flex flex-col justify-center items-center text-center min-h-screen min-[151px]:hidden'>
             <p className='text-2xl'>🤔</p>

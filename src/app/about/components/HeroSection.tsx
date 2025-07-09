@@ -1,17 +1,15 @@
-import Image from "next/image";
-import { assets } from "@/configs/app";
+import ProfileImage from "@/components/ProfileImage";
 
 export default function HeroSection() {
   return (
     <section>
-      <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center lg:text-left space-y-8 lg:space-y-0' >
-        <Image
-          src={assets.images.profile.me}
-          alt='James Reyes'
+      <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center lg:text-left space-y-8 lg:space-y-0'>
+        <ProfileImage
           width={300}
           height={300}
-          className='shadow-2xl'
-          draggable={false}
+          priority={true}
+          sizes='(max-width: 768px) 80vw, (max-width: 1200px) 300px, 300px'
+          alt='James Reyes'
         />
         <div className='space-y-4'>
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight'>

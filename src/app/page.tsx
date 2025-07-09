@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { assets } from '@/configs/app';
 import { Button, SocialLinks, WordRotate } from '@/components';
-import Image from 'next/image';
+import ProfileImage from '@/components/ProfileImage';
 
 const words = [
   'Full-Stack Product Engineer',
@@ -16,13 +15,12 @@ export default function Home() {
   return (
     <div className='flex items-center justify-center px-4 py-8'>
       <main className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center space-y-8 lg:space-y-0'>
-        <Image
-          src={assets.images.profile.me}
-          alt='Me in front of my desk'
+        <ProfileImage
           width={400}
           height={400}
-          className='shadow-2xl'
-          draggable={false}
+          priority={true}
+          sizes='(max-width: 768px) 90vw, (max-width: 1200px) 400px, 400px'
+          alt='Me in front of my desk'
         />
         <div className='space-y-5'>
           {/* Hero Section */}

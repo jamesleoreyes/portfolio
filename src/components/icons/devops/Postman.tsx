@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function Postman(props: SVGProps<SVGSVGElement>) {
+export default function PostmanIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 256 256"

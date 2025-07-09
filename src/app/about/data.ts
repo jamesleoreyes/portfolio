@@ -1,18 +1,5 @@
 import * as Icons from '@/components/icons';
-
-interface IconComponent {
-  name: string;
-  icon: React.ElementType;
-  url: string;
-}
-
-interface TechnicalSkills {
-  languages: IconComponent[],
-  frontend: IconComponent[],
-  backend: IconComponent[],
-  devops: IconComponent[],
-  cloud: IconComponent[],
-}
+import { TechnicalSkills } from './types/Data';
 
 const techSkills: TechnicalSkills = {
   languages: [

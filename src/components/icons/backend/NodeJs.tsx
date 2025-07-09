@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export default function NodeJs(props: SVGProps<SVGSVGElement>) {
+export default function NodeJsIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 256 292"

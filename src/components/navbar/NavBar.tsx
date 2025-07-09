@@ -17,7 +17,7 @@ export default function NavBar() {
 
   return (
     <nav className={cn(
-      'flex justify-center items-center p-4 sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60',
+      'flex justify-center items-center p-4 sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60',
       scrolled && 'border-b'
     )}>
       <div className='flex justify-between items-center max-w-screen-xl w-full'>
@@ -34,7 +34,7 @@ export default function NavBar() {
 
         {/* Desktop Navigation */}
         <div className='hidden md:flex items-center gap-2'>
-          {nav.filter(page => page.href !== '/resume').map((page) => (
+          {nav.map((page) => (
             <Button
               key={page.label}
               aria-label={`Go to ${page.label} page`}
