@@ -14,8 +14,12 @@ export default function ResumeActions() {
           text: 'Check out James Reyes\' professional resume',
           url: window.location.href,
         });
-      } catch {
-        toast.error('Error sharing');
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'AbortError') {
+          toast.warning('Sharing cancelled');
+        } else {
+          toast.error('Failed to share');
+        }
       }
     } else {
       try {
