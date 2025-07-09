@@ -1,14 +1,22 @@
 'use client';
 
 import Link from "next/link";
-import { resumeData, type ProjectItem } from "../data";
-import { ExternalLink } from "lucide-react";
-import { GitHub } from "@/components/icons";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { ExternalLink } from "lucide-react";
+import { resumeData, type ProjectItem } from "../data";
+import { GitHub } from "@/components/icons";
 
 function ProjectCard({ project }: { project: ProjectItem }) {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = mounted ? resolvedTheme : 'light';
 
   return (
     <div className="border border-foreground/10 bg-accent p-6 space-y-4 hover:shadow-md transition-shadow">
@@ -40,9 +48,9 @@ function ProjectCard({ project }: { project: ProjectItem }) {
 
       {project.image && (
         <div className="flex items-center justify-center">
-          <Link href={project.image[theme === 'dark' ? 'dark' : 'light']} target="_blank" rel="noopener noreferrer">
+          <Link href={project.image[currentTheme === 'dark' ? 'dark' : 'light']} target="_blank" rel="noopener noreferrer">
             <Image
-              src={project.image[theme === 'dark' ? 'dark' : 'light']}
+              src={project.image[currentTheme === 'dark' ? 'dark' : 'light']}
               alt={project.name}
               title={project.name}
               width={1000}
