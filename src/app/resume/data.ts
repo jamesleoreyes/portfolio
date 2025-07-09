@@ -1,78 +1,13 @@
 import * as Icons from '@/components/icons';
-
-interface ContactInfo {
-  email: string;
-  website: string;
-}
-
-interface ExperienceItem {
-  company: string;
-  position: string;
-  location: string;
-  startDate: string;
-  endDate: string;
-  description: string;
-  achievements: string[];
-  technologies: string[];
-}
-
-interface ProjectItem {
-  name: string;
-  description: string;
-  technologies: string[];
-  highlights: string[];
-  url?: string;
-  github?: string;
-}
-
-interface EducationItem {
-  institution: string;
-  degree: string;
-  field: string;
-  startDate: string;
-  endDate: string;
-  gpa?: string;
-  honors?: string[];
-}
-
-interface CertificationItem {
-  name: string;
-  issuer: string;
-  date: string;
-  credentialId?: string;
-  url?: string;
-}
-
-interface TechnicalSkills {
-  languages: Array<{ name: string; icon: React.ElementType; url: string }>;
-  frontend: Array<{ name: string; icon: React.ElementType; url: string }>;
-  backend: Array<{ name: string; icon: React.ElementType; url: string }>;
-  devops: Array<{ name: string; icon: React.ElementType; url: string }>;
-  cloud: Array<{ name: string; icon: React.ElementType; url: string }>;
-}
-
-interface ResumeData {
-  personalInfo: {
-    name: string;
-    title: string;
-    summary: string[];
-    contact: ContactInfo;
-  };
-  experience: ExperienceItem[];
-  projects: ProjectItem[];
-  education: EducationItem[];
-  certifications: CertificationItem[];
-  skills: TechnicalSkills;
-  coreCompetencies: string[];
-}
+import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from './types/data';
 
 const resumeData: ResumeData = {
   personalInfo: {
     name: 'James Reyes',
     title: 'Full-Stack Product Engineer',
     summary: [
-      'As a Full-Stack Product Engineer, I’ve cut infrastructure costs by 90%, automated systems processing 100K+ webhooks, and built tools that reduced manual work by over 98%. I specialize in building intuitive, scalable software that solves real user problems, from backend architecture to frontend experience, always guided by what the end user needs.',
-      'My background spans HR, payroll, and timekeeping tech, with deep experience in modern stacks like TypeScript, React, Next.js, and Supabase. I thrive at the intersection of technical precision and product empathy, where clean code meets real-world impact. I’m currently seeking roles where I can help design and ship thoughtful products in collaborative, growth-minded teams.'
+      'As a Full-Stack Product Engineer, I\'ve cut infrastructure costs by 90%, automated systems processing 100K+ webhooks, and built tools that reduced manual work by over 98%. I specialize in building intuitive, scalable software that solves real user problems, from backend architecture to frontend experience, always guided by what the end user needs.',
+      'My background spans HR, payroll, and timekeeping tech, with deep experience in modern stacks like TypeScript, React, Next.js, and Supabase. I thrive at the intersection of technical precision and product empathy, where clean code meets real-world impact. I\'m currently seeking roles where I can help design and ship thoughtful products in collaborative, growth-minded teams.'
     ],
     contact: {
       email: 'jamesleoreyes@gmail.com',
@@ -81,101 +16,89 @@ const resumeData: ResumeData = {
   },
   experience: [
     {
-      company: 'Cimplx HR, Inc.',
-      position: 'Full-Stack Product Engineer',
-      location: 'Remote',
-      startDate: 'Jan 2023',
+      company: 'SubTracked',
+      position: 'Co-Founder & Lead Developer',
+      location: 'Rock Hill, SC',
+      startDate: 'Dec 2024',
       endDate: 'Present',
-      description: 'Lead full-stack development of HR management platform serving 10,000+ users. Architect scalable solutions using modern web technologies and cloud infrastructure.',
+      description: 'Designed and built a full-stack platform for collectible grading submissions, enabling businesses to track and manage orders across multiple categories.',
       achievements: [
-        'Improved application performance by 40% through code optimization and database query improvements',
-        'Led migration from legacy system to modern React/Next.js architecture',
-        'Implemented automated testing suite reducing bugs in production by 60%',
-        'Mentored 3 junior developers and established coding standards and best practices',
-        'Designed and built RESTful APIs serving 1M+ requests daily'
+        'Cut monthly infrastructure costs by 90% by migrating from Azure to Supabase and Railway, while simplifying CI/CD and environment management',
+        'Architected backend with Express and Supabase (PostgreSQL, auth, storage, edge functions)',
+        'Enabled real-time submission tracking with custom serverless functions and personalized dashboards',
+        'Designed for scalability and future integrations with third-party vendors and marketplace features'
       ],
-      technologies: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Azure', 'Docker']
+      technologies: ['TypeScript', 'Node.js', 'Express.js', 'React.js', 'Supabase', 'Edge Functions', 'UI/UX Design']
     },
     {
-      company: 'TechStart Solutions',
-      position: 'Senior Frontend Developer',
-      location: 'San Francisco, CA',
-      startDate: 'Jun 2021',
-      endDate: 'Dec 2022',
-      description: 'Developed responsive web applications for enterprise clients using React ecosystem. Collaborated with UX/UI designers to create intuitive user interfaces.',
+      company: 'Cimplx HR, Inc.',
+      position: 'Full-Stack Developer / Integration Engineer',
+      location: 'Rock Hill, SC',
+      startDate: 'Sep 2023',
+      endDate: 'Present',
+      description: 'Architected and developed enterprise-grade HR/payroll integration platform synchronizing employee data between Factorial HR and UKG Ready systems for multiple clients.',
       achievements: [
-        'Built 5 client-facing applications serving 50,000+ monthly active users',
-        'Reduced bundle size by 35% through code splitting and optimization techniques',
-        'Implemented accessibility standards achieving WCAG 2.1 AA compliance',
-        'Established component library used across 8 different projects',
-        'Integrated with 15+ third-party APIs and services'
+        'Built event-driven microservices architecture using Azure Storage Queues and Key Vault, successfully processing 100,000+ webhook events',
+        'Developed timekeeping tools including an ID-linked QR code generator, a document uploader with auto-mapping, and a timecard processor that reduced import time by over 98%',
+        'Implemented comprehensive TypeScript APIs with Express.js, SQL Server integration, and automated retry/error handling reducing manual intervention by 95%',
+        'Streamlined internal operations by contributing across backend and frontend stacks, improving delivery speed and system visibility'
       ],
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Express.js', 'MongoDB']
+      technologies: ['TypeScript', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Azure DevOps', 'Azure Web Apps', 'Azure SQL Server', 'Azure Key Vault', 'Azure Queue Storage', 'REST APIs']
     },
     {
-      company: 'Digital Innovations Lab',
-      position: 'Full-Stack Developer',
-      location: 'Austin, TX',
-      startDate: 'Mar 2020',
-      endDate: 'May 2021',
-      description: 'Developed full-stack web applications for startups and small businesses. Worked directly with clients to understand requirements and deliver custom solutions.',
+      company: 'Cimplx HR, Inc.',
+      position: 'Full-Stack Developer (Internship)',
+      location: 'Rock Hill, SC',
+      startDate: 'Jul 2023',
+      endDate: 'Sep 2023',
+      description: 'Built a subscription management platform for the Abenity coupon system using Python, Flask, and ChargeBee.',
       achievements: [
-        'Delivered 12 web applications from concept to deployment',
-        'Maintained 99.9% uptime across all deployed applications',
-        'Implemented payment processing systems handling $500K+ in transactions',
-        'Reduced development time by 30% through reusable component architecture',
-        'Provided technical consulting for 20+ client projects'
+        'Integrated webhook-based licensing and dynamic user provisioning via custom access tiers',
+        'Developed frontend with vanilla JS, HTML, and CSS to support full subscription lifecycle (onboarding, limits, access)',
+        'Created responsive user interface to streamline the subscription lifecycle'
       ],
-      technologies: ['JavaScript', 'Python', 'Flask', 'React', 'PostgreSQL', 'Heroku', 'Stripe API']
+      technologies: ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'ChargeBee', 'GitLab']
     }
   ],
   projects: [
     {
-      name: 'Personal Portfolio Website',
-      description: 'Modern, responsive portfolio website built with Next.js 15 and TypeScript. Features dark/light mode, PWA capabilities, and optimized performance.',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+      name: 'The Reyes Vault',
+      description: 'A digital vault for preserving family memories. Forever, searchable, and safe in the cloud. Created to prevent the permanent loss of analog family memories from disasters like fires.',
+      technologies: ['Next.js', 'TypeScript', 'React', 'shadcn/ui', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Cloudflare R2', 'Vercel'],
       highlights: [
-        'Achieved 100% Lighthouse performance score',
-        'Implemented PWA features for offline functionality',
-        'Built with accessibility-first approach',
-        'Responsive design optimized for all devices'
+        'Disaster-Resilient Storage: Secure cloud backups ensure memories outlast physical risks',
+        'Role-Based Access: Admin-managed user accounts and permissions, with protected routes for privacy',
+        'Admin Dashboard: Manage user creation, roles, and access',
+        'Rich Metadata & Search: Tag, describe, and organize memories for easy retrieval',
+        'Demo Environment: A separate, feature-restricted demo site for testing and showcasing privacy controls',
+        'Modern, Accessible UI: Fully responsive design, accessible across devices'
       ],
-      url: 'https://jamesreyes.dev',
-      github: 'https://github.com/jamesreyes/portfolio'
+      url: 'https://demo.thereyesvault.com',
+      github: 'https://github.com/jamesleoreyes/the-reyes-vault'
     },
     {
-      name: 'Task Management SaaS',
-      description: 'Full-stack task management application with real-time collaboration features. Built for teams to manage projects and track progress efficiently.',
-      technologies: ['React', 'Node.js', 'Socket.io', 'PostgreSQL', 'Redis', 'Docker'],
+      name: 'Portfolio Website',
+      description: 'Personal portfolio site showcasing projects, experience, and backend-to-full stack journey. Built with modern web technologies and enterprise-grade features.',
+      technologies: ['Next.js 15', 'React 19', 'TypeScript', 'shadcn/ui', 'Tailwind CSS', 'Vercel'],
       highlights: [
-        'Real-time collaboration with WebSocket implementation',
-        'Supports 1000+ concurrent users',
-        'Advanced filtering and search capabilities',
-        'Role-based access control system'
+        'Server-side rendering and static generation for optimal performance and SEO',
+        'Advanced UI/UX features including custom animated word rotation component',
+        'Adaptive theming system (light/dark mode) and fully responsive design',
+        'Comprehensive SEO optimization with structured data (JSON-LD), Open Graph meta tags',
+        'Progressive web app capabilities including service worker and app manifest',
+        'Modern DevOps practices with automated builds and performance monitoring'
       ],
-      github: 'https://github.com/jamesreyes/task-manager'
-    },
-    {
-      name: 'E-commerce Analytics Dashboard',
-      description: 'Analytics dashboard for e-commerce businesses to track sales, customer behavior, and inventory. Features interactive charts and real-time data updates.',
-      technologies: ['Vue.js', 'Python', 'FastAPI', 'PostgreSQL', 'Chart.js', 'AWS'],
-      highlights: [
-        'Processes 100K+ data points daily',
-        'Interactive data visualizations',
-        'Automated report generation',
-        'Integration with multiple payment providers'
-      ]
+      url: 'https://jamesleoreyes.com',
+      github: 'https://github.com/jamesleoreyes/portfolio'
     }
   ],
   education: [
     {
-      institution: 'University of California, Berkeley',
-      degree: 'Bachelor of Science',
-      field: 'Computer Science',
+      institution: 'University of South Carolina - Columbia',
+      degree: 'Bachelor of Arts',
+      field: 'Media Arts',
       startDate: 'Aug 2016',
-      endDate: 'May 2020',
-      gpa: '3.8/4.0',
-      honors: ['Magna Cum Laude', 'Dean\'s List (6 semesters)', 'Computer Science Honor Society']
+      endDate: 'Jan 2018',
     }
   ],
   certifications: [
@@ -212,14 +135,12 @@ const resumeData: ResumeData = {
     ],
     backend: [
       { name: 'Node.js', icon: Icons.NodeJs, url: 'https://nodejs.org/' },
-      { name: 'Deno', icon: Icons.Deno, url: 'https://deno.com/' },
       { name: 'Express', icon: Icons.Express, url: 'https://expressjs.com/' },
       { name: 'Flask', icon: Icons.Flask, url: 'https://flask.palletsprojects.com/' },
       { name: 'Supabase', icon: Icons.Supabase, url: 'https://supabase.com/' },
     ],
     devops: [
       { name: 'Git', icon: Icons.Git, url: 'https://git-scm.com/' },
-      { name: 'GitHub', icon: Icons.GitHub, url: 'https://github.com/' },
       { name: 'Postman', icon: Icons.Postman, url: 'https://www.postman.com/' },
       { name: 'Sentry', icon: Icons.Sentry, url: 'https://sentry.io/' },
     ],
@@ -232,15 +153,17 @@ const resumeData: ResumeData = {
   },
   coreCompetencies: [
     'Full-Stack Development',
+    'API Development & Integration',
     'System Architecture',
-    'API Design & Development',
     'Cloud Infrastructure',
     'DevOps & CI/CD',
-    'Technical Leadership',
-    'Code Review & Mentoring',
+    'REST APIs',
+    'Microservices Architecture',
+    'Database Design',
     'Performance Optimization',
-    'Security Best Practices',
-    'Test-Driven Development'
+    'User Experience Design',
+    'Technical Leadership',
+    'Product Development'
   ]
 };
 

@@ -9,7 +9,7 @@ function ExperienceItem({ experience }: { experience: typeof resumeData.experien
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
             <h3 className="text-xl font-semibold">{experience.position}</h3>
-            <p className="text-lg font-medium text-primary">{experience.company}</p>
+            <p className="text-lg font-medium text-muted-foreground">{experience.company}</p>
           </div>
           <div className="text-sm text-muted-foreground">
             <p>{experience.startDate} - {experience.endDate}</p>
@@ -17,7 +17,7 @@ function ExperienceItem({ experience }: { experience: typeof resumeData.experien
           </div>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-foreground leading-relaxed">
           {experience.description}
         </p>
 
