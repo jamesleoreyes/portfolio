@@ -1,7 +1,14 @@
 import { Button, SocialLinks } from "@/components";
+import { nav } from "@/configs/nav";
 import Link from "next/link";
 
 export default function CTASection() {
+  // Helper function to check if a page is disabled
+  const isPageDisabled = (href: string) => {
+    const page = nav.find(p => p.href === href);
+    return page?.disabled || false;
+  };
+
   return (
     <section className='space-y-6 text-center border-t pt-12'>
       <h2 className='text-3xl font-bold tracking-tight'>Let&apos;s Work Together</h2>
@@ -12,30 +19,55 @@ export default function CTASection() {
       </p>
 
       <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-        <Button
-          asChild
-          size='lg'
-          className='min-w-[140px]'
-          aria-label='View my projects'
-          title='View my projects'
-        >
-          <Link href='/projects'>
+        {isPageDisabled('/projects') ? (
+          <Button
+            size='lg'
+            className='min-w-[140px]'
+            disabled={true}
+            aria-label='Projects page (coming soon)'
+            title='Projects page (coming soon)'
+          >
             View My Work
-          </Link>
-        </Button>
+          </Button>
+        ) : (
+          <Button
+            asChild
+            size='lg'
+            className='min-w-[140px]'
+            aria-label='View my projects'
+            title='View my projects'
+          >
+            <Link href='/projects'>
+              View My Work
+            </Link>
+          </Button>
+        )}
 
-        <Button
-          asChild
-          size='lg'
-          variant='ghost'
-          className='min-w-[140px]'
-          aria-label='Get in touch with me'
-          title='Get in touch with me'
-        >
-          <Link href='/contact'>
+        {isPageDisabled('/contact') ? (
+          <Button
+            size='lg'
+            variant='ghost'
+            className='min-w-[140px]'
+            disabled={true}
+            aria-label='Contact page (coming soon)'
+            title='Contact page (coming soon)'
+          >
             Get In Touch
-          </Link>
-        </Button>
+          </Button>
+        ) : (
+          <Button
+            asChild
+            size='lg'
+            variant='ghost'
+            className='min-w-[140px]'
+            aria-label='Get in touch with me'
+            title='Get in touch with me'
+          >
+            <Link href='/contact'>
+              Get In Touch
+            </Link>
+          </Button>
+        )}
       </div>
 
       <div className='flex justify-center'>

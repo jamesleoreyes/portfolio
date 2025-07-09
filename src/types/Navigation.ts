@@ -1,7 +1,6 @@
 interface Navigation {
   href: string;
   label: string;
-  active?: boolean;
   disabled?: boolean;
 }
 

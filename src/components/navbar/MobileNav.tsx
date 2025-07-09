@@ -60,18 +60,28 @@ export default function MobileNav({ className }: MobileNavProps) {
             {/* Navigation Links */}
             <div className="flex flex-col gap-2 mb-4 text-left">
               {nav.map((page) => (
-                <DrawerClose key={page.label} asChild>
+                page.disabled ? (
                   <Button
-                    asChild
+                    key={page.label}
                     variant='ghost'
                     className='h-12 text-3xl w-full px-4'
-                    disabled={page.disabled}
+                    disabled={true}
                   >
-                    <Link href={page.href}>
-                      {page.label}
-                    </Link>
+                    {page.label}
                   </Button>
-                </DrawerClose>
+                ) : (
+                  <DrawerClose key={page.label} asChild>
+                    <Button
+                      asChild
+                      variant='ghost'
+                      className='h-12 text-3xl w-full px-4'
+                    >
+                      <Link href={page.href}>
+                        {page.label}
+                      </Link>
+                    </Button>
+                  </DrawerClose>
+                )
               ))}
             </div>
 

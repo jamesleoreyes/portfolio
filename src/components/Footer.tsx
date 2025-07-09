@@ -39,12 +39,18 @@ export default function Footer() {
             <ul className='mt-4 space-y-3'>
               {navContent.map((page) => (
                 <li key={page.href}>
-                  <Link
-                    href={page.href}
-                    className='text-sm text-muted-foreground hover:text-foreground transition-colors duration-200'
-                  >
-                    {page.label}
-                  </Link>
+                  {page.disabled ? (
+                    <span className='text-sm text-muted-foreground/50 cursor-not-allowed'>
+                      {page.label}
+                    </span>
+                  ) : (
+                    <Link
+                      href={page.href}
+                      className='text-sm text-muted-foreground hover:text-foreground transition-colors duration-200'
+                    >
+                      {page.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -56,12 +62,18 @@ export default function Footer() {
             <ul className='mt-4 space-y-3'>
               {navWork.map((page) => (
                 <li key={page.href}>
-                  <Link
-                    href={page.href}
-                    className='text-sm text-muted-foreground hover:text-foreground transition-colors duration-200'
-                  >
-                    {page.label}
-                  </Link>
+                  {page.disabled ? (
+                    <span className='text-sm text-muted-foreground/50 cursor-not-allowed'>
+                      {page.label}
+                    </span>
+                  ) : (
+                    <Link
+                      href={page.href}
+                      className='text-sm text-muted-foreground hover:text-foreground transition-colors duration-200'
+                    >
+                      {page.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -72,7 +84,7 @@ export default function Footer() {
         <div className='mt-12 pt-8 border-t border-border'>
           <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
             <p className='text-sm text-muted-foreground'>
-              &copy; {currentYear} James Reyes
+              Made with &hearts; by James Reyes &copy; {currentYear}
             </p>
             <ThemeToggle variant='full' />
           </div>

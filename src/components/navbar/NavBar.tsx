@@ -35,21 +35,32 @@ export default function NavBar() {
         {/* Desktop Navigation */}
         <div className='hidden md:flex items-center gap-2'>
           {nav.map((page) => (
-            <Button
-              key={page.label}
-              aria-label={`Go to ${page.label} page`}
-              title={`Go to ${page.label} page`}
-              asChild
-              disabled={page.disabled}
-              variant='ghost'
-              className={cn(
-                isActive(page.href) && 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground dark:hover:bg-primary/90 dark:hover:text-primary-foreground'
-              )}
-            >
-              <Link href={page.href}>
+            page.disabled ? (
+              <Button
+                key={page.label}
+                aria-label={`${page.label} page (coming soon)`}
+                title={`${page.label} page (coming soon)`}
+                disabled={true}
+                variant='ghost'
+              >
                 {page.label}
-              </Link>
-            </Button>
+              </Button>
+            ) : (
+              <Button
+                key={page.label}
+                aria-label={`Go to ${page.label} page`}
+                title={`Go to ${page.label} page`}
+                asChild
+                variant='ghost'
+                className={cn(
+                  isActive(page.href) && 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground dark:hover:bg-primary/90 dark:hover:text-primary-foreground'
+                )}
+              >
+                <Link href={page.href}>
+                  {page.label}
+                </Link>
+              </Button>
+            )
           ))}
           <ThemeToggle variant='simple' />
         </div>
