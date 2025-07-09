@@ -65,6 +65,7 @@ const resumeData: ResumeData = {
     {
       name: 'The Reyes Vault',
       description: 'A digital vault for preserving family memories. Forever, searchable, and safe in the cloud. Created to prevent the permanent loss of analog family memories from disasters like fires.',
+      completionPercentage: 36,
       technologies: ['Next.js', 'TypeScript', 'React', 'shadcn/ui', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Cloudflare R2', 'Vercel'],
       highlights: [
         'Disaster-Resilient Storage: Secure cloud backups ensure memories outlast physical risks',
@@ -80,10 +81,7 @@ const resumeData: ResumeData = {
     {
       name: 'Portfolio Website',
       description: 'Personal portfolio site showcasing projects, experience, and backend-to-full stack journey. Built with modern web technologies and enterprise-grade features.',
-      image: {
-        light: assets.images.screenshots.portfolioDesktop.light,
-        dark: assets.images.screenshots.portfolioDesktop.dark,
-      },
+      completionPercentage: 35,
       technologies: ['Next.js 15', 'React 19', 'TypeScript', 'shadcn/ui', 'Tailwind CSS', 'Vercel'],
       highlights: [
         'Server-side rendering and static generation for optimal performance and SEO',
@@ -93,6 +91,10 @@ const resumeData: ResumeData = {
         'Progressive web app capabilities including service worker and app manifest',
         'Modern DevOps practices with automated builds and performance monitoring'
       ],
+      image: {
+        light: assets.images.screenshots.portfolioDesktop.light,
+        dark: assets.images.screenshots.portfolioDesktop.dark,
+      },
       url: 'https://jamesleoreyes.com',
       github: 'https://github.com/jamesleoreyes/portfolio'
     }
@@ -175,6 +177,7 @@ const resumeData: ResumeData = {
     'Cloud Infrastructure',
     'DevOps & CI/CD',
     'REST APIs',
+    'ARIA Accessibility',
     'Performance Optimization',
     'User Experience Design',
     'Technical Leadership',

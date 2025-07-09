@@ -17,12 +17,13 @@ interface ExperienceItem {
 interface ProjectItem {
   name: string;
   description: string;
+  completionPercentage?: number;
+  technologies: string[];
+  highlights: string[];
   image?: {
     light: string;
     dark: string;
   };
-  technologies: string[];
-  highlights: string[];
   url?: string;
   github?: string;
 }
