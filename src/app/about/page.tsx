@@ -1,9 +1,11 @@
-import HeroSection from './components/HeroSection';
-import IntroSection from './components/IntroSection';
-import TechSkills from './components/TechSkillsSection';
-import SoftSkills from './components/SoftSkillsSection';
-import ValuesSection from './components/ValuesSection';
-import CTASection from './components/CTASection';
+import {
+  HeroSection,
+  IntroSection,
+  TechSkillsSection,
+  SoftSkillsSection,
+  ValuesSection,
+  CTASection
+} from './components';
 import { techSkills } from './data';
 export { default as metadata } from './metadata';
 
@@ -13,8 +15,8 @@ export default function About() {
       <main className='max-w-4xl mx-auto space-y-12'>
         <HeroSection />
         <IntroSection />
-        <TechSkills techSkills={techSkills} />
-        <SoftSkills />
+        <TechSkillsSection techSkills={techSkills} />
+        <SoftSkillsSection />
         <ValuesSection />
         <CTASection />
       </main>

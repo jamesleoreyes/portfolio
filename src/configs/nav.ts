@@ -10,7 +10,7 @@ const navContent: Navigation[] = [
 
 const navWork: Navigation[] = [
   { href: '/resume', label: 'Resume' },
-  { href: '/contact', label: 'Contact', disabled: true },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const nav: Navigation[] = [
