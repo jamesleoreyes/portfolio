@@ -10,7 +10,7 @@ export default function CTASection() {
   };
 
   return (
-    <section className='space-y-6 text-center border-t pt-12'>
+    <section className='space-y-6 text-center'>
       <h2 className='text-3xl font-bold tracking-tight'>Let&apos;s Work Together</h2>
       <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
         I&apos;m always interested in new opportunities and meaningful projects.
@@ -43,31 +43,17 @@ export default function CTASection() {
           </Button>
         )}
 
-        {isPageDisabled('/contact') ? (
-          <Button
-            size='lg'
-            variant='ghost'
-            className='min-w-[140px]'
-            disabled={true}
-            aria-label='Contact page (coming soon)'
-            title='Contact page (coming soon)'
-          >
+        <Button
+          asChild
+          size='lg'
+          className='min-w-[140px]'
+          aria-label='Get in touch with me'
+          title='Get in touch with me'
+        >
+          <Link href='/contact'>
             Get In Touch
-          </Button>
-        ) : (
-          <Button
-            asChild
-            size='lg'
-            variant='ghost'
-            className='min-w-[140px]'
-            aria-label='Get in touch with me'
-            title='Get in touch with me'
-          >
-            <Link href='/contact'>
-              Get In Touch
-            </Link>
-          </Button>
-        )}
+          </Link>
+        </Button>
       </div>
 
       <div className='flex justify-center'>
