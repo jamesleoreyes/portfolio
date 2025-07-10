@@ -16,6 +16,7 @@ const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
   preload: true,
+  fallback: ['system-ui', 'arial'],
 });
 
 export default function RootLayout({
@@ -34,6 +35,7 @@ export default function RootLayout({
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange
+          storageKey='theme'
         >
           <DynamicFavicon />
           <DynamicThemeColor />
@@ -49,7 +51,7 @@ export default function RootLayout({
             richColors
             closeButton
             visibleToasts={5}
-            duration={5000}
+            duration={4000}
             position='top-center'
           />
           <Analytics />

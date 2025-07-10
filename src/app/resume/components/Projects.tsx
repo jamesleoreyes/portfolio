@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { resumeData, type ProjectItem } from '../data';
 import { GitHub } from '@/components/icons';
@@ -17,7 +17,6 @@ function ProjectCard({ project }: { project: ProjectItem }) {
     setMounted(true);
   }, []);
 
-  // Simplify theme detection - avoid multiple state updates
   const currentTheme = mounted ? (resolvedTheme || 'light') : 'light';
   const completionPercentage = project.completionPercentage || 0;
 
@@ -31,24 +30,22 @@ function ProjectCard({ project }: { project: ProjectItem }) {
               <Link
                 href={project.url}
                 target='_blank'
-                title='View Project'
-                aria-label='View Project'
                 rel='noopener noreferrer'
                 className='text-muted-foreground hover:text-primary'
+                aria-label='View Project'
               >
-                <ExternalLink className='w-4 h-4' aria-label='View Project' />
+                <ExternalLink className='w-4 h-4' />
               </Link>
             )}
             {project.github && (
               <Link
                 href={project.github}
                 target='_blank'
-                title='View GitHub Repository'
-                aria-label='View GitHub Repository'
                 rel='noopener noreferrer'
                 className='text-muted-foreground hover:text-primary'
+                aria-label='View GitHub Repository'
               >
-                <GitHub className='w-4 h-4' aria-label='GitHub Repository' />
+                <GitHub className='w-4 h-4' />
               </Link>
             )}
           </div>
@@ -61,9 +58,6 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                   value={completionPercentage}
                   className='h-3'
                   aria-label={`${completionPercentage}% complete`}
-                  aria-valuenow={completionPercentage}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
                 />
               </TooltipTrigger>
               <TooltipContent>
@@ -74,32 +68,25 @@ function ProjectCard({ project }: { project: ProjectItem }) {
         </div>
       </div>
 
-      <div className='flex items-center justify-center relative'>
+      <div className='flex items-center justify-center'>
         {project.image ? (
           <Link
             href={project.image[currentTheme === 'dark' ? 'dark' : 'light']}
             target='_blank'
             rel='noopener noreferrer'
-            className='block'
           >
             <Image
               src={project.image[currentTheme === 'dark' ? 'dark' : 'light']}
               alt={project.name}
-              title={project.name}
-              aria-label={project.name}
               width={400}
               height={200}
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 400px"
               className="w-full"
               loading="lazy"
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
           </Link>
         ) : (
-          <div className='flex items-center justify-center bg-background'>
-            <PlaceholderScreenshot className='w-full max-w-none' />
-          </div>
+          <PlaceholderScreenshot className='w-full max-w-none' />
         )}
       </div>
 
