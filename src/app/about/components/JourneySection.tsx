@@ -1,27 +1,16 @@
+import type { ReactNode } from "react";
 import { Code, Music, Truck, Zap } from "lucide-react";
-
-function JourneyItem({ title, description, icon }: JourneyItem) {
-  return (
-    <div className='text-center space-y-3'>
-      <div className='mx-auto w-12 h-12 bg-primary/10 flex items-center justify-center'>
-        {icon}
-      </div>
-      <h3 className='font-semibold'>{title}</h3>
-      <p className='text-sm text-muted-foreground'>{description}</p>
-    </div>
-  );
-}
 
 interface JourneyItem {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 const journeyItems: JourneyItem[] = [
   {
     title: 'Early Coding',
-    description: 'Started with Visual Basic as a kid, making desktop apps (and accidentally scamming people 😅)',
+    description: 'Started with Visual Basic as a kid, making desktop apps from YouTube tutorials',
     icon: <Code className='w-6 h-6 text-primary' />
   },
   {
@@ -40,6 +29,18 @@ const journeyItems: JourneyItem[] = [
     icon: <Zap className='w-6 h-6 text-primary' />
   }
 ]
+
+function JourneyItem({ title, description, icon }: JourneyItem) {
+  return (
+    <div className='text-center space-y-3'>
+      <div className='mx-auto w-12 h-12 bg-primary/10 flex items-center justify-center'>
+        {icon}
+      </div>
+      <h3 className='font-semibold'>{title}</h3>
+      <p className='text-sm text-muted-foreground'>{description}</p>
+    </div>
+  );
+}
 
 export default function JourneySection() {
   return (

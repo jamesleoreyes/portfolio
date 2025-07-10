@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Info } from 'lucide-react';
 import { resumeData, type ProjectItem } from '../data';
 import { GitHub } from '@/components/icons';
 import { Progress, PlaceholderScreenshot, Tooltip, TooltipTrigger, TooltipContent } from '@/components';
@@ -25,16 +25,29 @@ function ProjectCard({ project }: { project: ProjectItem }) {
       <div className='flex flex-col'>
         <div className='flex items-center justify-between'>
           <h3 className='text-lg font-semibold'>{project.name}</h3>
-          <div className='flex gap-2'>
-            {project.url && (
+          <div className='flex gap-4 md:gap-3'>
+            {project.projectHref && (
               <Link
-                href={project.url}
+                href={project.projectHref}
+                target='_self'
+                rel='noopener noreferrer'
+                className='text-muted-foreground hover:text-primary'
+                title='View Project Details'
+                aria-label='View Project Details'
+              >
+                <Info className='w-5 h-5 md:w-4 md:h-4' />
+              </Link>
+            )}
+            {project.liveUrl && (
+              <Link
+                href={project.liveUrl}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-muted-foreground hover:text-primary'
-                aria-label='View Project'
+                title='View Live Project'
+                aria-label='View Live Project'
               >
-                <ExternalLink className='w-4 h-4' />
+                <ExternalLink className='w-5 h-5 md:w-4 md:h-4' />
               </Link>
             )}
             {project.github && (
@@ -43,9 +56,10 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-muted-foreground hover:text-primary'
+                title='View GitHub Repository'
                 aria-label='View GitHub Repository'
               >
-                <GitHub className='w-4 h-4' />
+                <GitHub className='w-5 h-5 md:w-4 md:h-4' />
               </Link>
             )}
           </div>

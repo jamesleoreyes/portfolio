@@ -24,7 +24,8 @@ interface ProjectItem {
     light: string;
     dark: string;
   };
-  url?: string;
+  projectHref?: string;
+  liveUrl?: string;
   github?: string;
 }
 

@@ -1,9 +1,10 @@
+import type { ReactNode } from "react";
 import { Calendar, MapPin, Quote } from "lucide-react";
 
 interface TurningPoint {
   year: string;
   title: string;
-  description: string;
+  description: string | ReactNode;
   lesson: string;
   location?: string;
 }
@@ -12,7 +13,7 @@ const turningPoints: TurningPoint[] = [
   {
     year: "2008-2012",
     title: "The Accidental Hacker",
-    description: "Built my first desktop apps in Visual Basic, including a fake YouTube partnership tool that accidentally taught me about user expectations (and ethics).",
+    description: `Built my first desktop apps in Visual Basic, following as many YouTube tutorials as I could find. I also tinkered with Cheat Engine to "hack" Club Penguin and Bloons Tower Defense.`,
     lesson: "Code has real impact on real people — use that power responsibly.",
   },
   {
@@ -25,26 +26,41 @@ const turningPoints: TurningPoint[] = [
   {
     year: "2018-2022",
     title: "The Music Obsession",
-    description: "Spent years making beats in FL Studio, recording music, selling on BeatStars. Learned about iteration, feedback loops, and finding your unique voice.",
+    description: "Spent years making beats in FL Studio, recording music, selling on BeatStars. Learned about iteration, feedback loops, and finding my unique voice.",
     lesson: "Passion projects teach you more than any textbook ever could."
   },
   {
     year: "2020-2022",
     title: "The Reality Check",
     description: "FedEx Ground delivery driver working 60+ hours a week. Physical labor, time pressure, customer service — all while dreaming of something more.",
-    lesson: "Hard work builds character, but smart work builds futures.",
+    lesson: "Hard work builds character, while smart work builds futures.",
     location: "Rock Hill, SC"
   },
   {
     year: "Late 2022",
     title: "The ChatGPT Moment",
     description: "First interaction with ChatGPT sparked everything. Asked about building a Discord bot, got introduced to Python, and suddenly the path forward was clear.",
-    lesson: "Sometimes the right tool at the right moment changes everything."
+    lesson: "The right tool at the right moment can change everything."
   },
   {
     year: "2023-Present",
     title: "The Full Circle",
-    description: "From 'vibe coding' with AI to learning fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.",
+    description: (
+      <>
+        From{' '}
+        <a
+          href="https://x.com/karpathy/status/1886192184808149383"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+          title="Wait... what?"
+          aria-label="What is vibe coding?"
+        >
+          &quot;vibe coding&quot;
+        </a>
+        {' '}with AI to learning fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.
+      </>
+    ),
     lesson: "The best journeys bring you back to where you started, but with new eyes."
   }
 ];

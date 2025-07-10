@@ -75,7 +75,8 @@ const resumeData: ResumeData = {
         'Demo Environment: A separate, feature-restricted demo site for testing and showcasing privacy controls',
         'Modern, Accessible UI: Fully responsive design, accessible across devices'
       ],
-      url: 'https://demo.thereyesvault.com',
+      projectHref: '/projects#the-reyes-vault',
+      liveUrl: 'https://demo.thereyesvault.com',
       github: 'https://github.com/jamesleoreyes/the-reyes-vault'
     },
     {
@@ -95,7 +96,8 @@ const resumeData: ResumeData = {
         light: assets.images.screenshots.portfolioDesktop.light,
         dark: assets.images.screenshots.portfolioDesktop.dark,
       },
-      url: 'https://jamesleoreyes.com',
+      projectHref: '/projects#portfolio-website',
+      liveUrl: 'https://jamesleoreyes.com',
       github: 'https://github.com/jamesleoreyes/portfolio'
     }
   ],
