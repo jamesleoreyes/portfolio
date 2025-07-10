@@ -1,7 +1,6 @@
 import {
   HeroSection,
   ContactMethodsSection,
-  CalEmbedSection,
   ContactInfoSection,
   SocialLinksSection
 } from './components';
@@ -14,7 +13,6 @@ export default function Contact() {
       <main className='max-w-4xl mx-auto space-y-12'>
         <HeroSection />
         <ContactMethodsSection />
-        <CalEmbedSection />
         <ContactInfoSection />
         <SocialLinksSection />
       </main>

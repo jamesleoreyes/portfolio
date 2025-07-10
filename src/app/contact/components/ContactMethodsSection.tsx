@@ -43,6 +43,12 @@ export default function ContactMethodsSection() {
           );
         })}
       </div>
+
+      <div className='text-center'>
+        <p className='text-sm text-muted-foreground'>
+          All meetings are conducted via Google Meet. You&apos;ll receive a calendar invite with the meeting link after booking.
+        </p>
+      </div>
     </section>
   );
 }
