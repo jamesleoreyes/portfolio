@@ -1,12 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components';
 import usePageDisabled from '@/hooks/usePageDisabled';
 
 export default function NotFound() {
   const [backUrl, setBackUrl] = useState<string>('/');
+  const router = useRouter();
   const isPageDisabled = (href: string) => usePageDisabled(href);
 
   useEffect(() => {
@@ -15,6 +17,11 @@ export default function NotFound() {
       setBackUrl(new URL(referrer).pathname);
     }
   }, []);
+
+  const handleGoBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    router.back();
+  };
 
   return (
     <div className='max-w-4xl flex items-center justify-center px-4 py-8'>
@@ -50,7 +57,7 @@ export default function NotFound() {
             aria-label='Go back to previous page'
             title='Go back to previous page'
           >
-            <Link href={backUrl}>
+            <Link href={backUrl} onClick={handleGoBack}>
               Go Back
             </Link>
           </Button>

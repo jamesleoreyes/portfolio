@@ -35,7 +35,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                 title='View Project Details'
                 aria-label='View Project Details'
               >
-                <Info className='w-4 h-4' />
+                <Info className='w-5 h-5 md:w-4 md:h-4' />
               </Link>
             )}
             {project.liveUrl && (
@@ -47,7 +47,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                 title='View Live Project'
                 aria-label='View Live Project'
               >
-                <ExternalLink className='w-4 h-4' />
+                <ExternalLink className='w-5 h-5 md:w-4 md:h-4' />
               </Link>
             )}
             {project.github && (
@@ -59,7 +59,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                 title='View GitHub Repository'
                 aria-label='View GitHub Repository'
               >
-                <GitHub className='w-4 h-4' />
+                <GitHub className='w-5 h-5 md:w-4 md:h-4' />
               </Link>
             )}
           </div>

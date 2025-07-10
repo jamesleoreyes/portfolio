@@ -1,9 +1,10 @@
+import type { ReactNode } from "react";
 import { Calendar, MapPin, Quote } from "lucide-react";
 
 interface TurningPoint {
   year: string;
   title: string;
-  description: string;
+  description: string | ReactNode;
   lesson: string;
   location?: string;
 }
@@ -12,7 +13,7 @@ const turningPoints: TurningPoint[] = [
   {
     year: "2008-2012",
     title: "The Accidental Hacker",
-    description: "Built my first desktop apps in Visual Basic, including a fake YouTube partnership tool that accidentally taught me about user expectations (and ethics).",
+    description: `Built my first desktop apps in Visual Basic, following as many YouTube tutorials as I could find. I also tinkered with Cheat Engine to "hack" Club Penguin and Bloons Tower Defense.`,
     lesson: "Code has real impact on real people — use that power responsibly.",
   },
   {
@@ -44,7 +45,22 @@ const turningPoints: TurningPoint[] = [
   {
     year: "2023-Present",
     title: "The Full Circle",
-    description: "From 'vibe coding' with AI to learning fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.",
+    description: (
+      <>
+        From{' '}
+        <a
+          href="https://x.com/karpathy/status/1886192184808149383"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+          title="Wait... what?"
+          aria-label="What is vibe coding?"
+        >
+          "vibe coding"
+        </a>
+        {' '}with AI to learning fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.
+      </>
+    ),
     lesson: "The best journeys bring you back to where you started, but with new eyes."
   }
 ];
