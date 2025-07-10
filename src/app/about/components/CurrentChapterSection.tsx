@@ -6,9 +6,8 @@ export default function CurrentChapterSection() {
       <div className='text-center'>
         <h2 className='text-3xl font-bold tracking-tight mb-4'>Where I Am Now</h2>
         <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
-          Today, I&apos;m not just writing code — I&apos;m building products that solve real problems.
-          Every line of code is written with the end user in mind, because I&apos;ve learned that great software
-          isn&apos;t just about perfect algorithms, it&apos;s about meeting expectations and creating value.
+          Today, I&apos;m building products that solve real problems. Every technical decision is guided by user impact,
+          because great software isn't just about perfect algorithms - it&apos;s about meeting expectations and creating value.
         </p>
       </div>
 
