@@ -1,4 +1,8 @@
+'use client';
+
 import { Calendar, MapPin, Quote } from "lucide-react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 interface TurningPoint {
   year: string;
@@ -49,19 +53,20 @@ const turningPoints: TurningPoint[] = [
   }
 ];
 
-function TurningPointItem({ point, index, isLast }: { point: TurningPoint; index: number; isLast: boolean }) {
-  return (
-    <div className='relative'>
-      {/* Timeline line */}
-      {!isLast && (
-        <div className='absolute left-6 top-16 w-0.5 h-full bg-border'></div>
-      )}
+function TurningPointItem({ point }: { point: TurningPoint }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 0.8", "end 0.2"]
+  });
 
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.4, 1, 1, 0.4]);
+
+  return (
+    <motion.div ref={ref} className='relative' style={{ opacity }}>
       <div className='flex gap-6'>
-        {/* Timeline dot */}
-        <div className='flex-shrink-0 w-12 h-12 bg-primary flex items-center justify-center text-primary-foreground font-semibold text-sm'>
-          {index + 1}
-        </div>
+        {/* Space for timeline - dot will be positioned fixed */}
+        <div className='flex-shrink-0 w-12 h-12'></div>
 
         {/* Content */}
         <div className='flex-1 space-y-3 pb-8'>
@@ -89,6 +94,99 @@ function TurningPointItem({ point, index, isLast }: { point: TurningPoint; index
           </div>
         </div>
       </div>
+    </motion.div>
+  );
+}
+
+function AnimatedTimeline() {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start center", "end center"]
+  });
+
+  // Get overall scroll progress for the entire section
+  const { scrollYProgress: sectionProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Calculate which turning point is currently active based on scroll position
+  const rawProgress = useTransform(scrollYProgress, [0, 1], [0, turningPoints.length - 1]);
+  const currentPointIndex = useTransform(rawProgress, (value) => Math.max(0, Math.min(Math.floor(value), turningPoints.length - 1)));
+
+  // Display number (1-based instead of 0-based)
+  const displayNumber = useTransform(currentPointIndex, (value) => value + 1);
+
+  // Calculate dot position behavior:
+  // - Before timeline: stick to first position
+  // - During timeline: fixed in center of screen
+  // - After timeline: stick to last position
+  const dotPosition = useTransform(sectionProgress, (progress) => {
+    if (progress < 0.2) {
+      // Before timeline starts - stick to first item
+      return "absolute";
+    } else if (progress > 0.8) {
+      // After timeline ends - stick to last item
+      return "absolute";
+    } else {
+      // During timeline - fixed in center
+      return "fixed";
+    }
+  });
+
+  const dotTop = useTransform(sectionProgress, (progress) => {
+    if (progress < 0.2) {
+      // Stick to first item position
+      return "3rem"; // Approximate position of first item
+    } else if (progress > 0.8) {
+      // Stick to last item position  
+      return "calc(100% - 5rem)"; // Approximate position of last item
+    } else {
+      // Fixed in center of screen
+      return "50vh";
+    }
+  });
+
+  const dotLeft = useTransform(sectionProgress, (progress) => {
+    if (progress < 0.2 || progress > 0.8) {
+      // When sticky, position relative to timeline
+      return "1.5rem";
+    } else {
+      // When fixed, calculate absolute position from viewport edge
+      return "calc(1.5rem + 1rem + 4px)"; // Account for container padding
+    }
+  });
+
+  return (
+    <div ref={containerRef}>
+      {/* Timeline line - moves with content */}
+      <div ref={timelineRef} className='absolute left-6 top-0 bottom-8 w-0.5'>
+        <div className='absolute w-full h-full bg-border rounded-full'></div>
+
+        {/* Animated progress line */}
+        <motion.div
+          className='absolute w-full bg-primary rounded-full origin-top'
+          style={{
+            scaleY: scrollYProgress,
+          }}
+        />
+      </div>
+
+      {/* Dynamic dot that changes positioning behavior */}
+      <motion.div
+        className='w-12 h-12 bg-primary border-4 border-background rounded-full flex items-center justify-center text-primary-foreground font-semibold text-sm shadow-lg z-50 pointer-events-none'
+        style={{
+          position: dotPosition,
+          left: dotLeft,
+          top: dotTop,
+          y: "-50%",
+        }}
+      >
+        <motion.span>{displayNumber}</motion.span>
+      </motion.div>
     </div>
   );
 }
@@ -103,13 +201,13 @@ export default function TurningPointsSection() {
         </p>
       </div>
 
-      <div className='space-y-8'>
+      <div className='relative space-y-8'>
+        <AnimatedTimeline />
+
         {turningPoints.map((point, index) => (
           <TurningPointItem
             key={index}
             point={point}
-            index={index}
-            isLast={index === turningPoints.length - 1}
           />
         ))}
       </div>
