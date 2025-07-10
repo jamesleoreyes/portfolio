@@ -86,7 +86,9 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             />
           </Link>
         ) : (
-          <PlaceholderScreenshot className='w-full max-w-none' />
+          <div className='flex items-center justify-center bg-background'>
+            <PlaceholderScreenshot className='w-full max-w-none' />
+          </div>
         )}
       </div>
 
