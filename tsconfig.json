@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    // Language and Environment - Target modern browsers
-    "target": "ES2022",
+    // Language and Environment - Target modern browsers more aggressively
+    "target": "ES2023",
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "preserve",
 

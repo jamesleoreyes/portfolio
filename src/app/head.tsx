@@ -1,6 +1,5 @@
 import { assets, urlConfig } from "@/configs/app";
 
-
 export default function Head() {
   return (
     <head>
@@ -14,6 +13,8 @@ export default function Head() {
 
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
 
       <script
         type='application/ld+json'
