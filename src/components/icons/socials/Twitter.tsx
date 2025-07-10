@@ -1,17 +1,9 @@
-import * as React from 'react'
+import { SVGProps } from 'react'
 
-interface TwitterIconProps extends React.SVGProps<SVGSVGElement> {
-  className?: string
-}
-
-export default function TwitterIcon({ className, ...props }: TwitterIconProps) {
+export default function TwitterIcon({ ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox='0 0 256 209'
-      width='1em'
-      height='1em'
-      xmlns='http://www.w3.org/2000/svg'
-      preserveAspectRatio='xMidYMid'
       fill='currentColor'
       {...props}
     >
