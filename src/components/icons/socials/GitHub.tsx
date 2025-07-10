@@ -1,17 +1,9 @@
-import * as React from 'react'
-import { cn } from '@/lib/utils'
+import { SVGProps } from 'react'
 
-interface GitHubIconProps extends React.SVGProps<SVGSVGElement> {
-  className?: string
-}
-
-export default function GitHubIcon({ className, ...props }: GitHubIconProps) {
+export default function GitHubIcon({ ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      role='img'
       viewBox='0 0 24 24'
-      xmlns='http://www.w3.org/2000/svg'
-      className={cn('size-4', className)}
       fill='currentColor'
       {...props}
     >
