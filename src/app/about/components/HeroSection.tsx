@@ -8,7 +8,6 @@ export default function HeroSection() {
           width={300}
           height={300}
           priority={true}
-          sizes='(max-width: 768px) 70vw, (max-width: 1200px) 280px, 300px'
           alt='James Reyes'
         />
         <div className='space-y-4'>
