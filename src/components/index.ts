@@ -19,6 +19,7 @@ export { Tooltip, TooltipTrigger, TooltipContent } from './ui/tooltip';
 // UI Components
 export { SocialLinks } from './SocialLinks';
 export { WordRotate } from './magicui/WordRotate';
+export { default as Cookie } from './Cookie';
 
 // Utility Components
 export { DynamicThemeColor } from './theme/DynamicThemeColor';

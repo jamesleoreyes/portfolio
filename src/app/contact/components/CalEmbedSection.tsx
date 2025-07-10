@@ -1,23 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
+import { toast } from "sonner";
+import { Cookie } from "@/components";
 
 export default function CalEmbedSection() {
-  useEffect(() => {
-    // Load Cal.com embed script
-    const script = document.createElement('script');
-    script.src = 'https://app.cal.com/embed/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <section className='space-y-6'>
       <div className='text-center'>
@@ -28,12 +14,20 @@ export default function CalEmbedSection() {
       </div>
 
       <div className='bg-card border border-foreground/10 overflow-hidden'>
-        {/* Cal.com embed */}
-        <div
-          data-cal-link="jamesleoreyes"
-          data-cal-config='{"layout":"month_view","theme":"auto"}'
-          style={{ width: '100%', height: '600px', overflow: 'scroll' }}
-        />
+        <div className='w-full h-[600px] flex flex-col items-center justify-center gap-2'>
+          <h3 className='text-2xl font-medium'>Working on it...</h3>
+          <p className='text-sm text-muted-foreground max-w-md text-center'>
+            In the meantime, here is a cookie for you!
+          </p>
+          <p
+            className='mt-2 cursor-pointer select-none hover:scale-105 transition-all duration-200'
+            onClick={() => {
+              toast.info('*nom nom* 🍪 Delicious!')
+            }}
+          >
+            <Cookie className='w-48 h-48' />
+          </p>
+        </div>
       </div>
 
       <div className='text-center'>
