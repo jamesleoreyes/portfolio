@@ -26,7 +26,7 @@ export default function Home() {
           width={400}
           height={400}
           priority={true}
-          sizes='(max-width: 768px) 90vw, (max-width: 1200px) 400px, 400px'
+          sizes='(max-width: 768px) 80vw, (max-width: 1200px) 380px, 400px'
           alt='Me in front of my desk'
         />
         <div className='space-y-5'>

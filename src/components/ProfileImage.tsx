@@ -38,10 +38,8 @@ export default function ProfileImage({
           objectFit: 'cover',
           objectPosition: 'center',
         }}
-        onLoad={(e) => {
-          // Ensure smooth transition after load
-          e.currentTarget.style.opacity = '1';
-        }}
+        fetchPriority={priority ? 'high' : 'auto'}
+        onLoad={(e) => e.currentTarget.style.opacity = '1'}
       />
     </div>
   );

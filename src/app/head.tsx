@@ -12,6 +12,9 @@ export default function Head() {
         fetchPriority="high"
       />
 
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{

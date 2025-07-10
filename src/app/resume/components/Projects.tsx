@@ -19,7 +19,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
   useEffect(() => {
     const timer = setTimeout(() => setCompletionPercentage(project.completionPercentage || 0));
     return () => clearTimeout(timer);
-  }, []);
+  }, [project.completionPercentage]);
 
   useEffect(() => {
     setMounted(true);
@@ -107,10 +107,11 @@ function ProjectCard({ project }: { project: ProjectItem }) {
               alt={project.name}
               title={project.name}
               aria-label={project.name}
-              width={1000}
-              height={1000}
-              sizes="100vw"
+              width={400}
+              height={200}
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 400px"
               className="w-full"
+              loading="lazy"
               onLoad={() => setImageLoaded(true)}
             />
           </Link>

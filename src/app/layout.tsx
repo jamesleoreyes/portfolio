@@ -14,6 +14,8 @@ export { metadata, viewport };
 const outfit = Outfit({
   variable: '--font-outfit',
   subsets: ['latin'],
+  display: 'swap',
+  preload: true,
 });
 
 export default function RootLayout({
