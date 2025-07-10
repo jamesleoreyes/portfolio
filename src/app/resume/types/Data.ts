@@ -30,7 +30,7 @@ interface ProjectItem {
 
 interface EducationItem {
   institution: string;
-  degree: string;
+  degree?: string;
   field: string;
   startDate: string;
   endDate: string;

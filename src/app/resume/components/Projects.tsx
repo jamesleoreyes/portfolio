@@ -12,26 +12,14 @@ import { Progress, PlaceholderScreenshot, Tooltip, TooltipTrigger, TooltipConten
 function ProjectCard({ project }: { project: ProjectItem }) {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [imageReady, setImageReady] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [completionPercentage, setCompletionPercentage] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setCompletionPercentage(project.completionPercentage || 0));
-    return () => clearTimeout(timer);
-  }, [project.completionPercentage]);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (mounted && resolvedTheme) {
-      setImageReady(true);
-    }
-  }, [mounted, resolvedTheme]);
-
-  const currentTheme = resolvedTheme || 'light';
+  // Simplify theme detection - avoid multiple state updates
+  const currentTheme = mounted ? (resolvedTheme || 'light') : 'light';
+  const completionPercentage = project.completionPercentage || 0;
 
   return (
     <div className='border border-foreground/10 bg-accent p-6 space-y-4 hover:shadow-md transition-shadow'>
@@ -87,20 +75,12 @@ function ProjectCard({ project }: { project: ProjectItem }) {
       </div>
 
       <div className='flex items-center justify-center relative'>
-        {/* Show placeholder until image is fully loaded */}
-        {(!project.image || !imageReady || !imageLoaded) && (
-          <div className='flex items-center justify-center bg-background'>
-            <PlaceholderScreenshot className='w-full max-w-none' />
-          </div>
-        )}
-
-        {/* Show actual image when ready */}
-        {project.image && imageReady && (
+        {project.image ? (
           <Link
             href={project.image[currentTheme === 'dark' ? 'dark' : 'light']}
             target='_blank'
             rel='noopener noreferrer'
-            className={imageLoaded ? 'block' : 'absolute opacity-0 pointer-events-none'}
+            className='block'
           >
             <Image
               src={project.image[currentTheme === 'dark' ? 'dark' : 'light']}
@@ -112,9 +92,14 @@ function ProjectCard({ project }: { project: ProjectItem }) {
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 400px"
               className="w-full"
               loading="lazy"
-              onLoad={() => setImageLoaded(true)}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
           </Link>
+        ) : (
+          <div className='flex items-center justify-center bg-background'>
+            <PlaceholderScreenshot className='w-full max-w-none' />
+          </div>
         )}
       </div>
 

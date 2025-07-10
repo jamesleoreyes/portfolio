@@ -12,7 +12,8 @@ export default function Education() {
             <div className="space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
-                  <h3 className="text-lg font-semibold">{edu.degree} in {edu.field}</h3>
+                  {edu.degree && <h3 className="text-lg font-semibold">{edu.degree} in {edu.field}</h3>}
+                  {!edu.degree && <h3 className="text-lg font-semibold">{edu.field}</h3>}
                   <p className="text-muted-foreground font-medium">{edu.institution}</p>
                 </div>
                 <div className="text-sm text-muted-foreground">

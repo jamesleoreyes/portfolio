@@ -102,7 +102,6 @@ const resumeData: ResumeData = {
   education: [
     {
       institution: 'University of South Carolina - Columbia',
-      degree: 'Bachelor of Arts',
       field: 'Media Arts',
       startDate: 'Aug 2016',
       endDate: 'Jan 2018',

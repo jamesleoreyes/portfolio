@@ -39,7 +39,6 @@ export default function ProfileImage({
           objectPosition: 'center',
         }}
         fetchPriority={priority ? 'high' : 'auto'}
-        onLoad={(e) => e.currentTarget.style.opacity = '1'}
       />
     </div>
   );
