@@ -1,13 +1,9 @@
-import { Button, SocialLinks } from "@/components";
-import { nav } from "@/configs/nav";
 import Link from "next/link";
+import { Button, SocialLinks } from "@/components";
+import usePageDisabled from "@/hooks/usePageDisabled";
 
 export default function CTASection() {
-  // Helper function to check if a page is disabled
-  const isPageDisabled = (href: string) => {
-    const page = nav.find(p => p.href === href);
-    return page?.disabled || false;
-  };
+  const isPageDisabled = (href: string) => usePageDisabled(href);
 
   return (
     <section className='space-y-6 text-center'>

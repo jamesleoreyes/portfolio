@@ -6,9 +6,9 @@ import './globals.css';
 import { DynamicFavicon, DynamicThemeColor, DynamicViewport } from '@/components';
 import { NavBar } from '@/components';
 import { Footer } from '@/components';
-import Head from './head';
-import metadata from './metadata';
-import viewport from './viewport';
+import Head from './seo/head';
+import metadata from './seo/metadata';
+import viewport from './seo/viewport';
 export { metadata, viewport };
 
 const outfit = Outfit({

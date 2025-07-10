@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button, SocialLinks, WordRotate } from '@/components';
-import { nav } from '@/configs/nav';
 import ProfileImage from '@/components/ProfileImage';
+import usePageDisabled from '@/hooks/usePageDisabled';
 
 const words = [
   'Full-Stack Product Engineer',
@@ -13,11 +13,7 @@ const words = [
 ];
 
 export default function Home() {
-  // Helper function to check if a page is disabled
-  const isPageDisabled = (href: string) => {
-    const page = nav.find(p => p.href === href);
-    return page?.disabled || false;
-  };
+  const isPageDisabled = (href: string) => usePageDisabled(href);
 
   return (
     <div className='flex items-center justify-center px-4 py-8'>

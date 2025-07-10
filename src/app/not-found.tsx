@@ -1,7 +1,21 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components';
+import usePageDisabled from '@/hooks/usePageDisabled';
 
 export default function NotFound() {
+  const [backUrl, setBackUrl] = useState<string>('/');
+  const isPageDisabled = (href: string) => usePageDisabled(href);
+
+  useEffect(() => {
+    const referrer = document.referrer;
+    if (referrer && new URL(referrer).origin === window.location.origin) {
+      setBackUrl(new URL(referrer).pathname);
+    }
+  }, []);
+
   return (
     <div className='max-w-4xl flex items-center justify-center px-4 py-8'>
       <main className='mx-auto text-center space-y-8'>
@@ -33,25 +47,37 @@ export default function NotFound() {
             asChild
             size='lg'
             className='min-w-[140px] w-full sm:w-auto'
-            aria-label='Go to home page'
-            title='Go to home page'
+            aria-label='Go back to previous page'
+            title='Go back to previous page'
           >
-            <Link href='/'>
-              Go Home
+            <Link href={backUrl}>
+              Go Back
             </Link>
           </Button>
 
-          <Button
-            asChild
-            size='lg'
-            className='min-w-[140px] w-full sm:w-auto'
-            aria-label='View my projects'
-            title='View my projects'
-          >
-            <Link href='/projects'>
-              View Projects
-            </Link>
-          </Button>
+          {isPageDisabled('/projects') ? (
+            <Button
+              size='lg'
+              className='w-full sm:w-auto'
+              disabled={true}
+              aria-label='Projects page (coming soon)'
+              title='Projects page (coming soon)'
+            >
+              View My Projects
+            </Button>
+          ) : (
+            <Button
+              asChild
+              size='lg'
+              className='min-w-[140px] w-full sm:w-auto'
+              aria-label='View my projects'
+              title='View my projects'
+            >
+              <Link href='/projects'>
+                View Projects
+              </Link>
+            </Button>
+          )}
 
           <Button
             asChild
@@ -79,14 +105,20 @@ export default function NotFound() {
               about
             </Link>
             {', '}
-            <Link
-              href='/experience'
-              className='underline hover:text-foreground transition-colors'
-              aria-label='Go to experience page'
-              title='Go to experience page'
-            >
-              experience
-            </Link>
+            {isPageDisabled('/experience') ? (
+              <span className='text-muted-foreground/50 cursor-not-allowed'>
+                experience
+              </span>
+            ) : (
+              <Link
+                href='/experience'
+                className='underline hover:text-foreground transition-colors'
+                aria-label='Go to experience page'
+                title='Go to experience page'
+              >
+                experience
+              </Link>
+            )}
             {', or '}
             <Link
               href='/resume'

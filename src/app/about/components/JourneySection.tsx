@@ -21,7 +21,7 @@ interface JourneyItem {
 const journeyItems: JourneyItem[] = [
   {
     title: 'Early Coding',
-    description: 'Started with Visual Basic as a kid, making desktop apps (and accidentally scamming people 😅)',
+    description: 'Started with Visual Basic as a kid, making desktop apps from YouTube tutorials',
     icon: <Code className='w-6 h-6 text-primary' />
   },
   {

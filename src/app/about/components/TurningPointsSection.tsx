@@ -25,21 +25,21 @@ const turningPoints: TurningPoint[] = [
   {
     year: "2018-2022",
     title: "The Music Obsession",
-    description: "Spent years making beats in FL Studio, recording music, selling on BeatStars. Learned about iteration, feedback loops, and finding your unique voice.",
+    description: "Spent years making beats in FL Studio, recording music, selling on BeatStars. Learned about iteration, feedback loops, and finding my unique voice.",
     lesson: "Passion projects teach you more than any textbook ever could."
   },
   {
     year: "2020-2022",
     title: "The Reality Check",
     description: "FedEx Ground delivery driver working 60+ hours a week. Physical labor, time pressure, customer service — all while dreaming of something more.",
-    lesson: "Hard work builds character, but smart work builds futures.",
+    lesson: "Hard work builds character, while smart work builds futures.",
     location: "Rock Hill, SC"
   },
   {
     year: "Late 2022",
     title: "The ChatGPT Moment",
     description: "First interaction with ChatGPT sparked everything. Asked about building a Discord bot, got introduced to Python, and suddenly the path forward was clear.",
-    lesson: "Sometimes the right tool at the right moment changes everything."
+    lesson: "The right tool at the right moment can change everything."
   },
   {
     year: "2023-Present",
