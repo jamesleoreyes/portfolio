@@ -10,7 +10,6 @@ interface ProfileImageProps {
   className?: string;
   alt?: string;
   priority?: boolean;
-  sizes?: string;
 }
 
 export default function ProfileImage({
@@ -19,8 +18,11 @@ export default function ProfileImage({
   className,
   alt = 'James Reyes - Professional Photo',
   priority = false,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
 }: ProfileImageProps) {
+  const optimizedSizes = width <= 300
+    ? '(max-width: 768px) 280px, 300px'
+    : '(max-width: 768px) 350px, 400px';
+
   return (
     <div className={cn('relative overflow-hidden', className)}>
       <Image
@@ -29,7 +31,7 @@ export default function ProfileImage({
         width={width}
         height={height}
         priority={priority}
-        sizes={sizes}
+        sizes={optimizedSizes}
         className='shadow-2xl transition-opacity duration-300'
         draggable={false}
         style={{
@@ -37,6 +39,7 @@ export default function ProfileImage({
           objectPosition: 'center',
         }}
         fetchPriority={priority ? 'high' : 'auto'}
+        quality={85}
       />
     </div>
   );

@@ -1,14 +1,18 @@
+import { Suspense } from 'react';
 import {
   ResumeHeader,
   ProfessionalSummary,
   CoreCompetencies,
   Experience,
-  Projects,
   TechnicalSkills,
   Education,
   Certifications,
   ResumeActions
 } from './components';
+import { lazy } from 'react';
+
+const Projects = lazy(() => import('./components/Projects'));
+
 export { default as metadata } from './metadata';
 
 export default function Resume() {
@@ -31,10 +35,21 @@ export default function Resume() {
             <ProfessionalSummary />
             <CoreCompetencies />
             <Experience />
-            <Projects />
+            <Suspense fallback={
+              <div className="animate-pulse">
+                <div className="h-8 bg-gray-200 rounded mb-4"></div>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="h-64 bg-gray-200 rounded"></div>
+                  <div className="h-64 bg-gray-200 rounded"></div>
+                </div>
+              </div>
+            }>
+              <Projects />
+            </Suspense>
             <TechnicalSkills />
             <Education />
             <Certifications />
+
           </div>
         </div>
       </div>
