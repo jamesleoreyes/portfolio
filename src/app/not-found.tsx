@@ -4,12 +4,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components';
-import usePageDisabled from '@/hooks/usePageDisabled';
+import { isPageDisabled } from '@/lib/utils';
 
 export default function NotFound() {
   const [backUrl, setBackUrl] = useState<string>('/');
   const router = useRouter();
-  const isPageDisabled = (href: string) => usePageDisabled(href);
 
   useEffect(() => {
     const referrer = document.referrer;

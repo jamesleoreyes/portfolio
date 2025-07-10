@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button, SocialLinks, WordRotate } from '@/components';
 import ProfileImage from '@/components/ProfileImage';
-import usePageDisabled from '@/hooks/usePageDisabled';
+import { isPageDisabled } from '@/lib/utils';
 
 const words = [
   'Full-Stack Product Engineer',
@@ -13,8 +13,6 @@ const words = [
 ];
 
 export default function Home() {
-  const isPageDisabled = (href: string) => usePageDisabled(href);
-
   return (
     <div className='flex items-center justify-center px-4 py-8'>
       <main className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center space-y-8 lg:space-y-0'>

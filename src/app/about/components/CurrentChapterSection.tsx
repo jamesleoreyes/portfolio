@@ -22,9 +22,9 @@ const currentChapterItems: CurrentChapterItem[] = [
     title: "How I Think",
     description: (
       <>
-        <em className="text-foreground">"The more I learn, the less I know"</em> — my favorite saying because it perfectly captures
+        <em className="text-foreground">&quot;The more I learn, the less I know&quot;</em> — my favorite saying because it perfectly captures
         the learning journey. Every new skill reveals deeper rabbit holes, and I embrace that
-        endless curiosity. I'm always asking "What's the goal?" and "How well are we aligned?"
+        endless curiosity. I&apos;m always asking &quot;What&apos;s the goal?&quot; and &quot;How well are we aligned?&quot;
       </>
     ),
     icon: <Lightbulb className='w-5 h-5 text-primary' />

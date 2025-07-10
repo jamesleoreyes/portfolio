@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { Button, SocialLinks } from "@/components";
-import usePageDisabled from "@/hooks/usePageDisabled";
+import { isPageDisabled } from "@/lib/utils";
 
 export default function CTASection() {
-  const isPageDisabled = (href: string) => usePageDisabled(href);
-
   return (
     <section className='space-y-6 text-center'>
       <h2 className='text-3xl font-bold tracking-tight'>Let&apos;s Work Together</h2>

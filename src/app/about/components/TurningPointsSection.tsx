@@ -56,7 +56,7 @@ const turningPoints: TurningPoint[] = [
           title="Wait... what?"
           aria-label="What is vibe coding?"
         >
-          "vibe coding"
+          &quot;vibe coding&quot;
         </a>
         {' '}with AI to learning fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.
       </>
