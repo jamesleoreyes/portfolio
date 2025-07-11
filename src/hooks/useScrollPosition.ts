@@ -18,4 +18,4 @@ export function useScrollPosition() {
   }, []);
 
   return scrolled;
-} 
+};
