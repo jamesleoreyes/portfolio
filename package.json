@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "pnpm run test:ci && next build",
+    "build:skip-tests": "next build",
     "start": "next start",
     "lint": "next lint",
     "version:patch": "pnpm version patch",
     "version:minor": "pnpm version minor",
     "version:major": "pnpm version major",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:coverage": "jest --coverage",
+    "prebuild": "pnpm run lint && pnpm run test:ci"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
