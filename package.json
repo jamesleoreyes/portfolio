@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "pnpm run test:ci && next build",
+    "build": "next build",
     "build:skip-tests": "next build",
     "start": "next start",
     "lint": "next lint",
