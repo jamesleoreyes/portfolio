@@ -16,6 +16,8 @@ export default function Head() {
       <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
 
+      <script defer src="https://cloud.umami.is/script.js" data-website-id="6558351c-7013-4b45-bc6e-51f05ee79344"></script>
+
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
