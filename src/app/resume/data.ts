@@ -83,7 +83,7 @@ const resumeData: ResumeData = {
       name: 'Portfolio Website',
       description: 'Personal portfolio site showcasing projects, experience, and backend-to-full stack journey. Built with modern web technologies and enterprise-grade features.',
       completionPercentage: 35,
-      technologies: ['Next.js 15', 'React 19', 'TypeScript', 'shadcn/ui', 'Tailwind CSS', 'Vercel'],
+      technologies: ['Next.js 15', 'React 19', 'TypeScript', 'shadcn/ui', 'Tailwind CSS 4', 'Vercel'],
       highlights: [
         'Server-side rendering and static generation for optimal performance and SEO',
         'Advanced UI/UX features including custom animated word rotation component',
