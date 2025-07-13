@@ -2,7 +2,7 @@ import ProfileImage from "@/components/ProfileImage";
 
 export default function HeroSection() {
   return (
-    <section>
+    <section className='border-b border-foreground/10 pb-16'>
       <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center lg:text-left space-y-8 lg:space-y-0'>
         <ProfileImage
           width={300}

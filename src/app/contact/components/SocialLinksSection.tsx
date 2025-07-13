@@ -6,7 +6,7 @@ export default function SocialLinksSection() {
   const { socialLinks } = contactData;
 
   return (
-    <section className='space-y-6'>
+    <section className='space-y-6 pb-8'>
       <div className='text-center'>
         <h2 className='text-3xl font-bold tracking-tight mb-4'>Connect on Social</h2>
         <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>

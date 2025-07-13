@@ -6,7 +6,7 @@ export default function ContactMethodsSection() {
   const primaryMethods = contactData.contactMethods;
 
   return (
-    <section className='space-y-8'>
+    <section className='space-y-8 border-b border-foreground/10 pb-16'>
       <div className='text-center'>
         <h2 className='text-3xl font-bold tracking-tight mb-4'>Get In Touch</h2>
         <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>

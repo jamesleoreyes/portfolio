@@ -5,7 +5,7 @@ export default function ContactInfoSection() {
   const { contactInfo } = contactData;
 
   return (
-    <section className='space-y-6'>
+    <section className='space-y-6 border-b border-foreground/10 pb-16'>
       <h2 className='text-center sm:text-left text-3xl font-bold tracking-tight'>Contact Information</h2>
 
       <div className='grid gap-6 md:grid-cols-3'>
