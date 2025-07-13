@@ -2,6 +2,63 @@ import Link from "next/link";
 import { Button, SocialLinks } from "@/components";
 import { isPageDisabled } from "@/lib/utils";
 
+function CTAButtons() {
+  return (
+    <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+      <Button
+        asChild
+        size='lg'
+        className='min-w-[140px]'
+        aria-label='View my resume'
+        title='View my resume'
+      >
+        <Link href='/resume'>
+          View Resume
+        </Link>
+      </Button>
+
+      {isPageDisabled('/projects') ? (
+        <Button
+          size='lg'
+          variant='ghost'
+          className='min-w-[140px]'
+          disabled={true}
+          aria-label='Projects page (coming soon)'
+          title='Projects page (coming soon)'
+        >
+          See Projects
+        </Button>
+      ) : (
+        <Button
+          asChild
+          size='lg'
+          variant='ghost'
+          className='min-w-[140px]'
+          aria-label='View my projects'
+          title='View my projects'
+        >
+          <Link href='/projects'>
+            See Projects
+          </Link>
+        </Button>
+      )}
+
+      <Button
+        asChild
+        size='lg'
+        variant='ghost'
+        className='min-w-[140px]'
+        aria-label='Get in touch with me'
+        title='Get in touch with me'
+      >
+        <Link href='/contact'>
+          Get In Touch
+        </Link>
+      </Button>
+    </div>
+  );
+}
+
 export default function CTASection() {
   return (
     <section className='space-y-6 text-center pb-8'>
@@ -11,58 +68,7 @@ export default function CTASection() {
         Let&apos;s discuss how we can work together to build something great.
       </p>
 
-      <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-        <Button
-          asChild
-          size='lg'
-          className='min-w-[140px]'
-          aria-label='View my resume'
-          title='View my resume'
-        >
-          <Link href='/resume'>
-            View Resume
-          </Link>
-        </Button>
-
-        {isPageDisabled('/projects') ? (
-          <Button
-            size='lg'
-            variant='ghost'
-            className='min-w-[140px]'
-            disabled={true}
-            aria-label='Projects page (coming soon)'
-            title='Projects page (coming soon)'
-          >
-            See Projects
-          </Button>
-        ) : (
-          <Button
-            asChild
-            size='lg'
-            variant='ghost'
-            className='min-w-[140px]'
-            aria-label='View my projects'
-            title='View my projects'
-          >
-            <Link href='/projects'>
-              See Projects
-            </Link>
-          </Button>
-        )}
-
-        <Button
-          asChild
-          size='lg'
-          variant='ghost'
-          className='min-w-[140px]'
-          aria-label='Get in touch with me'
-          title='Get in touch with me'
-        >
-          <Link href='/contact'>
-            Get In Touch
-          </Link>
-        </Button>
-      </div>
+      <CTAButtons />
 
       <div className='flex justify-center'>
         <SocialLinks />
