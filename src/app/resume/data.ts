@@ -1,5 +1,6 @@
 import { assets } from '@/configs/app';
 import * as Icons from '@/components/icons';
+import { MessageCircle, Users, Lightbulb, Shuffle, Clock, Eye } from 'lucide-react';
 import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from './types/Data';
 
 const resumeData: ResumeData = {
@@ -136,7 +137,7 @@ const resumeData: ResumeData = {
       date: 'In Progress',
     },
   ],
-  skills: {
+  technicalSkills: {
     languages: [
       { name: 'JavaScript', icon: Icons.JavaScript, url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
       { name: 'TypeScript', icon: Icons.TypeScript, url: 'https://www.typescriptlang.org/' },
@@ -166,11 +167,44 @@ const resumeData: ResumeData = {
     ],
     cloud: [
       { name: 'Azure', icon: Icons.Azure, url: 'https://azure.microsoft.com/' },
+      { name: 'Cloudflare R2', icon: Icons.Cloudflare, url: 'https://www.cloudflare.com/products/r2/' },
       { name: 'Vercel', icon: Icons.Vercel, url: 'https://vercel.com/' },
       { name: 'Heroku', icon: Icons.Heroku, url: 'https://www.heroku.com/' },
       { name: 'Railway', icon: Icons.Railway, url: 'https://railway.app/' },
     ]
   },
+  softSkills: [
+    {
+      name: 'Communication',
+      description: 'Effectively conveying ideas and collaborating with team members, clients, and stakeholders through clear written and verbal communication.',
+      icon: MessageCircle,
+    },
+    {
+      name: 'Teamwork',
+      description: 'Working collaboratively in cross-functional teams to achieve shared goals and deliver high-quality products.',
+      icon: Users,
+    },
+    {
+      name: 'Problem Solving',
+      description: 'Analyzing complex technical challenges and developing creative, efficient solutions that address root causes.',
+      icon: Lightbulb,
+    },
+    {
+      name: 'Adaptability',
+      description: 'Quickly learning new technologies and adjusting to changing project requirements and business needs.',
+      icon: Shuffle,
+    },
+    {
+      name: 'Time Management',
+      description: 'Prioritizing tasks effectively and meeting deadlines while maintaining code quality and attention to detail.',
+      icon: Clock,
+    },
+    {
+      name: 'Attention to Detail',
+      description: 'Ensuring code quality, catching edge cases, and maintaining high standards in both development and user experience.',
+      icon: Eye,
+    },
+  ],
   coreCompetencies: [
     'Full-Stack Development',
     'API Development & Integration',

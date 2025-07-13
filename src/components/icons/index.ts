@@ -35,6 +35,7 @@ export { default as Sentry } from './devops/Sentry'
 
 // Cloud icons
 export { default as Azure } from './cloud/Azure'
+export { default as Cloudflare } from './cloud/Cloudflare'
 export { default as Vercel } from './cloud/Vercel'
 export { default as Heroku } from './cloud/Heroku'
 export { default as Railway } from './cloud/Railway'

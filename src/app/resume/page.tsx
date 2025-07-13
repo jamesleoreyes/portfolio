@@ -5,6 +5,7 @@ import {
   CoreCompetencies,
   Experience,
   TechnicalSkills,
+  SoftSkills,
   Education,
   Certifications,
   StickyResumeHeader
@@ -40,6 +41,7 @@ export default function Resume() {
               <Projects />
             </Suspense>
             <TechnicalSkills />
+            <SoftSkills />
             <Education />
             <Certifications />
 
