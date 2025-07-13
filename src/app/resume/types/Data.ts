@@ -55,6 +55,12 @@ interface TechnicalSkills {
   cloud: { name: string; icon: React.ElementType; url: string }[];
 }
 
+interface SoftSkill {
+  name: string;
+  description: string;
+  icon: React.ElementType;
+}
+
 interface ResumeData {
   personalInfo: {
     name: string;
@@ -66,7 +72,8 @@ interface ResumeData {
   projects: ProjectItem[];
   education: EducationItem[];
   certifications: CertificationItem[];
-  skills: TechnicalSkills;
+  technicalSkills: TechnicalSkills;
+  softSkills: SoftSkill[];
   coreCompetencies: string[];
 }
 
@@ -77,5 +84,6 @@ export type {
   EducationItem,
   CertificationItem,
   TechnicalSkills,
+  SoftSkill,
   ResumeData
 };

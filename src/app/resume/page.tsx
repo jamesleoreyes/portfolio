@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
 import {
-  ResumeHeader,
+  ResumeHero,
   ProfessionalSummary,
   CoreCompetencies,
   Experience,
   TechnicalSkills,
+  SoftSkills,
   Education,
   Certifications,
-  ResumeActions
+  StickyResumeHeader
 } from './components';
 import { lazy } from 'react';
 
@@ -17,19 +18,12 @@ export { default as metadata } from './metadata';
 
 export default function Resume() {
   return (
-    <div className="bg-background">
-      <div className="border-b">
-        <div className="container mx-auto px-4 md:px-0 py-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Resume</h1>
-            <ResumeActions />
-          </div>
-        </div>
-      </div>
+    <div className="bg-background relative">
+      <StickyResumeHeader />
 
       <div className="container mx-auto px-0 md:px-0 py-0 md:py-8 max-w-4xl">
         <div className="bg-card shadow-lg overflow-hidden">
-          <ResumeHeader />
+          <ResumeHero />
 
           <div className="p-8 space-y-12">
             <ProfessionalSummary />
@@ -47,6 +41,7 @@ export default function Resume() {
               <Projects />
             </Suspense>
             <TechnicalSkills />
+            <SoftSkills />
             <Education />
             <Certifications />
 

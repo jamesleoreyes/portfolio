@@ -106,13 +106,13 @@ function ProjectCard({ project }: { project: ProjectItem }) {
         )}
       </div>
 
-      <p className='text-muted-foreground text-sm leading-relaxed'>
+      <p className='text-muted-foreground leading-relaxed'>
         {project.description}
       </p>
 
       <div>
-        <h4 className='font-semibold mb-2 text-sm'>Key Highlights:</h4>
-        <ul className='list-disc list-inside space-y-1 text-sm text-muted-foreground'>
+        <h4 className='font-semibold mb-2'>Key Highlights:</h4>
+        <ul className='list-disc list-inside space-y-1 text-muted-foreground'>
           {project.highlights.map((highlight, idx) => (
             <li key={idx}>{highlight}</li>
           ))}
@@ -120,12 +120,12 @@ function ProjectCard({ project }: { project: ProjectItem }) {
       </div>
 
       <div>
-        <h4 className='font-semibold mb-2 text-sm'>Technologies:</h4>
+        <h4 className='font-semibold mb-2'>Technologies:</h4>
         <div className='flex flex-wrap gap-1'>
           {project.technologies.map((tech, idx) => (
             <span
               key={idx}
-              className='bg-popover text-secondary-foreground px-2 py-1 text-xs'
+              className='bg-popover text-secondary-foreground px-2 py-1 text-sm'
             >
               {tech}
             </span>

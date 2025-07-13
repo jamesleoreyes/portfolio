@@ -1,5 +1,6 @@
 import { MapPin, Clock, Calendar } from "lucide-react";
 import { contactData } from "../data";
+import { Card, CardDescription, CardTitle } from "@/components";
 
 export default function ContactInfoSection() {
   const { contactInfo } = contactData;
@@ -40,13 +41,13 @@ export default function ContactInfoSection() {
         </div>
       </div>
 
-      <div className='bg-accent p-6 border border-foreground/10 text-center'>
-        <h3 className='text-lg font-semibold mb-3'>Response Time</h3>
-        <p className='text-muted-foreground leading-relaxed'>
+      <Card className='bg-accent p-6 border border-foreground/10 text-center gap-0'>
+        <CardTitle className='text-lg font-semibold mb-3'>Response Time</CardTitle>
+        <CardDescription className='text-muted-foreground text-base leading-relaxed'>
           I try to respond to all messages within 48 hours. I&apos;m always excited to discuss new opportunities,
           collaborate on ideas, or just connect with fellow developers and creators!
-        </p>
-      </div>
+        </CardDescription>
+      </Card>
     </section>
   );
 }

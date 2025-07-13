@@ -17,7 +17,7 @@ export default function NavBar() {
 
   return (
     <nav className={cn(
-      'flex justify-center items-center p-4 sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60',
+      'flex justify-center items-center p-4 sticky top-0 z-50 bg-background',
       scrolled && 'border-b'
     )}>
       <div className='flex justify-between items-center max-w-screen-xl w-full'>

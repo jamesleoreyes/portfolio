@@ -4,7 +4,7 @@ import { isPageDisabled } from "@/lib/utils";
 
 export default function CTASection() {
   return (
-    <section className='space-y-6 text-center'>
+    <section className='space-y-6 text-center mb-8'>
       <h2 className='text-3xl font-bold tracking-tight'>Let&apos;s Work Together</h2>
       <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
         I&apos;m always interested in new opportunities and meaningful projects.
@@ -12,7 +12,7 @@ export default function CTASection() {
         I&apos;d love to help bring your ideas to life.
       </p>
 
-      <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+      <div className='flex sm:flex-row gap-4 justify-center items-center'>
         {isPageDisabled('/projects') ? (
           <Button
             size='lg'
@@ -50,7 +50,7 @@ export default function CTASection() {
         </Button>
       </div>
 
-      <div className='flex justify-center'>
+      <div className='flex justify-center space-x-4'>
         <SocialLinks />
       </div>
     </section>

@@ -14,6 +14,7 @@ export default function ResumeActions() {
           text: 'Check out James Reyes\' professional resume',
           url: window.location.href,
         });
+        toast.success('URL shared successfully');
       } catch (error) {
         if (error instanceof DOMException && error.name === 'AbortError') {
           toast.warning('Sharing cancelled');
@@ -33,11 +34,11 @@ export default function ResumeActions() {
 
   return (
     <div className="flex gap-2">
-      <Button variant="ghost" size="sm" onClick={handleShare}>
+      <Button variant="ghost" size="lg" onClick={handleShare}>
         <Share2 className="w-4 h-4 mr-2" />
         Share
       </Button>
-      <Button asChild size="sm">
+      <Button asChild size="lg">
         <Link href="/api/resume" download>
           <Download className="w-4 h-4" />
           Download PDF
@@ -45,4 +46,4 @@ export default function ResumeActions() {
       </Button>
     </div>
   );
-} 
+}

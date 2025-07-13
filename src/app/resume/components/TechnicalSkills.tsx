@@ -25,17 +25,17 @@ function SkillCategory({ title, skills }: { title: string; skills: Array<{ name:
 }
 
 export default function TechnicalSkills() {
-  const { skills } = resumeData;
+  const { technicalSkills } = resumeData;
 
   return (
     <section>
       <h2 className="text-2xl font-semibold mb-6 text-primary border-b pb-2">Technical Skills</h2>
       <div className="space-y-6">
-        <SkillCategory title="Programming Languages" skills={skills.languages} />
-        <SkillCategory title="Frontend Development" skills={skills.frontend} />
-        <SkillCategory title="Backend Development" skills={skills.backend} />
-        <SkillCategory title="DevOps & Tools" skills={skills.devops} />
-        <SkillCategory title="Cloud & Infrastructure" skills={skills.cloud} />
+        <SkillCategory title="Programming Languages" skills={technicalSkills.languages} />
+        <SkillCategory title="Frontend Development" skills={technicalSkills.frontend} />
+        <SkillCategory title="Backend Development" skills={technicalSkills.backend} />
+        <SkillCategory title="DevOps & Tools" skills={technicalSkills.devops} />
+        <SkillCategory title="Cloud & Infrastructure" skills={technicalSkills.cloud} />
       </div>
     </section>
   );
