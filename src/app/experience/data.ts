@@ -15,11 +15,11 @@ const experienceData: ExperienceData = {
       endDate: 'Sep 2023',
       status: 'completed',
       overview: 'Built subscription management platform for Abenity coupon system using Python, Flask, and ChargeBee. First professional software development experience.',
-      context: 'Career transition from FedEx delivery driver to software development. Father connected me with opportunity after seeing my AI-assisted Discord bot projects. Proved capabilities through Google Apps Script technical assessment.',
+      context: 'Career transition from FedEx delivery driver to software development. Father connected me with opportunity after seeing my AI-assisted Discord and Telegram bot projects. Proved capabilities through Google Apps Script technical assessment.',
       keyProjects: [
         {
           name: 'Abenity Subscription Platform',
-          description: 'Full-stack SaaS platform for managing coupon subscription access',
+          description: 'Full-stack SaaS platform for managing subscription access to Abenity coupon system',
           impact: 'Enabled business to offer subscription-based coupon services to clients',
           technologies: ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'ChargeBee', 'Azure', 'Jenkins'],
           challenges: [
@@ -64,6 +64,9 @@ const experienceData: ExperienceData = {
         'Client communication and requirements gathering',
         'Cloud infrastructure basics (Azure)'
       ],
+      nextSteps: [
+        'None. I got a full-time role :)',
+      ]
     },
     {
       id: 'cimplx-fulltime',
@@ -81,10 +84,10 @@ const experienceData: ExperienceData = {
       context: 'Transitioned from internship to full-time role, becoming the sole in-house developer responsible for maintaining and rebuilding critical integration systems. Took ownership of production systems processing 100,000+ webhook events.',
       keyProjects: [
         {
-          name: 'Factorial-UKG Integration Platform',
+          name: 'Factorial x UKG Integration Platform',
           description: 'Complete rebuild of enterprise integration system connecting European HR platform with US payroll system',
           impact: 'Replaced unreliable third-party solution with secure, maintainable in-house system',
-          technologies: ['TypeScript', 'Express.js', 'React', 'Azure SQL Server', 'Azure DevOps', 'Azure Key Vault', 'Azure Queue Storage'],
+          technologies: ['TypeScript', 'Express.js', 'React', 'Tailwind CSS', 'Azure SQL Server', 'Azure DevOps', 'Azure Key Vault', 'Azure Queue Storage'],
           challenges: [
             'Inherited poorly architected microservices with no authentication',
             'No documentation or proper error handling',
@@ -101,7 +104,7 @@ const experienceData: ExperienceData = {
           name: 'Employee QR Code Generator',
           description: 'Micro web app for generating employee ID QR codes for timekeeping system',
           impact: 'Enabled facial recognition alternative for privacy-conscious employees',
-          technologies: ['TypeScript', 'React', 'UKG Ready API', 'Heroku'],
+          technologies: ['Python', 'Flask', 'HTML', 'Tailwind CSS', 'UKG Ready API', 'Heroku'],
           outcomes: [
             'Seamlessly integrated into UKG Ready dashboard via iframe',
             'Eliminated manual badge creation process',
@@ -112,18 +115,18 @@ const experienceData: ExperienceData = {
           name: 'Mass Document Uploader',
           description: 'Automated document processing system for bulk employee document uploads',
           impact: 'Reduced document upload time from hours to minutes',
-          technologies: ['TypeScript', 'React', 'File Processing APIs', 'UKG Ready API'],
+          technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Express.js', 'File Processing APIs', 'UKG Ready API'],
           outcomes: [
-            'Processed 500+ documents in 15 minutes vs hours manually',
+            'Processes hundreds of documents per week in minutes instead of hours',
             'Intelligent file naming and employee detection',
             'Outperformed native UKG Ready solution in usability'
           ]
         },
         {
           name: 'Timecard Processor (ETL)',
-          description: 'Extract, Transform, Load system for automated timesheet imports',
+          description: 'Extract, Transform, Load system for automated timesheet imports from external timekeeping system to UKG Ready',
           impact: 'Reduced payroll processing time by over 95%',
-          technologies: ['TypeScript', 'Excel Processing', 'UKG Ready API', 'Data Transformation'],
+          technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Express.js', 'Excel Processing', 'UKG Ready API', 'Data Transformation'],
           outcomes: [
             'Automated hour-long manual process to 30 seconds',
             'Eliminated human error in timesheet entry',
@@ -134,7 +137,7 @@ const experienceData: ExperienceData = {
       achievements: [
         {
           title: 'Event-Driven Architecture',
-          description: 'Built microservices processing 100,000+ webhook events',
+          description: 'Built integration platform processing 100,000+ webhook events',
           impact: 'Enabled real-time data synchronization between systems',
           metrics: '100,000+ events processed'
         },
@@ -162,7 +165,7 @@ const experienceData: ExperienceData = {
       nextSteps: [
         'Continue optimizing integration performance',
         'Explore additional automation opportunities',
-        'Mentor junior developers as team grows'
+        'Improve and expand internal processes and tooling'
       ]
     },
     {
@@ -182,12 +185,12 @@ const experienceData: ExperienceData = {
       keyProjects: [
         {
           name: 'PSA Grading Tracker',
-          description: 'Automated system for tracking collectible card grading submissions',
+          description: 'Automated system for collectibles shops to track grading submissions with PSA, BGS, and TAG',
           impact: 'Eliminates manual Excel tracking and automates customer notifications',
           technologies: ['TypeScript', 'Node.js', 'Express.js', 'React.js', 'Supabase', 'PostgreSQL', 'Edge Functions', 'Railway'],
           challenges: [
             'Migrating from expensive Azure infrastructure',
-            'Implementing real-time webhook processing',
+            'Implementing edge functions for real-time processing',
             'Designing scalable multi-tenant architecture',
             'Creating intuitive dashboard for non-technical users'
           ],
@@ -229,7 +232,7 @@ const experienceData: ExperienceData = {
       ],
       nextSteps: [
         'Launch beta with multiple card shop partners',
-        'Expand to other grading companies (BGS, SGC)',
+        'Expand to other grading companies (BGS, TAG)',
         'Develop marketplace integration features',
         'Explore direct PSA partnership opportunities'
       ]

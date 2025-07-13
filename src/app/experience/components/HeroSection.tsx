@@ -19,24 +19,24 @@ export default function HeroSection() {
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
             <div className='bg-accent p-4 text-center space-y-1'>
               <div className='text-2xl font-bold text-primary'>{overallStats.totalExperience}</div>
-              <div className='text-sm text-muted-foreground'>Experience</div>
+              <div className='text-muted-foreground'>Experience</div>
             </div>
             <div className='bg-accent p-4 text-center space-y-1'>
               <div className='text-2xl font-bold text-primary'>{overallStats.projectsBuilt}</div>
-              <div className='text-sm text-muted-foreground'>Projects Built</div>
+              <div className='text-muted-foreground'>Projects Built</div>
             </div>
             <div className='bg-accent p-4 text-center space-y-1'>
               <div className='text-2xl font-bold text-primary'>{overallStats.technologiesUsed}+</div>
-              <div className='text-sm text-muted-foreground'>Technologies</div>
+              <div className='text-muted-foreground'>Technologies</div>
             </div>
             <div className='bg-accent p-4 text-center space-y-1'>
               <div className='text-2xl font-bold text-primary'>{overallStats.problemsSolved}+</div>
-              <div className='text-sm text-muted-foreground'>Problems Solved</div>
+              <div className='text-muted-foreground'>Problems Solved</div>
             </div>
           </div>
 
           <div className='bg-primary/10 p-6 border border-primary/20 text-center lg:text-left'>
-            <h3 className='text-lg font-semibold mb-2'>The Journey So Far</h3>
+            <h3 className='text-lg font-semibold mb-2'>What I've Learned</h3>
             <p className='text-muted-foreground'>
               Each role taught me something different: the internship showed me what's possible,
               the full-time position taught me enterprise-grade development, and the side project

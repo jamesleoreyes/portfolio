@@ -4,33 +4,41 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Code, Target, Lightbulb, TrendingUp, ArrowRight } from 'lucide-react';
 import { experienceData } from '../data';
-import { Button } from '@/components';
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@/components';
 
 function ProjectCard({ project }: { project: typeof experienceData.experiences[0]['keyProjects'][0] }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className='border border-foreground/10 bg-accent p-6 space-y-4 max-w-lg'>
-      <div className='flex items-start justify-between relative'>
-        <div className='flex-1'>
+    <div className='border border-foreground/10 bg-accent p-6 max-w-2xl'>
+      <div className='flex items-start justify-between mb-4'>
+        <div className='flex-1 pr-2'>
           <h4 className='text-lg font-semibold mb-2'>{project.name}</h4>
-          <p className='text-muted-foreground mb-3'>{project.description}</p>
-          <div className='bg-primary/10 p-3 border border-primary/20'>
-            <div className='flex items-center gap-2 mb-1'>
-              <Target className='w-4 h-4 text-primary' />
-              <span className='font-medium'>Impact</span>
-            </div>
-            <p className='text-muted-foreground'>{project.impact}</p>
-          </div>
+          <p className='text-muted-foreground'>{project.description}</p>
         </div>
-        <Button
-          onClick={() => setIsExpanded(!isExpanded)}
-          variant='ghost'
-          className='hover:bg-background! absolute right-0 top-[-5px]'
-          aria-label={isExpanded ? 'Collapse details' : 'Expand details'}
-        >
-          {isExpanded ? <ChevronUp className='w-4 h-4' /> : <ChevronDown className='w-4 h-4' />}
-        </Button>
+        <Tooltip delayDuration={100}>
+          <TooltipTrigger asChild>
+            <Button
+              onClick={() => setIsExpanded(!isExpanded)}
+              variant='ghost'
+              className='hover:bg-background! flex-shrink-0'
+              aria-label={isExpanded ? 'Collapse details' : 'Expand details'}
+            >
+              {isExpanded ? <ChevronUp className='w-4 h-4' /> : <ChevronDown className='w-4 h-4' />}
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            {isExpanded ? 'Collapse details' : 'Expand details'}
+          </TooltipContent>
+        </Tooltip>
+      </div>
+
+      <div className={`bg-primary/10 p-3 border border-primary/20 ${isExpanded ? 'mb-4' : 'mb-0'}`}>
+        <div className='flex items-center gap-2 mb-1'>
+          <Target className='w-4 h-4 text-primary' />
+          <span className='font-medium'>Impact</span>
+        </div>
+        <p className='text-muted-foreground'>{project.impact}</p>
       </div>
 
       {isExpanded && (
@@ -102,18 +110,18 @@ function ExperienceDetail({ experience }: { experience: typeof experienceData.ex
         </p>
       </div>
 
-      <div className={`grid gap-6 ${experience.keyProjects.length === 1 ? 'justify-center' : 'md:grid-cols-2'}`}>
+      <div className='flex flex-wrap justify-center gap-6'>
         {experience.keyProjects.map((project, idx) => (
           <ProjectCard key={idx} project={project} />
         ))}
       </div>
 
-      <div className='grid gap-6 md:grid-cols-2'>
-        <div className='bg-accent p-6 border border-foreground/10'>
+      <div className='grid gap-6 justify-center md:grid-cols-2'>
+        <div className='bg-accent p-6 border border-foreground/10 max-w-lg'>
           <h4 className='text-lg font-semibold mb-4'>Key Learnings</h4>
           <ul className='space-y-2'>
             {experience.learnings.map((learning, idx) => (
-              <li key={idx} className='flex items-start gap-2 text-sm'>
+              <li key={idx} className='flex items-start gap-2'>
                 <ArrowRight className='w-4 h-4 text-primary mt-0.5 flex-shrink-0' />
                 <span className='text-muted-foreground'>{learning}</span>
               </li>
@@ -122,11 +130,11 @@ function ExperienceDetail({ experience }: { experience: typeof experienceData.ex
         </div>
 
         {experience.nextSteps && experience.nextSteps.length > 0 && (
-          <div className='bg-primary/10 p-6 border border-primary/20'>
+          <div className='bg-primary/10 p-6 border border-primary/20 max-w-lg'>
             <h4 className='text-lg font-semibold mb-4'>Next Steps</h4>
             <ul className='space-y-2'>
               {experience.nextSteps.map((step, idx) => (
-                <li key={idx} className='flex items-start gap-2 text-sm'>
+                <li key={idx} className='flex items-start gap-2'>
                   <ArrowRight className='w-4 h-4 text-primary mt-0.5 flex-shrink-0' />
                   <span className='text-muted-foreground'>{step}</span>
                 </li>
@@ -146,7 +154,7 @@ export default function DetailedExperience() {
     <section className='space-y-8 border-b border-foreground/10 pb-16'>
       <div className='text-center'>
         <h2 className='text-3xl font-bold tracking-tight mb-4'>Detailed Experience</h2>
-        <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
+        <p className='text-lg text-muted-foreground'>
           Deep dive into the projects, challenges, and outcomes that defined each role.
         </p>
       </div>
@@ -166,4 +174,4 @@ export default function DetailedExperience() {
       <ExperienceDetail experience={selectedExperience} />
     </section>
   );
-} 
+}

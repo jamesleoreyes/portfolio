@@ -51,47 +51,52 @@ function TimelineItem({ experience, isLast }: {
           <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2'>
             <div>
               <h3 className='text-xl font-semibold'>{experience.position}</h3>
-              <p className='text-lg text-muted-foreground font-medium'>
-                <Link href={experience.company.url} target='_blank' rel='noopener noreferrer'>
+              <p className='text-muted-foreground'>
+                <Link
+                  href={experience.company.url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover:underline hover:text-primary hover:underline-offset-4'
+                >
                   {experience.company.name}
                 </Link>
               </p>
             </div>
             <div className='flex flex-col sm:items-end gap-1'>
-              <div className='flex items-center gap-2 text-sm text-muted-foreground'>
+              <div className='flex items-center gap-2 text-muted-foreground'>
                 <Calendar className='w-4 h-4' />
                 <span>{experience.startDate} - {experience.endDate}</span>
               </div>
-              <div className='flex items-center gap-2 text-sm text-muted-foreground'>
+              <div className='flex items-center gap-2 text-muted-foreground'>
                 <MapPin className='w-4 h-4' />
                 <span>{experience.location}</span>
               </div>
-              <div className={`px-2 py-1 text-xs font-medium text-white ${getStatusColor(experience.status)} self-start sm:self-end`}>
+              <div className={`px-2 py-1 text-sm font-medium text-white ${getStatusColor(experience.status)} self-start sm:self-end`}>
                 {getStatusText(experience.status)}
               </div>
             </div>
           </div>
 
-          <p className='text-muted-foreground leading-relaxed'>{experience.overview}</p>
+          <p className='text-muted-foreground leading-relaxed text-lg'>{experience.overview}</p>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
             <div className='bg-accent p-4 space-y-2'>
-              <h4 className='font-semibold text-sm'>Projects Built</h4>
+              <h4 className='font-semibold'>Projects Built</h4>
               <p className='text-2xl font-bold text-primary'>{experience.keyProjects.length}</p>
             </div>
             <div className='bg-accent p-4 space-y-2'>
-              <h4 className='font-semibold text-sm'>Technologies</h4>
+              <h4 className='font-semibold'>Technologies</h4>
               <p className='text-2xl font-bold text-primary'>{experience.technologies.length}</p>
             </div>
             <div className='bg-accent p-4 space-y-2'>
-              <h4 className='font-semibold text-sm'>Key Achievements</h4>
+              <h4 className='font-semibold'>Key Achievements</h4>
               <p className='text-2xl font-bold text-primary'>{experience.achievements.length}</p>
             </div>
           </div>
 
           <div className='bg-primary/5 p-4 border-l-4 border-primary'>
-            <h4 className='font-semibold mb-2'>Context & Impact</h4>
-            <p className='text-sm text-muted-foreground leading-relaxed'>{experience.context}</p>
+            <h4 className='font-semibold mb-2 text-lg'>Context & Impact</h4>
+            <p className='text-muted-foreground leading-relaxed'>{experience.context}</p>
           </div>
         </div>
       </div>

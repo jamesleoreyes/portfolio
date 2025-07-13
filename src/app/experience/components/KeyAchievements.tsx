@@ -1,4 +1,4 @@
-import { Trophy, TrendingUp, Users, Zap } from 'lucide-react';
+import { Trophy, TrendingUp, Users, Zap, Target } from 'lucide-react';
 import { experienceData } from '../data';
 
 function AchievementCard({ achievement, icon: Icon, color }: {
@@ -14,10 +14,13 @@ function AchievementCard({ achievement, icon: Icon, color }: {
         </div>
         <div className='flex-1'>
           <h3 className='text-lg font-semibold mb-2'>{achievement.title}</h3>
-          <p className='text-muted-foreground text-sm mb-3'>{achievement.description}</p>
+          <p className='text-muted-foreground mb-3'>{achievement.description}</p>
           <div className='bg-primary/10 p-3 border border-primary/20'>
-            <p className='text-sm font-medium text-primary mb-1'>Impact</p>
-            <p className='text-sm text-muted-foreground'>{achievement.impact}</p>
+            <div className='flex items-center gap-2 mb-1'>
+              <Target className='w-4 h-4 text-primary' />
+              <span className='font-medium'>Impact</span>
+            </div>
+            <p className='text-muted-foreground'>{achievement.impact}</p>
           </div>
         </div>
       </div>
@@ -57,7 +60,7 @@ export default function KeyAchievements() {
         </p>
       </div>
 
-      <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid gap-6 md:grid-cols-2'>
         {allAchievements.map((achievement, index) => (
           <AchievementCard
             key={index}
