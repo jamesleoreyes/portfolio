@@ -14,6 +14,7 @@ export default function ResumeActions() {
           text: 'Check out James Reyes\' professional resume',
           url: window.location.href,
         });
+        toast.success('URL shared successfully');
       } catch (error) {
         if (error instanceof DOMException && error.name === 'AbortError') {
           toast.warning('Sharing cancelled');
