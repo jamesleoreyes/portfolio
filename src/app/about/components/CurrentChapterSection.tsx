@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Target, Heart, Lightbulb, Rocket } from "lucide-react";
+import { Card, CardContent, CardDescription, CardTitle } from "@/components";
 
 interface CurrentChapterItem {
   title: string;
@@ -67,20 +68,20 @@ export default function CurrentChapterSection() {
         ))}
       </div>
 
-      <div className='bg-accent p-8 border border-foreground/10 text-center space-y-4'>
-        <h3 className='text-xl font-semibold'>The Full-Stack Product Engineer Mindset</h3>
-        <p className='text-muted-foreground max-w-2xl mx-auto'>
+      <Card className='bg-accent p-8 border border-foreground/10 text-center'>
+        <CardTitle className='text-xl font-semibold'>The Full-Stack Product Engineer Mindset</CardTitle>
+        <CardDescription className='text-muted-foreground text-base max-w-2xl mx-auto'>
           I don&apos;t just write code — I solve problems. Every technical decision is informed by user impact,
           business value, and long-term maintainability. From backend architecture to frontend experience,
           I think about the whole picture.
-        </p>
-        <div className='flex flex-wrap justify-center gap-4 text-sm'>
+        </CardDescription>
+        <CardContent className='flex flex-wrap justify-center gap-4 text-sm'>
           <span className='bg-primary/10 text-primary px-3 py-1'>User-Centered Design</span>
           <span className='bg-primary/10 text-primary px-3 py-1'>Clean Architecture</span>
           <span className='bg-primary/10 text-primary px-3 py-1'>Business Value</span>
           <span className='bg-primary/10 text-primary px-3 py-1'>Continuous Learning</span>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </section>
   );
 }
