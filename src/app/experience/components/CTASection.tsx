@@ -27,7 +27,7 @@ export default function CTASection() {
         {isPageDisabled('/projects') ? (
           <Button
             size='lg'
-            variant='outline'
+            variant='ghost'
             className='min-w-[140px]'
             disabled={true}
             aria-label='Projects page (coming soon)'
@@ -39,7 +39,7 @@ export default function CTASection() {
           <Button
             asChild
             size='lg'
-            variant='outline'
+            variant='ghost'
             className='min-w-[140px]'
             aria-label='View my projects'
             title='View my projects'
@@ -53,7 +53,7 @@ export default function CTASection() {
         <Button
           asChild
           size='lg'
-          variant='outline'
+          variant='ghost'
           className='min-w-[140px]'
           aria-label='Get in touch with me'
           title='Get in touch with me'
@@ -70,7 +70,7 @@ export default function CTASection() {
 
       <div className='bg-accent p-6 border border-foreground/10 max-w-2xl mx-auto'>
         <h3 className='text-lg font-semibold mb-3'>What I&apos;m Looking For</h3>
-        <p className='text-sm text-muted-foreground leading-relaxed'>
+        <p className='text-muted-foreground leading-relaxed'>
           I&apos;m seeking a full-stack engineering role where I can focus on building great software
           with teams that value both technical excellence and user experience. I want to work on
           products that make a real difference in people&apos;s lives.

@@ -38,7 +38,10 @@ interface ExperienceItem {
 
 interface TechEvolutionItem {
   period: string;
-  technologies: string[];
+  technologies: {
+    name: string;
+    url: string | null;
+  }[];
   focus: string;
   milestone: string;
 }

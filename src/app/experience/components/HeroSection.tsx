@@ -11,7 +11,7 @@ export default function HeroSection() {
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight'>
               Professional Experience
             </h1>
-            <p className='text-xl text-muted-foreground max-w-2xl'>
+            <p className='text-xl text-muted-foreground'>
               From FedEx delivery driver to Full-Stack Product Engineer — discover the projects, challenges, and breakthroughs that shaped my technical journey.
             </p>
           </div>
@@ -47,4 +47,4 @@ export default function HeroSection() {
       </div>
     </section>
   );
-} 
+}

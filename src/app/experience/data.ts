@@ -31,7 +31,7 @@ const experienceData: ExperienceData = {
           outcomes: [
             'Successfully launched working SaaS platform',
             'Integrated subscription billing and user management',
-            'Created responsive frontend with FlowBite components',
+            'Created responsive frontend with Flowbite components',
             'Implemented secure webhook processing'
           ]
         }
@@ -39,7 +39,7 @@ const experienceData: ExperienceData = {
       achievements: [
         {
           title: 'Rapid Learning',
-          description: 'Mastered full-stack development in 2 months',
+          description: 'Learned full-stack development in 2 months',
           impact: 'Delivered production-ready application as first coding project',
           metrics: '0 to production in 8 weeks'
         },
@@ -241,25 +241,57 @@ const experienceData: ExperienceData = {
   techEvolution: [
     {
       period: 'Late 2022',
-      technologies: ['ChatGPT', 'Python', 'Discord.py'],
+      technologies: [
+        { name: 'ChatGPT', url: 'https://chat.openai.com' },
+        { name: 'AI Workflow', url: null },
+        { name: 'Python', url: 'https://python.org' },
+        { name: 'Discord.py', url: 'https://discordpy.readthedocs.io' }
+      ],
       focus: 'AI-Assisted Learning',
       milestone: 'First interaction with ChatGPT sparked software development interest'
     },
     {
       period: 'Jul-Sep 2023',
-      technologies: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript'],
+      technologies: [
+        { name: 'Flask', url: 'https://flask.palletsprojects.com' },
+        { name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+        { name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+        { name: 'Tailwind CSS', url: 'https://tailwindcss.com' },
+        { name: 'Flowbite', url: 'https://flowbite.com' },
+        { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' }
+      ],
       focus: 'Web Development Fundamentals',
-      milestone: 'Built first full-stack application during internship'
+      milestone: 'Built my first full-stack application during internship'
     },
     {
       period: 'Sep 2023-Present',
-      technologies: ['TypeScript', 'Node.js', 'Express.js', 'React', 'Azure'],
+      technologies: [
+        { name: 'TypeScript', url: 'https://typescriptlang.org' },
+        { name: 'Node.js', url: 'https://nodejs.org' },
+        { name: 'Express.js', url: 'https://expressjs.com' },
+        { name: 'React', url: 'https://react.dev' },
+        { name: 'shadcn/ui', url: 'https://ui.shadcn.com' },
+        { name: 'Azure', url: 'https://azure.microsoft.com' }
+      ],
       focus: 'Enterprise Development',
       milestone: 'Rebuilt critical integration systems in production'
     },
     {
       period: 'Dec 2024-Present',
-      technologies: ['Supabase', 'PostgreSQL', 'Edge Functions', 'Railway'],
+      technologies: [
+        { name: 'Supabase', url: 'https://supabase.com' },
+        { name: 'Edge Functions', url: 'https://supabase.com/docs/guides/functions' },
+        { name: 'PostgreSQL', url: 'https://postgresql.org' },
+        { name: 'Railway', url: 'https://railway.app' },
+        { name: 'System Design', url: null },
+        { name: 'Product-Market Fit', url: null },
+        { name: 'Partnership', url: null },
+        { name: 'Business Development', url: null },
+        { name: 'SaaS', url: null },
+        { name: 'Multi-Tenant', url: null },
+        { name: 'Cost Optimization', url: null },
+        { name: 'Infrastructure', url: null },
+      ],
       focus: 'Modern Full-Stack & SaaS',
       milestone: 'Co-founded SaaS platform with optimized infrastructure'
     }
@@ -268,7 +300,7 @@ const experienceData: ExperienceData = {
     totalExperience: '2 years',
     projectsBuilt: 6,
     technologiesUsed: 25,
-    problemsSolved: 50
+    problemsSolved: 100
   }
 };
 
