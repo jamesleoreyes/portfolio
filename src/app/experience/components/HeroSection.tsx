@@ -36,9 +36,9 @@ export default function HeroSection() {
           </div>
 
           <div className='bg-primary/10 p-6 border border-primary/20 text-center lg:text-left'>
-            <h3 className='text-lg font-semibold mb-2'>What I've Learned</h3>
+            <h3 className='text-lg font-semibold mb-2'>What I&apos;ve Learned</h3>
             <p className='text-muted-foreground'>
-              Each role taught me something different: the internship showed me what's possible,
+              Each role taught me something different: the internship showed me what&apos;s possible,
               the full-time position taught me enterprise-grade development, and the side project
               is teaching me entrepreneurship and product development.
             </p>
