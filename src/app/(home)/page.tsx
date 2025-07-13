@@ -17,7 +17,7 @@ export default function Home() {
           <HeroSection />
           <CTASection />
 
-          <div className='mt-6 flex space-x-4 justify-start'>
+          <div className='mt-6 flex space-x-4 justify-center md:justify-start'>
             <SocialLinks />
           </div>
 

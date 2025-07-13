@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 import { Button } from '@/components';
 import { GitHub, LinkedIn, Twitter } from '@/components/icons';
 
@@ -8,8 +9,11 @@ interface SocialLink {
   icon: React.ElementType;
 }
 
+interface SocialLinkProps {
+  className?: string;
+}
 
-export function SocialLinks() {
+export function SocialLinks({ className }: SocialLinkProps) {
   const socialLinks: SocialLink[] = [
     {
       name: 'GitHub',
@@ -40,7 +44,7 @@ export function SocialLinks() {
             variant='ghost'
             size='icon'
             asChild
-            className='h-9 w-9 p-0'
+            className={cn('h-9 w-9 p-0', className)}
           >
             <Link
               href={link.href}

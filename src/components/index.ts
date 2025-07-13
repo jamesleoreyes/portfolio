@@ -5,6 +5,7 @@ export { default as Footer } from './Footer';
 export { ThemeToggle } from './theme/ThemeToggle';
 
 // shadcn/ui
+export { Alert, AlertTitle, AlertDescription } from './ui/alert';
 export { Button } from './ui/button';
 export { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
 export { Drawer } from './ui/drawer';
