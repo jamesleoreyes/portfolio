@@ -1,0 +1,50 @@
+import { experienceData } from "../data";
+
+export default function HeroSection() {
+  const { overallStats } = experienceData;
+
+  return (
+    <section className="border-b border-foreground/10 pb-16">
+      <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center md:text-left space-y-8 lg:space-y-0'>
+        <div className='space-y-6'>
+          <div className='space-y-4'>
+            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight'>
+              Professional Experience
+            </h1>
+            <p className='text-xl text-muted-foreground max-w-2xl'>
+              From FedEx delivery driver to Full-Stack Product Engineer — discover the projects, challenges, and breakthroughs that shaped my technical journey.
+            </p>
+          </div>
+
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+            <div className='bg-accent p-4 text-center space-y-1'>
+              <div className='text-2xl font-bold text-primary'>{overallStats.totalExperience}</div>
+              <div className='text-sm text-muted-foreground'>Experience</div>
+            </div>
+            <div className='bg-accent p-4 text-center space-y-1'>
+              <div className='text-2xl font-bold text-primary'>{overallStats.projectsBuilt}</div>
+              <div className='text-sm text-muted-foreground'>Projects Built</div>
+            </div>
+            <div className='bg-accent p-4 text-center space-y-1'>
+              <div className='text-2xl font-bold text-primary'>{overallStats.technologiesUsed}+</div>
+              <div className='text-sm text-muted-foreground'>Technologies</div>
+            </div>
+            <div className='bg-accent p-4 text-center space-y-1'>
+              <div className='text-2xl font-bold text-primary'>{overallStats.problemsSolved}+</div>
+              <div className='text-sm text-muted-foreground'>Problems Solved</div>
+            </div>
+          </div>
+
+          <div className='bg-primary/10 p-6 border border-primary/20 text-center lg:text-left'>
+            <h3 className='text-lg font-semibold mb-2'>The Journey So Far</h3>
+            <p className='text-muted-foreground'>
+              Each role taught me something different: the internship showed me what's possible,
+              the full-time position taught me enterprise-grade development, and the side project
+              is teaching me entrepreneurship and product development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+} 
