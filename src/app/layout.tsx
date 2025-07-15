@@ -3,7 +3,7 @@ import { Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from "@/components/ui/sonner"
 import './globals.css';
-import { DynamicFavicon, DynamicThemeColor, DynamicViewport } from '@/components';
+import { DynamicFavicon, DynamicThemeColor, DynamicViewport, ImpossibleDeviceEasterEgg } from '@/components';
 import { NavBar } from '@/components';
 import { Footer } from '@/components';
 import Head from './(seo)/head';
@@ -55,10 +55,7 @@ export default function RootLayout({
             position='top-center'
           />
           <Analytics />
-          <div className='flex flex-col justify-center items-center text-center min-h-screen min-[151px]:hidden'>
-            <p className='text-2xl'>🤔</p>
-            <p>What kind of device are you viewing on???</p>
-          </div>
+          <ImpossibleDeviceEasterEgg />
         </ThemeProvider>
       </body>
     </html>

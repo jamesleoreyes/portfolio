@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { assets } from '@/configs/app';
 import { nav } from '@/configs/nav';
-import { cn } from '@/lib/utils';
+import { cn, isActiveRoute } from '@/lib/utils';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { Button, MobileNav, ThemeToggle } from '@/components';
 import { AdaptiveIcon } from '@/components/icons';
@@ -13,7 +13,6 @@ import { AdaptiveIcon } from '@/components/icons';
 export default function NavBar() {
   const pathname = usePathname();
   const scrolled = useScrollPosition();
-  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <nav className={cn(
@@ -53,7 +52,7 @@ export default function NavBar() {
                 asChild
                 variant='ghost'
                 className={cn(
-                  isActive(page.href) && 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground dark:hover:bg-primary/90 dark:hover:text-primary-foreground'
+                  isActiveRoute(pathname, page.href) && 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground dark:hover:bg-primary/90 dark:hover:text-primary-foreground'
                 )}
               >
                 <Link href={page.href}>

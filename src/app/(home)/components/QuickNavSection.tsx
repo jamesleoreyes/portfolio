@@ -5,7 +5,7 @@ import { Alert, AlertDescription } from "@/components";
 export default function QuickNavSection() {
   return (
     <Alert
-      variant='ghost'
+      variant='default'
       className='text-sm text-muted-foreground flex justify-center md:justify-start w-fit mx-auto md:mx-0'
     >
       <AlertDescription>

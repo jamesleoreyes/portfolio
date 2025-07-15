@@ -28,3 +28,6 @@ export { DynamicFavicon } from './theme/DynamicFavicon';
 export { default as ProfileImage } from './ProfileImage';
 export { default as PlaceholderScreenshot } from './PlaceholderScreenshot';
 export { default as LiveTimeDisplay } from './LiveTimeDisplay';
+
+// Easter Eggs
+export { default as ImpossibleDeviceEasterEgg } from './easter-eggs/ImpossibleDeviceEasterEgg';

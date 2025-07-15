@@ -10,7 +10,6 @@ export function useScrollPosition() {
       setScrolled(window.scrollY > 0);
     };
 
-    // Initial check
     handleScroll();
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -18,4 +17,4 @@ export function useScrollPosition() {
   }, []);
 
   return scrolled;
-} 
+}

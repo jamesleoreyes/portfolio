@@ -4,7 +4,7 @@ import type { Meta } from "@/types/App";
 
 const meta: Meta = {
   title: 'About Me',
-  description: 'My journey from childhood coding curiosity to accidental scams, dead-end jobs, music obsession, and finally finding my calling as a Full-Stack Product Engineer. The winding path that led me here.'
+  description: 'My journey from childhood coding curiosity to dead-end jobs, music obsession, and finally finding my calling as a Full-Stack Product Engineer. The winding path that led me here.'
 }
 
 const metadata: Metadata = {
