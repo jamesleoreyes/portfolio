@@ -14,6 +14,7 @@ export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps)
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+  const [lastKeyPress, setLastKeyPress] = useState<number>(0);
 
   // Avoid hydration mismatch by only rendering after mount
   useEffect(() => {
@@ -73,12 +74,25 @@ export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps)
       }
     };
 
+    // Prevent rapid keyboard activation (1s debounce)
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        const now = Date.now();
+        if (now - lastKeyPress < 1000) {
+          e.preventDefault();
+          return;
+        }
+        setLastKeyPress(now);
+        toggleTheme();
+        e.preventDefault();
+      }
+    };
+
     return (
       <Tooltip
         delayDuration={150}
         open={isTooltipOpen}
         onOpenChange={(open) => {
-          // Only allow the tooltip to close if we're not hovering over the trigger
           if (!open) {
             const trigger = document.querySelector('[data-tooltip-trigger]');
             if (trigger && trigger.matches(':hover')) {
@@ -93,6 +107,7 @@ export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps)
             variant='ghost'
             size='icon'
             onClick={toggleTheme}
+            onKeyDown={handleKeyDown}
             className={className}
             aria-label='Toggle theme'
             data-tooltip-trigger
