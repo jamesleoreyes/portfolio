@@ -13,7 +13,6 @@ interface ThemeToggleProps {
 export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
   const [lastKeyPress, setLastKeyPress] = useState<number>(0);
 
   // Avoid hydration mismatch by only rendering after mount
@@ -89,19 +88,7 @@ export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps)
     };
 
     return (
-      <Tooltip
-        delayDuration={150}
-        open={isTooltipOpen}
-        onOpenChange={(open) => {
-          if (!open) {
-            const trigger = document.querySelector('[data-tooltip-trigger]');
-            if (trigger && trigger.matches(':hover')) {
-              return;
-            }
-          }
-          setIsTooltipOpen(open);
-        }}
-      >
+      <Tooltip delayDuration={150}>
         <TooltipTrigger asChild>
           <Button
             variant='ghost'
