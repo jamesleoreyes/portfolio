@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { assets, urlConfig } from "@/configs/app";
+import { assets, baseMeta, urlConfig } from "@/configs/app";
 import type { Meta } from "@/types/App";
 
 const meta: Meta = {
@@ -15,6 +15,15 @@ const metadata: Metadata = {
     url: `${urlConfig.app}/resume`,
     title: meta.title,
     description: meta.description,
+    siteName: `${baseMeta.fullTitle}`,
+    images: [
+      {
+        url: assets.images.profile.me,
+        width: 400,
+        height: 400,
+        alt: 'James Reyes - Professional Photo',
+      },
+    ],
   },
   twitter: {
     title: meta.title,

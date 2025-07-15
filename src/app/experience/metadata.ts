@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { assets, urlConfig } from "@/configs/app";
+import { assets, baseMeta, urlConfig } from "@/configs/app";
 import type { Meta } from "@/types/App";
 
 const meta: Meta = {
@@ -15,6 +15,7 @@ const metadata: Metadata = {
     url: `${urlConfig.app}/experience`,
     title: meta.title,
     description: meta.description,
+    siteName: `${baseMeta.fullTitle}`,
     images: [
       {
         url: assets.images.profile.me,
@@ -27,8 +28,7 @@ const metadata: Metadata = {
   twitter: {
     title: meta.title,
     description: meta.description,
-    images: [assets.images.og],
-    creator: '@jamesleoreyes',
+    images: [assets.images.profile.me],
   },
   alternates: {
     canonical: `${urlConfig.app}/experience`,
