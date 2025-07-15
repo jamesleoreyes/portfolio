@@ -19,9 +19,6 @@ interface Availability {
 interface ContactInfo {
   email: string;
   location: string;
-  timezone: string;
-  currentTime12Hr: string;
-  currentTime24Hr: string;
   availability: Availability[];
 }
 

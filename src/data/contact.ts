@@ -1,5 +1,4 @@
 import { Mail, Calendar } from 'lucide-react';
-import { getEasternTimezone, getCurrentEasternTime } from '@/lib/utils';
 import { ContactData } from '@/types/Contact';
 import * as Icons from '@/components/icons';
 
@@ -7,9 +6,6 @@ const contactData: ContactData = {
   contactInfo: {
     email: 'jamesleoreyes@gmail.com',
     location: 'Charlotte, NC',
-    timezone: getEasternTimezone(),
-    currentTime12Hr: getCurrentEasternTime(),
-    currentTime24Hr: getCurrentEasternTime(true),
     availability: [
       { day: 'Sunday & Saturday', time: '2 PM - 5 PM' },
       { day: 'Monday - Friday', time: '5 PM - 8 PM' },
