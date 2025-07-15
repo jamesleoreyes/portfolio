@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun, Monitor } from 'lucide-react';
-import { Button } from '@/components';
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@/components';
 
 interface ThemeToggleProps {
   variant?: 'simple' | 'full';
@@ -13,6 +13,7 @@ interface ThemeToggleProps {
 export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
   // Avoid hydration mismatch by only rendering after mount
   useEffect(() => {
@@ -63,30 +64,47 @@ export function ThemeToggle({ variant = 'simple', className }: ThemeToggleProps)
   }
 
   if (variant === 'simple') {
-    // Simple toggle between light and dark only
     const toggleTheme = () => {
       if (theme === 'system') {
-        // Check if system prefers dark mode
         const systemIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         setTheme(systemIsDark ? 'light' : 'dark');
       } else {
-        // Normal toggle between explicit light and dark
         setTheme(theme === 'dark' ? 'light' : 'dark');
       }
     };
 
     return (
-      <Button
-        variant='ghost'
-        size='icon'
-        onClick={toggleTheme}
-        className={className}
-        aria-label='Toggle theme'
-        title='Toggle theme'
+      <Tooltip
+        delayDuration={150}
+        open={isTooltipOpen}
+        onOpenChange={(open) => {
+          // Only allow the tooltip to close if we're not hovering over the trigger
+          if (!open) {
+            const trigger = document.querySelector('[data-tooltip-trigger]');
+            if (trigger && trigger.matches(':hover')) {
+              return;
+            }
+          }
+          setIsTooltipOpen(open);
+        }}
       >
-        <Sun className='h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
-        <Moon className='absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
-      </Button>
+        <TooltipTrigger asChild>
+          <Button
+            variant='ghost'
+            size='icon'
+            onClick={toggleTheme}
+            className={className}
+            aria-label='Toggle theme'
+            data-tooltip-trigger
+          >
+            <Sun className='h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
+            <Moon className='absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Toggle theme</p>
+        </TooltipContent>
+      </Tooltip>
     );
   }
 
