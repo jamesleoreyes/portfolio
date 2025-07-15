@@ -1,4 +1,4 @@
-import { Trophy, TrendingUp, Users, Zap, Target } from 'lucide-react';
+import { Trophy, TrendingUp, Users, Zap, Target, Rocket, Shield, Building, Award } from 'lucide-react';
 import { experienceData } from '../data';
 
 function AchievementCard({ achievement, icon: Icon, color }: {
@@ -41,17 +41,16 @@ export default function KeyAchievements() {
   // Flatten all achievements from all experiences
   const allAchievements = experienceData.experiences.flatMap(exp => exp.achievements);
 
-  // Define icons and colors for different types of achievements
+  // Define unique icons and colors for different achievements
   const achievementStyles = [
-    { icon: Trophy, color: 'bg-yellow-600' },
+    { icon: Rocket, color: 'bg-blue-600' },
     { icon: TrendingUp, color: 'bg-green-700' },
-    { icon: Users, color: 'bg-blue-800' },
     { icon: Zap, color: 'bg-purple-700' },
-    { icon: Trophy, color: 'bg-red-700' },
-    { icon: TrendingUp, color: 'bg-indigo-700' },
-    { icon: Users, color: 'bg-pink-700' },
-    { icon: Zap, color: 'bg-orange-700' },
-    { icon: Trophy, color: 'bg-teal-700' },
+    { icon: Users, color: 'bg-orange-700' },
+    { icon: Shield, color: 'bg-red-700' },
+    { icon: Building, color: 'bg-indigo-700' },
+    { icon: Trophy, color: 'bg-yellow-600' },
+    { icon: Award, color: 'bg-teal-700' },
   ];
 
   return (
@@ -82,7 +81,7 @@ export default function KeyAchievements() {
             <div className='text-muted-foreground'>Events Processed</div>
           </div>
           <div className='space-y-2'>
-            <div className='text-2xl font-bold text-primary'>98%</div>
+            <div className='text-2xl font-bold text-primary'>95%</div>
             <div className='text-muted-foreground'>Task Automation</div>
           </div>
           <div className='space-y-2'>

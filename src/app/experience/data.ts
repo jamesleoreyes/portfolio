@@ -38,19 +38,13 @@ const experienceData: ExperienceData = {
       ],
       achievements: [
         {
-          title: 'Rapid Learning',
-          description: 'Learned full-stack development in 2 months',
-          impact: 'Delivered production-ready application as first coding project',
+          title: 'Accelerated Learning',
+          description: 'Learned full-stack development fundamentals in 2 months',
+          impact: 'Delivered production-ready SaaS platform as first coding project',
           metrics: '0 to production in 8 weeks'
         },
         {
-          title: 'Technical Assessment',
-          description: 'Completed and improved Google Apps Script challenge',
-          impact: 'Demonstrated problem-solving skills and attention to detail',
-          metrics: 'Exceeded requirements with improvements'
-        },
-        {
-          title: 'Career Transition',
+          title: 'Career Breakthrough',
           description: 'Successfully transitioned from physical labor to software development',
           impact: 'Earned full-time developer position offer',
           metrics: 'Internship to full-time in 2 months'
@@ -136,22 +130,22 @@ const experienceData: ExperienceData = {
       ],
       achievements: [
         {
-          title: 'Event-Driven Architecture',
-          description: 'Built integration platform processing 100,000+ webhook events',
-          impact: 'Enabled real-time data synchronization between systems',
+          title: 'High-Volume Event Processing',
+          description: 'Architected integration platform handling continuous webhook traffic',
+          impact: 'Enabled real-time data synchronization across multiple client systems',
           metrics: '100,000+ events processed'
         },
         {
-          title: 'Productivity Automation',
-          description: 'Created tools reducing manual work by over 98%',
-          impact: 'Freed up hours of employee time for higher-value work',
+          title: 'Workflow Transformation',
+          description: 'Eliminated manual processes through intelligent automation tools',
+          impact: 'Freed up hours of employee time for strategic work',
           metrics: '98% reduction in manual tasks'
         },
         {
-          title: 'System Reliability',
-          description: 'Rebuilt integration with proper error handling and retry logic',
-          impact: 'Reduced manual intervention by 95%',
-          metrics: '95% reduction in manual fixes'
+          title: 'Legacy System Modernization',
+          description: 'Rebuilt unreliable microservices into maintainable monolithic architecture',
+          impact: 'Dramatically improved system stability and reduced operational overhead',
+          metrics: '95% reduction in manual interventions'
         }
       ],
       technologies: ['TypeScript', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Azure DevOps', 'Azure Web Apps', 'Azure SQL Server', 'Azure Key Vault', 'Azure Queue Storage', 'REST APIs'],
@@ -204,21 +198,21 @@ const experienceData: ExperienceData = {
       ],
       achievements: [
         {
-          title: 'Infrastructure Optimization',
-          description: 'Cut monthly costs by 90% through strategic migration',
-          impact: 'Made SaaS financially viable for small businesses',
+          title: 'Cost-Effective Architecture',
+          description: 'Migrated from Azure to optimized Supabase/Railway infrastructure',
+          impact: 'Made SaaS financially viable for small business market',
           metrics: '90% cost reduction'
         },
         {
-          title: 'Process Automation',
-          description: 'Automated entire grading submission tracking workflow',
-          impact: 'Eliminated manual Excel tracking and customer inquiries',
-          metrics: 'Automated 100% of tracking process'
+          title: 'Product-Market Validation',
+          description: 'Identified and solved real business pain point in collectibles industry',
+          impact: 'Secured multiple card shop partnerships for beta launch',
+          metrics: '85-95% workflow automation'
         },
         {
-          title: 'Scalable Architecture',
-          description: 'Built multi-tenant system for future growth',
-          impact: 'Platform ready for multiple card shop partnerships',
+          title: 'Multi-Tenant Foundation',
+          description: 'Designed scalable SaaS architecture supporting unlimited businesses',
+          impact: 'Platform ready for rapid customer acquisition and growth',
           metrics: 'Designed for unlimited tenants'
         }
       ],
