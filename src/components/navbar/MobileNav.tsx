@@ -48,7 +48,7 @@ export default function MobileNav({ className }: MobileNavProps) {
             <DrawerHeader>
               <DrawerTitle className="font-medium flex items-center justify-center">
                 <AdaptiveIcon
-                  src={assets.branding.iconTransparent}
+                  src={assets.branding.icons.transparent}
                   alt='logo'
                   width={100}
                   height={100}

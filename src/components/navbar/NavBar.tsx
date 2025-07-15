@@ -24,7 +24,7 @@ export default function NavBar() {
         {/* Logo */}
         <Link href='/'>
           <AdaptiveIcon
-            src={assets.branding.iconTransparent}
+            src={assets.branding.icons.transparent}
             alt='logo'
             width={100}
             height={100}

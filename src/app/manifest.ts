@@ -33,17 +33,17 @@ export default function manifest(): MetadataRoute.Manifest {
     orientation: 'portrait',
     icons: [
       {
-        src: assets.branding.icon192,
+        src: assets.branding.icons['192'],
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: assets.branding.icon512,
+        src: assets.branding.icons['512'],
         sizes: '512x512',
         type: 'image/png',
       },
       {
-        src: assets.branding.iconMaskable,
+        src: assets.branding.icons.maskable,
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',

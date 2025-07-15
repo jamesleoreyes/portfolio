@@ -28,14 +28,16 @@ const baseMeta: Meta = {
 
 const assets: Assets = {
   branding: {
-    appleTouchIcon: '/branding/apple-touch-icon.png',
     favicon: '/branding/favicon.ico',
-    icon192: '/branding/icon-192.png',
-    icon512: '/branding/icon-512.png',
-    iconMaskable: '/branding/icon-maskable.png',
-    iconTransparent: '/branding/icon-transparent.svg',
-    icon: '/branding/icon.svg',
-    iconInverted: '/branding/icon-inverted.svg',
+    icons: {
+      appleTouch: '/branding/apple-touch-icon.png',
+      '192': '/branding/icon-192.png',
+      '512': '/branding/icon-512.png',
+      maskable: '/branding/icon-maskable.png',
+      transparent: '/branding/icon-transparent.svg',
+      default: '/branding/icon.svg',
+      inverted: '/branding/icon-inverted.svg',
+    },
   },
   downloads: {
     resume: '/downloads/resume/James-Reyes-Resume.pdf',

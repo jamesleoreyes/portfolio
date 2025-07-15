@@ -1,4 +1,5 @@
-import { assets, urlConfig } from "@/configs/app";
+import { assets } from "@/configs/app";
+import { PersonSchema, FAQPageSchema, ProfilePageSchema } from "@/components/seo";
 
 export default function Head() {
   return (
@@ -18,28 +19,9 @@ export default function Head() {
 
       <script defer src="https://cloud.umami.is/script.js" data-website-id="6558351c-7013-4b45-bc6e-51f05ee79344"></script>
 
-      <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            'name': 'James Reyes',
-            'url': urlConfig.app,
-            'image': `${urlConfig.app}${assets.images.og}`,
-            'sameAs': [
-              'https://github.com/jamesleoreyes',
-              'https://linkedin.com/in/jamesleoreyes'
-            ],
-            'jobTitle': 'Full-Stack Product Engineer',
-            'worksFor': {
-              '@type': 'Organization',
-              'name': 'Cimplx HR, Inc.',
-              'url': 'https://cimplx.com'
-            }
-          })
-        }}
-      />
+      <PersonSchema />
+      <FAQPageSchema />
+      <ProfilePageSchema />
     </head>
   );
 }

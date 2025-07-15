@@ -16,7 +16,7 @@ export default function Footer() {
           <div className='lg:col-span-1 text-center lg:text-left'>
             <Link href='/' className='inline-block'>
               <AdaptiveIcon
-                src={assets.branding.iconTransparent}
+                src={assets.branding.icons.transparent}
                 alt='James Reyes Transparent Logo'
                 width={40}
                 height={40}

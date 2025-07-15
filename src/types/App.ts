@@ -14,37 +14,39 @@ interface Meta {
 interface Assets {
   branding: {
     /**
-     * @url `/branding/apple-touch-icon.png`
-     */
-    appleTouchIcon: string;
-    /**
      * @url `/branding/favicon.ico`
      */
     favicon: string;
-    /**
-     * @url `/branding/icon-192.png`
-     */
-    icon192: string;
-    /**
-     * @url `/branding/icon-512.png`
-     */
-    icon512: string;
-    /**
-     * @url `/branding/icon-maskable.png`
-     */
-    iconMaskable: string;
-    /**
-     * @url `/branding/icon-transparent.svg`
-     */
-    iconTransparent: string;
-    /**
-     * @url `/branding/icon.svg`
-     */
-    icon: string;
-    /**
-     * @url `/branding/icon-inverted.svg`
-     */
-    iconInverted: string;
+    icons: {
+      /**
+       * @url `/branding/apple-touch-icon.png`
+       */
+      appleTouch: string;
+      /**
+       * @url `/branding/icon-192.png`
+       */
+      '192': string;
+      /**
+       * @url `/branding/icon-512.png`
+       */
+      '512': string;
+      /**
+       * @url `/branding/icon-maskable.png`
+       */
+      maskable: string;
+      /**
+       * @url `/branding/icon-transparent.svg`
+       */
+      transparent: string;
+      /**
+       * @url `/branding/icon.svg`
+       */
+      default: string;
+      /**
+       * @url `/branding/icon-inverted.svg`
+       */
+      inverted: string;
+    };
   };
   downloads: {
     /**

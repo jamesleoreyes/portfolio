@@ -15,6 +15,9 @@ const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    'max-snippet': -1,
+    'max-image-preview': 'large',
+    'max-video-preview': -1,
     googleBot: {
       index: true,
       follow: true,
@@ -56,7 +59,7 @@ const metadata: Metadata = {
     capable: true,
     title: baseMeta.title,
     statusBarStyle: 'default',
-    startupImage: assets.branding.appleTouchIcon
+    startupImage: assets.branding.icons.appleTouch
   },
   alternates: {
     canonical: urlConfig.app,
@@ -66,7 +69,7 @@ const metadata: Metadata = {
       { url: assets.branding.favicon, sizes: '32x32', type: 'image/x-icon' },
     ],
     apple: [
-      { url: assets.branding.appleTouchIcon, sizes: '180x180', type: 'image/png' },
+      { url: assets.branding.icons.appleTouch, sizes: '180x180', type: 'image/png' },
     ],
   },
 };

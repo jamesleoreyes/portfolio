@@ -12,7 +12,7 @@ export function DynamicFavicon() {
     // Only update if theme actually changed
     if (!resolvedTheme || resolvedTheme === currentTheme) return;
 
-    const iconUrl = resolvedTheme === 'dark' ? assets.branding.icon : assets.branding.iconInverted;
+    const iconUrl = resolvedTheme === 'dark' ? assets.branding.icons.default : assets.branding.icons.inverted;
 
     // Find existing dynamic favicon or create one
     let favicon = document.querySelector('link[data-dynamic-favicon]') as HTMLLinkElement;
