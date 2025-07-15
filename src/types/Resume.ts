@@ -37,6 +37,7 @@ interface EducationItem {
   endDate: string;
   gpa?: string;
   honors?: string[];
+  note?: string;
 }
 
 interface CertificationItem {

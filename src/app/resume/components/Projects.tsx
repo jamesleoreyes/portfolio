@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 import { ExternalLink, Info } from 'lucide-react';
-import { resumeData, type ProjectItem } from '../data';
+import { resumeData, type ProjectItem } from '@/data';
 import { GitHub } from '@/components/icons';
 import { Progress, PlaceholderScreenshot, Tooltip, TooltipTrigger, TooltipContent } from '@/components';
 

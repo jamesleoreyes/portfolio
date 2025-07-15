@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Calendar, MapPin, Briefcase, Rocket, GraduationCap } from "lucide-react";
 import { useMobile } from "@/hooks/useMobile";
-import { experienceData } from "../data";
+import { experienceData } from "@/data";
 
 function TimelineItem({ experience, isLast }: {
   experience: typeof experienceData.experiences[0];

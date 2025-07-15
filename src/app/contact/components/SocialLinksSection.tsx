@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components";
-import { contactData } from "../data";
+import { contactData } from "../../../data/contact";
 
 export default function SocialLinksSection() {
   const { socialLinks } = contactData;

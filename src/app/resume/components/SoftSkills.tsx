@@ -1,5 +1,5 @@
-import { resumeData } from "../data";
-import type { SoftSkill } from "../types/Data";
+import { resumeData } from "@/data";
+import type { SoftSkill } from "@/types/Resume";
 
 function SkillItem({ skill }: { skill: SoftSkill }) {
   const { name, description, icon: IconComponent } = skill;

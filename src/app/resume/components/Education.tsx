@@ -1,4 +1,4 @@
-import { resumeData } from "../data";
+import { resumeData } from "@/data";
 
 export default function Education() {
   return (
@@ -16,9 +16,10 @@ export default function Education() {
                   {!edu.degree && <h3 className="text-lg font-semibold">{edu.field}</h3>}
                   <p className="text-muted-foreground font-medium">{edu.institution}</p>
                 </div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-muted-foreground sm:text-right">
                   <p>{edu.startDate} - {edu.endDate}</p>
                   {edu.gpa && <p>GPA: {edu.gpa}</p>}
+                  {edu.note && <p className="text-xs text-muted-foreground">{edu.note}</p>}
                 </div>
               </div>
 

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Code, Target, Lightbulb, TrendingUp, ArrowRight } from 'lucide-react';
-import { experienceData } from '../data';
+import { experienceData } from '@/data';
 import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@/components';
 
 function ProjectCard({ project }: { project: typeof experienceData.experiences[0]['keyProjects'][0] }) {

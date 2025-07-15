@@ -1,5 +1,5 @@
 import { Trophy, TrendingUp, Users, Zap, Target, Rocket, Shield, Building, Award } from 'lucide-react';
-import { experienceData } from '../data';
+import { experienceData } from '@/data';
 
 function AchievementCard({ achievement, icon: Icon, color }: {
   achievement: typeof experienceData.experiences[0]['achievements'][0];

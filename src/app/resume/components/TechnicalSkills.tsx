@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { resumeData } from "../data";
+import { resumeData } from "@/data";
 
 function SkillCategory({ title, skills }: { title: string; skills: Array<{ name: string; icon: React.ElementType; url: string }> }) {
   return (

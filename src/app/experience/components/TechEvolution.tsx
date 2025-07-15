@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Star, Code, Milestone } from 'lucide-react';
-import { experienceData } from '../data';
+import { experienceData } from '@/data';
 
 function EvolutionItem({ item, index, isLast }: {
   item: typeof experienceData.techEvolution[0];

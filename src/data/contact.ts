@@ -1,21 +1,15 @@
 import { Mail, Calendar } from 'lucide-react';
+import { getEasternTimezone, getCurrentEasternTime } from '@/lib/utils';
+import { ContactData } from '@/types/Contact';
 import * as Icons from '@/components/icons';
-import { ContactData } from './types/Data';
-
-const getCurrentTimezone = (): string => {
-  const now = new Date();
-  const jan = new Date(now.getFullYear(), 0, 1);
-  const jul = new Date(now.getFullYear(), 6, 1);
-  const standardTimezoneOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
-  const isDST = now.getTimezoneOffset() < standardTimezoneOffset;
-  return isDST ? 'EDT (UTC-4)' : 'EST (UTC-5)';
-};
 
 const contactData: ContactData = {
   contactInfo: {
     email: 'jamesleoreyes@gmail.com',
     location: 'Charlotte, NC',
-    timezone: getCurrentTimezone(),
+    timezone: getEasternTimezone(),
+    currentTime12Hr: getCurrentEasternTime(),
+    currentTime24Hr: getCurrentEasternTime(true),
     availability: [
       { day: 'Sunday & Saturday', time: '2 PM - 5 PM' },
       { day: 'Monday - Friday', time: '5 PM - 8 PM' },

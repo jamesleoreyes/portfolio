@@ -1,6 +1,6 @@
 import { Globe, Mail } from "lucide-react";
 import Link from "next/link";
-import { resumeData } from "../data";
+import { resumeData } from "@/data";
 
 export default function ResumeHero() {
   const { personalInfo } = resumeData;

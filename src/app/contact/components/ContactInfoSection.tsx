@@ -1,5 +1,5 @@
 import { MapPin, Clock, Calendar } from "lucide-react";
-import { contactData } from "../data";
+import { contactData } from "@/data";
 import { Card, CardDescription, CardTitle } from "@/components";
 
 export default function ContactInfoSection() {
@@ -23,7 +23,10 @@ export default function ContactInfoSection() {
             <Clock className='w-5 h-5 text-primary' />
             <h3 className='text-lg font-semibold'>Timezone</h3>
           </div>
-          <p className='text-muted-foreground'>{contactInfo.timezone}</p>
+          <div>
+            <p className='text-muted-foreground'>{contactInfo.timezone}</p>
+            <p className='text-sm text-muted-foreground'>{contactInfo.currentTime12Hr} / {contactInfo.currentTime24Hr}</p>
+          </div>
         </div>
 
         <div className='text-center sm:text-left space-y-3'>

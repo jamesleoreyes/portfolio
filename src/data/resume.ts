@@ -1,7 +1,7 @@
 import { assets } from '@/configs/app';
 import * as Icons from '@/components/icons';
 import { MessageCircle, Users, Lightbulb, Shuffle, Clock, Eye } from 'lucide-react';
-import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from './types/Data';
+import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from '@/types/Resume';
 
 const resumeData: ResumeData = {
   personalInfo: {
@@ -108,6 +108,7 @@ const resumeData: ResumeData = {
       field: 'Media Arts',
       startDate: 'Aug 2016',
       endDate: 'Jan 2018',
+      note: 'Completed 1.5 semesters'
     }
   ],
   certifications: [
@@ -186,7 +187,7 @@ const resumeData: ResumeData = {
     },
     {
       name: 'Problem Solving',
-      description: 'Analyzing complex technical challenges and developing creative, efficient solutions that address root causes.',
+      description: 'Analyzing technical challenges and developing creative, efficient solutions that address root causes.',
       icon: Lightbulb,
     },
     {

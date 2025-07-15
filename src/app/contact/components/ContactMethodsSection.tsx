@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button, Card, CardContent, CardHeader, CardFooter } from "@/components";
-import { contactData } from "../data";
+import { contactData } from "../../../data/contact";
 
 export default function ContactMethodsSection() {
   const primaryMethods = contactData.contactMethods;

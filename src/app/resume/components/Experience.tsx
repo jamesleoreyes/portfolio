@@ -1,4 +1,4 @@
-import { resumeData } from "../data";
+import { resumeData } from "@/data";
 
 function ExperienceItem({ experience }: { experience: typeof resumeData.experience[0] }) {
   return (

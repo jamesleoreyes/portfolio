@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { resumeData } from "../data";
+import { resumeData } from "@/data";
 import { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent } from "@/components/ui/card";
 
 export default function Certifications() {

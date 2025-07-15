@@ -1,4 +1,4 @@
-import { experienceData } from "../data";
+import { experienceData } from "@/data";
 
 export default function HeroSection() {
   const { overallStats } = experienceData;

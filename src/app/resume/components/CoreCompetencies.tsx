@@ -1,4 +1,4 @@
-import { resumeData } from "../data";
+import { resumeData } from "@/data";
 
 export default function CoreCompetencies() {
   return (
