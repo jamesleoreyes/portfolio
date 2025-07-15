@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Code, Target, Lightbulb, TrendingUp, ArrowRight } from 'lucide-react';
 import { experienceData } from '@/data';
-import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@/components';
+import { Button, Tooltip, TooltipContent, TooltipTrigger, Tabs, TabsList, TabsTrigger, TabsContent } from '@/components';
 
 function ProjectCard({ project }: { project: typeof experienceData.experiences[0]['keyProjects'][0] }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -148,8 +148,6 @@ function ExperienceDetail({ experience }: { experience: typeof experienceData.ex
 }
 
 export default function DetailedExperience() {
-  const [selectedExperience, setSelectedExperience] = useState<typeof experienceData.experiences[0]>(experienceData.experiences[0]!);
-
   return (
     <section className='space-y-8 border-b border-foreground/10 pb-16'>
       <div className='text-center'>
@@ -159,19 +157,27 @@ export default function DetailedExperience() {
         </p>
       </div>
 
-      <div className='flex flex-wrap justify-center gap-2 mb-8'>
-        {experienceData.experiences.map((experience) => (
-          <Button
-            key={experience.id}
-            onClick={() => setSelectedExperience(experience)}
-            variant={selectedExperience.id === experience.id ? 'default' : 'ghost'}
-          >
-            {experience.company.name}
-          </Button>
-        ))}
-      </div>
+      <Tabs defaultValue={experienceData.experiences[0]!.id} className='w-full'>
+        <div className='flex justify-center mb-4'>
+          <TabsList className='grid w-full sm:w-fit grid-cols-3 border border-foreground/10'>
+            {experienceData.experiences.map((experience) => (
+              <TabsTrigger
+                key={experience.id}
+                value={experience.id}
+                className='whitespace-nowrap'
+              >
+                {experience.tabName}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </div>
 
-      <ExperienceDetail experience={selectedExperience} />
+        {experienceData.experiences.map((experience) => (
+          <TabsContent key={experience.id} value={experience.id}>
+            <ExperienceDetail experience={experience} />
+          </TabsContent>
+        ))}
+      </Tabs>
     </section>
   );
 }

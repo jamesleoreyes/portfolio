@@ -16,6 +16,7 @@ interface ExperienceAchievement {
 
 interface ExperienceItem {
   id: string;
+  tabName: string;
   company: {
     name: string;
     url: string;

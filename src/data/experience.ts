@@ -4,11 +4,12 @@ const experienceData: ExperienceData = {
   experiences: [
     {
       id: 'cimplx-internship',
+      tabName: 'Internship',
       company: {
         name: 'Cimplx HR, Inc.',
         url: 'https://cimplx.com',
       },
-      position: 'Full-Stack Developer (Internship)',
+      position: 'Full-Stack Developer',
       type: 'internship',
       location: 'Rock Hill, SC',
       startDate: 'Jul 2023',
@@ -64,11 +65,12 @@ const experienceData: ExperienceData = {
     },
     {
       id: 'cimplx-fulltime',
+      tabName: 'Full-Time',
       company: {
         name: 'Cimplx HR, Inc.',
         url: 'https://cimplx.com',
       },
-      position: 'Full-Stack Developer / Integration Engineer',
+      position: 'API Developer / Integration Engineer',
       type: 'full-time',
       location: 'Rock Hill, SC',
       startDate: 'Sep 2023',
@@ -164,6 +166,7 @@ const experienceData: ExperienceData = {
     },
     {
       id: 'subtracked',
+      tabName: 'Startup',
       company: {
         name: 'SubTracked',
         url: 'https://subtracked.com',
@@ -175,7 +178,7 @@ const experienceData: ExperienceData = {
       endDate: 'Present',
       status: 'current',
       overview: 'Designed and built full-stack platform for collectible grading submissions, enabling businesses to track and manage orders across multiple categories.',
-      context: 'Collaboration with coworker who owns card shop business. Identified pain point in tracking PSA grading submissions and built automated solution. Preparing for beta launch with multiple card shop partners.',
+      context: 'Collaborated with co-founder identifying business requirements and pain points in tracking PSA grading submissions and built a fully automated solution. Preparing for beta launch with multiple card shop partners.',
       keyProjects: [
         {
           name: 'PSA Grading Tracker',

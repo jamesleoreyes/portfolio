@@ -13,6 +13,7 @@ export { Progress } from './ui/progress';
 export { Input } from './ui/input';
 export { Label } from './ui/label';
 export { Skeleton } from './ui/skeleton';
+export { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/tabs';
 export { Textarea } from './ui/textarea';
 export { Toaster } from './ui/sonner';
 export { Tooltip, TooltipTrigger, TooltipContent } from './ui/tooltip';
