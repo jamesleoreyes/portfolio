@@ -1,9 +1,14 @@
 import ProfileImage from "@/components/ProfileImage";
+import { cn } from "@/lib/utils";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  className?: string;
+}
+
+export default function HeroSection({ className }: HeroSectionProps) {
   return (
-    <section className='border-b border-foreground/10 pb-16'>
-      <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center lg:text-left space-y-8 lg:space-y-0'>
+    <section className={cn("border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center lg:text-left space-y-8 lg:space-y-0'>
         <ProfileImage
           width={300}
           height={300}
