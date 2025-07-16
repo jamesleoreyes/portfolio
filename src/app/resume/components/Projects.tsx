@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { ExternalLink, Info } from 'lucide-react';
-import { resumeData, type ProjectItem } from '@/data';
+import { resumeData } from '@/data';
+import { ProjectItem } from '@/types/Resume';
 import { GitHub } from '@/components/icons';
 import {
   Progress,
