@@ -108,7 +108,7 @@ export const projects: Projects = {
       { label: 'Lighthouse Best Practices', value: '100' },
       { label: 'Lighthouse SEO', value: '100' },
       { label: 'Core Web Vitals', value: 'All Green' },
-      { label: 'Bundle Size', value: '< 200KB' },
+      { label: 'Bundle Size', value: '< 350KB' },
     ],
   }
 };
