@@ -1,48 +1,19 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import ResumeActions from './ResumeActions';
+import { useScrollPosition } from '@/hooks/useScrollPosition';
 
 export default function StickyResumeHeader() {
-  const headerRef = useRef<HTMLDivElement>(null);
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry) {
-          setIsSticky(!entry.isIntersecting);
-        }
-      },
-      {
-        threshold: 0,
-        rootMargin: '-64px 0px 0px 0px', // Account for top-16 (64px)
-      }
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const isScrolled = useScrollPosition();
 
   return (
-    <>
-      {/* Sentinel element to detect when header should be sticky */}
-      <div ref={headerRef} className="absolute top-0 h-px" />
-
-      {/* Sticky Resume Header */}
-      <div className={`sticky top-16 z-30 pt-2 bg-background border-b border-foreground/10 ${isSticky ? 'sm:border-x' : ''}`}>
-        <div className={`mx-auto py-4 transition-all duration-300 ${isSticky ? 'px-4' : 'px-4 lg:px-0'
-          }`}>
-          <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-primary">Resume</h1>
-            <ResumeActions />
-          </div>
+    <div className={`sticky top-[5.05rem] z-30 bg-background transition-all duration-300 ${isScrolled ? 'shadow-xl' : 'shadow-none'}`}>
+      <div className='mx-auto p-4'>
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl font-bold text-primary">Resume</h1>
+          <ResumeActions />
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='border-t border-border/50'>
+    <footer className='border-t border-border/50 bg-background'>
       <div className='mx-auto max-w-screen-xl py-8 border-x border-border/50'>
         <div className='grid grid-cols-1 px-8 gap-8 lg:grid-cols-3'>
           {/* Logo and Description */}

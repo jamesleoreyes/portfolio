@@ -24,7 +24,7 @@ export default function NavBar() {
             alt='logo'
             width={100}
             height={100}
-            className='w-10 h-10 hover:opacity-60 transition-all duration-150'
+            className='w-12 h-12 hover:opacity-60 transition-all duration-150'
           />
         </Link>
 

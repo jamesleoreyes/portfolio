@@ -18,11 +18,11 @@ export { default as metadata } from './metadata';
 
 export default function Resume() {
   return (
-    <div className="bg-background relative border-x border-t border-primary/10">
+    <div className="bg-background relative sm:border-x border-border/30">
       <StickyResumeHeader />
 
-      <div className="mx-auto px-0 md:px-0 py-0 md:py-8 max-w-4xl">
-        <div className="bg-secondary shadow-lg overflow-hidden border border-primary/10">
+      <div className="mx-auto max-w-4xl">
+        <div className="bg-secondary overflow-hidden border-b border-border/30">
           <ResumeHero />
 
           <div className="p-8 space-y-10">
