@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import { type ProjectItem } from '@/data';
+import { type ProjectItem } from '@/types/Resume';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, Skeleton } from '@/components';
 import { PlaceholderScreenshot } from '@/components';
 import { type CarouselApi } from '@/components';

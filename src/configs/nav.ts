@@ -5,7 +5,7 @@ const navContent: Navigation[] = [
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog', disabled: true },
   { href: '/experience', label: 'Experience' },
-  { href: '/projects', label: 'Projects', disabled: true },
+  { href: '/projects', label: 'Projects' },
 ];
 
 const navWork: Navigation[] = [

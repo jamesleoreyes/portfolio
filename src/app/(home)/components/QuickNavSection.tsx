@@ -18,14 +18,14 @@ export default function QuickNavSection() {
           >
             resume
           </Link>
-          {' '}or reach out to me{' '}
+          {' '}or{' '}
           <Link
             href='/contact'
             className='underline hover:text-foreground transition-colors'
             aria-label='Reach out to me'
             title='Reach out to me'
           >
-            here
+            contact me
           </Link>
         </p>
       </AlertDescription>
