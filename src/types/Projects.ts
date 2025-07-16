@@ -22,7 +22,7 @@ interface Project {
   subtitle: string;
   description: string;
   longDescription: string;
-  status: 'live' | 'development' | 'archived';
+  status: 'live' | 'development' | 'archived' | 'coming-soon';
   type: 'personal' | 'professional' | 'open-source';
 
   // Links
@@ -61,6 +61,9 @@ interface Project {
 
 interface Projects {
   portfolio: Project;
+  theReyesVault: Project;
+  subTrackedApp: Project;
+  subTrackedLanding: Project;
 }
 
 export type { Project, ProjectFeature, ProjectChallenge, TechStack, Projects };

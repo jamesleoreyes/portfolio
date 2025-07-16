@@ -7,18 +7,11 @@ export const projects: Projects = {
     title: 'Portfolio Website',
     subtitle: 'Personal Portfolio & Digital Presence',
     description: 'A modern, responsive portfolio website built with Next.js, featuring dynamic theming, progressive web app capabilities, and a focus on performance and accessibility.',
-    longDescription: `This portfolio website represents my approach to modern web development: clean design, exceptional performance, and thoughtful user experience. Built with Next.js 15 and React 19, it showcases not just my projects but also my technical philosophy of creating maintainable, scalable applications.
-  
-  The site features a completely custom design system built on top of Tailwind CSS, with careful attention to typography, spacing, and color theory. Every component is crafted for reusability and accessibility, following modern React patterns and best practices.
-  
-  Beyond just displaying information, this portfolio demonstrates advanced Next.js features like dynamic metadata generation, image optimization, and progressive web app capabilities. The codebase itself serves as an example of clean architecture, proper TypeScript usage, and modern deployment practices.`,
-
+    longDescription: `This portfolio website represents my approach to modern web development: clean design, exceptional performance, and thoughtful user experience. Built with Next.js 15 and React 19, it showcases not just my projects but also my technical philosophy of creating maintainable, scalable applications. The site features a completely custom design system built on top of Tailwind CSS, with careful attention to typography, spacing, and color theory. Every component is crafted for reusability and accessibility, following modern React patterns and best practices. Beyond just displaying information, this portfolio demonstrates advanced Next.js features like dynamic metadata generation, image optimization, and progressive web app capabilities. The codebase itself serves as an example of clean architecture, proper TypeScript usage, and modern deployment practices.`,
     status: 'live',
     type: 'personal',
-
     liveUrl: 'https://jamesleoreyes.com',
     githubUrl: 'https://github.com/jamesleoreyes/portfolio',
-
     screenshots: {
       default: assets.images.screenshots.dark.portfolioDesktop,
       light: assets.images.screenshots.light.portfolioDesktop,
@@ -29,7 +22,6 @@ export const projects: Projects = {
       light: assets.images.screenshots.light.portfolioDesktop[0]!,
       dark: assets.images.screenshots.dark.portfolioDesktop[0]!,
     },
-
     techStack: [
       { name: 'Next.js 15', category: 'frontend' },
       { name: 'React 19', category: 'frontend' },
@@ -45,7 +37,6 @@ export const projects: Projects = {
       { name: 'ESLint', category: 'tools' },
       { name: 'Prettier', category: 'tools' },
     ],
-
     features: [
       {
         title: 'Responsive Design',
@@ -80,7 +71,6 @@ export const projects: Projects = {
         description: 'Automated deployment pipeline with Vercel, domain management, and performance monitoring.',
       },
     ],
-
     challenges: [
       {
         title: 'Performance vs. Functionality',
@@ -98,17 +88,102 @@ export const projects: Projects = {
         solution: 'Designed a TypeScript-first data structure with strongly typed interfaces, making content updates safe and IDE-friendly while avoiding CMS overhead.',
       },
     ],
-
     startDate: 'May 2025',
     lastUpdated: 'July 16, 2025',
-
     metrics: [
-      { label: 'Lighthouse Performance', value: '100' },
-      { label: 'Lighthouse Accessibility', value: '100' },
-      { label: 'Lighthouse Best Practices', value: '100' },
-      { label: 'Lighthouse SEO', value: '100' },
+      { label: 'PageSpeed Insights Performance', value: '99' },
+      { label: 'PageSpeed Insights Accessibility', value: '100' },
+      { label: 'PageSpeed Insights Best Practices', value: '100' },
+      { label: 'PageSpeed Insights SEO', value: '100' },
       { label: 'Core Web Vitals', value: 'All Green' },
       { label: 'Bundle Size', value: '< 350KB' },
     ],
-  }
+  },
+  theReyesVault: {
+    id: 'the-reyes-vault',
+    title: 'The Reyes Vault',
+    subtitle: 'Personal Vault for Family and Friends',
+    description: 'A user-friendly platform for uploading, viewing, organizing, and searching digitized family memories like photos, videos, and audio recordings.',
+    longDescription: ``,
+    status: 'development',
+    type: 'personal',
+    liveUrl: 'https://demo.thereyesvault.com',
+    githubUrl: 'https://github.com/jamesleoreyes/the-reyes-vault',
+    screenshots: {
+      default: [],
+      light: [],
+      dark: [],
+    },
+    featuredImage: {
+      default: '',
+    },
+    techStack: [
+      { name: 'Next.js', category: 'frontend' },
+      { name: 'React', category: 'frontend' },
+      { name: 'TypeScript', category: 'frontend' },
+      { name: 'Tailwind CSS 4', category: 'frontend' },
+    ],
+    features: [],
+    startDate: 'July 2025',
+    lastUpdated: 'July 16, 2025',
+    metrics: [],
+  },
+  subTrackedApp: {
+    id: 'subtracked-app',
+    title: 'SubTracked',
+    subtitle: 'Subscription Management Platform',
+    description: 'A web app for tracking collectible submission grading orders and automating customer status updates.',
+    longDescription: ``,
+    status: 'coming-soon',
+    type: 'professional',
+    screenshots: {
+      default: [],
+      light: [],
+      dark: [],
+    },
+    featuredImage: {
+      default: '',
+    },
+    techStack: [
+      {name: 'React', category: 'frontend'},
+      {name: 'Express.js', category: 'backend'},
+      {name: 'Supabase', category: 'database'},
+      {name: 'TypeScript', category: 'frontend'},
+      {name: 'Tailwind CSS', category: 'frontend'},
+    ],
+    features: [],
+    startDate: 'July 2025',
+    lastUpdated: 'July 16, 2025',
+    metrics: [],
+  },
+  subTrackedLanding: {
+    id: 'subtracked-landing',
+    title: 'SubTracked Marketing',
+    subtitle: 'Marketing Website for SubTracked',
+    description: 'A marketing website designed to showcase SubTracked\'s features and convert visitors into users.',
+    longDescription: ``,
+    status: 'coming-soon',
+    type: 'professional',
+    screenshots: {
+      default: [],
+      light: [],
+      dark: [],
+    },
+    featuredImage: {
+      default: '',
+    },
+    techStack: [
+      {name: 'Next.js', category: 'frontend'},
+      {name: 'React', category: 'frontend'},
+      {name: 'TypeScript', category: 'frontend'},
+      {name: 'Tailwind CSS', category: 'frontend'},
+      {name: 'Framer Motion', category: 'frontend'},
+      {name: 'shadcn/ui', category: 'frontend'},
+      {name: 'Radix UI', category: 'frontend'},
+    ],
+    features: [],
+    startDate: 'July 2025',
+    lastUpdated: 'July 16, 2025',
+    metrics: [],
+  },
 };

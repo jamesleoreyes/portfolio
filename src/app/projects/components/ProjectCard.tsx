@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
+import { ExternalLink, Github, Eye } from 'lucide-react';
 import { Project } from '@/types/Projects';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button } from '@/components';
 
@@ -27,6 +28,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         return 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400';
       case 'development':
         return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400';
+      case 'coming-soon':
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400';
       case 'archived':
         return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
       default:
@@ -40,6 +43,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         return 'Live';
       case 'development':
         return 'In Development';
+      case 'coming-soon':
+        return 'Coming Soon';
       case 'archived':
         return 'Archived';
       default:
@@ -60,7 +65,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className='w-full h-full object-cover'
           />
         ) : (
-          <div className='text-primary text-4xl font-bold'>{project.title}</div>
+          <div className='text-primary text-3xl font-bold'>{project.title}</div>
         )}
       </div>
 
@@ -94,24 +99,28 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Action Buttons */}
         <div className='grid grid-cols-2 gap-2'>
-          <Button asChild>
-            <Link href={`/projects/${project.id}`}>View Details</Link>
-          </Button>
-          {project.liveUrl ? (
-            <Button asChild variant='ghost'>
-              <Link href={project.liveUrl} target='_blank' rel='noopener noreferrer'>
-                Live Site
+          {project.status !== 'development' && project.liveUrl && (
+            <>
+              <Button asChild variant='default' size='lg'>
+                <Link href={`/projects/${project.id}`}>
+                  <Eye className='w-4 h-4' />
+                  View Details
+                </Link>
+              </Button>
+              <Button asChild variant='secondary' size='lg'>
+                <Link href={project.liveUrl} target='_blank' rel='noopener noreferrer'>
+                  <ExternalLink className='w-4 h-4' />
+                  Live Site
+                </Link>
+              </Button>
+            </>
+          )}
+          {project.status === 'development' && (
+            <Button asChild size='lg' className='col-span-2'>
+              <Link href={project.githubUrl ?? ''} target='_blank' rel='noopener noreferrer'>
+                <Github className='w-4 h-4' />
+                View Repository
               </Link>
-            </Button>
-          ) : project.githubUrl ? (
-            <Button asChild variant='ghost'>
-              <Link href={project.githubUrl} target='_blank' rel='noopener noreferrer'>
-                GitHub
-              </Link>
-            </Button>
-          ) : (
-            <Button variant='ghost' disabled>
-              View Code
             </Button>
           )}
         </div>
