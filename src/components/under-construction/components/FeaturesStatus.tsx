@@ -1,11 +1,9 @@
-import { useState } from 'react';
 import { CheckCircle, Clock, Target } from 'lucide-react';
 import { projectsConfig } from '@/configs/projects';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button } from '@/components';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components';
 
 export default function FeaturesStatus() {
   const { completedFeatures, inProgressFeatures, plannedFeatures } = projectsConfig;
-  const [showAllPlanned, setShowAllPlanned] = useState(false);
 
   return (
     <section className="py-16 w-full px-4">
@@ -72,24 +70,12 @@ export default function FeaturesStatus() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
-              {(showAllPlanned ? plannedFeatures : plannedFeatures.slice(0, 4)).map((feature, index) => (
+              {plannedFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm">
                   <Target className="w-3 h-3 text-blue-500" />
                   <span className="text-blue-700 dark:text-blue-300">{feature}</span>
                 </div>
               ))}
-              {plannedFeatures.length > 4 && (
-                <Button
-                  variant="link"
-                  onClick={() => setShowAllPlanned(!showAllPlanned)}
-                  className="text-xs p-0 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors cursor-pointer"
-                >
-                  {showAllPlanned
-                    ? 'Show less'
-                    : `+${plannedFeatures.length - 4} more features planned`
-                  }
-                </Button>
-              )}
             </CardContent>
           </Card>
         </div>

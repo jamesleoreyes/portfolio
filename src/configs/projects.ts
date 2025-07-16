@@ -14,23 +14,33 @@ export interface ProjectsConfig {
 }
 
 export const projectsConfig: ProjectsConfig = {
-  completionPercentage: 5,
+  completionPercentage: 75,
   isComplete: false,
   estimatedCompletion: "End of July 2025",
   completedFeatures: [
     "Page structure setup",
     "Under construction design",
+    "Project showcase design",
+    "Project data modeling",
+    "Individual project pages",
+    "Technology stack visualization",
+    "Project card components",
+    "Portfolio case study page",
+    "Screenshot gallery with themes",
+    "Project metrics dashboard",
+    "Responsive grid layout"
   ],
   inProgressFeatures: [
-    "Project showcase design",
-    "Project data modeling"
+    "Additional project case studies",
+    "Project filtering by technology",
+    "Performance optimizations"
   ],
   plannedFeatures: [
-    "Individual project pages",
     "Project filtering system",
     "Interactive project demos",
     "GitHub integration",
-    "Technology stack visualization",
-    "Project timeline view"
+    "Project timeline view",
+    "Search functionality",
+    "Tags and categories"
   ]
 };
