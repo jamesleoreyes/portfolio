@@ -34,14 +34,3 @@ export const projectsConfig: ProjectsConfig = {
     "Project timeline view"
   ]
 };
-
-export const shouldShowUnderConstruction = () => {
-  const projectsMode = process.env['PROJECTS_MODE'] || 'production';
-  return projectsMode === 'production';
-};
-
-export const getProgressColor = (percentage: number) => {
-  if (percentage < 30) return 'bg-destructive';
-  if (percentage < 70) return 'bg-yellow-500';
-  return 'bg-green-500';
-};

@@ -302,4 +302,3 @@ const experienceData: ExperienceData = {
 };
 
 export { experienceData };
-export type { ExperienceData };

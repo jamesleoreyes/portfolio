@@ -1,7 +1,7 @@
 import { assets } from '@/configs/app';
 import * as Icons from '@/components/icons';
 import { MessageCircle, Users, Lightbulb, Shuffle, Clock, Eye } from 'lucide-react';
-import type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills } from '@/types/Resume';
+import type { ResumeData } from '@/types/Resume';
 
 const resumeData: ResumeData = {
   personalInfo: {
@@ -226,4 +226,3 @@ const resumeData: ResumeData = {
 };
 
 export { resumeData };
-export type { ResumeData, ExperienceItem, ProjectItem, EducationItem, CertificationItem, TechnicalSkills }; 

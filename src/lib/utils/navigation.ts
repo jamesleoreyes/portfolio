@@ -8,3 +8,14 @@ export function isPageDisabled(href: string) {
 export function isActiveRoute(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 };
+
+export function shouldShowUnderConstruction() {
+  const projectsMode = process.env['PROJECTS_MODE'] ?? 'production';
+  return projectsMode === 'production';
+};
+
+export function getProgressColor(percentage: number) {
+  if (percentage < 30) return 'bg-destructive';
+  if (percentage < 70) return 'bg-yellow-500';
+  return 'bg-green-500';
+};

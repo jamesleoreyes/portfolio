@@ -45,4 +45,3 @@ const contactData: ContactData = {
 };
 
 export { contactData };
-export type { ContactData };
