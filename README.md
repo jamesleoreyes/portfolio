@@ -19,20 +19,18 @@ Visit the live site: [jamesleoreyes.com](https://jamesleoreyes.com)
 - **Responsive**: Mobile-first design that works on all devices
 - **Interactive Elements**: Smooth animations and transitions using Framer Motion
 
-### Current Sections
+### Completed Features
 
-- **Home**: Hero section with rotating taglines and quick navigation
-- **About**: Comprehensive overview of skills, values, and approach
-- **Tech Stack**: Interactive showcase of technologies and tools
-- **Social Links**: Easy access to professional profiles
+- ✅ **Home**: Hero section with rotating taglines and quick navigation
+- ✅ **About**: Comprehensive overview of skills, values, and approach
+- ✅ **Experience**: Timeline of experience with detailed descriptions
+- ✅ **Contact**: Methods to get in touch with me
+- ✅ **Resume**: Interactive resume with download functionality
 
 ### Planned Features (V1 Roadmap)
 
-- [ ] Projects showcase with detailed case studies
-- [ ] Experience timeline
-- [ ] Contact form with email integration
-- [ ] Resume download functionality
-- [ ] Blog section with MDX support
+- 🚧 Projects showcase with detailed case studies
+- 🚧 Blog section with MDX support
 
 ## 🛠️ Tech Stack
 
