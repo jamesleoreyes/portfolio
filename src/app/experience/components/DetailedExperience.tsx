@@ -15,7 +15,7 @@ function ProjectCard({ project }: { project: typeof experienceData.experiences[0
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className='border border-primary/20 bg-accent p-6 max-w-2xl'>
+    <div className='border border-foreground/10 bg-accent p-6 max-w-2xl'>
       <div className='flex items-start justify-between mb-4'>
         <div className='flex-1 pr-2'>
           <h4 className='text-lg font-semibold mb-2 text-primary'>{project.name}</h4>
@@ -38,7 +38,7 @@ function ProjectCard({ project }: { project: typeof experienceData.experiences[0
         </Tooltip>
       </div>
 
-      <div className={`bg-primary/10 p-3 border border-primary/20 ${isExpanded ? 'mb-4' : 'mb-0'}`}>
+      <div className={`bg-primary/10 p-3 border border-foreground/10 ${isExpanded ? 'mb-4' : 'mb-0'}`}>
         <div className='flex items-center gap-2 mb-1'>
           <Target className='w-5 h-5 text-primary' />
           <span className='font-medium text-primary text-lg'>Impact</span>

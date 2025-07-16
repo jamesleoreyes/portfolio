@@ -40,7 +40,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
             </div>
           </div>
 
-          <div className='bg-primary/10 p-6 border border-primary/20 text-center lg:text-left'>
+          <div className='bg-primary/10 p-6 border border-foreground/10 text-center lg:text-left'>
             <h3 className='text-lg font-semibold mb-2'>What I&apos;ve Learned</h3>
             <p className='text-muted-foreground'>
               Each role taught me something different: the internship showed me what&apos;s possible,

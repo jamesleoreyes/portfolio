@@ -23,7 +23,7 @@ function AchievementCard({ achievement, icon: Icon, color }: {
           <p className='text-muted-foreground mb-0'>{achievement.description}</p>
         </div>
 
-        <div className='bg-primary/10 p-3 border border-primary/20 mb-4'>
+        <div className='bg-primary/10 p-3 border border-foreground/10 mb-4'>
           <div className='flex items-center gap-2 mb-1'>
             <Target className='w-5 h-5 text-primary' />
             <span className='font-medium text-primary text-lg'>Impact</span>
@@ -79,7 +79,7 @@ export default function KeyAchievements({ className }: KeyAchievementsProps) {
           ))}
         </div>
 
-        <div className='bg-primary/5 p-8 border border-primary/20 text-center'>
+        <div className='bg-primary/5 p-8 border border-foreground/10 text-center'>
           <h3 className='text-xl font-semibold mb-4'>Achievement Summary</h3>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
             <div className='space-y-2'>

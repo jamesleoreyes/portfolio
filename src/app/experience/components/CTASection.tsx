@@ -67,7 +67,7 @@ export default function CTASection({ className }: CTASectionProps) {
           <SocialLinks />
         </div>
 
-        <div className='bg-primary/10 p-6 border border-primary/20 max-w-2xl mx-auto'>
+        <div className='bg-primary/10 p-6 border border-foreground/10 max-w-2xl mx-auto'>
           <h3 className='text-lg font-semibold mb-3 text-primary'>What I&apos;m Looking For</h3>
           <p className='text-foreground/80 leading-relaxed'>
             I&apos;m seeking a full-stack engineering role where I can focus on building great software

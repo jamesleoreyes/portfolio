@@ -69,7 +69,7 @@ function KnowledgeStack() {
   const allTechnologies = [...new Set(techEvolution.flatMap(item => item.technologies))];
 
   return (
-    <div className='bg-accent p-8 border border-border/50'>
+    <div className='bg-accent p-8 border border-foreground/10'>
       <h3 className='text-xl font-semibold mb-6 text-center text-primary'>Complete Knowledge Stack</h3>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
         {allTechnologies.map((tech, idx) => (
@@ -78,12 +78,12 @@ function KnowledgeStack() {
               key={idx}
               href={tech.url || ''}
               target='_blank'
-              className='bg-background text-primary px-3 py-2 text-sm border border-border/50 text-center hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center'
+              className='bg-background text-primary px-3 py-2 text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center'
             >
               {tech.name}
             </Link>
           ) : (
-            <span key={idx} className='bg-background text-foreground px-3 py-2 text-sm border border-border/50 text-center flex items-center justify-center'>
+            <span key={idx} className='bg-background text-foreground px-3 py-2 text-sm text-center flex items-center justify-center'>
               {tech.name}
             </span>
           )
@@ -95,7 +95,7 @@ function KnowledgeStack() {
 
 function EvolutionInsight() {
   return (
-    <div className='bg-primary/10 p-8 border border-primary/20 text-center'>
+    <div className='bg-primary/10 p-8 border border-foreground/10 text-center'>
       <h3 className='text-xl font-semibold mb-4 text-primary'>Evolution Insights</h3>
       <div className='grid gap-6 md:grid-cols-2'>
         <div className='space-y-3'>
