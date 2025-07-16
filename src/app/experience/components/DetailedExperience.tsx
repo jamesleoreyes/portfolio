@@ -5,6 +5,11 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, Code, Target, Lightbulb, TrendingUp, ArrowRight } from 'lucide-react';
 import { experienceData } from '@/data';
 import { Button, Tooltip, TooltipContent, TooltipTrigger, Tabs, TabsList, TabsTrigger, TabsContent } from '@/components';
+import { cn } from '@/lib/utils';
+
+interface DetailedExperienceProps {
+  className?: string;
+}
 
 function ProjectCard({ project }: { project: typeof experienceData.experiences[0]['keyProjects'][0] }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -42,7 +47,7 @@ function ProjectCard({ project }: { project: typeof experienceData.experiences[0
       </div>
 
       {isExpanded && (
-        <div className='space-y-4 border-t border-foreground/10 pt-4'>
+        <div className='space-y-4 border-t border-border/50 pt-4'>
           {project.challenges && project.challenges.length > 0 && (
             <div>
               <div className='flex items-center gap-2 mb-2'>
@@ -80,7 +85,7 @@ function ProjectCard({ project }: { project: typeof experienceData.experiences[0
               {project.technologies.map((tech, idx) => (
                 <span
                   key={idx}
-                  className='bg-background/50 text-primary px-2 py-1 text-sm border border-foreground/20'
+                  className='bg-background/50 text-primary px-2 py-1 text-sm border border-border/50'
                 >
                   {tech}
                 </span>
@@ -117,7 +122,7 @@ function ExperienceDetail({ experience }: { experience: typeof experienceData.ex
       </div>
 
       <div className='grid gap-6 justify-center md:grid-cols-2'>
-        <div className='bg-primary/10 p-6 border border-foreground/10 max-w-lg'>
+        <div className='bg-primary/10 p-6 border border-border/50 max-w-lg'>
           <h4 className='text-lg font-semibold mb-4 text-primary'>Key Learnings</h4>
           <ul className='space-y-2'>
             {experience.learnings.map((learning, idx) => (
@@ -130,7 +135,7 @@ function ExperienceDetail({ experience }: { experience: typeof experienceData.ex
         </div>
 
         {experience.nextSteps && experience.nextSteps.length > 0 && (
-          <div className='bg-primary/10 p-6 border border-foreground/10 max-w-lg'>
+          <div className='bg-primary/10 p-6 border border-border/50 max-w-lg'>
             <h4 className='text-lg font-semibold mb-4 text-primary'>Next Steps</h4>
             <ul className='space-y-2'>
               {experience.nextSteps.map((step, idx) => (
@@ -147,37 +152,39 @@ function ExperienceDetail({ experience }: { experience: typeof experienceData.ex
   );
 }
 
-export default function DetailedExperience() {
+export default function DetailedExperience({ className }: DetailedExperienceProps) {
   return (
-    <section className='space-y-8 border-b border-foreground/10 pb-16'>
-      <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight text-primary mb-4'>Detailed Experience</h2>
-        <p className='text-lg text-muted-foreground'>
-          Deep dive into the projects, challenges, and outcomes that defined each role.
-        </p>
-      </div>
-
-      <Tabs defaultValue={experienceData.experiences[0]!.id} className='w-full'>
-        <div className='flex justify-center mb-4'>
-          <TabsList className='grid w-full sm:w-fit grid-cols-3 border border-foreground/10'>
-            {experienceData.experiences.map((experience) => (
-              <TabsTrigger
-                key={experience.id}
-                value={experience.id}
-                className='whitespace-nowrap'
-              >
-                {experience.tabName}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+    <section className={cn("border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto space-y-8'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold tracking-tight text-primary mb-4'>Detailed Experience</h2>
+          <p className='text-lg text-muted-foreground'>
+            Deep dive into the projects, challenges, and outcomes that defined each role.
+          </p>
         </div>
 
-        {experienceData.experiences.map((experience) => (
-          <TabsContent key={experience.id} value={experience.id}>
-            <ExperienceDetail experience={experience} />
-          </TabsContent>
-        ))}
-      </Tabs>
+        <Tabs defaultValue={experienceData.experiences[0]!.id} className='w-full'>
+          <div className='flex justify-center mb-4'>
+            <TabsList className='grid w-full sm:w-fit grid-cols-3 border border-border/50'>
+              {experienceData.experiences.map((experience) => (
+                <TabsTrigger
+                  key={experience.id}
+                  value={experience.id}
+                  className='whitespace-nowrap'
+                >
+                  {experience.tabName}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
+
+          {experienceData.experiences.map((experience) => (
+            <TabsContent key={experience.id} value={experience.id}>
+              <ExperienceDetail experience={experience} />
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
     </section>
   );
 }

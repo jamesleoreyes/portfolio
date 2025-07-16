@@ -1,5 +1,10 @@
 import { Trophy, TrendingUp, Users, Zap, Target, Rocket, Shield, Building, Award } from 'lucide-react';
 import { experienceData } from '@/data';
+import { cn } from '@/lib/utils';
+
+interface KeyAchievementsProps {
+  className?: string;
+}
 
 function AchievementCard({ achievement, icon: Icon, color }: {
   achievement: typeof experienceData.experiences[0]['achievements'][0];
@@ -7,7 +12,7 @@ function AchievementCard({ achievement, icon: Icon, color }: {
   color: string;
 }) {
   return (
-    <div className='bg-accent border border-foreground/10 p-6 hover:shadow-md transition-shadow flex flex-col h-full'>
+    <div className='bg-accent border border-border/50 p-6 hover:shadow-md transition-shadow flex flex-col h-full'>
       <div className={`p-3 ${color} text-white mb-4 flex items-center justify-center`}>
         <Icon className='w-6 h-6' />
       </div>
@@ -27,7 +32,7 @@ function AchievementCard({ achievement, icon: Icon, color }: {
         </div>
 
         {achievement.metrics && (
-          <div className='bg-background p-3 border border-foreground/10 text-center mt-auto'>
+          <div className='bg-background p-3 border border-border/50 text-center mt-auto'>
             <p className='text-primary/70 mb-1 text-lg'>Key Metric</p>
             <p className='text-lg font-bold text-primary'>{achievement.metrics}</p>
           </div>
@@ -37,7 +42,7 @@ function AchievementCard({ achievement, icon: Icon, color }: {
   );
 }
 
-export default function KeyAchievements() {
+export default function KeyAchievements({ className }: KeyAchievementsProps) {
   // Flatten all achievements from all experiences
   const allAchievements = experienceData.experiences.flatMap(exp => exp.achievements);
 
@@ -54,43 +59,45 @@ export default function KeyAchievements() {
   ];
 
   return (
-    <section className='space-y-8 border-b border-foreground/10 pb-16'>
-      <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight mb-4'>Key Achievements</h2>
-        <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
-          Highlighting the most significant accomplishments and impacts across all professional experiences.
-        </p>
-      </div>
+    <section className={cn("border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto space-y-8'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold tracking-tight mb-4'>Key Achievements</h2>
+          <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
+            Highlighting the most significant accomplishments and impacts across all professional experiences.
+          </p>
+        </div>
 
-      <div className='grid gap-6 md:grid-cols-2 items-stretch'>
-        {allAchievements.map((achievement, index) => (
-          <AchievementCard
-            key={index}
-            achievement={achievement}
-            icon={achievementStyles[index % achievementStyles.length]!.icon}
-            color={achievementStyles[index % achievementStyles.length]!.color}
-          />
-        ))}
-      </div>
+        <div className='grid gap-6 md:grid-cols-2 items-stretch'>
+          {allAchievements.map((achievement, index) => (
+            <AchievementCard
+              key={index}
+              achievement={achievement}
+              icon={achievementStyles[index % achievementStyles.length]!.icon}
+              color={achievementStyles[index % achievementStyles.length]!.color}
+            />
+          ))}
+        </div>
 
-      <div className='bg-primary/5 p-8 border border-primary/20 text-center'>
-        <h3 className='text-xl font-semibold mb-4'>Achievement Summary</h3>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-          <div className='space-y-2'>
-            <div className='text-2xl font-bold text-primary'>100K+</div>
-            <div className='text-muted-foreground'>Events Processed</div>
-          </div>
-          <div className='space-y-2'>
-            <div className='text-2xl font-bold text-primary'>95%</div>
-            <div className='text-muted-foreground'>Task Automation</div>
-          </div>
-          <div className='space-y-2'>
-            <div className='text-2xl font-bold text-primary'>90%</div>
-            <div className='text-muted-foreground'>Cost Reduction</div>
-          </div>
-          <div className='space-y-2'>
-            <div className='text-2xl font-bold text-primary'>95%</div>
-            <div className='text-muted-foreground'>Less Manual Work</div>
+        <div className='bg-primary/5 p-8 border border-primary/20 text-center'>
+          <h3 className='text-xl font-semibold mb-4'>Achievement Summary</h3>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+            <div className='space-y-2'>
+              <div className='text-2xl font-bold text-primary'>100K+</div>
+              <div className='text-muted-foreground'>Events Processed</div>
+            </div>
+            <div className='space-y-2'>
+              <div className='text-2xl font-bold text-primary'>95%</div>
+              <div className='text-muted-foreground'>Task Automation</div>
+            </div>
+            <div className='space-y-2'>
+              <div className='text-2xl font-bold text-primary'>90%</div>
+              <div className='text-muted-foreground'>Cost Reduction</div>
+            </div>
+            <div className='space-y-2'>
+              <div className='text-2xl font-bold text-primary'>95%</div>
+              <div className='text-muted-foreground'>Less Manual Work</div>
+            </div>
           </div>
         </div>
       </div>

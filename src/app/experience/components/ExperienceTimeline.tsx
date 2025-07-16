@@ -4,6 +4,11 @@ import Link from "next/link";
 import { Calendar, MapPin, Briefcase, Rocket, GraduationCap } from "lucide-react";
 import { useMobile } from "@/hooks/useMobile";
 import { experienceData } from "@/data";
+import { cn } from "@/lib/utils";
+
+interface ExperienceTimelineProps {
+  className?: string;
+}
 
 function TimelineItem({ experience, isLast }: {
   experience: typeof experienceData.experiences[0];
@@ -41,7 +46,7 @@ function TimelineItem({ experience, isLast }: {
   return (
     <div className='relative'>
       {/* Sticky Mobile Header */}
-      <div className='md:hidden sticky top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-foreground/10 -mx-4 px-4 py-3 pt-5 mb-2'>
+      <div className='md:hidden sticky top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-border/50 -mx-4 px-4 py-3 pt-5 mb-2'>
         <div className='flex items-center gap-3'>
           <div className={`w-8 h-8 ${getStatusColor(experience.status)} flex items-center justify-center text-white flex-shrink-0`}>
             {getTypeIcon(experience.type)}
@@ -138,26 +143,27 @@ function TimelineItem({ experience, isLast }: {
   );
 }
 
-export default function ExperienceTimeline() {
+export default function ExperienceTimeline({ className }: ExperienceTimelineProps) {
   const { experiences } = experienceData;
 
   return (
-    <section className='space-y-8 border-b border-foreground/10 pb-16'>
-      <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight text-primary mb-4'>Experience Timeline</h2>
-        <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
-          A chronological journey through my professional development, from first internship to current entrepreneurial ventures.
-        </p>
-      </div>
-
-      <div className=''>
-        {experiences.map((experience, index) => (
-          <TimelineItem
-            key={experience.id}
-            experience={experience}
-            isLast={index === experiences.length - 1}
-          />
-        ))}
+    <section className={cn("border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto space-y-8'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold tracking-tight text-primary mb-4'>Experience Timeline</h2>
+          <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
+            A chronological journey through my professional development, from first internship to current entrepreneurial ventures.
+          </p>
+        </div>
+        <div className=''>
+          {experiences.map((experience, index) => (
+            <TimelineItem
+              key={experience.id}
+              experience={experience}
+              isLast={index === experiences.length - 1}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

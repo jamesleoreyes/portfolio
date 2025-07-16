@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import { ArrowRight, Star, Code, Milestone } from 'lucide-react';
 import { experienceData } from '@/data';
+import { cn } from '@/lib/utils';
+
+interface TechEvolutionProps {
+  className?: string;
+}
 
 function EvolutionItem({ item, index, isLast }: {
   item: typeof experienceData.techEvolution[0];
@@ -46,7 +51,7 @@ function EvolutionItem({ item, index, isLast }: {
               {item.technologies.map((tech, idx) => (
                 <span
                   key={idx}
-                  className='bg-accent text-primary px-3 py-1 text-sm border border-foreground/10 hover:bg-accent/80 transition-colors'
+                  className='bg-accent text-primary px-3 py-1 text-sm border border-border/50 hover:bg-accent/80 transition-colors'
                 >
                   {tech.name}
                 </span>
@@ -64,7 +69,7 @@ function KnowledgeStack() {
   const allTechnologies = [...new Set(techEvolution.flatMap(item => item.technologies))];
 
   return (
-    <div className='bg-accent p-8 border border-foreground/10'>
+    <div className='bg-accent p-8 border border-border/50'>
       <h3 className='text-xl font-semibold mb-6 text-center text-primary'>Complete Knowledge Stack</h3>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
         {allTechnologies.map((tech, idx) => (
@@ -73,12 +78,12 @@ function KnowledgeStack() {
               key={idx}
               href={tech.url || ''}
               target='_blank'
-              className='bg-background text-primary px-3 py-2 text-sm border border-foreground/10 text-center hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center'
+              className='bg-background text-primary px-3 py-2 text-sm border border-border/50 text-center hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center'
             >
               {tech.name}
             </Link>
           ) : (
-            <span key={idx} className='bg-background text-foreground px-3 py-2 text-sm border border-foreground/10 text-center flex items-center justify-center'>
+            <span key={idx} className='bg-background text-foreground px-3 py-2 text-sm border border-border/50 text-center flex items-center justify-center'>
               {tech.name}
             </span>
           )
@@ -118,31 +123,33 @@ function EvolutionInsight() {
   );
 }
 
-export default function TechEvolution() {
+export default function TechEvolution({ className }: TechEvolutionProps) {
   const { techEvolution } = experienceData;
 
   return (
-    <section className='space-y-8 border-b border-foreground/10 pb-16'>
-      <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight mb-4 text-primary'>Technical Evolution</h2>
-        <p className='text-lg text-muted-foreground max-w-xl mx-auto'>
-          The progression of technologies, frameworks, and skills learned throughout my professional journey.
-        </p>
-      </div>
+    <section className={cn("border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto space-y-8'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold tracking-tight mb-4 text-primary'>Technical Evolution</h2>
+          <p className='text-lg text-muted-foreground max-w-xl mx-auto'>
+            The progression of technologies, frameworks, and skills learned throughout my professional journey.
+          </p>
+        </div>
 
-      <div className='space-y-8'>
-        {techEvolution.map((item, index) => (
-          <EvolutionItem
-            key={index}
-            item={item}
-            index={index}
-            isLast={index === techEvolution.length - 1}
-          />
-        ))}
-      </div>
+        <div className='space-y-8'>
+          {techEvolution.map((item, index) => (
+            <EvolutionItem
+              key={index}
+              item={item}
+              index={index}
+              isLast={index === techEvolution.length - 1}
+            />
+          ))}
+        </div>
 
-      <KnowledgeStack />
-      <EvolutionInsight />
+        <KnowledgeStack />
+        <EvolutionInsight />
+      </div>
     </section>
   );
 }

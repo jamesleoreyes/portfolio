@@ -1,11 +1,16 @@
 import { experienceData } from "@/data";
+import { cn } from "@/lib/utils";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  className?: string;
+}
+
+export default function HeroSection({ className }: HeroSectionProps) {
   const { overallStats } = experienceData;
 
   return (
-    <section className="border-b border-foreground/10 pb-16">
-      <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center md:text-left space-y-8 lg:space-y-0'>
+    <section className={cn("border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center md:text-left space-y-8 lg:space-y-0'>
         <div className='space-y-6'>
           <div className='space-y-4'>
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-primary'>
