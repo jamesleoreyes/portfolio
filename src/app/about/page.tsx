@@ -10,13 +10,13 @@ export { default as metadata } from './metadata';
 
 export default function About() {
   return (
-    <div className='flex items-center justify-center px-4 py-8'>
-      <main className='max-w-4xl mx-auto space-y-16'>
-        <HeroSection />
-        <JourneySection />
-        <TurningPointsSection />
-        <CurrentChapterSection />
-        <CTASection />
+    <div className='flex items-center justify-center w-full'>
+      <main className='w-full'>
+        <HeroSection className='px-4' />
+        <JourneySection className='px-4' />
+        <TurningPointsSection className='px-4' />
+        <CurrentChapterSection className='px-4' />
+        <CTASection className='px-4' />
       </main>
     </div>
   );

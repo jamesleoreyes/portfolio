@@ -9,9 +9,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='border-t'>
-      <div className='mx-auto max-w-screen-xl py-8 px-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
+    <footer className='border-t border-border/50'>
+      <div className='mx-auto max-w-screen-xl py-8 border-x border-border/50'>
+        <div className='grid grid-cols-1 px-8 gap-8 lg:grid-cols-3'>
           {/* Logo and Description */}
           <div className='lg:col-span-1 text-center lg:text-left'>
             <Link href='/' className='inline-block'>
@@ -81,8 +81,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className='mt-12 pt-8 border-t border-border'>
-          <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
+        <div className='mt-12 pt-8 border-t border-border/50 w-full'>
+          <div className='flex flex-col items-center justify-between px-8 gap-4 md:flex-row'>
             <p className='text-sm text-muted-foreground'>
               Made with &hearts; by James Reyes &copy; {currentYear}
             </p>

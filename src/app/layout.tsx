@@ -42,7 +42,7 @@ export default function RootLayout({
           <DynamicViewport />
           <div className='flex-1 hidden min-[151px]:flex flex-col'>
             <NavBar />
-            <main className='flex-1 flex justify-center items-center'>
+            <main className='flex-1 flex justify-center items-center max-w-screen-xl w-full mx-auto xl:border-x border-border/50'>
               {children}
             </main>
             <Footer />

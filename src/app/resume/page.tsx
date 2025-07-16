@@ -18,7 +18,7 @@ export { default as metadata } from './metadata';
 
 export default function Resume() {
   return (
-    <div className="bg-background relative">
+    <div className="bg-background relative border-x border-t border-primary/10">
       <StickyResumeHeader />
 
       <div className="mx-auto px-0 md:px-0 py-0 md:py-8 max-w-4xl">

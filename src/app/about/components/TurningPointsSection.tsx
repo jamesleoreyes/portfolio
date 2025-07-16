@@ -1,6 +1,11 @@
 import type { ReactNode } from 'react';
 import { Calendar, MapPin, Quote } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components';
+import { cn } from '@/lib/utils';
+
+interface TurningPointsSectionProps {
+  className?: string;
+}
 
 interface TurningPoint {
   year: string;
@@ -110,25 +115,26 @@ function TurningPointItem({ point, index, isLast }: { point: TurningPoint; index
   );
 }
 
-export default function TurningPointsSection() {
+export default function TurningPointsSection({ className }: TurningPointsSectionProps) {
   return (
-    <section className='space-y-8 border-b border-foreground/10 pb-16'>
-      <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight mb-4'>The Turning Points</h2>
-        <p className='text-lg text-muted-foreground max-w-xl mx-auto'>
-          Every journey has moments that change everything. Here are the pivotal experiences that shaped who I am today.
-        </p>
-      </div>
-
-      <div className='space-y-8'>
-        {turningPoints.map((point, index) => (
-          <TurningPointItem
-            key={index}
-            point={point}
-            index={index}
-            isLast={index === turningPoints.length - 1}
-          />
-        ))}
+    <section className={cn("space-y-8 border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto space-y-8'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold tracking-tight mb-4'>The Turning Points</h2>
+          <p className='text-lg text-muted-foreground max-w-xl mx-auto'>
+            Every journey has moments that change everything. Here are the pivotal experiences that shaped who I am today.
+          </p>
+        </div>
+        <div className='space-y-8'>
+          {turningPoints.map((point, index) => (
+            <TurningPointItem
+              key={index}
+              point={point}
+              index={index}
+              isLast={index === turningPoints.length - 1}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

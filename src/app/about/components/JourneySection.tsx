@@ -1,5 +1,10 @@
 import type { ReactNode } from "react";
 import { Code, Music, Truck, Zap } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface JourneySectionProps {
+  className?: string;
+}
 
 interface JourneyItem {
   title: string;
@@ -42,21 +47,22 @@ function JourneyItem({ title, description, icon }: JourneyItem) {
   );
 }
 
-export default function JourneySection() {
+export default function JourneySection({ className }: JourneySectionProps) {
   return (
-    <section className='space-y-8 border-b border-foreground/10 pb-16'>
-      <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight mb-4'>The Journey So Far</h2>
-        <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
-          My path to software engineering wasn&apos;t linear. It was more like a spiral — circling back to childhood interests,
-          taking unexpected detours through music and manual labor, until everything clicked into place.
-        </p>
-      </div>
-
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-        {journeyItems.map((item) => (
-          <JourneyItem key={item.title} {...item} />
-        ))}
+    <section className={cn("border-b border-border/50 py-16 w-full", className)}>
+      <div className='max-w-4xl mx-auto space-y-8'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold tracking-tight mb-4'>The Journey So Far</h2>
+          <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
+            My path to software engineering wasn&apos;t linear. It was more like a spiral — circling back to childhood interests,
+            taking unexpected detours through music and manual labor, until everything clicked into place.
+          </p>
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          {journeyItems.map((item) => (
+            <JourneyItem key={item.title} {...item} />
+          ))}
+        </div>
       </div>
     </section>
   );

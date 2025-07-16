@@ -6,18 +6,15 @@ import { usePathname } from 'next/navigation';
 import { assets } from '@/configs/app';
 import { nav } from '@/configs/nav';
 import { cn, isActiveRoute } from '@/lib/utils';
-import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { Button, MobileNav, ThemeToggle } from '@/components';
 import { AdaptiveIcon } from '@/components/icons';
 
 export default function NavBar() {
   const pathname = usePathname();
-  const scrolled = useScrollPosition();
 
   return (
     <nav className={cn(
-      'flex justify-center items-center p-4 sticky top-0 z-50 bg-background',
-      scrolled && 'border-b'
+      'flex justify-center items-center p-4 sticky top-0 z-50 bg-background border-b border-border/50'
     )}>
       <div className='flex justify-between items-center max-w-screen-xl w-full'>
         {/* Logo */}
