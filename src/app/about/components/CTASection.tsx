@@ -13,32 +13,23 @@ export default function CTASection() {
       </p>
 
       <div className='flex sm:flex-row gap-4 justify-center items-center'>
-        {isPageDisabled('/projects') ? (
-          <Button
-            size='lg'
-            className='min-w-[140px]'
-            disabled={true}
-            aria-label='Projects page (coming soon)'
-            title='Projects page (coming soon)'
-          >
+        <Button
+          asChild={!isPageDisabled('/projects')}
+          disabled={isPageDisabled('/projects')}
+          variant='default'
+          size='lg'
+          className='min-w-[140px]'
+          aria-label='View my projects'
+          title='View my projects'
+        >
+          <Link href='/projects'>
             View My Work
-          </Button>
-        ) : (
-          <Button
-            asChild
-            size='lg'
-            className='min-w-[140px]'
-            aria-label='View my projects'
-            title='View my projects'
-          >
-            <Link href='/projects'>
-              View My Work
-            </Link>
-          </Button>
-        )}
+          </Link>
+        </Button>
 
         <Button
           asChild
+          variant='default'
           size='lg'
           className='min-w-[140px]'
           aria-label='Get in touch with me'

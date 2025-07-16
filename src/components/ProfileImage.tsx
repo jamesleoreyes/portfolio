@@ -16,7 +16,7 @@ export default function ProfileImage({
   width,
   height,
   className,
-  alt = 'James Reyes - Professional Photo',
+  alt = 'James Reyes — Professional Photo',
   priority = false,
 }: ProfileImageProps) {
   const optimizedSizes = width <= 300

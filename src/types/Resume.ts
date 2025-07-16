@@ -20,9 +20,9 @@ interface ProjectItem {
   completionPercentage?: number;
   technologies: string[];
   highlights: string[];
-  image?: {
-    light: string;
-    dark: string;
+  images?: {
+    light: string[];
+    dark: string[];
   };
   projectHref?: string;
   liveUrl?: string;

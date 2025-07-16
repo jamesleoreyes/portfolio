@@ -11,7 +11,7 @@ function EvolutionItem({ item, index, isLast }: {
     <div className='relative'>
       {/* Timeline line */}
       {!isLast && (
-        <div className='absolute left-6 top-16 w-0.5 h-full bg-gradient-to-b from-primary to-primary/20'></div>
+        <div className='absolute left-6 top-16 w-0.5 h-[calc(100%-50px)] bg-border'></div>
       )}
 
       <div className='flex gap-6'>
@@ -24,29 +24,29 @@ function EvolutionItem({ item, index, isLast }: {
         <div className='flex-1 space-y-4 pb-12'>
           <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2'>
             <div>
-              <h3 className='text-xl font-semibold'>{item.period}</h3>
+              <h3 className='text-xl font-semibold text-primary'>{item.period}</h3>
               <p className='text-lg text-muted-foreground'>{item.focus}</p>
             </div>
           </div>
 
           <div className='bg-primary/5 p-4 border-l-4 border-primary'>
             <div className='flex items-center gap-2 mb-2'>
-              <Milestone className='w-4 h-4 text-primary' />
-              <span className='font-semibold'>Key Milestone</span>
+              <Milestone className='w-5 h-5 text-primary' />
+              <span className='font-semibold text-primary text-lg'>Key Milestone</span>
             </div>
             <p className='text-muted-foreground'>{item.milestone}</p>
           </div>
 
           <div>
             <div className='flex items-center gap-2 mb-3'>
-              <Code className='w-4 h-4 text-primary' />
-              <span className='font-semibold'>Technologies Learned</span>
+              <Code className='w-5 h-5 text-primary' />
+              <span className='font-semibold text-primary text-lg'>Technologies Learned</span>
             </div>
             <div className='flex flex-wrap gap-2'>
               {item.technologies.map((tech, idx) => (
                 <span
                   key={idx}
-                  className='bg-accent text-foreground px-3 py-1 text-sm border border-foreground/10 hover:bg-accent/80 transition-colors'
+                  className='bg-accent text-primary px-3 py-1 text-sm border border-foreground/10 hover:bg-accent/80 transition-colors'
                 >
                   {tech.name}
                 </span>
@@ -65,15 +65,15 @@ function KnowledgeStack() {
 
   return (
     <div className='bg-accent p-8 border border-foreground/10'>
-      <h3 className='text-xl font-semibold mb-6 text-center'>Complete Knowledge Stack</h3>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3'>
+      <h3 className='text-xl font-semibold mb-6 text-center text-primary'>Complete Knowledge Stack</h3>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
         {allTechnologies.map((tech, idx) => (
           tech.url ? (
             <Link
               key={idx}
               href={tech.url || ''}
               target='_blank'
-              className='bg-background text-foreground px-3 py-2 text-sm border border-foreground/10 text-center hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center'
+              className='bg-background text-primary px-3 py-2 text-sm border border-foreground/10 text-center hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center'
             >
               {tech.name}
             </Link>
@@ -91,14 +91,14 @@ function KnowledgeStack() {
 function EvolutionInsight() {
   return (
     <div className='bg-primary/10 p-8 border border-primary/20 text-center'>
-      <h3 className='text-xl font-semibold mb-4'>Evolution Insights</h3>
+      <h3 className='text-xl font-semibold mb-4 text-primary'>Evolution Insights</h3>
       <div className='grid gap-6 md:grid-cols-2'>
         <div className='space-y-3'>
           <div className='flex items-center justify-center gap-2'>
             <Star className='w-5 h-5 text-primary fill-primary' />
-            <span className='font-semibold'>Learning Approach</span>
+            <span className='font-semibold text-primary'>Learning Approach</span>
           </div>
-          <p className='text-muted-foreground'>
+          <p className='text-foreground/80'>
             Started with AI-assisted learning, evolved to understanding fundamentals,
             now focusing on architecture and business impact.
           </p>
@@ -106,9 +106,9 @@ function EvolutionInsight() {
         <div className='space-y-3'>
           <div className='flex items-center justify-center gap-2'>
             <ArrowRight className='w-5 h-5 text-primary' />
-            <span className='font-semibold'>Next Phase</span>
+            <span className='font-semibold text-primary'>Next Phase</span>
           </div>
-          <p className='text-muted-foreground'>
+          <p className='text-foreground/80'>
             Expanding into advanced system design, team leadership,
             and product strategy while maintaining technical excellence.
           </p>
@@ -124,8 +124,8 @@ export default function TechEvolution() {
   return (
     <section className='space-y-8 border-b border-foreground/10 pb-16'>
       <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight mb-4'>Technical Evolution</h2>
-        <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
+        <h2 className='text-3xl font-bold tracking-tight mb-4 text-primary'>Technical Evolution</h2>
+        <p className='text-lg text-muted-foreground max-w-xl mx-auto'>
           The progression of technologies, frameworks, and skills learned throughout my professional journey.
         </p>
       </div>

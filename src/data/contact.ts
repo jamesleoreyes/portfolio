@@ -7,8 +7,8 @@ const contactData: ContactData = {
     email: 'jamesleoreyes@gmail.com',
     location: 'Charlotte, NC',
     availability: [
-      { day: 'Sunday & Saturday', time: '2 PM - 5 PM' },
-      { day: 'Monday - Friday', time: '5 PM - 8 PM' },
+      { day: 'Sunday & Saturday', time: '2 PM — 5 PM' },
+      { day: 'Monday — Friday', time: '5 PM — 8 PM' },
     ],
   },
   contactMethods: [

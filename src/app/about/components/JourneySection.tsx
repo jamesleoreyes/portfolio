@@ -15,7 +15,7 @@ const journeyItems: JourneyItem[] = [
   },
   {
     title: 'Creative Years',
-    description: 'Dove deep into filmmaking, photography, and music production — learning the art of creation',
+    description: 'Dove deep into filmmaking, photography, and music production — mastering the art of creation',
     icon: <Music className='w-6 h-6 text-primary' />
   },
   {
@@ -37,7 +37,7 @@ function JourneyItem({ title, description, icon }: JourneyItem) {
         {icon}
       </div>
       <h3 className='font-semibold'>{title}</h3>
-      <p className='text-sm text-muted-foreground'>{description}</p>
+      <p className='text-muted-foreground'>{description}</p>
     </div>
   );
 }

@@ -67,7 +67,7 @@ function TimelineItem({ experience, isLast }: {
 
       {/* Timeline line */}
       {!isLast && !isMobile && (
-        <div className='absolute left-6 top-16 w-0.5 h-full bg-border'></div>
+        <div className='absolute left-6 top-16 w-0.5 h-[calc(100%-80px)] bg-border'></div>
       )}
 
       <div className='flex gap-6'>
@@ -81,7 +81,7 @@ function TimelineItem({ experience, isLast }: {
         {/* Content */}
         <div className={`flex-1 space-y-4 ${isLast ? 'pb-0' : 'pb-12'} min-w-0`}>
           {!isMobile && (
-            <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2'>
+            <div className='flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2'>
               <div>
                 <h3 className='text-xl font-semibold'>{experience.position}</h3>
                 <p className='text-muted-foreground'>
@@ -98,7 +98,7 @@ function TimelineItem({ experience, isLast }: {
               <div className='flex flex-col sm:items-end gap-1'>
                 <div className='flex items-center gap-2 text-muted-foreground'>
                   <Calendar className='w-4 h-4' />
-                  <span>{experience.startDate} - {experience.endDate}</span>
+                  <span>{experience.startDate} — {experience.endDate}</span>
                 </div>
                 <div className='flex items-center gap-2 text-muted-foreground'>
                   <MapPin className='w-4 h-4' />
@@ -129,7 +129,7 @@ function TimelineItem({ experience, isLast }: {
           </div>
 
           <div className='bg-primary/5 p-4 border-l-4 border-primary'>
-            <h4 className='font-semibold mb-2 text-lg'>Context & Impact</h4>
+            <h4 className='font-semibold mb-2 text-lg text-primary'>Context & Impact</h4>
             <p className='text-muted-foreground leading-relaxed'>{experience.context}</p>
           </div>
         </div>
@@ -144,8 +144,8 @@ export default function ExperienceTimeline() {
   return (
     <section className='space-y-8 border-b border-foreground/10 pb-16'>
       <div className='text-center'>
-        <h2 className='text-3xl font-bold tracking-tight mb-4'>Experience Timeline</h2>
-        <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
+        <h2 className='text-3xl font-bold tracking-tight text-primary mb-4'>Experience Timeline</h2>
+        <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
           A chronological journey through my professional development, from first internship to current entrepreneurial ventures.
         </p>
       </div>

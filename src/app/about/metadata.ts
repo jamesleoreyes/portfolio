@@ -21,7 +21,7 @@ const metadata: Metadata = {
         url: assets.images.profile.me,
         width: 400,
         height: 400,
-        alt: 'James Reyes - Professional Photo',
+        alt: 'James Reyes — Professional Photo',
       },
     ],
   },

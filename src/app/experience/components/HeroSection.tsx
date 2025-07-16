@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-10 text-center md:text-left space-y-8 lg:space-y-0'>
         <div className='space-y-6'>
           <div className='space-y-4'>
-            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight'>
+            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-primary'>
               Professional Experience
             </h1>
             <p className='text-xl text-muted-foreground'>

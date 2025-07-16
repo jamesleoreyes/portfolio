@@ -21,11 +21,11 @@ export default function Resume() {
     <div className="bg-background relative">
       <StickyResumeHeader />
 
-      <div className="container mx-auto px-0 md:px-0 py-0 md:py-8 max-w-4xl">
-        <div className="bg-card shadow-lg overflow-hidden">
+      <div className="mx-auto px-0 md:px-0 py-0 md:py-8 max-w-4xl">
+        <div className="bg-secondary shadow-lg overflow-hidden border border-primary/10">
           <ResumeHero />
 
-          <div className="p-8 space-y-12">
+          <div className="p-8 space-y-10">
             <ProfessionalSummary />
             <CoreCompetencies />
             <Experience />

@@ -14,21 +14,21 @@ function AchievementCard({ achievement, icon: Icon, color }: {
 
       <div className='flex-1 flex flex-col'>
         <div className='mb-4'>
-          <h3 className='text-lg font-semibold mb-2'>{achievement.title}</h3>
+          <h3 className='text-lg font-semibold mb-2 text-primary'>{achievement.title}</h3>
           <p className='text-muted-foreground mb-0'>{achievement.description}</p>
         </div>
 
         <div className='bg-primary/10 p-3 border border-primary/20 mb-4'>
           <div className='flex items-center gap-2 mb-1'>
-            <Target className='w-4 h-4 text-primary' />
-            <span className='font-medium'>Impact</span>
+            <Target className='w-5 h-5 text-primary' />
+            <span className='font-medium text-primary text-lg'>Impact</span>
           </div>
-          <p className='text-muted-foreground'>{achievement.impact}</p>
+          <p className='text-accent-foreground'>{achievement.impact}</p>
         </div>
 
         {achievement.metrics && (
           <div className='bg-background p-3 border border-foreground/10 text-center mt-auto'>
-            <p className='text-muted-foreground mb-1'>Key Metric</p>
+            <p className='text-primary/70 mb-1 text-lg'>Key Metric</p>
             <p className='text-lg font-bold text-primary'>{achievement.metrics}</p>
           </div>
         )}

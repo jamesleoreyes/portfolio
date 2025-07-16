@@ -83,7 +83,7 @@ const resumeData: ResumeData = {
     {
       name: 'Portfolio Website',
       description: 'Personal portfolio site showcasing projects, experience, and backend-to-full stack journey. Built with modern web technologies and enterprise-grade features.',
-      completionPercentage: 35,
+      completionPercentage: 65,
       technologies: ['Next.js 15', 'React 19', 'TypeScript', 'shadcn/ui', 'Tailwind CSS 4', 'Vercel'],
       highlights: [
         'Server-side rendering and static generation for optimal performance and SEO',
@@ -93,9 +93,13 @@ const resumeData: ResumeData = {
         'Progressive web app capabilities including service worker and app manifest',
         'Modern DevOps practices with automated builds and performance monitoring'
       ],
-      image: {
-        light: assets.images.screenshots.portfolioDesktop.light,
-        dark: assets.images.screenshots.portfolioDesktop.dark,
+      images: {
+        light: [
+          ...assets.images.screenshots.light.portfolioDesktop,
+        ],
+        dark: [
+          ...assets.images.screenshots.dark.portfolioDesktop,
+        ],
       },
       projectHref: '/projects#portfolio-website',
       liveUrl: 'https://jamesleoreyes.com',
@@ -104,7 +108,7 @@ const resumeData: ResumeData = {
   ],
   education: [
     {
-      institution: 'University of South Carolina - Columbia',
+      institution: 'University of South Carolina — Columbia',
       field: 'Media Arts',
       startDate: 'Aug 2016',
       endDate: 'Jan 2018',

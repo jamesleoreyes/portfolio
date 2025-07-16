@@ -5,7 +5,7 @@ function SkillItem({ skill }: { skill: SoftSkill }) {
   const { name, description, icon: IconComponent } = skill;
 
   return (
-    <div className="bg-accent/30 p-4 hover:bg-accent/50 transition-colors">
+    <div className="bg-accent p-4 hover:shadow-md transition">
       <div className="flex items-start gap-3">
         <div className="flex-shrink-0 mt-1">
           <IconComponent className="w-5 h-5 text-primary" />

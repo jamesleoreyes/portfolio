@@ -8,6 +8,8 @@ export { ThemeToggle } from './theme/ThemeToggle';
 export { Alert, AlertTitle, AlertDescription } from './ui/alert';
 export { Button } from './ui/button';
 export { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
+export { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
+export type { CarouselApi } from './ui/carousel';
 export { Drawer } from './ui/drawer';
 export { Progress } from './ui/progress';
 export { Input } from './ui/input';

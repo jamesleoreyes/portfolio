@@ -71,7 +71,7 @@ function TurningPointItem({ point, index, isLast }: { point: TurningPoint; index
     <div className='relative'>
       {/* Timeline line */}
       {!isLast && (
-        <div className='absolute left-6 top-16 w-0.5 h-full bg-border'></div>
+        <div className='absolute left-6 top-16 w-0.5 h-[calc(100%-48px)] bg-border'></div>
       )}
 
       <div className='flex gap-6'>
@@ -82,7 +82,7 @@ function TurningPointItem({ point, index, isLast }: { point: TurningPoint; index
 
         {/* Content */}
         <div className='flex-1 space-y-3 pb-8'>
-          <div className='flex flex-col sm:flex-row sm:items-center gap-2'>
+          <div className='flex flex-col gap-2'>
             <div className='flex items-center gap-2 text-sm text-muted-foreground'>
               <Calendar className='w-4 h-4' />
               <span className='font-medium'>{point.year}</span>
@@ -115,7 +115,7 @@ export default function TurningPointsSection() {
     <section className='space-y-8 border-b border-foreground/10 pb-16'>
       <div className='text-center'>
         <h2 className='text-3xl font-bold tracking-tight mb-4'>The Turning Points</h2>
-        <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
+        <p className='text-lg text-muted-foreground max-w-xl mx-auto'>
           Every journey has moments that change everything. Here are the pivotal experiences that shaped who I am today.
         </p>
       </div>

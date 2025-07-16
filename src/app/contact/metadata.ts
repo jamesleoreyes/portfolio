@@ -4,7 +4,7 @@ import type { Meta } from "@/types/App";
 
 const meta: Meta = {
   title: 'Contact',
-  description: 'Get in touch with James Reyes - Full-Stack Product Engineer. Schedule a call, send an email, or connect through social media. Available for opportunities, collaborations, and networking.'
+  description: 'Get in touch with James Reyes — Full-Stack Product Engineer. Schedule a call, send an email, or connect through social media. Available for opportunities, collaborations, and networking.'
 }
 
 const metadata: Metadata = {
@@ -21,7 +21,7 @@ const metadata: Metadata = {
         url: assets.images.profile.me,
         width: 400,
         height: 400,
-        alt: 'James Reyes - Professional Photo',
+        alt: 'James Reyes — Professional Photo',
       },
     ],
   },

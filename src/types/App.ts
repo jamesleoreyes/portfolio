@@ -68,12 +68,13 @@ interface Assets {
       me: string;
     },
     screenshots: {
-      /**
-       * @url `/images/screenshots/portfolio-desktop.png`
-       */
-      portfolioDesktop: {
-        light: string;
-        dark: string;
+      light: {
+        portfolioDesktop: string[];
+        theReyesVault: string[];
+      };
+      dark: {
+        portfolioDesktop: string[];
+        theReyesVault: string[];
       };
     },
     /**

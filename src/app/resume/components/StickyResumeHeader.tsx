@@ -34,11 +34,11 @@ export default function StickyResumeHeader() {
       <div ref={headerRef} className="absolute top-0 h-px" />
 
       {/* Sticky Resume Header */}
-      <div className="sticky top-16 z-30 pt-2 bg-background border-b border-foreground/10">
-        <div className={`container mx-auto py-4 transition-all duration-300 ${isSticky ? 'px-4' : 'px-4 md:px-0'
+      <div className={`sticky top-16 z-30 pt-2 bg-background border-b border-foreground/10 ${isSticky ? 'sm:border-x' : ''}`}>
+        <div className={`mx-auto py-4 transition-all duration-300 ${isSticky ? 'px-4' : 'px-4 lg:px-0'
           }`}>
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold">Resume</h1>
+            <h1 className="text-3xl font-bold text-primary">Resume</h1>
             <ResumeActions />
           </div>
         </div>

@@ -50,9 +50,25 @@ const assets: Assets = {
       me: '/images/profile/me.jpg',
     },
     screenshots: {
-      portfolioDesktop: {
-        light: '/images/screenshots/portfolio-desktop-light.png',
-        dark: '/images/screenshots/portfolio-desktop-dark.png',
+      light: {
+        portfolioDesktop: [
+          '/images/screenshots/light/portfolio/desktop-light-home.png',
+          '/images/screenshots/light/portfolio/desktop-light-about.png',
+          '/images/screenshots/light/portfolio/desktop-light-experience.png',
+          '/images/screenshots/light/portfolio/desktop-light-resume.png',
+          '/images/screenshots/light/portfolio/desktop-light-contact.png',
+        ],
+        theReyesVault: [],
+      },
+      dark: {
+        portfolioDesktop: [
+          '/images/screenshots/dark/portfolio/desktop-dark-home.png',
+          '/images/screenshots/dark/portfolio/desktop-dark-about.png',
+          '/images/screenshots/dark/portfolio/desktop-dark-experience.png',
+          '/images/screenshots/dark/portfolio/desktop-dark-resume.png',
+          '/images/screenshots/dark/portfolio/desktop-dark-contact.png',
+        ],
+        theReyesVault: [],
       },
     },
     og: '/images/og-image.png',

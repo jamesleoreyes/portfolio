@@ -17,7 +17,7 @@ export default function Education() {
                   <p className="text-muted-foreground font-medium">{edu.institution}</p>
                 </div>
                 <div className="text-sm text-muted-foreground sm:text-right">
-                  <p>{edu.startDate} - {edu.endDate}</p>
+                  <p>{edu.startDate} — {edu.endDate}</p>
                   {edu.gpa && <p>GPA: {edu.gpa}</p>}
                   {edu.note && <p className="text-xs text-muted-foreground">{edu.note}</p>}
                 </div>

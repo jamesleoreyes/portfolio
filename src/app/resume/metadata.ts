@@ -4,7 +4,7 @@ import type { Meta } from "@/types/App";
 
 const meta: Meta = {
   title: 'Resume',
-  description: 'Professional resume of James Reyes - Full-Stack Product Engineer with expertise in building scalable, maintainable software solutions. View experience, skills, projects, and achievements in modern web development.'
+  description: 'Professional resume of James Reyes — Full-Stack Product Engineer with expertise in building scalable, maintainable software solutions. View experience, skills, projects, and achievements in modern web development.'
 }
 
 const metadata: Metadata = {
@@ -21,7 +21,7 @@ const metadata: Metadata = {
         url: assets.images.profile.me,
         width: 400,
         height: 400,
-        alt: 'James Reyes - Professional Photo',
+        alt: 'James Reyes — Professional Photo',
       },
     ],
   },

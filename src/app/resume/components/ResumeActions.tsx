@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Download, Share2 } from 'lucide-react';
+import { Download, Share } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function ResumeActions() {
@@ -10,7 +10,7 @@ export default function ResumeActions() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'James Reyes - Resume',
+          title: 'James Reyes — Resume',
           text: 'Check out James Reyes\' professional resume',
           url: window.location.href,
         });
@@ -34,13 +34,18 @@ export default function ResumeActions() {
 
   return (
     <div className="flex gap-2">
-      <Button variant="ghost" size="lg" onClick={handleShare}>
-        <Share2 className="w-4 h-4 mr-2" />
+      <Button
+        variant="ghost"
+        size="lg"
+        onClick={handleShare}
+        className='text-primary'
+      >
+        <Share />
         Share
       </Button>
       <Button asChild size="lg">
         <Link href="/api/resume" download>
-          <Download className="w-4 h-4" />
+          <Download />
           Download PDF
         </Link>
       </Button>

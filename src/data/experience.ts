@@ -47,7 +47,7 @@ const experienceData: ExperienceData = {
         {
           title: 'Career Breakthrough',
           description: 'Successfully transitioned from physical labor to software development',
-          impact: 'Earned full-time developer position offer',
+          impact: 'Earned a full-time developer position offer at Cimplx',
           metrics: 'Internship to full-time in 2 months'
         }
       ],

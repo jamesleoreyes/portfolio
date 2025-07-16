@@ -1,23 +1,18 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
 import { ExternalLink, Info } from 'lucide-react';
 import { resumeData, type ProjectItem } from '@/data';
 import { GitHub } from '@/components/icons';
-import { Progress, PlaceholderScreenshot, Tooltip, TooltipTrigger, TooltipContent } from '@/components';
+import {
+  Progress,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from '@/components';
+import ScreenshotCarousel from './ScreenshotCarousel';
 
 function ProjectCard({ project }: { project: ProjectItem }) {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const currentTheme = mounted ? (resolvedTheme || 'light') : 'light';
   const completionPercentage = project.completionPercentage || 0;
 
   return (
@@ -82,36 +77,14 @@ function ProjectCard({ project }: { project: ProjectItem }) {
         </div>
       </div>
 
-      <div className='flex items-center justify-center'>
-        {project.image ? (
-          <Link
-            href={project.image[currentTheme === 'dark' ? 'dark' : 'light']}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Image
-              src={project.image[currentTheme === 'dark' ? 'dark' : 'light']}
-              alt={project.name}
-              width={400}
-              height={200}
-              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 400px"
-              className="w-full"
-              loading="lazy"
-            />
-          </Link>
-        ) : (
-          <div className='flex items-center justify-center bg-background'>
-            <PlaceholderScreenshot className='w-full max-w-none' />
-          </div>
-        )}
-      </div>
+      <ScreenshotCarousel project={project} />
 
       <p className='text-muted-foreground leading-relaxed'>
         {project.description}
       </p>
 
       <div>
-        <h4 className='font-semibold mb-2'>Key Highlights:</h4>
+        <h4 className='font-semibold mb-2 text-primary'>Key Highlights:</h4>
         <ul className='list-disc list-inside space-y-1 text-muted-foreground'>
           {project.highlights.map((highlight, idx) => (
             <li key={idx}>{highlight}</li>
@@ -120,12 +93,12 @@ function ProjectCard({ project }: { project: ProjectItem }) {
       </div>
 
       <div>
-        <h4 className='font-semibold mb-2'>Technologies:</h4>
+        <h4 className='font-semibold mb-2 text-primary'>Technologies:</h4>
         <div className='flex flex-wrap gap-1'>
           {project.technologies.map((tech, idx) => (
             <span
               key={idx}
-              className='bg-popover text-secondary-foreground px-2 py-1 text-sm'
+              className='bg-primary/10 text-primary px-2 py-1 text-sm'
             >
               {tech}
             </span>

@@ -9,7 +9,7 @@ export default function Certifications() {
       <h2 className="text-2xl font-semibold mb-6 text-primary border-b pb-2">Certifications</h2>
       <div className="grid gap-4 md:grid-cols-2">
         {resumeData.certifications.map((cert, index) => (
-          <Card key={index} className='border border-foreground/10 py-4 bg-accent'>
+          <Card key={index} className='border border-foreground/10 py-4 bg-accent shadow-none hover:shadow-md transition'>
             <CardHeader>
               <CardTitle>{cert.name}</CardTitle>
               <CardDescription>{cert.issuer}</CardDescription>
