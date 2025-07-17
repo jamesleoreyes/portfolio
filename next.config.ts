@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [384, 640, 750, 828, 1080, 1200],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 86400,
     dangerouslyAllowSVG: false,
     unoptimized: false,
   },
@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   transpilePackages: [],
+  poweredByHeader: false,
 };
 
 export default nextConfig;

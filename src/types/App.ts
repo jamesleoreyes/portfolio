@@ -65,7 +65,11 @@ interface Assets {
       /**
        * @url `/images/profile/me.jpg`
        */
-      me: string;
+      meJpg: string;
+      /**
+       * @url `/images/profile/me.webp`
+       */
+      meWebp: string;
     },
     screenshots: {
       light: {

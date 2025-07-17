@@ -18,7 +18,7 @@ const metadata: Metadata = {
     siteName: `${baseMeta.fullTitle}`,
     images: [
       {
-        url: assets.images.profile.me,
+        url: assets.images.profile.meWebp,
         width: 400,
         height: 400,
         alt: 'James Reyes — Professional Photo',
@@ -28,7 +28,7 @@ const metadata: Metadata = {
   twitter: {
     title: meta.title,
     description: meta.description,
-    images: [assets.images.profile.me],
+    images: [assets.images.profile.meWebp],
   },
   alternates: {
     canonical: `${urlConfig.app}/resume`,

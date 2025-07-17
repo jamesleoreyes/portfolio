@@ -57,16 +57,16 @@ export default function ScreenshotCarousel({ project }: { project: ProjectItem }
               variant='outline'
             />
             <CarouselNext
-              className='absolute right-2 top-1/2 -translate-y-1/2'
+              className='absolute right-4 top-1/2 -translate-y-1/2'
               variant='outline'
             />
           </Carousel>
           <div className="text-muted-foreground py-2 -mb-2 border-b border-muted-foreground/10 text-center text-sm">
             {!api || count === 0 ? (
               <div className="flex justify-center space-x-1">
-                <Skeleton className="h-5 w-4 bg-foreground/10" />
+                <Skeleton className="h-5 w-2 bg-foreground/10" />
                 <span className="text-muted-foreground">/</span>
-                <Skeleton className="h-5 w-4 bg-foreground/10" />
+                <Skeleton className="h-5 w-2 bg-foreground/10" />
               </div>
             ) : (
               <span>{currentSlide} / {count}</span>

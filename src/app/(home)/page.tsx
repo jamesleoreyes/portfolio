@@ -1,7 +1,9 @@
 import { ProfileImage, SocialLinks } from '@/components';
+import { lazy, Suspense } from 'react';
 import CTASection from './components/CTASection';
 import HeroSection from './components/HeroSection';
-import QuickNavSection from './components/QuickNavSection';
+
+const QuickNavSection = lazy(() => import('./components/QuickNavSection'));
 
 export default function Home() {
   return (
@@ -21,7 +23,9 @@ export default function Home() {
             <SocialLinks />
           </div>
 
-          <QuickNavSection />
+          <Suspense fallback={<div className='h-20' />}>
+            <QuickNavSection />
+          </Suspense>
         </div>
       </main>
     </div>

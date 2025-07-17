@@ -7,7 +7,7 @@ export default function PersonSchema() {
     'name': 'James Reyes',
     'alternateName': ['James Leo Reyes', 'James L. Reyes'],
     'url': urlConfig.app,
-    'image': `${urlConfig.app}${assets.images.profile.me}`,
+    'image': `${urlConfig.app}${assets.images.profile.meWebp}`,
     'sameAs': [
       'https://github.com/jamesleoreyes',
       'https://linkedin.com/in/jamesleoreyes',

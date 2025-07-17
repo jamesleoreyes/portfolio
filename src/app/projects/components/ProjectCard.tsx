@@ -63,6 +63,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             width={400}
             height={225}
             className='w-full h-full object-cover'
+            priority={true}
           />
         ) : (
           <div className='text-primary text-3xl font-bold'>{project.title}</div>

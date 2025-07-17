@@ -70,7 +70,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
                   aria-label={`${completionPercentage}% complete`}
                 />
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipContent className='shadow-lg'>
                 <span className='font-semibold'>{completionPercentage}% complete</span>
               </TooltipContent>
             </Tooltip>

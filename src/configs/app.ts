@@ -47,7 +47,8 @@ const assets: Assets = {
       wide: '/images/logos/jlr.png',
     },
     profile: {
-      me: '/images/profile/me.jpg',
+      meJpg: '/images/profile/me.jpg',
+      meWebp: '/images/profile/me.webp',
     },
     screenshots: {
       light: {
