@@ -55,31 +55,31 @@ export default function ProjectHero({ className }: ProjectHeroProps) {
   return (
     <section className={cn("border-b border-border/50 py-16 pt-4 sm:pt-16 w-full px-4", className)}>
       <div className='max-w-6xl mx-auto'>
-        <div className='flex justify-end'>
-          <Button variant="ghost" size="lg" className='mb-4' asChild>
-            <Link href="/projects">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Projects
-            </Link>
-          </Button>
-        </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
           {/* Project Info */}
           <div className='space-y-6'>
             {/* Badges */}
-            <div className='flex flex-wrap gap-3'>
-              <span className={cn(
-                'px-3 py-1 text-sm font-medium rounded-full',
-                getStatusColor(status)
-              )}>
-                {status.charAt(0).toUpperCase() + status.slice(1)}
-              </span>
-              <span className={cn(
-                'px-3 py-1 text-sm font-medium rounded-full',
-                getTypeColor(type)
-              )}>
-                {type.charAt(0).toUpperCase() + type.slice(1)} Project
-              </span>
+            <div className='flex flex-wrap justify-between items-center gap-3'>
+              <div>
+                <span className={cn(
+                  'px-3 py-1 text-sm font-medium rounded-full',
+                  getStatusColor(status)
+                )}>
+                  {status.charAt(0).toUpperCase() + status.slice(1)}
+                </span>
+                <span className={cn(
+                  'px-3 py-1 text-sm font-medium rounded-full',
+                  getTypeColor(type)
+                )}>
+                  {type.charAt(0).toUpperCase() + type.slice(1)} Project
+                </span>
+              </div>
+              <Button variant="secondary" asChild>
+                <Link href="/projects">
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Projects
+                </Link>
+              </Button>
             </div>
 
             {/* Title & Description */}
@@ -130,14 +130,14 @@ export default function ProjectHero({ className }: ProjectHeroProps) {
             </div>
 
             {/* Timeline */}
-            <Card className="bg-accent/50 border-border/50">
-              <CardContent>
-                <div className='flex flex-col sm:flex-row sm:items-center gap-4'>
+            <Card className="bg-accent/50 border-border/50 p-4 py-3 w-full sm:w-fit">
+              <CardContent className='px-0'>
+                <div className='flex items-center justify-center gap-4'>
                   <div className='flex items-center gap-2 text-sm text-muted-foreground'>
                     <Calendar className='w-4 h-4' />
                     <span>Started: {startDate}</span>
                   </div>
-                  <div className='hidden sm:block w-px h-4 bg-border'></div>
+                  <div className='w-px h-4 bg-border'></div>
                   <div className='text-sm text-muted-foreground'>
                     Last updated: {lastUpdated}
                   </div>
@@ -163,7 +163,7 @@ export default function ProjectHero({ className }: ProjectHeroProps) {
             <div className='absolute -top-3 -right-3 bg-background border-2 border-border rounded-full p-3 shadow-lg'>
               <div className={cn(
                 'w-3 h-3 rounded-full',
-                status === 'live' ? 'bg-green-500' :
+                status === 'live' ? 'bg-green-500 animate-pulse' :
                   status === 'development' ? 'bg-yellow-500' : 'bg-gray-500'
               )}></div>
             </div>
