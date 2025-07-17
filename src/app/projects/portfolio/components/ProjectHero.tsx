@@ -43,12 +43,30 @@ export default function ProjectHero({ className }: ProjectHeroProps) {
     }
   };
 
+  const getStatusBorderColor = (status: string) => {
+    switch (status) {
+      case 'live': return 'border-green-500';
+      case 'development': return 'border-yellow-500';
+      case 'archived': return 'border-gray-500';
+      default: return 'border-gray-500';
+    }
+  };
+
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'personal': return 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400';
       case 'professional': return 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400';
       case 'open-source': return 'bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
+    }
+  };
+
+  const getTypeBorderColor = (type: string) => {
+    switch (type) {
+      case 'personal': return 'border-blue-500';
+      case 'professional': return 'border-purple-500';
+      case 'open-source': return 'border-orange-500';
+      default: return 'border-gray-500';
     }
   };
 
@@ -59,17 +77,19 @@ export default function ProjectHero({ className }: ProjectHeroProps) {
           {/* Project Info */}
           <div className='space-y-6'>
             {/* Badges */}
-            <div className='flex flex-wrap justify-between items-center gap-3'>
-              <div>
+            <div className='flex flex-wrap justify-between items-center'>
+              <div className='flex flex-wrap gap-3'>
                 <span className={cn(
-                  'px-3 py-1 text-sm font-medium rounded-full',
-                  getStatusColor(status)
+                  'px-3 py-1 text-sm font-medium border',
+                  getStatusColor(status),
+                  getStatusBorderColor(status)
                 )}>
                   {status.charAt(0).toUpperCase() + status.slice(1)}
                 </span>
                 <span className={cn(
-                  'px-3 py-1 text-sm font-medium rounded-full',
-                  getTypeColor(type)
+                  'px-3 py-1 text-sm font-medium border',
+                  getTypeColor(type),
+                  getTypeBorderColor(type)
                 )}>
                   {type.charAt(0).toUpperCase() + type.slice(1)} Project
                 </span>
