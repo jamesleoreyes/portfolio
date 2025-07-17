@@ -4,7 +4,7 @@ import type { Meta } from "@/types/App";
 
 const meta: Meta = {
   title: 'Projects',
-  description: 'Explore the projects and applications built by James Reyes — Full-Stack Product Engineer. From side experiments to production applications, discover the creative solutions and technical innovations. Currently under development with exciting features coming soon!'
+  description: 'Explore the projects and applications built by James Reyes — Full-Stack Product Engineer. From side experiments to production applications, discover the creative solutions and technical innovations.'
 }
 
 const metadata: Metadata = {
