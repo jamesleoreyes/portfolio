@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components';
 import { isPageDisabled } from '@/lib/utils';
-import { useGoBack } from '@/hooks/useGoBack';
+import { useGoBack } from '@/hooks';
 
 export default function NotFound() {
   const { backUrl, handleGoBack } = useGoBack();

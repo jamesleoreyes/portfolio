@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Calendar, MapPin, Briefcase, Rocket, GraduationCap } from "lucide-react";
-import { useMobile } from "@/hooks/useMobile";
+import { useMobile } from "@/hooks";
 import { experienceData } from "@/data";
 import { cn } from "@/lib/utils";
 

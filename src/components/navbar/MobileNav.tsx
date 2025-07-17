@@ -6,7 +6,7 @@ import { nav } from '@/configs/nav';
 import { assets } from '@/configs/app';
 import { Button, ThemeToggle } from '@/components';
 import { AdaptiveIcon } from '@/components/icons';
-import { usePWAMode } from '@/hooks/usePWAMode';
+import { usePWAMode } from '@/hooks';
 import {
   Drawer,
   DrawerTrigger,

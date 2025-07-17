@@ -1,7 +1,7 @@
 'use client';
 
 import ResumeActions from './ResumeActions';
-import { useScrollPosition } from '@/hooks/useScrollPosition';
+import { useScrollPosition } from '@/hooks';
 
 export default function StickyResumeHeader() {
   const isScrolled = useScrollPosition();
