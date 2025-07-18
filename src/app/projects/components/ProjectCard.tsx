@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 import { Project } from '@/types/Projects';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button } from '@/components';
+import { cn, getStatusColor, getStatusBorderColor } from '@/lib/utils';
 
 interface ProjectCardProps {
   project: Project;
@@ -21,21 +22,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const getStatusColor = (status: Project['status']) => {
-    switch (status) {
-      case 'live':
-        return 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400';
-      case 'development':
-        return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400';
-      case 'coming-soon':
-        return 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400';
-      case 'archived':
-        return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
-      default:
-        return 'bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400';
-    }
-  };
 
   const getStatusLabel = (status: Project['status']) => {
     switch (status) {
@@ -73,7 +59,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <CardHeader>
         <div className='flex items-center justify-between'>
           <CardTitle className='text-xl'>{project.title}</CardTitle>
-          <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(project.status)}`}>
+          <span className={cn(`px-2 py-1 text-xs ${getStatusColor(project.status)} border ${getStatusBorderColor(project.status)}`)}>
             {getStatusLabel(project.status)}
           </span>
         </div>
@@ -86,13 +72,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {primaryTechStack.map((tech) => (
             <span
               key={tech.name}
-              className='bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 px-2 py-1 text-xs rounded-full'
+              className='bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-500 px-2 py-1 text-xs'
             >
               {tech.name}
             </span>
           ))}
           {project.techStack.length > 3 && (
-            <span className='bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-300 px-2 py-1 text-xs rounded-full'>
+            <span className='bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-300 border border-gray-500 px-2 py-1 text-xs'>
               +{project.techStack.length - 3} more
             </span>
           )}

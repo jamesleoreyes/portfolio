@@ -66,6 +66,18 @@ export default function TechStack({ className }: TechStackProps) {
     }
   };
 
+  const getTagBorderColor = (category: string) => {
+    switch (category) {
+      case 'frontend': return 'border-blue-500';
+      case 'backend': return 'border-green-500';
+      case 'database': return 'border-purple-500';
+      case 'deployment': return 'border-orange-500';
+      case 'analytics': return 'border-purple-500';
+      case 'tools': return 'border-green-500';
+      default: return 'border-gray-500';
+    }
+  };
+
   return (
     <section className={cn("py-16 w-full px-4", className)}>
       <div className='max-w-6xl mx-auto space-y-8'>
@@ -94,8 +106,9 @@ export default function TechStack({ className }: TechStackProps) {
                     <span
                       key={index}
                       className={cn(
-                        'px-3 py-1 text-sm font-medium rounded-full transition-colors',
-                        getTagColor(category)
+                        'px-3 py-1 text-sm font-medium transition-colors border',
+                        getTagColor(category),
+                        getTagBorderColor(category),
                       )}
                     >
                       {tech.name}

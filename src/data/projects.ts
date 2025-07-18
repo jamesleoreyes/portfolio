@@ -13,14 +13,14 @@ export const projects: Projects = {
     liveUrl: 'https://jamesleoreyes.com',
     githubUrl: 'https://github.com/jamesleoreyes/portfolio',
     screenshots: {
-      default: assets.images.screenshots.dark.portfolioDesktop,
-      light: assets.images.screenshots.light.portfolioDesktop,
-      dark: assets.images.screenshots.dark.portfolioDesktop,
+      default: assets.images.screenshots.dark.portfolio,
+      light: assets.images.screenshots.light.portfolio,
+      dark: assets.images.screenshots.dark.portfolio,
     },
     featuredImage: {
-      default: assets.images.screenshots.dark.portfolioDesktop[0]!,
-      light: assets.images.screenshots.light.portfolioDesktop[0]!,
-      dark: assets.images.screenshots.dark.portfolioDesktop[0]!,
+      default: assets.images.screenshots.dark.portfolio[0]!,
+      light: assets.images.screenshots.light.portfolio[0]!,
+      dark: assets.images.screenshots.dark.portfolio[0]!,
     },
     techStack: [
       { name: 'Next.js 15', category: 'frontend' },
@@ -89,7 +89,7 @@ export const projects: Projects = {
       },
     ],
     startDate: 'May 2025',
-    lastUpdated: 'July 16, 2025',
+    lastUpdated: 'July 17, 2025',
     metrics: [
       { label: 'PageSpeed Insights Performance', value: '99' },
       { label: 'PageSpeed Insights Accessibility', value: '100' },

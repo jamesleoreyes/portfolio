@@ -73,11 +73,11 @@ interface Assets {
     },
     screenshots: {
       light: {
-        portfolioDesktop: string[];
+        portfolio: string[];
         theReyesVault: string[];
       };
       dark: {
-        portfolioDesktop: string[];
+        portfolio: string[];
         theReyesVault: string[];
       };
     },

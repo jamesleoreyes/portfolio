@@ -87,7 +87,7 @@ export default function ScreenshotGallery({ className }: ScreenshotGalleryProps)
                           src={screenshot}
                           alt={`${title} - ${getPageName(screenshot)} page`}
                           fill
-                          className="object-cover object-top hover:scale-105 transition-transform duration-300"
+                          className="object-cover object-top"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
@@ -117,8 +117,8 @@ export default function ScreenshotGallery({ className }: ScreenshotGalleryProps)
           </Card>
           <Card className="text-center bg-accent border-primary/20">
             <CardContent className="py-4">
-              <div className="text-2xl font-bold text-primary">2</div>
-              <div className="text-sm text-muted-foreground">Theme Modes</div>
+              <div className="text-2xl font-bold text-primary">OKLCH</div>
+              <div className="text-sm text-muted-foreground">Colors</div>
             </CardContent>
           </Card>
           <Card className="text-center bg-accent border-primary/20">
