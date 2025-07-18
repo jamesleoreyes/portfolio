@@ -16,8 +16,9 @@ This document provides comprehensive technical documentation for developers who 
 - [Data Management](#data-management)
 - [Deployment & Hosting](#deployment--hosting)
 - [Configuration Details](#configuration-details)
+- [Additional Resources](#additional-resources)
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ### Current Version: v0.16.7
 
@@ -37,7 +38,7 @@ The portfolio has evolved from a basic showcase to a comprehensive digital prese
 4. **Performance-First**: Every decision optimized for Core Web Vitals
 5. **Accessibility by Default**: WCAG compliance built into every component
 
-## 🛠️ Tech Stack Deep Dive
+## Tech Stack Deep Dive
 
 ### Core Technologies
 
@@ -90,7 +91,7 @@ The portfolio has evolved from a basic showcase to a comprehensive digital prese
 }
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 portfolio/
@@ -313,7 +314,7 @@ portfolio/
 └── tsconfig.json             # TypeScript configuration
 ```
 
-## 🚀 Development Setup
+## Development Setup
 
 ### Prerequisites
 
@@ -370,20 +371,17 @@ portfolio/
 | `pnpm run version:minor` | Bump minor version                      |
 | `pnpm run version:major` | Bump major version                      |
 
-## 🔧 Code Quality Standards
+## Code Quality Standards
 
 ### TypeScript Configuration
 
 ```json
-// tsconfig.json
 {
   "compilerOptions": {
-    // Language and Environment - Target modern browsers more aggressively
     "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "preserve",
 
-    // Modules
     "module": "esnext",
     "moduleResolution": "bundler",
     "esModuleInterop": true,
@@ -391,19 +389,15 @@ portfolio/
     "resolveJsonModule": true,
     "isolatedModules": true,
 
-    // JavaScript Support
     "allowJs": false,
     "checkJs": false,
 
-    // Emit
     "noEmit": true,
     "incremental": true,
 
-    // Interop Constraints
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": false,
 
-    // Type Checking - Strict Mode
     "strict": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
@@ -417,17 +411,14 @@ portfolio/
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
 
-    // Completeness
     "skipLibCheck": true,
 
-    // Next.js specific
     "plugins": [
       {
         "name": "next"
       }
     ],
 
-    // Path Mapping
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
@@ -468,7 +459,7 @@ export default eslintConfig;
 4. **Comments**: JSDoc comments for complex functions
 5. **Accessibility**: ARIA labels and semantic HTML
 
-## ⚡ Performance Optimizations
+## Performance Optimizations
 
 ### Bundle Optimization
 
@@ -494,7 +485,7 @@ export default eslintConfig;
 | **Best Practices** | 100/100 | Modern web standards                       |
 | **SEO**            | 100/100 | Complete meta tags and structured data     |
 
-## 🧩 Component Architecture
+## Component Architecture
 
 ### Component Design Principles
 
@@ -530,7 +521,7 @@ export default eslintConfig;
 - shadcn/ui based components
 - Atomic design principles
 
-## 📊 Data Management
+## Data Management
 
 ### Data Structure
 
@@ -595,7 +586,7 @@ export interface Assets {
 }
 ```
 
-## 🚀 Deployment & Hosting
+## Deployment & Hosting
 
 ### Vercel Deployment
 
@@ -633,7 +624,7 @@ export interface Assets {
 - **SSL Certificate**: Automatic via Vercel
 - **CDN**: Global edge network
 
-## ⚙️ Configuration Details
+## Configuration Details
 
 ### Next.js Configuration
 
@@ -642,90 +633,29 @@ export interface Assets {
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js",
-        },
-      },
-    },
-  },
+  allowedDevOrigins: process.env['ALLOWED_DEV_ORIGINS']
+    ? process.env['ALLOWED_DEV_ORIGINS'].split(",")
+    : [],
   images: {
-    formats: ["image/webp"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [384, 640, 750, 828, 1080, 1200],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 86400,
+    dangerouslyAllowSVG: false,
+    unoptimized: false,
   },
-  compress: true,
+  experimental: {
+    optimizePackageImports: ['@/components', '@/configs'],
+    esmExternals: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  transpilePackages: [],
   poweredByHeader: false,
-  reactStrictMode: true,
-  swcMinify: true,
 };
 
 export default nextConfig;
-```
-
-### Tailwind CSS Configuration
-
-```typescript
-// tailwind.config.ts
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-    },
-  },
-  plugins: [],
-};
-
-export default config;
 ```
 
 ### PWA Configuration
@@ -766,35 +696,7 @@ export default function manifest(): MetadataRoute.Manifest {
 }
 ```
 
-## 🔍 Troubleshooting
-
-### Common Issues
-
-1. **TypeScript Errors**
-
-   - Ensure strict mode is enabled
-   - Check for proper type imports
-   - Verify interface definitions
-
-2. **Build Failures**
-
-   - Clear `.next` directory
-   - Reinstall dependencies
-   - Check for circular imports
-
-3. **Performance Issues**
-   - Run Lighthouse audit
-   - Check bundle analyzer
-   - Optimize images and code splitting
-
-### Development Tips
-
-1. **Hot Reload**: Use Turbopack for faster development
-2. **Type Checking**: Enable TypeScript strict mode
-3. **Linting**: Run ESLint before commits
-4. **Testing**: Test on multiple devices and browsers
-
-## 📚 Additional Resources
+## Additional Resources
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs)

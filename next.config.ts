@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ['192.168.0.205', '10.15.1.106'],
+  allowedDevOrigins: process.env['ALLOWED_DEV_ORIGINS']
+    ? process.env['ALLOWED_DEV_ORIGINS'].split(",")
+    : [],
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [384, 640, 750, 828, 1080, 1200],
