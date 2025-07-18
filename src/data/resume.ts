@@ -95,10 +95,10 @@ const resumeData: ResumeData = {
       ],
       images: {
         light: [
-          ...assets.images.screenshots.light.portfolioDesktop,
+          ...assets.images.screenshots.light.portfolio,
         ],
         dark: [
-          ...assets.images.screenshots.dark.portfolioDesktop,
+          ...assets.images.screenshots.dark.portfolio,
         ],
       },
       projectHref: '/projects/portfolio',
