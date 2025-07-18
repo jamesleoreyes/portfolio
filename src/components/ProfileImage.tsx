@@ -39,7 +39,7 @@ export default function ProfileImage({
         height={height}
         priority={priority}
         sizes={optimizedSizes}
-        className='shadow-2xl transition-opacity duration-300'
+        className='shadow-2xl transition-opacity duration-200'
         draggable={false}
         style={{
           objectFit: 'cover',
@@ -47,7 +47,6 @@ export default function ProfileImage({
         }}
         fetchPriority={priority ? 'high' : 'auto'}
         quality={quality}
-        key={currentSrc}
       />
     </div>
   );

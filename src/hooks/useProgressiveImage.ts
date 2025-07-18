@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 interface UseProgressiveImageOptions {
   lowQualitySrc: string;
@@ -20,49 +20,50 @@ export function useProgressiveImage({
   const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
   const [shouldUpgrade, setShouldUpgrade] = useState(false);
 
-  const triggerUpgrade = useCallback(() => {
-    const delay = priority ? 150 : 300;
-    setTimeout(() => setShouldUpgrade(true), delay);
-  }, [priority]);
-
   useEffect(() => {
-    const checkReadiness = () => {
-      const isReady =
-        document.readyState === 'complete' ||
-        (document.readyState === 'interactive' && performance.now() > 1000);
-
-      if (isReady) {
-        triggerUpgrade();
-      }
+    const triggerUpgrade = () => {
+      const delay = priority ? 150 : 300;
+      setTimeout(() => setShouldUpgrade(true), delay);
     };
 
-    checkReadiness();
-
-    if (document.readyState !== 'complete') {
+    if (document.readyState === 'complete') {
+      triggerUpgrade();
+    } else {
       window.addEventListener('load', triggerUpgrade);
-      document.addEventListener('DOMContentLoaded', checkReadiness);
-
-      return () => {
-        window.removeEventListener('load', triggerUpgrade);
-        document.removeEventListener('DOMContentLoaded', checkReadiness);
-      };
+      return () => window.removeEventListener('load', triggerUpgrade);
     }
 
     return undefined;
-  }, [triggerUpgrade]);
+  }, [priority]);
 
   useEffect(() => {
-    if (shouldUpgrade && !isHighQualityLoaded) {
-      const img = new window.Image();
+    if (!shouldUpgrade || isHighQualityLoaded) return;
 
-      img.onload = () => {
-        setTimeout(() => setIsHighQualityLoaded(true), 50);
-      };
+    const img = new window.Image();
+    let cancelled = false;
 
-      img.onerror = () => setShouldUpgrade(false);
+    img.onload = () => {
+      if (!cancelled) {
+        img.decode().then(() => {
+          if (!cancelled) setIsHighQualityLoaded(true);
+        }).catch(() => {
+          if (!cancelled) setIsHighQualityLoaded(true);
+        });
+      }
+    };
 
-      img.src = highQualitySrc;
-    }
+    img.onerror = () => {
+      console.warn('High-quality image failed to load');
+      setShouldUpgrade(false);
+    };
+
+    img.src = highQualitySrc;
+
+    return () => {
+      cancelled = true;
+      img.onload = null;
+      img.onerror = null;
+    };
   }, [shouldUpgrade, highQualitySrc, isHighQualityLoaded]);
 
   return {
