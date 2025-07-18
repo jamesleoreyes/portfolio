@@ -19,7 +19,7 @@ This document provides comprehensive technical documentation for developers who 
 
 ## 🏗️ Architecture Overview
 
-### Current Version: v0.16.6
+### Current Version: v0.16.7
 
 The portfolio has evolved from a basic showcase to a comprehensive digital presence with:
 
