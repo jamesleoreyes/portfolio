@@ -112,7 +112,7 @@ const resumeData: ResumeData = {
       field: 'Media Arts',
       startDate: 'Aug 2016',
       endDate: 'Jan 2018',
-      note: 'Completed 1.5 semesters'
+      note: 'Completed 1.5 years of study'
     }
   ],
   certifications: [

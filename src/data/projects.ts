@@ -35,7 +35,7 @@ export const projects: Projects = {
       { name: 'Vercel Analytics', category: 'analytics' },
       { name: 'Umami', category: 'analytics' },
       { name: 'ESLint', category: 'tools' },
-      { name: 'Prettier', category: 'tools' },
+      { name: 'pnpm', category: 'tools' },
     ],
     features: [
       {
