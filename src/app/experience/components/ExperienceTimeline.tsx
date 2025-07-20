@@ -46,7 +46,7 @@ function TimelineItem({ experience, isLast }: {
   return (
     <div className='relative'>
       {/* Sticky Mobile Header */}
-      <div className='md:hidden sticky top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-border/50 -mx-4 px-4 py-3 pt-5 mb-2'>
+      <div className='md:hidden sticky top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-border/50 -mx-4 px-4 py-3 pt-7'>
         <div className='flex items-center gap-3'>
           <div className={`w-8 h-8 ${getStatusColor(experience.status)} flex items-center justify-center text-white flex-shrink-0`}>
             {getTypeIcon(experience.type)}
@@ -116,7 +116,7 @@ function TimelineItem({ experience, isLast }: {
             </div>
           )}
 
-          <p className='text-muted-foreground leading-relaxed text-lg'>{experience.overview}</p>
+          <p className='text-muted-foreground leading-relaxed text-lg mt-2'>{experience.overview}</p>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
             <div className='bg-accent p-4 space-y-2'>
