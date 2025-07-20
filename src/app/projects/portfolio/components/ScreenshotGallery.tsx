@@ -29,7 +29,7 @@ export default function ScreenshotGallery({ className }: ScreenshotGalleryProps)
 
   useEffect(() => {
     setMounted(true)
-  })
+  }, [])
 
   return (
     <section className={cn("py-16 w-full px-4 border-t border-border/50", className)}>
