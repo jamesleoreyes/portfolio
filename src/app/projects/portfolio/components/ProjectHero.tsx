@@ -1,10 +1,11 @@
 'use client';
 
-import { ExternalLink, Github, Calendar, Globe, ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { ExternalLink, Calendar, Globe, ArrowLeft } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
+import { GitHub } from '@/components/icons';
 import { Button, Card, CardContent, PlaceholderScreenshot } from '@/components';
 import { cn, getStatusColor, getStatusBorderColor, getTypeColor, getTypeBorderColor } from '@/lib/utils';
 import { projects } from '@/data/projects';
@@ -105,7 +106,7 @@ export default function ProjectHero({ className }: ProjectHeroProps) {
                     rel="noopener noreferrer"
                     className='flex items-center gap-2'
                   >
-                    <Github className='w-4 h-4' />
+                    <GitHub />
                     View Source
                     <ExternalLink />
                   </Link>
