@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight, Moon, Sun } from 'lucide-react';
-import { Button, Card, CardContent, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components';
+import { Button, Card, CardContent, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, PlaceholderScreenshot } from '@/components';
 import { cn } from '@/lib/utils';
 import { projects } from '@/data/projects';
 
@@ -12,6 +12,7 @@ interface ScreenshotGalleryProps {
 }
 
 export default function ScreenshotGallery({ className }: ScreenshotGalleryProps) {
+  const [mounted, setMounted] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState<'light' | 'dark'>('light');
   const { screenshots, title } = projects.portfolio;
 
@@ -25,6 +26,10 @@ export default function ScreenshotGallery({ className }: ScreenshotGalleryProps)
     }
     return 'Screenshot';
   };
+
+  useEffect(() => {
+    setMounted(true)
+  })
 
   return (
     <section className={cn("py-16 w-full px-4 border-t border-border/50", className)}>
@@ -82,14 +87,18 @@ export default function ScreenshotGallery({ className }: ScreenshotGalleryProps)
                 <CarouselItem key={`${selectedTheme}-${index}`} className="md:basis-1/2 lg:basis-1/3">
                   <Card className="overflow-hidden pt-0 border border-border/50 hover:border-border transition-colors">
                     <CardContent className="p-0">
-                      <div className="relative aspect-[16/10] overflow-hidden">
-                        <Image
-                          src={screenshot}
-                          alt={`${title} - ${getPageName(screenshot)} page`}
-                          fill
-                          className="object-cover object-top"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
+                      <div className="relative aspect-video overflow-hidden">
+                        {mounted ? (
+                          <Image
+                            src={screenshot}
+                            alt={`${title} - ${getPageName(screenshot)} page`}
+                            fill
+                            className="object-cover object-top"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                        ) : (
+                          <PlaceholderScreenshot />
+                        )}
                       </div>
                       <div className="p-4 pb-0">
                         <h3 className="font-semibold text-foreground">{getPageName(screenshot)} Page</h3>
