@@ -1,4 +1,5 @@
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from "@/components/ui/sonner"
@@ -55,6 +56,7 @@ export default function RootLayout({
             position='top-center'
           />
           <Analytics />
+          <SpeedInsights />
           <ImpossibleDeviceEasterEgg />
         </ThemeProvider>
       </body>
