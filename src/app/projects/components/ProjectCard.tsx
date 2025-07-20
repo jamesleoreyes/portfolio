@@ -4,10 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import { ExternalLink, Github, Eye } from 'lucide-react';
-import { Project } from '@/types/Projects';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button } from '@/components';
+import { ExternalLink, Eye } from 'lucide-react';
 import { cn, getStatusColor, getStatusBorderColor } from '@/lib/utils';
+import { Project } from '@/types/Projects';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button, PlaceholderScreenshot } from '@/components';
+import { GitHub } from '@/components/icons';
 
 interface ProjectCardProps {
   project: Project;
@@ -18,6 +19,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const [mounted, setMounted] = useState(false);
   const currentTheme = mounted ? (resolvedTheme || 'light') : 'light';
   const primaryTechStack = project.techStack.slice(0, 3);
+  const shouldShowDetailButtons = project.liveUrl && project.githubUrl;
 
   useEffect(() => {
     setMounted(true);
@@ -39,34 +41,36 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   };
 
   return (
-    <Card className='group hover:shadow-lg pt-0 transition-all duration-300 overflow-hidden'>
+    <Card className='group flex flex-col justify-between hover:shadow-lg pt-0 transition-all duration-300 overflow-hidden'>
       {/* Project Preview/Screenshot */}
-      <div className='aspect-video bg-accent/50 flex items-center justify-center overflow-hidden'>
-        {project.featuredImage[currentTheme as 'light' | 'dark'] ? (
-          <Image
-            src={project.featuredImage[currentTheme as 'light' | 'dark']!}
-            alt={`${project.title} screenshot`}
-            width={400}
-            height={225}
-            className='w-full h-full object-cover'
-            priority={true}
-          />
-        ) : (
-          <div className='text-primary text-3xl font-bold'>{project.title}</div>
-        )}
-      </div>
-
-      <CardHeader>
-        <div className='flex items-center justify-between'>
-          <CardTitle className='text-xl'>{project.title}</CardTitle>
-          <span className={cn(`px-2 py-1 text-xs ${getStatusColor(project.status)} border ${getStatusBorderColor(project.status)}`)}>
-            {getStatusLabel(project.status)}
-          </span>
+      <div className='space-y-6'>
+        <div className='aspect-video bg-accent/50 flex items-center justify-center overflow-hidden'>
+          {mounted && resolvedTheme && project.featuredImage[currentTheme as 'light' | 'dark'] ? (
+            <Image
+              src={project.featuredImage[currentTheme as 'light' | 'dark']!}
+              alt={`${project.title} screenshot`}
+              width={400}
+              height={225}
+              className='w-full h-full object-cover'
+              priority={true}
+            />
+          ) : (
+            <PlaceholderScreenshot />
+          )}
         </div>
-        <CardDescription>{project.description}</CardDescription>
-      </CardHeader>
 
-      <CardContent className='space-y-4'>
+
+        <CardHeader>
+          <div className='flex items-center justify-between'>
+            <CardTitle className='text-xl truncate'>{project.title}</CardTitle>
+            <span className={cn(`px-2 py-1 text-xs ${getStatusColor(project.status)} border ${getStatusBorderColor(project.status)}`)}>
+              {getStatusLabel(project.status)}
+            </span>
+          </div>
+          <CardDescription>{project.description}</CardDescription>
+        </CardHeader>
+      </div>
+      <CardContent className={cn(`flex flex-col justify-between ${shouldShowDetailButtons ? 'space-y-4' : ''}`)}>
         {/* Tech Stack */}
         <div className='flex flex-wrap gap-2'>
           {primaryTechStack.map((tech) => (
@@ -83,7 +87,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </span>
           )}
         </div>
-
         {/* Action Buttons */}
         <div className='grid grid-cols-2 gap-2'>
           {project.status !== 'development' && project.liveUrl && (
@@ -105,13 +108,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.status === 'development' && (
             <Button asChild size='lg' className='col-span-2'>
               <Link href={project.githubUrl ?? ''} target='_blank' rel='noopener noreferrer'>
-                <Github className='w-4 h-4' />
+                <GitHub />
                 View Repository
               </Link>
             </Button>
           )}
         </div>
       </CardContent>
+
     </Card>
   );
 }

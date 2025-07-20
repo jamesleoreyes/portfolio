@@ -60,7 +60,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             )}
           </div>
         </div>
-        <div className='flex items-center gap-2 mt-2'>
+        <div className='flex items-center gap-2 my-2'>
           <div className='flex-1'>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -76,6 +76,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             </Tooltip>
           </div>
         </div>
+        <p className='flex justify-center md:hidden -mb-1 text-sm text-muted-foreground'>{completionPercentage}% complete</p>
       </div>
 
       <ScreenshotCarousel project={project} />

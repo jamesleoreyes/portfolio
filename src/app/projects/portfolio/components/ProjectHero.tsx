@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { Button, Card, CardContent } from '@/components';
+import { Button, Card, CardContent, PlaceholderScreenshot } from '@/components';
 import { cn, getStatusColor, getStatusBorderColor, getTypeColor, getTypeBorderColor } from '@/lib/utils';
 import { projects } from '@/data/projects';
 
@@ -132,15 +132,19 @@ export default function ProjectHero({ className }: ProjectHeroProps) {
 
           {/* Featured Image */}
           <div className='relative'>
-            <div className='relative overflow-hidden border border-border/50 shadow-xl'>
-              <Image
-                src={featuredImage[currentTheme as 'light' | 'dark'] || featuredImage.default}
-                alt={`${title} - Featured Screenshot`}
-                width={800}
-                height={500}
-                className='w-full h-auto object-cover'
-                priority
-              />
+            <div className='relative aspect-video overflow-hidden border border-border/50 shadow-xl'>
+              {mounted && resolvedTheme ? (
+                <Image
+                  src={featuredImage[currentTheme as 'light' | 'dark'] || featuredImage.default}
+                  alt={`${title} - Featured Screenshot`}
+                  width={800}
+                  height={500}
+                  className='w-full h-auto object-cover'
+                  priority
+                />
+              ) : (
+                <PlaceholderScreenshot className='h-full' />
+              )}
             </div>
 
             {/* Floating status indicator */}
