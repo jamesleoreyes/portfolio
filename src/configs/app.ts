@@ -1,4 +1,4 @@
-import type { Assets, Meta } from '@/types/App';
+import type { Assets, Meta, SupabaseConfig } from '@/types/App';
 import { UrlConfig } from '@/types/App';
 
 const urlConfig: UrlConfig = {
@@ -16,6 +16,12 @@ const urlConfig: UrlConfig = {
    * `https://jamesleoreyes.com/sitemap.xml` | `http://localhost:3000/sitemap.xml`
    */
   sitemap: process.env['SITEMAP_URL'] ? `https://${process.env['SITEMAP_URL']}` : 'http://localhost:3000/sitemap.xml',
+}
+
+const supabaseConfig: SupabaseConfig = {
+  url: process.env['SUPABASE_URL'] || '',
+  anonKey: process.env['SUPABASE_ANON_KEY'] || '',
+  serviceRoleKey: process.env['SUPABASE_SERVICE_ROLE_KEY'] || '',
 }
 
 const baseMeta: Meta = {
@@ -78,4 +84,4 @@ const assets: Assets = {
   }
 }
 
-export { urlConfig, baseMeta, assets };
+export { urlConfig, baseMeta, assets, supabaseConfig };

@@ -3,6 +3,12 @@ interface UrlConfig {
   sitemap: string;
 }
 
+interface SupabaseConfig {
+  url: string;
+  anonKey: string;
+  serviceRoleKey: string;
+}
+
 interface Meta {
   title: string;
   fullTitle?: string;
@@ -94,4 +100,4 @@ interface Assets {
   images: Images;
 }
 
-export type { UrlConfig, Meta, Branding, Downloads, Images, Assets };
+export type { UrlConfig, Meta, Branding, Downloads, Images, Assets, SupabaseConfig };
