@@ -1,11 +1,12 @@
-import { supabaseConfig } from "@/configs/app";
-import { createServerClient as supabaseServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { createServerClient as supabaseServerClient } from "@supabase/ssr";
+import { Database } from "@/types/supabase/Supabase";
+import { supabaseConfig } from "@/configs/app";
 
 async function createServerClient() {
   const cookieStore = await cookies();
 
-  return supabaseServerClient(
+  return supabaseServerClient<Database>(
     supabaseConfig.url,
     supabaseConfig.anonKey,
     {
