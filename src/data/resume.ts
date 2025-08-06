@@ -18,21 +18,6 @@ const resumeData: ResumeData = {
   },
   experience: [
     {
-      company: 'SubTracked',
-      position: 'Co-Founder & Lead Developer',
-      location: 'Rock Hill, SC',
-      startDate: 'Dec 2024',
-      endDate: 'Present',
-      description: 'Designed and built a full-stack platform for collectible grading submissions, enabling businesses to track and manage orders across multiple categories.',
-      achievements: [
-        'Cut monthly infrastructure costs by 90% by migrating from Azure to Supabase and Railway, while simplifying CI/CD and environment management',
-        'Architected backend with Express and Supabase (PostgreSQL, auth, storage, edge functions)',
-        'Enabled real-time submission tracking with custom serverless functions and personalized dashboards',
-        'Designed for scalability and future integrations with third-party vendors and marketplace features'
-      ],
-      technologies: ['TypeScript', 'Node.js', 'Express.js', 'React.js', 'Supabase', 'Edge Functions', 'UI/UX Design']
-    },
-    {
       company: 'Cimplx HR, Inc.',
       position: 'Full-Stack Developer / Integration Engineer',
       location: 'Rock Hill, SC',

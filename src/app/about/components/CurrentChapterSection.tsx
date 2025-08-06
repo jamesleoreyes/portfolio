@@ -21,7 +21,7 @@ const currentChapterItems: CurrentChapterItem[] = [
   },
   {
     title: "Current Focus",
-    description: "I'm doubling down on fundamentals while building SubTracked, a SaaS platform for collectible grading submissions. It's the perfect blend of technical challenge and real-world problem solving. I'm also completing certifications and learning from the best in the field.",
+    description: "I'm doubling down on fundamentals while building a major side project. It's the perfect blend of technical challenge and real-world problem solving. I'm also completing certifications and learning from the best in the field.",
     icon: <Target className='w-5 h-5 text-primary' />
   },
   {

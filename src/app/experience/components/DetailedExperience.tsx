@@ -165,7 +165,7 @@ export default function DetailedExperience({ className }: DetailedExperienceProp
 
         <Tabs defaultValue={experienceData.experiences[0]!.id} className='w-full'>
           <div className='flex justify-center mb-4'>
-            <TabsList className='grid w-full sm:w-fit grid-cols-3 border border-border/50'>
+            <TabsList className='grid w-full sm:w-fit grid-cols-2 border border-border/50'>
               {experienceData.experiences.map((experience) => (
                 <TabsTrigger
                   key={experience.id}
