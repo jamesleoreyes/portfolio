@@ -62,8 +62,6 @@ interface Project {
 interface Projects {
   portfolio: Project;
   theReyesVault: Project;
-  subTrackedApp: Project;
-  subTrackedLanding: Project;
 }
 
 export type { Project, ProjectFeature, ProjectChallenge, TechStack, Projects };
