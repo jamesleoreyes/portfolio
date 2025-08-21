@@ -1,5 +1,5 @@
-import { Projects } from '@/types/Projects';
-import { assets } from '@/configs/app';
+import { Projects } from '@_types/Projects';
+import { assets } from '@configs/app';
 
 export const projects: Projects = {
   portfolio: {

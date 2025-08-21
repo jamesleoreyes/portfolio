@@ -1,5 +1,5 @@
-import type { Assets, Meta } from '@/types/App';
-import { UrlConfig } from '@/types/App';
+import type { Assets, Meta } from '@_types/App';
+import { UrlConfig } from '@_types/App';
 
 const urlConfig: UrlConfig = {
   /** 

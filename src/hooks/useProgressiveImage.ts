@@ -71,4 +71,4 @@ export function useProgressiveImage({
     isHighQualityLoaded,
     quality: isHighQualityLoaded ? 85 : 75,
   };
-}
+};

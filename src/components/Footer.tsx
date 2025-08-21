@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { assets } from '@/configs/app';
-import { navContent, navWork } from '@/configs/nav';
-import { ThemeToggle, SocialLinks } from '@/components';
-import { AdaptiveIcon } from '@/components/icons';
+import { assets } from '@configs/app';
+import { navContent, navWork } from '@configs/nav';
+import { ThemeToggle, SocialLinks } from '@/src/components';
+import { AdaptiveIcon } from '@components/icons';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

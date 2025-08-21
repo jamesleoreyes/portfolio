@@ -1,5 +1,5 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react';
+import type { SVGProps } from 'react';
 
 export default function NextJsIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -14,7 +14,7 @@ export default function NextJsIcon(props: SVGProps<SVGSVGElement>) {
       <mask
         id="mask0_408_139"
         style={{
-          maskType: "alpha",
+          maskType: 'alpha',
         }}
         maskUnits="userSpaceOnUse"
         x={0}

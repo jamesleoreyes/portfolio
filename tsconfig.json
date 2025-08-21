@@ -52,7 +52,13 @@
     // Path Mapping
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"],
+      "@app/*": ["./app/*"],
+      "@components/*": ["./src/components/*"],
+      "@configs/*": ["./src/configs/*"],
+      "@data/*": ["./src/data/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@_types/*": ["./src/types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

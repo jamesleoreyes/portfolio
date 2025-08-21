@@ -1,4 +1,4 @@
-import { assets, urlConfig } from "@/configs/app";
+import { assets, urlConfig } from '@configs/app';
 
 export default function PersonSchema() {
   const personSchema = {
