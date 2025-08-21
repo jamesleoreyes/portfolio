@@ -1,9 +1,9 @@
-import logger from "./logger";
-import { NextResponse } from "next/server";
+import logger from './logger';
+import { NextResponse } from 'next/server';
 
 export function errorHandler(error: unknown, requestId?: string) {
   const statusCode = error instanceof Error && 'statusCode' in error
-    ? (error as any).statusCode as number
+    ? error.statusCode as number
     : 500;
 
   const message = error instanceof Error ? error.message : 'An unexpected error occurred';
