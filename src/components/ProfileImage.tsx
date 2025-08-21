@@ -1,9 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { assets } from '@/configs/app';
-import { cn } from '@/lib/utils';
-import { useProgressiveImage } from '@/hooks';
+import { assets } from '@configs/app';
+import { cn } from '@/src/lib';
+import { useProgressiveImage } from '@/src/hooks';
 
 interface ProfileImageProps {
   width: number;

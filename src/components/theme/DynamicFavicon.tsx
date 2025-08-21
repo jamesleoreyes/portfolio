@@ -2,7 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { assets } from '@/configs/app';
+import { assets } from '@configs/app';
 
 export function DynamicFavicon() {
   const { resolvedTheme } = useTheme();

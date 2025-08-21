@@ -21,4 +21,4 @@ export function useGoBack(defaultUrl: string = '/') {
     backUrl,
     handleGoBack,
   };
-}
+};

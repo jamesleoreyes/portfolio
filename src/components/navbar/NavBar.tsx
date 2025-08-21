@@ -3,11 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { assets } from '@/configs/app';
-import { nav } from '@/configs/nav';
-import { cn, isActiveRoute } from '@/lib/utils';
-import { Button, MobileNav, ThemeToggle } from '@/components';
-import { AdaptiveIcon } from '@/components/icons';
+import { assets } from '@configs/app';
+import { nav } from '@configs/nav';
+import { cn, isActiveRoute } from '@/src/lib';
+import { Button, MobileNav, ThemeToggle } from '@/src/components';
+import { AdaptiveIcon } from '@components/icons';
 
 export default function NavBar() {
   const pathname = usePathname();

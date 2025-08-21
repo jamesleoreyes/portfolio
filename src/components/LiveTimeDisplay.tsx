@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getEasternTimezone, getCurrentEasternTime } from '@/lib/utils';
-import { Skeleton } from './ui/skeleton';
+import { getEasternTimezone, getCurrentEasternTime } from '@/src/lib';
+import { Skeleton } from '@/src/components';
 
 interface LiveTimeDisplayProps {
   className?: string;
