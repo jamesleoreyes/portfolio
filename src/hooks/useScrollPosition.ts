@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 
 export function useScrollPosition() {
@@ -17,4 +15,4 @@ export function useScrollPosition() {
   }, []);
 
   return scrolled;
-}
+};

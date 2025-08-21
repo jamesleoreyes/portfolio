@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun, Monitor } from 'lucide-react';
-import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@/components';
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from '@/src/components';
 
 interface ThemeToggleProps {
   variant?: 'simple' | 'full';

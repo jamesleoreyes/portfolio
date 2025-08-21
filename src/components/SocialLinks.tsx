@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components';
-import { GitHub, LinkedIn, Twitter } from '@/components/icons';
+import { cn } from '@/src/lib';
+import { Button } from '@/src/components';
+import { GitHub, LinkedIn, Twitter } from '@components/icons';
 
 interface SocialLink {
   name: string;

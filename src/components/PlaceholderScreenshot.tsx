@@ -1,5 +1,5 @@
 import { SVGProps } from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/lib';
 
 export default function PlaceholderScreenshot({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (

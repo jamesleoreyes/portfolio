@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
-import { nav } from '@/configs/nav';
-import { assets } from '@/configs/app';
-import { Button, ThemeToggle } from '@/components';
-import { AdaptiveIcon } from '@/components/icons';
-import { usePWAMode } from '@/hooks';
+import { nav } from '@configs/nav';
+import { assets } from '@configs/app';
+import { Button, ThemeToggle } from '@/src/components';
+import { AdaptiveIcon } from '@components/icons';
+import { usePWAMode } from '@/src/hooks';
 import {
   Drawer,
   DrawerTrigger,
@@ -17,7 +17,7 @@ import {
   DrawerTitle,
   DrawerFooter,
   DrawerClose
-} from '@/components/ui/drawer';
+} from '@/src/components';
 
 interface MobileNavProps {
   className?: string;

@@ -1,12 +1,13 @@
 {
   "name": "portfolio",
-  "version": "0.16.14",
+  "version": "0.17.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "version:patch": "pnpm version patch",
     "version:minor": "pnpm version minor",
     "version:major": "pnpm version major"
@@ -52,6 +53,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@stylistic/eslint-plugin": "^5.2.3",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
