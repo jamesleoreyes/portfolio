@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { readFile } from 'fs/promises';
 import path from 'path';
-import { logger } from '@/src/lib';
+import logger from '@/src/lib/logger';
 import { headers } from 'next/headers';
 
 export async function GET() {

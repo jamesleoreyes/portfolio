@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { after } from 'next/server';
-import { logger } from "./src/lib";
+import logger from './src/lib/logger';
 
 export function middleware(request: Request) {
   const startTime = Date.now();
