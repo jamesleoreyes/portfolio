@@ -66,7 +66,7 @@ const resumeData: ResumeData = {
       github: 'https://github.com/jamesleoreyes/the-reyes-vault'
     },
     {
-      name: 'Portfolio Website',
+      name: 'Portfolio Website V1',
       description: 'Personal portfolio site showcasing projects, experience, and backend-to-full stack journey. Built with modern web technologies and enterprise-grade features.',
       completionPercentage: 80,
       technologies: ['Next.js 15', 'React 19', 'TypeScript', 'shadcn/ui', 'Tailwind CSS 4', 'Vercel'],

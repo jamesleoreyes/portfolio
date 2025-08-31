@@ -16,7 +16,7 @@ const experienceData: ExperienceData = {
       endDate: 'Sep 2023',
       status: 'completed',
       overview: 'Built subscription management platform for Abenity coupon system using Python, Flask, and ChargeBee. First professional software development experience.',
-      context: 'Career transition from FedEx delivery driver to software development. Father connected me with opportunity after seeing my AI-assisted Discord and Telegram bot projects. Proved capabilities through Google Apps Script technical assessment.',
+      context: 'Career transition from FedEx delivery driver to software development. Father connected me with opportunity after seeing my Discord and Telegram bot projects. Proved capabilities through Google Apps Script technical assessment.',
       keyProjects: [
         {
           name: 'Abenity Subscription Platform',

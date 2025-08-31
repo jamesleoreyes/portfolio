@@ -19,6 +19,15 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  logging: {
+    fetches: {
+      fullUrl: true,
+      hmrRefreshes: true,
+    },
+    incomingRequests: {
+      ignore: [/^\/api\/health$/],
+    },
+  },
   transpilePackages: [],
   poweredByHeader: false,
 };
