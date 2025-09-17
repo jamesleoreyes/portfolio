@@ -200,7 +200,7 @@ const experienceData: ExperienceData = {
         { name: 'shadcn/ui', url: 'https://ui.shadcn.com' },
         { name: 'Azure', url: 'https://azure.microsoft.com' }
       ],
-      focus: 'Enterprise Development',
+      focus: 'Real-World Product Development',
       milestone: 'Rebuilt critical integration systems in production'
     },
     {

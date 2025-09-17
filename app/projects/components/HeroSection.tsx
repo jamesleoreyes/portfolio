@@ -7,7 +7,7 @@ export default function HeroSection() {
             My Projects
           </h1>
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
-            A collection of applications, experiments, and solutions I&apos;ve built.
+            A collection of applications and solutions I&apos;ve built.
             Each project represents a unique challenge and a learning opportunity.
           </p>
         </div>

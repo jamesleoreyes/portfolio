@@ -18,8 +18,8 @@ interface TurningPoint {
 const turningPoints: TurningPoint[] = [
   {
     year: '2008-2012',
-    title: 'The Accidental Hacker',
-    description: `Built my first desktop apps in Visual Basic, following as many YouTube tutorials as I could find. I also tinkered with Cheat Engine to "hack" Club Penguin and Bloons Tower Defense.`,
+    title: 'The Tinkering Years',
+    description: `Built my first desktop apps in Visual Basic, following as many YouTube tutorials as I could find. I also tinkered with Cheat Engine to alter games like Club Penguin and Bloons Tower Defense.`,
     lesson: 'Learning by doing beats learning by reading — curiosity and experimentation are the best teachers.',
   },
   {
@@ -44,16 +44,16 @@ const turningPoints: TurningPoint[] = [
   },
   {
     year: 'Late 2022',
-    title: 'The ChatGPT Moment',
-    description: 'First interaction with ChatGPT sparked everything. Asked about building a Discord bot, got introduced to Python, and suddenly the path forward was clear.',
+    title: 'The Light Bulb Moment',
+    description: 'First interaction with ChatGPT sparked interest in web development. Asked about building a Discord bot, got introduced to Python, and suddenly the path forward was clear.',
     lesson: 'The right tool at the right moment can change everything.'
   },
   {
-    year: '2023-Present',
+    year: '2023-2025',
     title: 'The Full Circle',
     description: (
       <>
-        From{' '}
+        From merely{' '}
         <a
           href='https://x.com/karpathy/status/1886192184808149383'
           target='_blank'
@@ -64,10 +64,16 @@ const turningPoints: TurningPoint[] = [
         >
           &quot;vibe coding&quot;
         </a>
-        {' '}with AI to learning fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.
+        {' '}with AI to learning the actual fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.
       </>
     ),
     lesson: 'The best journeys bring you back to where you started, but with new eyes.'
+  },
+  {
+    year: '2025-Present',
+    title: 'The Continued Journey',
+    description: 'Designing and shipping a multi-tenant SaaS from the ground up, with tenant isolation, RBAC, metered billing, background jobs, and observability, all while sharpening product sense. I\'m focusing on reliability, maintainability, and a pace of steady, high-quality shipping.',
+    lesson: 'Consistency beats intensity. Small, high quality iterations are better than one big, messy one.'
   }
 ];
 

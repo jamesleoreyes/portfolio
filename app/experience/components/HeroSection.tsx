@@ -17,7 +17,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
               Professional Experience
             </h1>
             <p className='text-xl text-muted-foreground'>
-              From FedEx delivery driver to Full-Stack Product Engineer — discover the projects, challenges, and breakthroughs that shaped my technical journey.
+              From FedEx delivery driver to Full-Stack Product Engineer, discover the projects, challenges, and breakthroughs that shaped my technical journey.
             </p>
           </div>
 

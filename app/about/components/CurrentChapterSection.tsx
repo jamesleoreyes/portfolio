@@ -16,7 +16,7 @@ interface CurrentChapterItem {
 const currentChapterItems: CurrentChapterItem[] = [
   {
     title: 'What Drives Me',
-    description: "I love the intersection of technical precision and user empathy. The moment when clean, scalable code meets real human needs — that's where the magic happens. I'm passionate about building software that people actually want to use.",
+    description: "I love the intersection of technical precision and user empathy. The moment when clean, scalable code meets real human needs is where the magic happens. I'm passionate about building software that people actually want to use.",
     icon: <Heart className='w-5 h-5 text-primary' />
   },
   {
@@ -30,14 +30,14 @@ const currentChapterItems: CurrentChapterItem[] = [
       <>
         <em className="text-foreground">&quot;The more I learn, the less I know&quot;</em> — my favorite saying because it perfectly captures
         the learning journey. Every new skill reveals deeper rabbit holes, and I embrace that
-        endless curiosity. I&apos;m always asking &quot;What&apos;s the goal?&quot; and &quot;How well are we aligned?&quot;
+        endless curiosity.
       </>
     ),
     icon: <Lightbulb className='w-5 h-5 text-primary' />
   },
   {
     title: "What's Next",
-    description: "My goal is to land a full-stack engineering role where I can focus 100% on building great software. I want to work with teams that value both technical excellence and user experience. Once I'm there, I'll get back to making music — because creativity feeds creativity.",
+    description: "My goal is to land a full-stack engineering role where I can focus 100% on building great software. I want to work with teams that value both technical excellence and user experience.",
     icon: <Rocket className='w-5 h-5 text-primary' />
   }
 ];
@@ -75,7 +75,7 @@ export default function CurrentChapterSection({ className }: CurrentChapterSecti
         <Card className='bg-accent p-8 border border-foreground/10 text-center'>
           <CardTitle className='text-xl font-semibold'>The Full-Stack Product Engineer Mindset</CardTitle>
           <CardDescription className='text-muted-foreground text-base max-w-2xl mx-auto'>
-            I don&apos;t just write code — I solve problems. Every technical decision is informed by user impact,
+            I don&apos;t just write code, I solve problems. Every technical decision is informed by user impact,
             business value, and long-term maintainability. From backend architecture to frontend experience,
             I think about the whole picture.
           </CardDescription>

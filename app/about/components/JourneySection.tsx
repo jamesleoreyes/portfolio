@@ -20,17 +20,17 @@ const journeyItems: JourneyItem[] = [
   },
   {
     title: 'Creative Years',
-    description: 'Dove deep into filmmaking, photography, and music production — mastering the art of creation',
+    description: 'Dove deep into filmmaking, photography, and music production, learning the art of creation',
     icon: <Music className='w-6 h-6 text-primary' />
   },
   {
     title: 'Reality Check',
-    description: 'FedEx delivery driver, Instacart, Aldi — learning the value of hard work while searching for my path',
+    description: 'FedEx delivery driver, Instacart, Aldi, learning the value of hard work while searching for my path',
     icon: <Truck className='w-6 h-6 text-primary' />
   },
   {
     title: 'The Spark',
-    description: 'ChatGPT launched, and everything clicked. I found my way back to code — this time for real',
+    description: 'ChatGPT launched, and everything clicked. I found my way back to code, but this time for real',
     icon: <Zap className='w-6 h-6 text-primary' />
   }
 ]
