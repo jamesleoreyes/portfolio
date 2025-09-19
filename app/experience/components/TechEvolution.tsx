@@ -70,7 +70,7 @@ function KnowledgeStack() {
 
   return (
     <div className='bg-accent p-8 border border-foreground/10'>
-      <h3 className='text-xl font-semibold mb-6 text-center text-primary'>What I've Worked With</h3>
+      <h3 className='text-xl font-semibold mb-6 text-center text-primary'>What I&apos;ve Worked With</h3>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
         {allTechnologies.map((tech, idx) => (
           tech.url ? (

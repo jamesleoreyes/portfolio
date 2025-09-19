@@ -36,8 +36,8 @@ const currentChapterItems: CurrentChapterItem[] = [
     icon: <Lightbulb className='w-5 h-5 text-primary' />
   },
   {
-    title: "What's Next",
-    description: "My goal is to land a full-stack engineering role where I can focus 100% on building great software. I want to work with teams that value both technical excellence and user experience.",
+    title: 'What\'s Next',
+    description: 'My goal is to land a full-stack engineering role where I can focus 100% on building great software. I want to work with teams that value both technical excellence and user experience.',
     icon: <Rocket className='w-5 h-5 text-primary' />
   }
 ];
