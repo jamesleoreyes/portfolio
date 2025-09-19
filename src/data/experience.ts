@@ -217,7 +217,6 @@ const experienceData: ExperienceData = {
       period: 'Late 2022',
       technologies: [
         { name: 'ChatGPT', url: 'https://chat.openai.com' },
-        { name: 'AI Workflow', url: null },
         { name: 'Python', url: 'https://python.org' },
         { name: 'Discord.py', url: 'https://discordpy.readthedocs.io' }
       ],

@@ -1,8 +1,32 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight, Star, Code, Milestone } from 'lucide-react';
 import { experienceData } from '@/src/data';
 import { cn } from '@/src/lib';
-
+import { FlipButton, FlipButtonBack, FlipButtonFront } from '@/src/components/animate-ui/components/buttons/flip';
+import {
+  Python,
+  Flask,
+  JavaScript,
+  TypeScript,
+  HTML5,
+  CSS as CSSIcon,
+  React as ReactIcon,
+  NextJs,
+  Tailwind,
+  Shadcn,
+  NodeJs,
+  Express,
+  Supabase,
+  Azure,
+  GitLab,
+  Railway,
+  OpenAI,
+  Flowbite,
+  PostgreSQL,
+  DiscordPy,
+} from '@/src/components/icons';
 interface TechEvolutionProps {
   className?: string;
 }
@@ -66,28 +90,64 @@ function EvolutionItem({ item, index, isLast }: {
 
 function KnowledgeStack() {
   const { techEvolution } = experienceData;
-  const allTechnologies = [...new Set(techEvolution.flatMap(item => item.technologies))];
+  const allTechnologies = Array.from(
+    new Map(techEvolution.flatMap(item => item.technologies).map(tech => [tech.name, tech])).values()
+  )
+
+  const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    Python,
+    Flask,
+    JavaScript,
+    TypeScript,
+    HTML: HTML5,
+    HTML5,
+    CSS: CSSIcon,
+    'Tailwind CSS': Tailwind,
+    'shadcn/ui': Shadcn,
+    Flowbite,
+    React: ReactIcon,
+    'Next.js': NextJs,
+    NextJs,
+    PostgreSQL,
+    'Node.js': NodeJs,
+    'Express.js': Express,
+    Express,
+    'Edge Functions': Supabase,
+    Supabase,
+    Azure,
+    GitLab,
+    Railway,
+    'ChatGPT': OpenAI,
+    'Discord.py': DiscordPy
+  }
 
   return (
     <div className='bg-accent p-8 border border-foreground/10'>
       <h3 className='text-xl font-semibold mb-6 text-center text-primary'>What I&apos;ve Worked With</h3>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
-        {allTechnologies.map((tech, idx) => (
-          tech.url ? (
-            <Link
-              key={idx}
-              href={tech.url || ''}
-              target='_blank'
-              className='bg-background text-primary px-3 py-2 text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center'
-            >
-              {tech.name}
-            </Link>
+        {allTechnologies.map((tech, idx) => {
+          const Icon = (tech as any).icon ?? iconMap[tech.name] ?? null;
+          return tech.url ? (
+            <FlipButton key={idx} asChild variant='ghost'>
+              <Link
+                href={tech.url || ''}
+                target='_blank'
+                className='bg-background hover:bg-foreground text-primary px-3 py-2 transition-colors'
+              >
+                <FlipButtonFront className='px-3 py-2 text-sm'>
+                  {tech.name}
+                </FlipButtonFront>
+                <FlipButtonBack>
+                  {Icon ? <Icon className='size-5' /> : tech.name}
+                </FlipButtonBack>
+              </Link>
+            </FlipButton>
           ) : (
-            <span key={idx} className='bg-background text-foreground px-3 py-2 text-sm text-center flex items-center justify-center'>
+            <span key={idx} className='bg-background text-foreground px-3 py-4 text-sm text-center flex items-center justify-center'>
               {tech.name}
             </span>
           )
-        ))}
+        })}
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ export { default as NextJs } from './frontend/NextJs'
 export { default as Tailwind } from './frontend/Tailwind'
 export { default as Shadcn } from './frontend/Shadcn'
 export { default as Vite } from './frontend/Vite'
+export { default as Flowbite } from './frontend/Flowbite'
 
 // Backend icons
 export { default as NodeJs } from './backend/NodeJs'
@@ -26,6 +27,7 @@ export { default as Deno } from './backend/Deno'
 export { default as Express } from './backend/Express'
 export { default as Flask } from './backend/Flask'
 export { default as Supabase } from './backend/Supabase'
+export { default as PostgreSQL } from './backend/PostgreSQL'
 
 // DevOps icons
 export { default as Git } from './devops/Git'
@@ -39,3 +41,7 @@ export { default as Cloudflare } from './cloud/Cloudflare'
 export { default as Vercel } from './cloud/Vercel'
 export { default as Heroku } from './cloud/Heroku'
 export { default as Railway } from './cloud/Railway'
+
+// Tools icons
+export { default as OpenAI } from './tools/OpenAI'
+export { default as DiscordPy } from './tools/DiscordPy'
