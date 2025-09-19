@@ -1,4 +1,5 @@
 import type { ExperienceData } from '@_types/Experience';
+import { ClipboardList, ClockPlus, FileVideoIcon, LifeBuoy, Rocket, Shield, TrendingUp, Users, Zap } from 'lucide-react';
 
 const experienceData: ExperienceData = {
   experiences: [
@@ -42,13 +43,17 @@ const experienceData: ExperienceData = {
           title: 'Accelerated Learning',
           description: 'Learned full-stack development fundamentals in 2 months',
           impact: 'Delivered production-ready SaaS platform as first coding project',
-          metrics: '0 to production in 8 weeks'
+          metrics: '0 to production in 8 weeks',
+          icon: Rocket,
+          badgeColor: 'bg-blue-700'
         },
         {
           title: 'Career Breakthrough',
           description: 'Successfully transitioned from physical labor to software development',
           impact: 'Earned a full-time developer position offer at Cimplx',
-          metrics: 'Internship to full-time in 2 months'
+          metrics: 'Internship to full-time in 2 months',
+          icon: TrendingUp,
+          badgeColor: 'bg-green-700'
         }
       ],
       technologies: ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS', 'ChargeBee', 'GitLab', 'Azure', 'Jenkins'],
@@ -70,13 +75,13 @@ const experienceData: ExperienceData = {
         name: 'Cimplx HR, Inc.',
         url: 'https://cimplx.com',
       },
-      position: 'API Developer / Integration Engineer',
+      position: 'Tier II Support Specialist & API Developer',
       type: 'full-time',
       location: 'Rock Hill, SC',
       startDate: 'Sep 2023',
       endDate: 'Present',
       status: 'current',
-      overview: 'Architected and developed enterprise-grade HR/payroll integration platform synchronizing employee data between Factorial HR and UKG Ready systems for multiple clients.',
+      overview: 'Architected and developed enterprise-grade HR/payroll integration platform synchronizing employee data between Factorial HR and UKG Ready systems for multiple clients. Also managed technical operations such as time clock integrations, IT inventory, and advanced client support.',
       context: 'Transitioned from internship to full-time role, becoming the sole in-house developer responsible for maintaining and rebuilding critical integration systems. Took ownership of production systems processing 100,000+ webhook events.',
       keyProjects: [
         {
@@ -135,28 +140,70 @@ const experienceData: ExperienceData = {
           title: 'High-Volume Event Processing',
           description: 'Architected integration platform handling continuous webhook traffic',
           impact: 'Enabled real-time data synchronization across multiple client systems',
-          metrics: '100,000+ events processed'
+          metrics: '100,000+ events processed',
+          icon: Zap,
+          badgeColor: 'bg-purple-700'
         },
         {
           title: 'Workflow Transformation',
           description: 'Eliminated manual processes through intelligent automation tools',
           impact: 'Freed up hours of employee time for strategic work',
-          metrics: '98% reduction in manual tasks'
+          metrics: '98% reduction in manual tasks',
+          icon: Users,
+          badgeColor: 'bg-orange-700'
         },
         {
           title: 'Legacy System Modernization',
           description: 'Rebuilt unreliable microservices into maintainable monolithic architecture',
           impact: 'Dramatically improved system stability and reduced operational overhead',
-          metrics: '95% reduction in manual interventions'
+          metrics: '95% reduction in manual interventions',
+          icon: Shield,
+          badgeColor: 'bg-red-700'
+        },
+        {
+          title: 'Time Clock Integration & Support',
+          description: 'Configured, deployed, and maintained UKG, Synergy, and NoahFace time clocks',
+          impact: 'Enabled accurate payroll and compliance tracking across client environments',
+          metrics: '100+ clocks deployed and supported',
+          icon: ClockPlus,
+          badgeColor: 'bg-green-700'
+        },
+        {
+          title: 'Technical Inventory Management',
+          description: 'Tracked and managed all company/client time clocks and employee laptops',
+          impact: 'Ensured smooth hardware lifecycle, upgrades, and troubleshooting',
+          metrics: '20+ laptops maintained, 100+ devices inventoried',
+          icon: ClipboardList,
+          badgeColor: 'bg-blue-700'
+        },
+        {
+          title: 'Tier II Client Support',
+          description: 'Handled escalated HCM/TLM issues beyond AE/PM capabilities',
+          impact: 'Resolved critical client payroll/timekeeping problems quickly',
+          metrics: 'Average resolution time <4h for escalated issues',
+          icon: LifeBuoy,
+          badgeColor: 'bg-yellow-700'
+        },
+        {
+          title: 'Training & Media Production',
+          description: 'Produced video walkthroughs and guides for client onboarding and internal training',
+          impact: 'Reduced onboarding time and improved self-service support',
+          metrics: '10+ training materials produced',
+          icon: FileVideoIcon,
+          badgeColor: 'bg-purple-700'
         }
-      ],
+      ],      
       technologies: ['TypeScript', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Azure DevOps', 'Azure Web Apps', 'Azure SQL Server', 'Azure Key Vault', 'Azure Queue Storage', 'REST APIs'],
       learnings: [
         'Enterprise-grade system architecture and security',
         'Production system maintenance and debugging',
         'Client communication and requirement gathering',
         'Azure cloud infrastructure and DevOps practices',
-        'API design and integration patterns'
+        'API design and integration patterns',
+        'Hands-on deployment and support of enterprise time clock hardware/software',
+        'Technical inventory management and lifecycle planning',
+        'High-level client support and troubleshooting for payroll/timekeeping systems',
+        'Cross-functional collaboration with AEs, PMs, and payroll staff'
       ],
       nextSteps: [
         'Continue optimizing integration performance',

@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 interface ExperienceProject {
   name: string;
   description: string;
@@ -12,6 +14,8 @@ interface ExperienceAchievement {
   description: string;
   impact: string;
   metrics?: string;
+  icon: LucideIcon;
+  badgeColor: string;
 }
 
 interface ExperienceItem {

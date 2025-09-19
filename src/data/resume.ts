@@ -19,7 +19,7 @@ const resumeData: ResumeData = {
   experience: [
     {
       company: 'Cimplx HR, Inc.',
-      position: 'Full-Stack Developer / Integration Engineer',
+      position: 'Tier II Support Specialist && API Developer',
       location: 'Rock Hill, SC',
       startDate: 'Sep 2023',
       endDate: 'Present',
@@ -28,7 +28,11 @@ const resumeData: ResumeData = {
         'Built event-driven microservices architecture using Azure Storage Queues and Key Vault, successfully processing 100,000+ webhook events',
         'Developed timekeeping tools including an ID-linked QR code generator, a document uploader with auto-mapping, and a timecard processor that reduced import time by over 98%',
         'Implemented comprehensive TypeScript APIs with Express.js, SQL Server integration, and automated retry/error handling reducing manual intervention by 95%',
-        'Streamlined internal operations by contributing across backend and frontend stacks, improving delivery speed and system visibility'
+        'Streamlined internal operations by contributing across backend and frontend stacks, improving delivery speed and system visibility',
+        'Configured, deployed, and supported enterprise time clock systems (UKG/Kronos, Synergy SYnel, and iPad NoahFace), ensuring accurate time/labor data capture across client environments',
+        'Managed and tracked technical inventory including time clocks and employee laptops, overseeing hardware repairs, replacements, and lifecycle maintenance',
+        'Served as Tier II escalation point for HCM/TLM client support, resolving account and time/labor issues beyond the scope of account executives and product managers',
+        'Created and edited video walkthroughs and training materials for clients and internal staff',
       ],
       technologies: ['TypeScript', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Azure DevOps', 'Azure Web Apps', 'Azure SQL Server', 'Azure Key Vault', 'Azure Queue Storage', 'REST APIs']
     },

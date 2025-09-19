@@ -1,4 +1,4 @@
-import { Trophy, TrendingUp, Users, Zap, Target, Rocket, Shield, Building, Award } from 'lucide-react';
+import { Target } from 'lucide-react';
 import { experienceData } from '@/src/data';
 import { cn } from '@/src/lib';
 
@@ -6,14 +6,14 @@ interface KeyAchievementsProps {
   className?: string;
 }
 
-function AchievementCard({ achievement, icon: Icon, color }: {
+function AchievementCard({ achievement, icon: Icon, badgeColor }: {
   achievement: typeof experienceData.experiences[0]['achievements'][0];
   icon: React.ElementType;
-  color: string;
+  badgeColor: string;
 }) {
   return (
     <div className='bg-accent border border-border/50 p-6 hover:shadow-md transition-shadow flex flex-col h-full'>
-      <div className={`p-3 ${color} text-white mb-4 flex items-center justify-center`}>
+      <div className={`p-3 ${badgeColor} text-white mb-4 flex items-center justify-center`}>
         <Icon className='w-6 h-6' />
       </div>
 
@@ -26,14 +26,14 @@ function AchievementCard({ achievement, icon: Icon, color }: {
         <div className='bg-primary/10 p-3 border border-foreground/10 mb-4'>
           <div className='flex items-center gap-2 mb-1'>
             <Target className='w-5 h-5 text-primary' />
-            <span className='font-medium text-primary text-lg'>Impact</span>
+            <span className='font-semibold text-primary text-lg'>Impact</span>
           </div>
           <p className='text-accent-foreground'>{achievement.impact}</p>
         </div>
 
         {achievement.metrics && (
           <div className='bg-background p-3 border border-border/50 text-center mt-auto'>
-            <p className='text-primary/70 mb-1 text-lg'>Key Metric</p>
+            <p className='text-primary/70 mb-1 text-lg font-semibold'>Key Metric</p>
             <p className='text-lg font-bold text-primary'>{achievement.metrics}</p>
           </div>
         )}
@@ -43,20 +43,7 @@ function AchievementCard({ achievement, icon: Icon, color }: {
 }
 
 export default function KeyAchievements({ className }: KeyAchievementsProps) {
-  // Flatten all achievements from all experiences
   const allAchievements = experienceData.experiences.flatMap(exp => exp.achievements);
-
-  // Define unique icons and colors for different achievements
-  const achievementStyles = [
-    { icon: Rocket, color: 'bg-blue-600' },
-    { icon: TrendingUp, color: 'bg-green-700' },
-    { icon: Zap, color: 'bg-purple-700' },
-    { icon: Users, color: 'bg-orange-700' },
-    { icon: Shield, color: 'bg-red-700' },
-    { icon: Building, color: 'bg-indigo-700' },
-    { icon: Trophy, color: 'bg-yellow-600' },
-    { icon: Award, color: 'bg-teal-700' },
-  ];
 
   return (
     <section className={cn('border-b border-border/50 py-16 w-full', className)}>
@@ -73,8 +60,8 @@ export default function KeyAchievements({ className }: KeyAchievementsProps) {
             <AchievementCard
               key={index}
               achievement={achievement}
-              icon={achievementStyles[index % achievementStyles.length]!.icon}
-              color={achievementStyles[index % achievementStyles.length]!.color}
+              icon={achievement.icon}
+              badgeColor={achievement.badgeColor}
             />
           ))}
         </div>
