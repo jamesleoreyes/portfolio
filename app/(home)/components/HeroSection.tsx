@@ -35,8 +35,8 @@ export default function HeroSection() {
         {/* Introduction */}
         <div className='max-w-2xl mx-auto space-y-4 text-left'>
           <p className='text-lg text-primary leading-relaxed'>
-            Passionate about creating scalable, maintainable software solutions.
-            I specialize in modern web technologies and understand the importance of simplicity.
+            Passionate about creating scalable, maintainable software.
+            I specialize in web technologies and understand the importance of simplicity.
           </p>
         </div>
       </div>
