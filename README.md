@@ -4,11 +4,11 @@
 
 A modern, responsive portfolio showcasing my work as a Full-Stack Product Engineer. Built with Next.js 15, TypeScript, and Tailwind CSS, optimized for performance, accessibility, and user experience.
 
-## 🚀 Live Demo
+## Live Demo
 
 Visit the live site: [jamesleoreyes.com](https://jamesleoreyes.com)
 
-## ✨ At a Glance
+## At a Glance
 
 - **Modern Design**: Clean, responsive UI with dark/light mode support
 - **Performance**: 99+ Lighthouse scores and optimized Core Web Vitals
@@ -18,7 +18,7 @@ Visit the live site: [jamesleoreyes.com](https://jamesleoreyes.com)
 - **PWA**: Installable with offline support
 - **Deployment**: Hosted on Vercel with automatic CDN optimization
 
-## 📑 Pages
+## Pages
 
 - **Home**: Hero section with profile and quick navigation
 - **About**: My journey as a developer with key milestones
@@ -27,7 +27,7 @@ Visit the live site: [jamesleoreyes.com](https://jamesleoreyes.com)
 - **Resume**: Downloadable, shareable resume
 - **Contact**: Multiple ways to connect, including socials and scheduling
 
-## 🛠️ Setup
+## Setup
 
 1. **Clone the repository**
 
@@ -52,24 +52,24 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 For detailed technical setup, project structure, and development instructions, see [DEEPDIVE.md](./DEEPDIVE.md).
 
-## 📊 Performance
+## Performance
 
 - **Lighthouse Scores**: 99+ across Performance, Accessibility, Best Practices, SEO
 - **Core Web Vitals**: All metrics in green (LCP, FID, CLS)
 - **Bundle Size**: Optimized to <350KB with tree shaking and code splitting
 
-## 🤝 Contributing
+## Contributing
 
 Suggestions and improvements are welcome! Fork the repo, create a feature branch, and submit a pull request. See [DEEPDIVE.md](./DEEPDIVE.md) for technical details.
 
-## 📞 Contact
+## Contact
 
 - **Website**: [jamesleoreyes.com](https://jamesleoreyes.com)
-- **Email**: [contact@jamesleoreyes.com](mailto:contact@jamesleoreyes.com)
+- **Email**: [jamesleoreyes@gmail.com](mailto:jamesleoreyes@gmail.com)
 - **LinkedIn**: [linkedin.com/in/jamesleoreyes](https://linkedin.com/in/jamesleoreyes)
 - **GitHub**: [github.com/jamesleoreyes](https://github.com/jamesleoreyes)
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
