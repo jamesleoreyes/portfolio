@@ -108,12 +108,16 @@ const resumeData: ResumeData = {
     {
       name: 'Meta Front-End Developer',
       issuer: 'Coursera',
+      issuerUrl: 'https://www.coursera.org/professional-certificates/meta-front-end-developer',
       date: 'In Progress',
+      completionProgress: 79
     },
     {
-      name: 'Meta Back-End Developer',
-      issuer: 'Coursera',
+      name: 'Back-End Developer',
+      issuer: 'Boot.dev',
+      issuerUrl: 'https://www.boot.dev/tracks/backend-python-typescript',
       date: 'In Progress',
+      completionProgress: 9
     },
   ],
   technicalSkills: {

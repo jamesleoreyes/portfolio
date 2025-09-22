@@ -43,9 +43,11 @@ interface EducationItem {
 interface CertificationItem {
   name: string;
   issuer: string;
+  issuerUrl: string;
+  completionProgress: number;
   date: string;
   credentialId?: string;
-  url?: string;
+  certUrl?: string;
 }
 
 interface TechnicalSkills {
