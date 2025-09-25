@@ -41,21 +41,24 @@ export default function Certifications() {
             <CardContent>
               <div className="text-sm text-muted-foreground">
                 {cert.date !== 'In Progress' ? <p>Issued: {cert.date}</p> : (
-                  <div className='space-y-2'>
-                    <p>In Progress</p>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Progress
-                          value={cert.completionProgress}
-                          aria-label={`${cert.completionProgress}% complete`}
-                          className='h-3'
-                        />
-                      </TooltipTrigger>
-                      <TooltipContent className='shadow-lg'>
-                        <span className="font-semibold">{cert.completionProgress}% complete</span>
-                      </TooltipContent>
-                    </Tooltip>
-                  </div>
+                  <>
+                    <div className='space-y-2'>
+                      <p>In Progress</p>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Progress
+                            value={cert.completionProgress}
+                            aria-label={`${cert.completionProgress}% complete`}
+                            className='h-3'
+                          />
+                        </TooltipTrigger>
+                        <TooltipContent className='hidden sm:block shadow-lg'>
+                          <span className="font-semibold">{cert.completionProgress}% complete</span>
+                        </TooltipContent>
+                      </Tooltip>
+                    </div>
+                    <p className='flex justify-center md:hidden mt-2 -mb-1 text-sm text-muted-foreground'>{cert.completionProgress}% complete</p>
+                  </>
                 )}
                 {cert.credentialId && <p>Credential ID: {cert.credentialId}</p>}
               </div>
