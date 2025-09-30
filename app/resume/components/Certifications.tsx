@@ -57,6 +57,7 @@ export default function Certifications() {
                         </TooltipContent>
                       </Tooltip>
                     </div>
+                    <p className='text-xs mt-2'>Last Update: {cert.lastUpdate}</p>
                     <p className='flex justify-center md:hidden mt-2 -mb-1 text-sm text-muted-foreground'>{cert.completionProgress}% complete</p>
                   </>
                 )}

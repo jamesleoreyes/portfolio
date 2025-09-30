@@ -46,6 +46,7 @@ interface CertificationItem {
   issuerUrl: string;
   completionProgress: number;
   date: string;
+  lastUpdate?: string;
   credentialId?: string;
   certUrl?: string;
 }

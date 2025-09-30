@@ -65,7 +65,6 @@ const resumeData: ResumeData = {
         'Demo Environment: A separate, feature-restricted demo site for testing and showcasing privacy controls',
         'Modern, Accessible UI: Fully responsive design, accessible across devices'
       ],
-      projectHref: '/projects',
       liveUrl: 'https://demo.thereyesvault.com',
       github: 'https://github.com/jamesleoreyes/the-reyes-vault'
     },
@@ -110,6 +109,7 @@ const resumeData: ResumeData = {
       issuer: 'Coursera',
       issuerUrl: 'https://www.coursera.org/professional-certificates/meta-front-end-developer',
       date: 'In Progress',
+      lastUpdate: '9/17/2025',
       completionProgress: 79
     },
     {
@@ -117,6 +117,7 @@ const resumeData: ResumeData = {
       issuer: 'Boot.dev',
       issuerUrl: 'https://www.boot.dev/tracks/backend-python-typescript',
       date: 'In Progress',
+      lastUpdate: '9/30/2025',
       completionProgress: 24
     },
   ],
