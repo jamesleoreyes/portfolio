@@ -29,16 +29,16 @@ export default function ProjectStory() {
           <div className='bg-primary/5 p-8 border border-border'>
             <h3 className='text-xl font-semibold text-primary mb-4'>Technical Approach</h3>
             <p className='text-foreground leading-relaxed mb-4'>
-              Leveraging the latest features of Next.js 15 and React 19, this portfolio showcases
+              Leveraging some of the latest features of Next.js 15 and React 19, this portfolio showcases
               modern web development practices. The use of Server Components where appropriate,
               combined with strategic client-side interactivity, results in an application that
               loads fast and feels responsive.
             </p>
             <p className='text-foreground leading-relaxed'>
               The development process emphasized performance from the ground up. Every image is
-              optimized, every animation is GPU-accelerated, and every component is designed to
-              minimize re-renders. The result is a portfolio that achieves perfect Lighthouse
-              scores without sacrificing functionality or visual appeal.
+              optimized and every component is designed to minimize re-renders. The result is a
+              portfolio that achieves a seamless user experience without sacrificing functionality
+              or visual appeal.
             </p>
           </div>
 

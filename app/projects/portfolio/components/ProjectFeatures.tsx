@@ -76,7 +76,7 @@ export default function ProjectFeatures({ className }: ProjectFeaturesProps) {
                 Lightning Fast
               </h3>
               <p className="text-blue-700 dark:text-blue-300 text-sm">
-                Perfect Lighthouse scores across all metrics with optimized loading and rendering.
+                Excellent PageSpeed Insight scores across all metrics with optimized loading and rendering.
               </p>
             </CardContent>
           </Card>
@@ -108,7 +108,7 @@ export default function ProjectFeatures({ className }: ProjectFeaturesProps) {
                 Universal Design
               </h3>
               <p className="text-purple-700 dark:text-purple-300 text-sm">
-                Responsive across all devices with progressive enhancement and offline support.
+                Responsive across all devices with progressive enhancements for a great user experience.
               </p>
             </CardContent>
           </Card>

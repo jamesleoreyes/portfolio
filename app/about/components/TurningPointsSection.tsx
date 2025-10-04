@@ -20,7 +20,7 @@ const turningPoints: TurningPoint[] = [
     year: '2008-2012',
     title: 'The Tinkering Years',
     description: `Built my first desktop apps in Visual Basic, following as many YouTube tutorials as I could find. I also tinkered with Cheat Engine to alter games like Club Penguin and Bloons Tower Defense.`,
-    lesson: 'Learning by doing beats learning by reading — curiosity and experimentation are the best teachers.',
+    lesson: 'Learning by doing beats learning by reading. Curiosity and experimentation are the best teachers.',
   },
   {
     year: '2016-2018',
@@ -38,7 +38,7 @@ const turningPoints: TurningPoint[] = [
   {
     year: '2020-2022',
     title: 'The Reality Check',
-    description: 'FedEx Ground delivery driver working 60+ hours a week. Physical labor, time pressure, customer service — all while dreaming of something more.',
+    description: 'FedEx Ground delivery driver working 60+ hours a week. Juggling physical labor, time pressure, customer service, all while dreaming of something more.',
     lesson: 'Hard work builds character, while smart work builds futures.',
     location: 'Rock Hill, SC'
   },
@@ -55,7 +55,7 @@ const turningPoints: TurningPoint[] = [
       <>
         From merely{' '}
         <a
-          href='https://x.com/karpathy/status/1886192184808149383'
+          href='https://twitter.com/karpathy/status/1886192184808149383'
           target='_blank'
           rel='noopener noreferrer'
           className='text-primary hover:underline'

@@ -28,7 +28,7 @@ const currentChapterItems: CurrentChapterItem[] = [
     title: 'How I Think',
     description: (
       <>
-        <em className="text-foreground">&quot;The more I learn, the less I know&quot;</em> — my favorite saying because it perfectly captures
+        <em className="text-foreground mr-1">&quot;The more I learn, the less I know&quot;</em> is my favorite saying because it perfectly captures
         the learning journey. Every new skill reveals deeper rabbit holes, and I embrace that
         endless curiosity.
       </>
@@ -64,7 +64,7 @@ export default function CurrentChapterSection({ className }: CurrentChapterSecti
           <h2 className='text-3xl font-bold tracking-tight text-primary mb-4'>Where I Am Now</h2>
           <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
             Today, I&apos;m building products that solve real problems. Every technical decision is guided by user impact,
-            because great software isn&apos;t just about perfect algorithms — it&apos;s about meeting expectations and creating value.
+            because great software isn&apos;t just about perfect algorithms, it&apos;s about meeting expectations and creating value.
           </p>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8'>

@@ -3,7 +3,6 @@ import {
   TechStack,
   ProjectFeatures,
   ScreenshotGallery,
-  ProjectMetrics,
   ProjectStory
 } from './components';
 export { default as metadata } from './metadata';
@@ -16,7 +15,6 @@ export default function PortfolioProject() {
         <TechStack />
         <ProjectFeatures />
         <ScreenshotGallery />
-        <ProjectMetrics />
         <ProjectStory />
       </main>
     </div>

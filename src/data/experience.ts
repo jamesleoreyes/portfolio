@@ -192,7 +192,7 @@ const experienceData: ExperienceData = {
           icon: FileVideoIcon,
           badgeColor: 'bg-purple-700'
         }
-      ],      
+      ],
       technologies: ['TypeScript', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Azure DevOps', 'Azure Web Apps', 'Azure SQL Server', 'Azure Key Vault', 'Azure Queue Storage', 'REST APIs'],
       learnings: [
         'Enterprise-grade system architecture and security',
@@ -216,10 +216,9 @@ const experienceData: ExperienceData = {
     {
       period: 'Late 2022',
       technologies: [
-        { name: 'ChatGPT', url: 'https://chat.openai.com' },
-        { name: 'AI Workflow', url: null },
         { name: 'Python', url: 'https://python.org' },
-        { name: 'Discord.py', url: 'https://discordpy.readthedocs.io' }
+        { name: 'Discord.py', url: 'https://discordpy.readthedocs.io' },
+        { name: 'ChatGPT', url: 'https://chat.openai.com' }
       ],
       focus: 'AI-Assisted Learning',
       milestone: 'First interaction with ChatGPT sparked software development interest'

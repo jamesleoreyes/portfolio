@@ -12,7 +12,7 @@ export { default as Python } from './languages/Python'
 export { default as TypeScript } from './languages/TypeScript'
 
 // Frontend icons
-export { default as HTML5 } from './frontend/HTML5'
+export { default as HTML } from './frontend/HTML'
 export { default as CSS } from './frontend/CSS'
 export { default as React } from './frontend/React'
 export { default as NextJs } from './frontend/NextJs'
@@ -39,3 +39,4 @@ export { default as Cloudflare } from './cloud/Cloudflare'
 export { default as Vercel } from './cloud/Vercel'
 export { default as Heroku } from './cloud/Heroku'
 export { default as Railway } from './cloud/Railway'
+export { default as Render } from './cloud/Render'

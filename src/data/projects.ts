@@ -52,7 +52,7 @@ export const projects: Projects = {
       },
       {
         title: 'Performance Optimized',
-        description: 'Perfect Lighthouse scores with optimized images, code splitting, and efficient loading strategies.',
+        description: 'Custom optimization techniques to deliver near-perfect performance metrics',
       },
       {
         title: 'SEO & Accessibility',
@@ -89,7 +89,7 @@ export const projects: Projects = {
       },
     ],
     startDate: 'May 2025',
-    lastUpdated: 'July 17, 2025',
+    lastUpdated: 'October 4, 2025',
     metrics: [
       { label: 'PageSpeed Insights Performance', value: '99' },
       { label: 'PageSpeed Insights Accessibility', value: '100' },

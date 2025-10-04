@@ -54,7 +54,7 @@ export default function JourneySection({ className }: JourneySectionProps) {
         <div className='text-center'>
           <h2 className='text-3xl font-bold tracking-tight mb-4'>The Journey So Far</h2>
           <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
-            My path to software engineering wasn&apos;t linear. It was more like a spiral — circling back to childhood interests,
+            My path to software engineering wasn&apos;t linear. It was more like a spiral, with me circling back to childhood interests,
             taking unexpected detours through music and manual labor, until everything clicked into place.
           </p>
         </div>

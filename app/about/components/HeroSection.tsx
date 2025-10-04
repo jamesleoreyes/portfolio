@@ -20,7 +20,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
             My Story
           </h1>
           <p className='text-xl text-muted-foreground max-w-2xl'>
-            From childhood curiosity to creative exploration, unexpected detours to discovering my calling — here&apos;s the winding path that led me to become a Full-Stack Product Engineer.
+            From childhood curiosity to creative exploration, unexpected detours to discovering my calling. This is the winding path that led me to become a Full-Stack Product Engineer.
           </p>
           <p className='text-lg text-primary'>
             It&apos;s been a circular journey, but every detour taught me something valuable.

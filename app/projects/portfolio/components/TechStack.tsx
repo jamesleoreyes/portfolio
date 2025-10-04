@@ -119,28 +119,6 @@ export default function TechStack({ className }: TechStackProps) {
             </Card>
           ))}
         </div>
-
-        {/* Tech Stack Summary */}
-        <Card className="bg-primary/5 border-border">
-          <CardContent className="py-6">
-            <div className="text-center space-y-4">
-              <h3 className="text-xl font-semibold text-primary">Why This Stack?</h3>
-              <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                This technology stack was chosen to create a portfolio that&apos;s not just visually appealing,
-                but also demonstrates modern web development best practices. Next.js 15 and React 19 provide
-                cutting-edge features, TypeScript ensures code reliability, and Tailwind CSS enables rapid,
-                consistent styling. The entire stack prioritizes performance, developer experience, and scalability.
-              </p>
-              <div className="flex justify-center">
-                <div className="bg-primary/10 px-4 py-2">
-                  <span className="text-sm font-medium text-primary">
-                    {techStack.length} Technologies Used
-                  </span>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
