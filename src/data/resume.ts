@@ -19,7 +19,7 @@ const resumeData: ResumeData = {
   experience: [
     {
       company: 'Cimplx HR, Inc.',
-      position: 'Tier II Support Specialist && API Developer',
+      position: 'Tier II Support Specialist & API Developer',
       location: 'Rock Hill, SC',
       startDate: 'Sep 2023',
       endDate: 'Present',
