@@ -1,6 +1,6 @@
 import { LucideIcon } from 'lucide-react';
 
-interface ExperienceProject {
+type ExperienceProject = {
   name: string;
   description: string;
   impact: string;
@@ -9,7 +9,7 @@ interface ExperienceProject {
   outcomes?: string[];
 }
 
-interface ExperienceAchievement {
+type ExperienceAchievement = {
   title: string;
   description: string;
   impact: string;
@@ -18,7 +18,9 @@ interface ExperienceAchievement {
   badgeColor: string;
 }
 
-interface ExperienceItem {
+type ExperienceItemType = 'internship' | 'full-time' | 'side-project';
+type ExperienceItemStatus = 'completed' | 'current' | 'upcoming';
+type ExperienceItem = {
   id: string;
   tabName: string;
   company: {
@@ -26,11 +28,11 @@ interface ExperienceItem {
     url: string;
   }
   position: string;
-  type: 'internship' | 'full-time' | 'side-project';
+  type: ExperienceItemType;
   location: string;
   startDate: string;
   endDate: string;
-  status: 'completed' | 'current' | 'upcoming';
+  status: ExperienceItemStatus
   overview: string;
   context: string;
   keyProjects: ExperienceProject[];
@@ -41,7 +43,7 @@ interface ExperienceItem {
   image?: string;
 }
 
-interface TechEvolutionItem {
+type TechEvolutionItem = {
   period: string;
   technologies: {
     name: string;
@@ -51,7 +53,7 @@ interface TechEvolutionItem {
   milestone: string;
 }
 
-interface ExperienceData {
+type ExperienceData = {
   experiences: ExperienceItem[];
   techEvolution: TechEvolutionItem[];
   overallStats: {
@@ -66,6 +68,8 @@ export type {
   ExperienceProject,
   ExperienceAchievement,
   ExperienceItem,
+  ExperienceItemStatus,
+  ExperienceItemType,
   TechEvolutionItem,
   ExperienceData
 }; 

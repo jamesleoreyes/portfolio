@@ -1,9 +1,9 @@
-interface ContactInfo {
+type ContactInfo = {
   email: string;
   website: string;
 }
 
-interface ExperienceItem {
+type ExperienceItem = {
   company: string;
   position: string;
   location: string;
@@ -14,7 +14,7 @@ interface ExperienceItem {
   technologies: string[];
 }
 
-interface ProjectItem {
+type ProjectItem = {
   name: string;
   description: string;
   completionPercentage?: number;
@@ -29,7 +29,7 @@ interface ProjectItem {
   github?: string;
 }
 
-interface EducationItem {
+type EducationItem = {
   institution: string;
   degree?: string;
   field: string;
@@ -40,7 +40,7 @@ interface EducationItem {
   note?: string;
 }
 
-interface CertificationItem {
+type CertificationItem = {
   name: string;
   issuer: string;
   issuerUrl: string;
@@ -51,7 +51,7 @@ interface CertificationItem {
   certUrl?: string;
 }
 
-interface TechnicalSkills {
+type TechnicalSkills = {
   languages: { name: string; icon: React.ElementType; url: string }[];
   frontend: { name: string; icon: React.ElementType; url: string }[];
   backend: { name: string; icon: React.ElementType; url: string }[];
@@ -59,13 +59,13 @@ interface TechnicalSkills {
   cloud: { name: string; icon: React.ElementType; url: string }[];
 }
 
-interface SoftSkill {
+type SoftSkill = {
   name: string;
   description: string;
   icon: React.ElementType;
 }
 
-interface ResumeData {
+type ResumeData = {
   personalInfo: {
     name: string;
     title: string;

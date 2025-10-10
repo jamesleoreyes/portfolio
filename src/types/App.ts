@@ -1,9 +1,9 @@
-interface UrlConfig {
+type UrlConfig = {
   app: string;
   sitemap: string;
 }
 
-interface Meta {
+type Meta = {
   title: string;
   fullTitle?: string;
   description: string;
@@ -11,7 +11,7 @@ interface Meta {
   creator?: string;
 }
 
-interface Branding {
+type Branding = {
   /**
    * @url `/branding/favicon.ico`
    */
@@ -48,14 +48,14 @@ interface Branding {
   };
 }
 
-interface Downloads {
+type Downloads = {
   /**
    * @url `/downloads/resume/James-Reyes-Resume.pdf`
    */
   resume: string;
 }
 
-interface Images {
+type Images = {
   logos: {
     /**
      * @url `/images/logos/jlr.png`
@@ -88,7 +88,7 @@ interface Images {
   og: string;
 }
 
-interface Assets {
+type Assets = {
   branding: Branding;
   downloads: Downloads;
   images: Images;

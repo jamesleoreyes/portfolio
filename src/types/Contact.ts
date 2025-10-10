@@ -1,28 +1,28 @@
-interface ContactMethod {
+type ContactMethod = {
   name: string;
   description: string;
   url: string;
   icon: React.ElementType;
 }
 
-interface SocialLink {
+type SocialLink = {
   name: string;
   url: string;
   icon: React.ElementType;
 }
 
-interface Availability {
+type Availability = {
   day: string;
   time: string;
 }
 
-interface ContactInfo {
+type ContactInfo = {
   email: string;
   location: string;
   availability: Availability[];
 }
 
-interface ContactData {
+type ContactData = {
   contactInfo: ContactInfo;
   contactMethods: ContactMethod[];
   socialLinks: SocialLink[];

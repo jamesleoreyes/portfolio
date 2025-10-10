@@ -1,29 +1,32 @@
-interface TechStack {
+type TechStackCategory = 'frontend' | 'backend' | 'database' | 'deployment' | 'tools' | 'analytics';
+type TechStack = {
   name: string;
-  category: 'frontend' | 'backend' | 'database' | 'deployment' | 'tools' | 'analytics';
+  category: TechStackCategory;
   icon?: string;
 }
 
-interface ProjectFeature {
+type ProjectFeature = {
   title: string;
   description: string;
   icon?: string;
 }
 
-interface ProjectChallenge {
+type ProjectChallenge = {
   title: string;
   description: string;
   solution: string;
 }
 
-interface Project {
+type ProjectStatus = 'live' | 'development' | 'archived' | 'coming-soon';
+type ProjectType = 'personal' | 'professional' | 'open-source';
+type Project = {
   id: string;
   title: string;
   subtitle: string;
   description: string;
   longDescription: string;
-  status: 'live' | 'development' | 'archived' | 'coming-soon';
-  type: 'personal' | 'professional' | 'open-source';
+  status: ProjectStatus;
+  type: ProjectType;
 
   // Links
   liveUrl?: string;
@@ -64,4 +67,13 @@ interface Projects {
   theReyesVault: Project;
 }
 
-export type { Project, ProjectFeature, ProjectChallenge, TechStack, Projects };
+export type {
+  Project,
+  ProjectStatus,
+  ProjectType,
+  ProjectFeature,
+  ProjectChallenge,
+  TechStack,
+  TechStackCategory,
+  Projects
+};
