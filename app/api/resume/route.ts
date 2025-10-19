@@ -29,7 +29,7 @@ export async function GET() {
       duration: Date.now() - startTime
     }, 'Resume file served successfully');
 
-    return new NextResponse(fileBuffer, {
+    return new NextResponse(new Uint8Array(fileBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
