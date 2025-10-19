@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-interface UseProgressiveImageOptions {
+type UseProgressiveImageOptions = {
   lowQualitySrc: string;
   highQualitySrc: string;
   priority?: boolean;
 }
 
-interface UseProgressiveImageReturn {
+type UseProgressiveImageReturn = {
   currentSrc: string;
   isHighQualityLoaded: boolean;
   quality: number;

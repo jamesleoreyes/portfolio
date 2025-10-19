@@ -62,7 +62,7 @@ type Project = {
   }[];
 }
 
-interface Projects {
+type Projects = {
   portfolio: Project;
   theReyesVault: Project;
 }
