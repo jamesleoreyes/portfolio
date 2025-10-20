@@ -89,7 +89,7 @@ export const projects: Projects = {
       },
     ],
     startDate: 'May 2025',
-    lastUpdated: 'October 16, 2025',
+    lastUpdated: 'October 20, 2025',
     metrics: [
       { label: 'PageSpeed Insights Performance', value: '99' },
       { label: 'PageSpeed Insights Accessibility', value: '100' },
