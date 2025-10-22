@@ -8,6 +8,7 @@ type ContactMethod = {
 type SocialLink = {
   name: string;
   url: string;
+  color: string;
   icon: React.ElementType;
 }
 

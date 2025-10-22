@@ -29,18 +29,21 @@ const contactData: ContactData = {
     {
       name: 'GitHub',
       url: 'https://github.com/jamesleoreyes',
-      icon: Icons.GitHub
+      color: '#24292E',
+      icon: Icons.GitHub,
     },
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/jamesleoreyes',
-      icon: Icons.LinkedIn
+      color: '#0073B1',
+      icon: Icons.LinkedIn,
     },
     {
       name: 'Twitter',
       url: 'https://twitter.com/jamesleoreyes',
-      icon: Icons.Twitter
-    }
+      color: '#1DA1F2',
+      icon: Icons.Twitter,
+    },
   ]
 };
 

@@ -29,7 +29,8 @@ export default function SocialLinksSection({ className }: SocialLinksSectionProp
                 variant='default'
                 size='lg'
                 asChild
-                className='flex items-center gap-3 min-w-[140px]'
+                style={{ '--social-bg': social.color } as React.CSSProperties}
+                className='flex items-center gap-3 min-w-[140px] bg-[var(--social-bg)] hover:bg-[var(--social-bg)]/85 text-background dark:text-foreground'
               >
                 <Link
                   href={social.url}

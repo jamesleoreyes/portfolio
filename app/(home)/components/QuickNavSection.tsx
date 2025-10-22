@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { Alert, AlertDescription } from '@/src/components';
+import { ThemedLink } from '@/src/components/ui/themed-link';
 
 export default function QuickNavSection() {
   return (
@@ -8,25 +8,23 @@ export default function QuickNavSection() {
       className='text-sm text-muted-foreground flex justify-center md:justify-start w-fit mx-auto md:mx-0'
     >
       <AlertDescription>
-        <p>
+        <p className='tracking-wider'>
           Explore my{' '}
-          <Link
+          <ThemedLink
             href='/resume'
-            className='underline hover:text-foreground transition-colors'
             aria-label='View my resume'
             title='View my resume'
           >
             resume
-          </Link>
+          </ThemedLink>
           {' '}or{' '}
-          <Link
+          <ThemedLink
             href='/contact'
-            className='underline hover:text-foreground transition-colors'
             aria-label='Reach out to me'
             title='Reach out to me'
           >
             contact me
-          </Link>
+          </ThemedLink>
         </p>
       </AlertDescription>
     </Alert>

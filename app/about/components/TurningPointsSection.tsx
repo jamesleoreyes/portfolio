@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Calendar, MapPin, Quote } from 'lucide-react';
 import { Alert, AlertDescription } from '@/src/components';
 import { cn } from '@/src/lib';
+import { ThemedLink } from '@/src/components/ui/themed-link';
 
 interface TurningPointsSectionProps {
   className?: string;
@@ -54,16 +55,15 @@ const turningPoints: TurningPoint[] = [
     description: (
       <>
         From merely{' '}
-        <a
+        <ThemedLink
           href='https://twitter.com/karpathy/status/1886192184808149383'
           target='_blank'
           rel='noopener noreferrer'
-          className='text-primary hover:underline'
           title='Wait... what?'
           aria-label='What is vibe coding?'
         >
           &quot;vibe coding&quot;
-        </a>
+        </ThemedLink>
         {' '}with AI to learning the actual fundamentals, landing my first dev role, and building production systems. The childhood curiosity finally found its home.
       </>
     ),
