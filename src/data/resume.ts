@@ -117,8 +117,8 @@ const resumeData: ResumeData = {
       issuer: 'Boot.dev',
       issuerUrl: 'https://www.boot.dev/tracks/backend-python-typescript',
       date: 'In Progress',
-      lastUpdate: '10/20/2025',
-      completionProgress: 56
+      lastUpdate: '10/22/2025',
+      completionProgress: 58
     },
   ],
   technicalSkills: {
