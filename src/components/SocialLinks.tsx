@@ -1,36 +1,14 @@
 import Link from 'next/link';
 import { cn } from '@/src/lib';
 import { Button } from '@/src/components';
-import { GitHub, LinkedIn, Twitter } from '@components/icons';
-
-interface SocialLink {
-  name: string;
-  href: string;
-  icon: React.ElementType;
-}
+import { contactData } from '../data';
 
 interface SocialLinkProps {
   className?: string;
 }
 
 export function SocialLinks({ className }: SocialLinkProps) {
-  const socialLinks: SocialLink[] = [
-    {
-      name: 'GitHub',
-      href: 'https://github.com/jamesleoreyes',
-      icon: GitHub,
-    },
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/in/jamesleoreyes',
-      icon: LinkedIn,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com/jamesleoreyes',
-      icon: Twitter,
-    },
-  ];
+  const { socialLinks } = contactData;
 
   return (
     <>
@@ -44,10 +22,14 @@ export function SocialLinks({ className }: SocialLinkProps) {
             variant='ghost'
             size='icon'
             asChild
-            className={cn('h-9 w-9 p-0', className)}
+            style={{ '--hover-bg': link.color } as React.CSSProperties}
+            className={cn(
+              `h-9 w-9 p-0 hover:bg-[var(--hover-bg)] dark:hover:bg-[var(--hover-bg)] hover:text-background dark:hover:text-foreground`,
+              className
+            )}
           >
             <Link
-              href={link.href}
+              href={link.url}
               target='_blank'
               rel='noopener noreferrer'
             >
