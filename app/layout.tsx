@@ -52,8 +52,15 @@ export default function RootLayout({
             richColors
             closeButton
             visibleToasts={5}
-            duration={4000}
+            duration={40000}
             position='top-center'
+            toastOptions={{
+              classNames: {
+                toast: 'rounded-none!',
+                actionButton: 'rounded-none!',
+                cancelButton: 'rounded-none!',
+              }
+            }}
           />
           <Analytics />
           <SpeedInsights />

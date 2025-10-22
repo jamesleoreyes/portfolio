@@ -6,7 +6,7 @@ import { nav } from '@configs/nav';
 import { assets } from '@configs/app';
 import { Button, ThemeToggle } from '@/src/components';
 import { AdaptiveIcon } from '@components/icons';
-import { usePWAMode } from '@/src/hooks';
+import { useMobile, usePWAMode } from '@/src/hooks';
 import {
   Drawer,
   DrawerTrigger,
@@ -18,16 +18,29 @@ import {
   DrawerFooter,
   DrawerClose
 } from '@/src/components';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface MobileNavProps {
   className?: string;
 }
 
 export default function MobileNav({ className }: MobileNavProps) {
+  const pathname = usePathname();
   const isPWA = usePWAMode();
+  const isMobile = useMobile();
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isMobile && open) setOpen(false);
+  }, [isMobile, open]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname])
 
   return (
-    <Drawer>
+    <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
         <Button
           variant='ghost'
@@ -74,7 +87,7 @@ export default function MobileNav({ className }: MobileNavProps) {
                     <Button
                       asChild
                       variant='ghost'
-                      className='h-12 text-3xl w-full px-4'
+                      className='h-12 text-3xl w-full px-4 hover:bg-foreground! hover:text-background'
                     >
                       <Link href={page.href}>
                         {page.label}
