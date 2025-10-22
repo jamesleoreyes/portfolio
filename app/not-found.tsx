@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/src/components';
 import { isPageDisabled } from '@/src/lib';
 import { useGoBack } from '@/src/hooks';
+import { ThemedLink } from '@/src/components/ui/themed-link';
 
 export default function NotFound() {
   const { backUrl, handleGoBack } = useGoBack();
@@ -89,38 +90,38 @@ export default function NotFound() {
         <div className='text-sm text-muted-foreground'>
           <p>
             Or try one of these pages:{' '}
-            <Link
+            <ThemedLink
               href='/about'
               className='underline hover:text-foreground transition-colors'
               aria-label='Go to about page'
               title='Go to about page'
             >
               about
-            </Link>
+            </ThemedLink>
             {', '}
             {isPageDisabled('/experience') ? (
               <span className='text-muted-foreground/50 cursor-not-allowed'>
                 experience
               </span>
             ) : (
-              <Link
+              <ThemedLink
                 href='/experience'
                 className='underline hover:text-foreground transition-colors'
                 aria-label='Go to experience page'
                 title='Go to experience page'
               >
                 experience
-              </Link>
+              </ThemedLink>
             )}
             {', or '}
-            <Link
+            <ThemedLink
               href='/resume'
               className='underline hover:text-foreground transition-colors'
               aria-label='View my resume'
               title='View my resume'
             >
               resume
-            </Link>
+            </ThemedLink>
           </p>
         </div>
       </main>

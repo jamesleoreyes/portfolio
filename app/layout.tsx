@@ -54,6 +54,13 @@ export default function RootLayout({
             visibleToasts={5}
             duration={4000}
             position='top-center'
+            toastOptions={{
+              classNames: {
+                toast: 'rounded-none!',
+                actionButton: 'rounded-none!',
+                cancelButton: 'rounded-none!',
+              }
+            }}
           />
           <Analytics />
           <SpeedInsights />
