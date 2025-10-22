@@ -52,7 +52,7 @@ export default function RootLayout({
             richColors
             closeButton
             visibleToasts={5}
-            duration={40000}
+            duration={4000}
             position='top-center'
             toastOptions={{
               classNames: {
