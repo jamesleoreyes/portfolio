@@ -1,6 +1,6 @@
-import { cn } from "@/src/lib";
-import Link, { LinkProps } from "next/link";
-import { forwardRef, type AnchorHTMLAttributes } from "react";
+import { cn } from '@/src/lib';
+import Link, { LinkProps } from 'next/link';
+import { forwardRef, type AnchorHTMLAttributes } from 'react';
 
 type ThemedLinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & LinkProps & {
   className?: string;
@@ -19,5 +19,7 @@ const ThemedLink = forwardRef<HTMLAnchorElement, ThemedLinkProps>(
     );
   }
 );
+
+ThemedLink.displayName = 'ThemedLink';
 
 export { ThemedLink };
