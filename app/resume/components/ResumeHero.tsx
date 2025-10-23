@@ -18,7 +18,7 @@ export default function ResumeHero() {
               href={`mailto:${personalInfo.contact.email}`}
               target='_blank'
               rel='noopener noreferrer'
-              className='underline underline-offset-7 decoration-muted-foreground hover:decoration-background decoration-[1.5px] transition-colors duration-200'
+              className='hover:underline hover:underline-offset-7 decoration-muted-foreground hover:decoration-background decoration-[1.5px] transition-all duration-300'
             >
               {personalInfo.contact.email}
             </Link>
@@ -29,7 +29,7 @@ export default function ResumeHero() {
               href='/'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline underline-offset-7 decoration-muted-foreground hover:decoration-background decoration-[1.5px] transition-colors duration-200'
+              className='hover:underline hover:underline-offset-7 decoration-muted-foreground hover:decoration-background decoration-[1.5px] transition-all duration-300'
             >
               {personalInfo.contact.website}
             </Link>

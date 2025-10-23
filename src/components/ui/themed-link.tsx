@@ -10,7 +10,7 @@ const ThemedLink = forwardRef<HTMLAnchorElement, ThemedLinkProps>(
   ({ className, children, ...props }, ref) => {
     return (
       <Link ref={ref} className={cn(
-        'underline underline-offset-3 decoration-[1.5px] decoration-foreground/50 hover:decoration-foreground hover:text-foreground transition-colors',
+        'underline underline-offset-3 hover:underline-offset-6 decoration-[1.5px] decoration-foreground/50 hover:decoration-foreground hover:text-foreground transition-all duration-400',
         className
       )} {...props}
       >
