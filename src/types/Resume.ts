@@ -78,7 +78,6 @@ type ResumeData = {
   certifications: CertificationItem[];
   technicalSkills: TechnicalSkills;
   softSkills: SoftSkill[];
-  coreCompetencies: string[];
 }
 
 export type {

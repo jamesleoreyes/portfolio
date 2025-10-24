@@ -31,7 +31,7 @@ function ExperienceItem({ experience }: { experience: typeof resumeData.experien
         </div>
 
         <div>
-          <h4 className="font-semibold mb-2 text-primary">Technologies:</h4>
+          <h4 className="font-semibold mb-2 text-primary">Technologies Used:</h4>
           <div className="flex flex-wrap gap-2">
             {experience.technologies.map((tech, idx) => (
               <span

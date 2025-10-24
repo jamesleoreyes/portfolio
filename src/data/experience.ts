@@ -81,12 +81,12 @@ const experienceData: ExperienceData = {
       startDate: 'Sep 2023',
       endDate: 'Present',
       status: 'current',
-      overview: 'Architected and developed enterprise-grade HR/payroll integration platform synchronizing employee data between Factorial HR and UKG Ready systems for multiple clients. Also managed technical operations such as time clock integrations, IT inventory, and advanced client support.',
+      overview: 'Architected and developed HR/timekeeping integration synchronizing employee data between Factorial HR and UKG Ready systems for multiple clients. Also managed technical operations such as time clock integrations, IT inventory, and advanced client support.',
       context: 'Transitioned from internship to full-time role, becoming the sole in-house developer responsible for maintaining and rebuilding critical integration systems. Took ownership of production systems processing 100,000+ webhook events.',
       keyProjects: [
         {
           name: 'Factorial x UKG Integration Platform',
-          description: 'Complete rebuild of enterprise integration system connecting European HR platform with US payroll system',
+          description: 'Complete rebuild of integration system connecting European HR platform with US payroll system',
           impact: 'Replaced unreliable third-party solution with secure, maintainable in-house system',
           technologies: ['TypeScript', 'Express.js', 'React', 'Tailwind CSS', 'Azure SQL Server', 'Azure DevOps', 'Azure Key Vault', 'Azure Queue Storage'],
           challenges: [
@@ -139,7 +139,7 @@ const experienceData: ExperienceData = {
         {
           title: 'High-Volume Event Processing',
           description: 'Architected integration platform handling continuous webhook traffic',
-          impact: 'Enabled real-time data synchronization across multiple client systems',
+          impact: 'Enabled event-driven data synchronization across multiple client systems',
           metrics: '100,000+ events processed',
           icon: Zap,
           badgeColor: 'bg-purple-700'
@@ -195,12 +195,12 @@ const experienceData: ExperienceData = {
       ],
       technologies: ['TypeScript', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Azure DevOps', 'Azure Web Apps', 'Azure SQL Server', 'Azure Key Vault', 'Azure Queue Storage', 'REST APIs'],
       learnings: [
-        'Enterprise-grade system architecture and security',
+        'System architecture and security',
         'Production system maintenance and debugging',
         'Client communication and requirement gathering',
         'Azure cloud infrastructure and DevOps practices',
         'API design and integration patterns',
-        'Hands-on deployment and support of enterprise time clock hardware/software',
+        'Hands-on deployment and support of time clock hardware/software',
         'Technical inventory management and lifecycle planning',
         'High-level client support and troubleshooting for payroll/timekeeping systems',
         'Cross-functional collaboration with AEs, PMs, and payroll staff'

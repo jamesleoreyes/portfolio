@@ -44,7 +44,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
             <h2 className='text-lg font-semibold mb-2'>What I&apos;ve Learned</h2>
             <p className='text-muted-foreground'>
               Each role taught me something different: the internship showed me what&apos;s possible,
-              the full-time position taught me enterprise-grade development, and the side project
+              the full-time position taught me real-world development, and the side project
               is teaching me entrepreneurship and product development.
             </p>
           </div>
