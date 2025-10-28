@@ -2,9 +2,7 @@ import { Suspense } from 'react';
 import {
   ResumeHero,
   ProfessionalSummary,
-  CoreCompetencies,
   Experience,
-  TechnicalSkills,
   SoftSkills,
   Education,
   Certifications,
@@ -27,7 +25,6 @@ export default function Resume() {
 
           <div className="p-8 space-y-10">
             <ProfessionalSummary />
-            <CoreCompetencies />
             <Experience />
             <Suspense fallback={
               <div className="animate-pulse">
@@ -40,7 +37,6 @@ export default function Resume() {
             }>
               <Projects />
             </Suspense>
-            <TechnicalSkills />
             <SoftSkills />
             <Education />
             <Certifications />

@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: process.env['ALLOWED_DEV_ORIGINS']
-    ? process.env['ALLOWED_DEV_ORIGINS'].split(",")
+  allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS
+    ? process.env.ALLOWED_DEV_ORIGINS.split(",")
     : [],
   images: {
     formats: ['image/webp', 'image/avif'],
