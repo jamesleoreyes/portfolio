@@ -9,7 +9,7 @@ import { NavBar } from '@/src/components';
 import { Footer } from '@/src/components';
 import Head from './(seo)/head';
 import metadata from './(seo)/metadata';
-import viewport from './(seo)/viewport';
+import viewport from './viewport';
 export { metadata, viewport };
 
 const outfit = Outfit({
