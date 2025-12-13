@@ -1,4 +1,4 @@
-import { Projects } from '@_types/Projects';
+import { Projects } from '@/src/types/projects';
 import { assets } from '@configs/app';
 
 export const projects: Projects = {

@@ -1,5 +1,5 @@
 import { resumeData } from '@/src/data';
-import type { SoftSkill } from '@_types/Resume';
+import type { SoftSkill } from '@/src/types/resume';
 
 function SkillItem({ skill }: { skill: SoftSkill }) {
   const { name, description, icon: IconComponent } = skill;
@@ -24,7 +24,9 @@ export default function SoftSkills() {
 
   return (
     <section>
-      <h2 className="text-2xl font-semibold mb-6 text-primary border-b pb-2">Soft Skills</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-primary border-b pb-2">
+        Soft Skills
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {softSkills.map((skill) => (
           <SkillItem key={skill.name} skill={skill} />

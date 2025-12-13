@@ -122,9 +122,9 @@ portfolio/
 │   ├── app/                  # Next.js App Router pages
 │   │   ├── (home)/           # Home page and components
 │   │   │   ├── components/   # Home page specific components
-│   │   │   │   ├── CTASection.tsx
-│   │   │   │   ├── HeroSection.tsx
-│   │   │   │   └── QuickNavSection.tsx
+│   │   │   │   ├── cta-section.tsx
+│   │   │   │   ├── hero-section.tsx
+│   │   │   │   └── quick-nav-section.tsx
 │   │   │   └── page.tsx
 │   │   ├── (seo)/            # SEO-related files
 │   │   │   ├── head.tsx      # HTML head component
@@ -134,62 +134,62 @@ portfolio/
 │   │   │   └── viewport.ts   # Viewport configuration
 │   │   ├── about/            # About page and components
 │   │   │   ├── components/   # About page specific components
-│   │   │   │   ├── CTASection.tsx
-│   │   │   │   ├── CurrentChapterSection.tsx
-│   │   │   │   ├── HeroSection.tsx
-│   │   │   │   ├── JourneySection.tsx
-│   │   │   │   └── TurningPointsSection.tsx
+│   │   │   │   ├── cta-section.tsx
+│   │   │   │   ├── current-chapter-section.tsx
+│   │   │   │   ├── hero-section.tsx
+│   │   │   │   ├── journey-section.tsx
+│   │   │   │   └── turning-points-section.tsx
 │   │   │   ├── metadata.ts   # Page-specific metadata
 │   │   │   └── page.tsx      # About page component
 │   │   ├── experience/       # Experience page and components
 │   │   │   ├── components/   # Experience page specific components
-│   │   │   │   ├── CTASection.tsx
-│   │   │   │   ├── DetailedExperience.tsx
-│   │   │   │   ├── ExperienceTimeline.tsx
-│   │   │   │   ├── HeroSection.tsx
-│   │   │   │   ├── KeyAchievements.tsx
-│   │   │   │   └── TechEvolution.tsx
+│   │   │   │   ├── cta-section.tsx
+│   │   │   │   ├── detailed-experience.tsx
+│   │   │   │   ├── experience-timeline.tsx
+│   │   │   │   ├── hero-section.tsx
+│   │   │   │   ├── key-achievements.tsx
+│   │   │   │   └── tech-evolution.tsx
 │   │   │   ├── metadata.ts   # Page-specific metadata
 │   │   │   └── page.tsx      # Experience page component
 │   │   ├── projects/         # Projects page and components
 │   │   │   ├── components/   # Projects page specific components
-│   │   │   │   ├── HeroSection.tsx
-│   │   │   │   ├── ProjectCard.tsx
-│   │   │   │   └── ProjectsGrid.tsx
+│   │   │   │   ├── hero-section.tsx
+│   │   │   │   ├── project-card.tsx
+│   │   │   │   └── projects-grid.tsx
 │   │   │   ├── portfolio/    # Portfolio case study
 │   │   │   │   ├── components/
-│   │   │   │   │   ├── ProjectFeatures.tsx
-│   │   │   │   │   ├── ProjectHero.tsx
-│   │   │   │   │   ├── ProjectMetrics.tsx
-│   │   │   │   │   ├── ProjectStory.tsx
-│   │   │   │   │   ├── ScreenshotGallery.tsx
-│   │   │   │   │   └── TechStack.tsx
+│   │   │   │   │   ├── project-features.tsx
+│   │   │   │   │   ├── project-hero.tsx
+│   │   │   │   │   ├── project-metrics.tsx
+│   │   │   │   │   ├── project-story.tsx
+│   │   │   │   │   ├── screenshot-gallery.tsx
+│   │   │   │   │   └── tech-stack.tsx
 │   │   │   │   ├── metadata.ts
 │   │   │   │   └── page.tsx
 │   │   │   ├── metadata.ts   # Page-specific metadata
 │   │   │   └── page.tsx      # Projects page component
 │   │   ├── resume/           # Resume page and components
 │   │   │   ├── components/   # Resume page specific components
-│   │   │   │   ├── Certifications.tsx
-│   │   │   │   ├── CoreCompetencies.tsx
-│   │   │   │   ├── Education.tsx
-│   │   │   │   ├── Experience.tsx
-│   │   │   │   ├── ProfessionalSummary.tsx
-│   │   │   │   ├── Projects.tsx
-│   │   │   │   ├── ResumeActions.tsx
-│   │   │   │   ├── ResumeHero.tsx
-│   │   │   │   ├── ScreenshotCarousel.tsx
-│   │   │   │   ├── SoftSkills.tsx
-│   │   │   │   ├── StickyResumeHeader.tsx
-│   │   │   │   └── TechnicalSkills.tsx
+│   │   │   │   ├── certifications.tsx
+│   │   │   │   ├── core-competencies.tsx
+│   │   │   │   ├── education.tsx
+│   │   │   │   ├── experience.tsx
+│   │   │   │   ├── professional-summary.tsx
+│   │   │   │   ├── projects.tsx
+│   │   │   │   ├── resume-actions.tsx
+│   │   │   │   ├── resume-hero.tsx
+│   │   │   │   ├── screenshot-carousel.tsx
+│   │   │   │   ├── soft-skills.tsx
+│   │   │   │   ├── sticky-resume-header.tsx
+│   │   │   │   └── technical-skills.tsx
 │   │   │   ├── metadata.ts   # Page-specific metadata
 │   │   │   └── page.tsx      # Resume page component
 │   │   ├── contact/          # Contact page and components
 │   │   │   ├── components/   # Contact page specific components
-│   │   │   │   ├── ContactInfoSection.tsx
-│   │   │   │   ├── ContactMethodsSection.tsx
-│   │   │   │   ├── HeroSection.tsx
-│   │   │   │   └── SocialLinksSection.tsx
+│   │   │   │   ├── contact-info-section.tsx
+│   │   │   │   ├── contact-methods-section.tsx
+│   │   │   │   ├── hero-section.tsx
+│   │   │   │   └── social-links-section.tsx
 │   │   │   ├── metadata.ts   # Page-specific metadata
 │   │   │   └── page.tsx      # Contact page component
 │   │   ├── api/              # API routes
@@ -202,48 +202,48 @@ portfolio/
 │   ├── components/           # Reusable components
 │   │   ├── icons/            # Custom icon components
 │   │   │   ├── frontend/     # Frontend technology icons
-│   │   │   │   ├── CSS.tsx
-│   │   │   │   ├── HTML5.tsx
-│   │   │   │   ├── NextJs.tsx
-│   │   │   │   ├── React.tsx
-│   │   │   │   ├── Shadcn.tsx
-│   │   │   │   ├── Tailwind.tsx
-│   │   │   │   └── Vite.tsx
+│   │   │   │   ├── css.tsx
+│   │   │   │   ├── html.tsx
+│   │   │   │   ├── nextjs.tsx
+│   │   │   │   ├── react.tsx
+│   │   │   │   ├── shadcn.tsx
+│   │   │   │   ├── tailwind.tsx
+│   │   │   │   └── vite.tsx
 │   │   │   ├── backend/      # Backend technology icons
-│   │   │   │   ├── Deno.tsx
-│   │   │   │   ├── Express.tsx
-│   │   │   │   ├── Flask.tsx
-│   │   │   │   ├── NodeJs.tsx
-│   │   │   │   └── Supabase.tsx
+│   │   │   │   ├── deno.tsx
+│   │   │   │   ├── express.tsx
+│   │   │   │   ├── flask.tsx
+│   │   │   │   ├── nodejs.tsx
+│   │   │   │   └── supabase.tsx
 │   │   │   ├── devops/       # DevOps tool icons
-│   │   │   │   ├── Git.tsx
-│   │   │   │   ├── GitLab.tsx
-│   │   │   │   ├── Postman.tsx
-│   │   │   │   └── Sentry.tsx
+│   │   │   │   ├── git.tsx
+│   │   │   │   ├── gitlab.tsx
+│   │   │   │   ├── postman.tsx
+│   │   │   │   └── sentry.tsx
 │   │   │   ├── cloud/        # Cloud platform icons
-│   │   │   │   ├── Azure.tsx
-│   │   │   │   ├── Cloudflare.tsx
-│   │   │   │   ├── Heroku.tsx
-│   │   │   │   ├── Railway.tsx
-│   │   │   │   └── Vercel.tsx
+│   │   │   │   ├── azure.tsx
+│   │   │   │   ├── cloudflare.tsx
+│   │   │   │   ├── heroku.tsx
+│   │   │   │   ├── railway.tsx
+│   │   │   │   └── vercel.tsx
 │   │   │   ├── socials/      # Social media icons
-│   │   │   │   ├── GitHub.tsx
-│   │   │   │   ├── LinkedIn.tsx
-│   │   │   │   └── Twitter.tsx
+│   │   │   │   ├── github.tsx
+│   │   │   │   ├── linkedin.tsx
+│   │   │   │   └── twitter.tsx
 │   │   │   ├── languages/    # Programming language icons
-│   │   │   │   ├── JavaScript.tsx
-│   │   │   │   ├── Python.tsx
-│   │   │   │   └── TypeScript.tsx
+│   │   │   │   ├── javascript.tsx
+│   │   │   │   ├── python.tsx
+│   │   │   │   └── typescript.tsx
 │   │   │   └── index.ts
 │   │   ├── magicui/          # Magic UI components
-│   │   │   └── WordRotate.tsx
+│   │   │   └── word-rotate.tsx
 │   │   ├── navbar/           # Navigation components
-│   │   │   ├── MobileNav.tsx
-│   │   │   └── NavBar.tsx
+│   │   │   ├── mobile-nav.tsx
+│   │   │   └── navbar.tsx
 │   │   ├── theme/            # Theme-related components
-│   │   │   ├── DynamicFavicon.tsx
-│   │   │   ├── DynamicThemeColor.tsx
-│   │   │   └── ThemeToggle.tsx
+│   │   │   ├── dynamic-favicon.tsx
+│   │   │   ├── dynamic-theme-color.tsx
+│   │   │   └── theme-toggle.tsx
 │   │   ├── ui/               # shadcn/ui components
 │   │   │   ├── alert.tsx
 │   │   │   ├── button.tsx
@@ -259,20 +259,20 @@ portfolio/
 │   │   │   ├── textarea.tsx
 │   │   │   └── tooltip.tsx
 │   │   ├── easter-eggs/      # Easter egg components
-│   │   │   ├── ImpossibleDeviceEasterEgg.tsx
+│   │   │   ├── impossible-device.tsx
 │   │   │   └── index.ts
 │   │   ├── seo/              # SEO components
-│   │   │   ├── FAQPageSchema.tsx
-│   │   │   ├── PersonSchema.tsx
-│   │   │   ├── ProfilePageSchema.tsx
+│   │   │   ├── faq-page-schema.tsx
+│   │   │   ├── person-schema.tsx
+│   │   │   ├── profile-page-schema.tsx
 │   │   │   └── index.ts
-│   │   ├── DynamicViewport.tsx
-│   │   ├── Footer.tsx
+│   │   ├── dynamic-viewport.tsx
+│   │   ├── footer.tsx
 │   │   ├── index.ts          # Component exports
-│   │   ├── LiveTimeDisplay.tsx
-│   │   ├── PlaceholderScreenshot.tsx
-│   │   ├── ProfileImage.tsx
-│   │   └── SocialLinks.tsx
+│   │   ├── live-time-display.tsx
+│   │   ├── placeholder-screenshot.tsx
+│   │   ├── profile-image.tsx
+│   │   └── social-links.tsx
 │   ├── configs/              # App configuration
 │   │   ├── app.ts            # App metadata and assets
 │   │   ├── nav.ts            # Navigation configuration
@@ -285,11 +285,11 @@ portfolio/
 │   │   └── index.ts          # Data exports
 │   ├── hooks/                # Custom React hooks
 │   │   ├── index.ts
-│   │   ├── useGoBack.ts
-│   │   ├── useMobile.ts
-│   │   ├── useProgressiveImage.ts
-│   │   ├── usePWAMode.ts
-│   │   └── useScrollPosition.ts
+│   │   ├── use-go-back.ts
+│   │   ├── use-mobile.ts
+│   │   ├── use-progressive-image.ts
+│   │   ├── use-pwa-mode.ts
+│   │   └── use-scroll-position.ts
 │   ├── lib/                  # Utility functions
 │   │   └── utils/            # Utility functions
 │   │       ├── constants.ts
@@ -299,12 +299,12 @@ portfolio/
 │   │       ├── styles.ts
 │   │       └── time.ts
 │   └── types/                # TypeScript type definitions
-│       ├── App.ts
-│       ├── Contact.ts
-│       ├── Experience.ts
-│       ├── Navigation.ts
-│       ├── Projects.ts
-│       └── Resume.ts
+│       ├── app.ts
+│       ├── contact.ts
+│       ├── experience.ts
+│       ├── navigation.ts
+│       ├── projects.ts
+│       └── resume.ts
 ├── components.json           # shadcn/ui configuration
 ├── eslint.config.mjs         # ESLint configuration
 ├── next.config.ts            # Next.js configuration

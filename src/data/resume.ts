@@ -1,7 +1,7 @@
 import { assets } from '@configs/app';
 import * as Icons from '@components/icons';
 import { MessageCircle, Users, Lightbulb, Shuffle, Clock, Eye } from 'lucide-react';
-import type { ResumeData } from '@_types/Resume';
+import type { ResumeData } from '@/src/types/resume';
 
 const resumeData: ResumeData = {
   personalInfo: {

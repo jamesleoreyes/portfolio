@@ -1,1 +1,1 @@
-export { default as ImpossibleDeviceEasterEgg } from './ImpossibleDeviceEasterEgg'; 
+export { default as ImpossibleDeviceEasterEgg } from './impossible-device'; 
