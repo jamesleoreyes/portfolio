@@ -84,7 +84,7 @@ export default function Footer() {
         <div className='mt-12 pt-8 border-t border-border/50 w-full'>
           <div className='flex flex-col items-center justify-between px-8 gap-4 md:flex-row'>
             <p className='text-sm text-muted-foreground'>
-              Made with ❤️ by James Reyes &copy; {currentYear}
+              Made with &hearts; and passion by James Reyes &copy; {currentYear}
             </p>
             <ThemeToggle variant='full' />
           </div>
