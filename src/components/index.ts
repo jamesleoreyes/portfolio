@@ -25,6 +25,7 @@ export { SocialLinks } from './SocialLinks';
 export { WordRotate } from './magicui/WordRotate';
 
 // Utility Components
+export { AnalyticsClient } from './AnalyticsClient';
 export { DynamicThemeColor } from './theme/DynamicThemeColor';
 export { DynamicViewport } from './DynamicViewport';
 export { DynamicFavicon } from './theme/DynamicFavicon';

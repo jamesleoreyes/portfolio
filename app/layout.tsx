@@ -1,8 +1,7 @@
-import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Outfit } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
-import { Toaster } from '@/src/components'
+import { Toaster, AnalyticsClient } from '@/src/components'
 import './globals.css';
 import { DynamicFavicon, DynamicThemeColor, DynamicViewport, ImpossibleDeviceEasterEgg } from '@/src/components';
 import { NavBar } from '@/src/components';
@@ -62,7 +61,7 @@ export default function RootLayout({
               }
             }}
           />
-          <Analytics />
+          <AnalyticsClient />
           <SpeedInsights />
           <ImpossibleDeviceEasterEgg />
         </ThemeProvider>
