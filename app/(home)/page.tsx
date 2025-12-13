@@ -1,9 +1,9 @@
 import { ProfileImage, SocialLinks } from '@/src/components';
 import { lazy, Suspense } from 'react';
-import CTASection from './components/CTASection';
-import HeroSection from './components/HeroSection';
+import CTASection from './components/cta-section';
+import HeroSection from './components/hero-section';
 
-const QuickNavSection = lazy(() => import('./components/QuickNavSection'));
+const QuickNavSection = lazy(() => import('./components/quick-nav-section'));
 
 export default function Home() {
   return (

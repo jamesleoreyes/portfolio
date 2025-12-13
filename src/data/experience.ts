@@ -1,4 +1,4 @@
-import type { ExperienceData } from '@_types/Experience';
+import type { ExperienceData } from '@/src/types/experience';
 import { ClipboardList, ClockPlus, FileVideoIcon, LifeBuoy, Rocket, Shield, TrendingUp, Users, Zap } from 'lucide-react';
 
 const experienceData: ExperienceData = {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { baseMeta, urlConfig } from '@configs/app';
 import { projects } from '@/src/data/projects';
-import type { Meta } from '@_types/App';
+import type { Meta } from '@/src/types/app';
 
 const meta: Meta = {
   title: `${projects.portfolio.title} - Project Case Study`,

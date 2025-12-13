@@ -1,4 +1,4 @@
-export { default as HeroSection } from './HeroSection';
-export { default as ContactMethodsSection } from './ContactMethodsSection';
-export { default as ContactInfoSection } from './ContactInfoSection';
-export { default as SocialLinksSection } from './SocialLinksSection';
+export { default as HeroSection } from './hero-section';
+export { default as ContactMethodsSection } from './contact-methods-section';
+export { default as ContactInfoSection } from './contact-info-section';
+export { default as SocialLinksSection } from './social-links-section';
