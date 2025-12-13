@@ -73,6 +73,9 @@ type Images = {
     meWebp: string;
   },
   screenshots: {
+    default: {
+      pokedexCli: string[];
+    };
     light: {
       portfolio: string[];
       theReyesVault: string[];

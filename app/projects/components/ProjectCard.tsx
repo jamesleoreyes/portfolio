@@ -19,7 +19,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const [mounted, setMounted] = useState(false);
   const currentTheme = mounted ? (resolvedTheme || 'light') : 'light';
   const primaryTechStack = project.techStack.slice(0, 3);
-  const shouldShowDetailButtons = project.liveUrl && project.githubUrl;
+  const shouldShowDetailButtons = project.status !== 'development';
+  const themed = mounted ? project.featuredImage[currentTheme as 'light' | 'dark'] : undefined;
+  const featuredSrc = 
+    themed ||
+    project.featuredImage.default ||
+    project.featuredImage.dark ||
+    project.featuredImage.light;
+  const shouldShowImage = Boolean(featuredSrc);
 
   useEffect(() => {
     setMounted(true);
@@ -45,9 +52,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {/* Project Preview/Screenshot */}
       <div className='space-y-6'>
         <div className='aspect-video bg-accent/50 flex items-center justify-center overflow-hidden'>
-          {mounted && resolvedTheme && project.featuredImage[currentTheme as 'light' | 'dark'] ? (
+          {mounted && resolvedTheme && shouldShowImage ? (
             <Image
-              src={project.featuredImage[currentTheme as 'light' | 'dark']!}
+              src={featuredSrc!}
               alt={`${project.title} screenshot`}
               width={400}
               height={225}
@@ -70,7 +77,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <CardDescription>{project.description}</CardDescription>
         </CardHeader>
       </div>
-      <CardContent className={cn(`flex flex-col justify-between ${shouldShowDetailButtons ? 'space-y-4' : ''}`)}>
+      <CardContent className={cn(`flex flex-col justify-between space-y-4`)}>
         {/* Tech Stack */}
         <div className='flex flex-wrap gap-2'>
           {primaryTechStack.map((tech) => (
@@ -89,23 +96,23 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         {/* Action Buttons */}
         <div className='grid grid-cols-2 gap-2'>
-          {project.status !== 'development' && project.liveUrl && (
-            <>
-              <Button asChild variant='default' size='lg'>
-                <Link href={`/projects/${project.id}`}>
-                  <Eye className='w-4 h-4' />
-                  View Details
-                </Link>
-              </Button>
-              <Button asChild variant='secondary' size='lg'>
-                <Link href={project.liveUrl} target='_blank' rel='noopener noreferrer'>
-                  <ExternalLink className='w-4 h-4' />
-                  Live Site
-                </Link>
-              </Button>
-            </>
+          {shouldShowDetailButtons && (
+            <Button asChild variant='default' size='lg' className='col-span-2'>
+              <Link href={`/projects/${project.id}`}>
+                <Eye className='w-4 h-4' />
+                View Details
+              </Link>
+            </Button>
           )}
-          {project.status === 'development' && (
+          {project.liveUrl && (
+            <Button asChild variant='default' size='lg' className='col-span-2'>
+              <Link href={project.liveUrl} target='_blank' rel='noopener noreferrer'>
+                <ExternalLink className='w-4 h-4' />
+                Live Site
+              </Link>
+            </Button>
+          )}
+          {project.githubUrl && (
             <Button asChild size='lg' className='col-span-2'>
               <Link href={project.githubUrl ?? ''} target='_blank' rel='noopener noreferrer'>
                 <GitHub />

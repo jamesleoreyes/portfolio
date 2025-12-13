@@ -51,6 +51,11 @@ const assets: Assets = {
       meWebp: '/images/profile/me.webp',
     },
     screenshots: {
+      default: {
+        pokedexCli: [
+          '/images/screenshots/default/pokedex-cli/cover.jpg',
+        ],
+      },
       light: {
         portfolio: [
           '/images/screenshots/light/portfolio/desktop-light-home.png',

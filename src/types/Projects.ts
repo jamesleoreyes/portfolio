@@ -1,4 +1,4 @@
-type TechStackCategory = 'frontend' | 'backend' | 'database' | 'deployment' | 'tools' | 'analytics';
+type TechStackCategory = 'frontend' | 'backend' | 'api' | 'database' | 'deployment' | 'tools' | 'analytics';
 type TechStack = {
   name: string;
   category: TechStackCategory;
@@ -65,6 +65,7 @@ type Project = {
 type Projects = {
   portfolio: Project;
   theReyesVault: Project;
+  'pokedex-cli': Project;
 }
 
 export type {

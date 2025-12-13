@@ -128,4 +128,29 @@ export const projects: Projects = {
     lastUpdated: 'July 16, 2025',
     metrics: [],
   },
+  'pokedex-cli': {
+    id: 'pokedex-cli',
+    title: 'Pokedex CLI',
+    subtitle: 'Interactive Pokedex CLI built with TypeScript and Node.js',
+    description: 'A fun, interactive Pokedex CLI built with TypeScript and Node.js. Explore the Pokemon world, catch Pokemon, and build your collection!',
+    longDescription: `TBD`,
+    status: 'live',
+    type: 'personal',
+    startDate: 'December 2025',
+    lastUpdated: 'December 9, 2025',
+    githubUrl: 'https://github.com/jamesleoreyes/pokedex-cli',
+    screenshots: {
+      default: [],
+      light: [],
+      dark: [],
+    },
+    featuredImage: {
+      default: assets.images.screenshots.default.pokedexCli[0]!,
+    },
+    techStack: [
+      { name: 'TypeScript', category: 'frontend' },
+      { name: 'Node.js', category: 'backend' },
+    ],
+    features: [], // TODO: Add features
+  },
 };
