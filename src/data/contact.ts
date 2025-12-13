@@ -1,5 +1,5 @@
 import { Mail, Calendar } from 'lucide-react';
-import { ContactData } from '@_types/Contact';
+import { ContactData } from '@/src/types/contact';
 import * as Icons from '@components/icons';
 
 const contactData: ContactData = {

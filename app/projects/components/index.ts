@@ -1,3 +1,3 @@
-export { default as HeroSection } from './HeroSection';
-export { default as ProjectsGrid } from './ProjectsGrid';
-export { default as ProjectCard } from './ProjectCard';
+export { default as HeroSection } from './hero-section';
+export { default as ProjectsGrid } from './projects-grid';
+export { default as ProjectCard } from './project-card';

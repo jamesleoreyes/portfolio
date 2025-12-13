@@ -1,4 +1,4 @@
-import { Navigation } from '@_types/Navigation';
+import { Navigation } from '@/src/types/navigation';
 
 const navContent: Navigation[] = [
   { href: '/', label: 'Home' },

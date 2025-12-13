@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { assets, baseMeta, urlConfig } from '@configs/app';
-import type { Meta } from '@_types/App';
+import type { Meta } from '@/src/types/app';
 
 const meta: Meta = {
   title: 'Resume',

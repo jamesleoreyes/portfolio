@@ -1,3 +1,3 @@
-export { default as FAQPageSchema } from './FAQPageSchema';
-export { default as PersonSchema } from './PersonSchema';
-export { default as ProfilePageSchema } from './ProfilePageSchema';
+export { default as FAQPageSchema } from './faq-page-schema';
+export { default as PersonSchema } from './person-schema';
+export { default as ProfilePageSchema } from './profile-page-schema';
