@@ -52,16 +52,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 For detailed technical setup, project structure, and development instructions, see [DEEPDIVE.md](./DEEPDIVE.md).
 
-## Performance
-
-- **Lighthouse Scores**: 99+ across Performance, Accessibility, Best Practices, SEO
-- **Core Web Vitals**: All metrics in green (LCP, FID, CLS)
-- **Bundle Size**: Optimized to <350KB with tree shaking and code splitting
-
-## Contributing
-
-Suggestions and improvements are welcome! Fork the repo, create a feature branch, and submit a pull request. See [DEEPDIVE.md](./DEEPDIVE.md) for technical details.
-
 ## Contact
 
 - **Website**: [jamesleoreyes.com](https://jamesleoreyes.com)
@@ -75,4 +65,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Made with ❤️ by James Reyes | © 2025
+Made with &hearts; and passion by James Reyes &copy; 2025
