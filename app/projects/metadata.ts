@@ -37,7 +37,7 @@ const metadata: Metadata = {
     'profile:first_name': 'James',
     'profile:last_name': 'Reyes',
     'profile:abbreviation': 'JLR',
-    'profile:email': 'jamesleoreyes@gmail.com',
+    'profile:email': 'me@jamesleoreyes.com',
     'profile:username': 'jamesleoreyes',
   },
 };

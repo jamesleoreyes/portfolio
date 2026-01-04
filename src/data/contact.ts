@@ -4,7 +4,7 @@ import * as Icons from '@components/icons';
 
 const contactData: ContactData = {
   contactInfo: {
-    email: 'jamesleoreyes@gmail.com',
+    email: 'me@jamesleoreyes.com',
     location: 'Charlotte, NC',
     availability: [
       { day: 'Sunday & Saturday', time: '2 PM — 5 PM' },
@@ -21,7 +21,7 @@ const contactData: ContactData = {
     {
       name: 'Send an Email',
       description: 'Reach out directly via email for any inquiries or collaboration opportunities.',
-      url: 'mailto:jamesleoreyes@gmail.com',
+      url: 'mailto:me@jamesleoreyes.com',
       icon: Mail,
     },
   ],
