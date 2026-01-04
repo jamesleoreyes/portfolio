@@ -12,7 +12,7 @@ const resumeData: ResumeData = {
       'My background spans HR, payroll, and timekeeping tech, with deep experience in modern stacks like TypeScript, React, Next.js, and Supabase. I thrive at the intersection of technical precision and product empathy, where clean code meets real-world impact. I\'m currently seeking roles where I can help design and ship thoughtful products in collaborative, growth-minded teams.'
     ],
     contact: {
-      email: 'jamesleoreyes@gmail.com',
+      email: 'me@jamesleoreyes.com',
       website: 'jamesleoreyes.com',
     }
   },

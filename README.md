@@ -55,7 +55,7 @@ For detailed technical setup, project structure, and development instructions, s
 ## Contact
 
 - **Website**: [jamesleoreyes.com](https://jamesleoreyes.com)
-- **Email**: [jamesleoreyes@gmail.com](mailto:jamesleoreyes@gmail.com)
+- **Email**: [me@jamesleoreyes.com](mailto:me@jamesleoreyes.com)
 - **LinkedIn**: [linkedin.com/in/jamesleoreyes](https://linkedin.com/in/jamesleoreyes)
 - **GitHub**: [github.com/jamesleoreyes](https://github.com/jamesleoreyes)
 
