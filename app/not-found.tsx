@@ -21,7 +21,7 @@ export default function NotFound() {
               </h1>
 
               <h2 className='text-2xl sm:text-3xl font-semibold tracking-tight text-foreground'>
-                You look a little lost
+                Lost? It happens.
               </h2>
             </div>
           </div>
