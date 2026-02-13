@@ -21,7 +21,7 @@ export default function NotFound() {
               </h1>
 
               <h2 className='text-2xl sm:text-3xl font-semibold tracking-tight text-foreground'>
-                Page Not Found
+                Lost? It happens.
               </h2>
             </div>
           </div>
@@ -29,7 +29,7 @@ export default function NotFound() {
           {/* Description */}
           <div className='max-w-md mx-auto'>
             <p className='text-lg text-muted-foreground leading-relaxed'>
-              Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
+              We all get lost sometimes, and that&apos;s OK. This page doesn&apos;t exist, but there&apos;s plenty more to explore.
             </p>
           </div>
         </div>
